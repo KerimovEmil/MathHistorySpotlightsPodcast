@@ -988,3 +988,34 @@ header .container {
   }
 
 }
+
+/* Large-screen hero layout: keep logo/banner proportional */
+@media (min-width: 1024px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-top: 120px;
+  }
+
+  .hero-content {
+    flex: 0 0 40%;
+    max-width: 420px;
+  }
+
+  .hero-banner {
+    flex: 1 1 60%;
+    margin-top: 0;
+    display: block;
+  }
+
+  .hero-banner img {
+    width: 100%;
+    max-width: 720px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    display: block;
+    margin-left: auto;
+  }
+}
