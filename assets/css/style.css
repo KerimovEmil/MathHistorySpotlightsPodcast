@@ -285,6 +285,7 @@ header .container {
 
 .hero-title {
   width: 100%;
+  max-width: 640px;
   margin-bottom: 20px;
 }
 
@@ -329,7 +330,18 @@ header .container {
 
 .hero .btn-link { margin-bottom: 15px; }
 
-.hero-banner { display: none; }
+.hero-banner {
+  display: block;
+  margin-top: 20px;
+}
+
+.hero-banner img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
 
 
