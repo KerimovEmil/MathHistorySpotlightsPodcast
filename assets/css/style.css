@@ -285,8 +285,9 @@ header .container {
 
 .hero-title {
   width: 100%;
-  max-width: 640px;
+  max-width: 900px;
   margin-bottom: 20px;
+  display: block;
 }
 
 .hero-text {
