@@ -763,6 +763,18 @@ header .container {
 
   .container { max-width: 980px; }
 
+  /* Make hero area use the full page width on large screens */
+  .hero > .container {
+    max-width: 100%;
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-inline: 0;
+  }
+
+  .hero-content {
+    max-width: 900px;
+  }
+
 
 
   /**
