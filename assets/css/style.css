@@ -999,8 +999,8 @@ header .container {
   }
 
   .hero-content {
-    flex: 0 0 40%;
-    max-width: 420px;
+    flex: 1 1 100%;
+    max-width: none;
   }
 
   .hero-banner {
