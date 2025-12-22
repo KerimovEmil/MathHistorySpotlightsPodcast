@@ -14,7 +14,7 @@ python -m http.server 8000
 
 ## Deployment
 - The project is currently hosted on GitHub Pages at https://kerimovemil.github.io/MathHistorySpotlightsPodcast/
-- To publish updates: commit and push to the `master` branch (or configure GitHub Pages to use `main`).
+- To publish updates: commit and push to the `master` branch.
 
 ## Update episodes
 - Episodes are currently embedded in `index.html` using the RSS enclosure audio URLs and local thumbnails in `assets/images/`.
@@ -23,8 +23,5 @@ python -m http.server 8000
 ## Notes
 - CSS is in `assets/css/style.css`.
 - Images are in `assets/images/`.
-- If you want me to: I can add dynamic RSS rendering, per-episode pages, or a small CI/deploy workflow.
 
 ---
-
-Maintainer: emil.kerimov93@gmail.com
