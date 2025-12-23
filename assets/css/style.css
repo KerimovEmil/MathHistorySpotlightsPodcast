@@ -331,6 +331,14 @@ header .container {
 
 .hero .btn-link { margin-bottom: 15px; }
 
+/* Icon sizing for subscribe buttons */
+.btn-link .btn-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  object-fit: contain;
+}
+
 .hero-banner {
   display: block;
   margin-top: 20px;
