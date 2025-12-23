@@ -283,6 +283,9 @@ header .container {
 
 .hero { padding: 140px 0 var(--section-padding); }
 
+/* Ensure pages without a hero section have space for the fixed header */
+.no-hero main { padding-top: 140px; }
+
 .hero-title {
   width: 100%;
   max-width: 900px;
