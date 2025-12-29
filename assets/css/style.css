@@ -1035,8 +1035,9 @@ header .container {
 
   .hero-banner img {
     width: 100%;
-    max-width: 720px;
-    height: auto;
+/*    max-width: 720px;  */
+    max-width: 900px;
+    height: 100px;
     object-fit: contain;
     border-radius: 20px;
     display: block;

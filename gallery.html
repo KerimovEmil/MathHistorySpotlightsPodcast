@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+</head>
+<body>
+  <header class="active" data-header>
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="./assets/images/logo.svg" alt="Micro logo">
+      </a>
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+          <li class="navbar-item"><a href="index.html#podcast" class="navbar-link">Podcast</a></li>
+          <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+          <li class="navbar-item"><a href="gallery.html" class="navbar-link">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container">
+      <section class="gallery">
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="assets/images/Abraham de Moivre Pioneer of Probability.png" alt="Abraham de Moivre Pioneer of Probability"></div>
+          <div class="gallery-item"><img src="assets/images/Carl Jacobi.png" alt="Carl Jacobi"></div>
+          <div class="gallery-item"><img src="assets/images/Chinese Mathematics.png" alt="Chinese Mathematics"></div>
+          <div class="gallery-item"><img src="assets/images/dirichlet.png" alt="dirichlet"></div>
+          <div class="gallery-item"><img src="assets/images/euler.png" alt="euler"></div>
+          <div class="gallery-item"><img src="assets/images/fourier.png" alt="fourier"></div>
+          <div class="gallery-item"><img src="assets/images/galois.png" alt="galois"></div>
+          <div class="gallery-item"><img src="assets/images/gauss.png" alt="gauss"></div>
+          <div class="gallery-item"><img src="assets/images/Jean d'Alembert.png" alt="Jean d'Alembert"></div>
+          <div class="gallery-item"><img src="assets/images/LaGrangeHistory.png" alt="LaGrangeHistory"></div>
+          <div class="gallery-item"><img src="assets/images/laplace.png" alt="laplace"></div>
+          <div class="gallery-item"><img src="assets/images/liouville.png" alt="liouville"></div>
+          <div class="gallery-item"><img src="assets/images/nash.png" alt="nash"></div>
+          <div class="gallery-item"><img src="assets/images/Pell's Equation Timeline.png" alt="Pell's Equation Timeline"></div>
+          <div class="gallery-item"><img src="assets/images/poincare.png" alt="poincare"></div>
+          <div class="gallery-item"><img src="assets/images/Poisson.png" alt="Poisson"></div>
+          <div class="gallery-item"><img src="assets/images/riemann.png" alt="riemann"></div>
+          <div class="gallery-item"><img src="assets/images/Sophie Germain Unrecognized Genius.png" alt="Sophie Germain Unrecognized Genius"></div>
+          <div class="gallery-item"><img src="assets/images/Viète Father of Modern Algebra.png" alt="Viète Father of Modern Algebra"></div>
+        </div>
+      </section>
+
+      <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <a class="prev-btn">&#10094;</a>
+        <a class="next-btn">&#10095;</a>
+      </div>
+    </article>
+  </main>
+
+  <script src="assets/js/gallery.js"></script>
+</body>
+</html>

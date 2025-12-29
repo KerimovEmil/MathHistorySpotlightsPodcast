@@ -1,0 +1,76 @@
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.prev-btn,
+.next-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  right: auto;
+  left: 15px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next-btn {
+  left: auto;
+  right: 15px;
+}
+
+.close-btn:hover,
+.close-btn:focus,
+.prev-btn:hover,
+.prev-btn:focus,
+.next-btn:hover,
+.next-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
