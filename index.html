@@ -13,12 +13,12 @@
   -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-  <!-- 
+  <!--
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
 
-  <!-- 
+  <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,54 +33,8 @@
     - #HEADER
   -->
 
-  <header class="active" data-header>
-    <div class="container">
+   <site-header></site-header>
 
-      <!-- 
-        - overlay
-      -->
-      <div class="overlay" data-overlay></div>
-
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" alt="Micro logo">
-      </a>
-
-      <button class="nav-toggle-btn" data-nav-toggle-btn>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <nav class="navbar" data-navbar>
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <a href="#hero" class="navbar-link">Home</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="#podcast" class="navbar-link">Podcast</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="about.html" class="navbar-link">About</a>
-          </li>
-
-          <li class="navbar-item">
-            <a href="gallery.html" class="navbar-link">Gallery</a>
-          </li>
-
-        </ul>
-
-        <div class="navbar-actions">
-
-          <button class="navbar-btn" title="Search">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-
-        </div>
-      </nav>
-
-    </div>
-  </header>
 
   <main>
     <article class="container">
@@ -142,290 +96,8 @@
 
       </section>
 
-
-
-
-
-      <!-- 
-        - #PODCAST
-      -->
-
       <section class="podcast" id="podcast">
-        <ul class="podcast-list">
-
-          <!-- Episode 16: Joseph Liouville -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/liouville.png" alt="Liouville">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-28">Dec 28, 2025</time>
-                  <p class="pod-epi">Episode 16 • 00:12:49</p>
-                </div>
-                <h3 class="h3 card-title">Joseph Liouville 1809 - 1882</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/113207658/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2F1868906b-269f-46be-0fda-4cb3ab54c8e3.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 15: Évariste Galois -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/galois.png" alt="Galois">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-28">Dec 28, 2025</time>
-                  <p class="pod-epi">Episode 15 • 00:15:43</p>
-                </div>
-                <h3 class="h3 card-title">Évariste Galois 1811 - 1832</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/113207317/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2F0aeee8d6-90c2-93c6-ac45-255fdc77cde3.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 14: John F Nash -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/nash.png" alt="Nash">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-28">Dec 28, 2025</time>
-                  <p class="pod-epi">Episode 14 • 00:11:25</p>
-                </div>
-                <h3 class="h3 card-title">John F Nash 1928 - 2015</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/113206768/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2Fead99591-a2b4-506b-3d7a-0f4018e14a67.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 13: Poincare -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/poincare.png" alt="Poincare">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-25">Dec 25, 2025</time>
-                  <p class="pod-epi">Episode 13 • 00:16:05</p>
-                </div>
-                <h3 class="h3 card-title">Jules Henri Poincaré 1854 - 1912</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/113111268/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-25%2F7eb38dd8-8e04-9537-9cb6-1b199293f83d.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 12: Johann Carl Friedrich Gauss -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/gauss.png" alt="Gauss">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-22">Dec 22, 2025</time>
-                  <p class="pod-epi">Episode 12 • 00:16:52</p>
-                </div>
-                <h3 class="h3 card-title">Johann Carl Friedrich Gauss 1777 - 1855</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112994720/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-22%2Fe922fb97-9660-7e93-616e-84e8a0fbb8a3.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 11: Georg Friedrich Bernhard Riemann -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/riemann.png" alt="Riemann">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-22">Dec 22, 2025</time>
-                  <p class="pod-epi">Episode 11 • 00:13:20</p>
-                </div>
-                <h3 class="h3 card-title">Georg Friedrich Bernhard Riemann 1826 - 1866</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112994560/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-22%2Feb9fc9f2-cfb5-aaf6-271b-b6f8fb52743a.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 10: Dirichlet -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/dirichlet.png" alt="Dirichlet">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-22">Dec 22, 2025</time>
-                  <p class="pod-epi">Episode 10 • 00:14:26</p>
-                </div>
-                <h3 class="h3 card-title">Johann Peter Gustav Lejeune Dirichlet 1805 - 1859</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112994322/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-22%2F5cbe26d6-cfa6-b16b-942a-29d79c898aa4.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 9: Marie-Sophie Germain -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/Sophie Germain Unrecognized Genius.png" alt="Sophie Germain">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-19">Dec 19, 2025</time>
-                  <p class="pod-epi">Episode 9 • 00:16:47</p>
-                </div>
-                <h3 class="h3 card-title">Marie-Sophie Germain 1776 - 1831</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112855133/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-19%2Faa7397a9-3518-49df-f699-b8887ea01085.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 8: Carl Gustav Jacob Jacobi -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/Carl Jacobi.png" alt="Jacobi">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-19">Dec 19, 2025</time>
-                  <p class="pod-epi">Episode 8 • 00:17:31</p>
-                </div>
-                <h3 class="h3 card-title">Carl Gustav Jacob Jacobi 1804 - 1851</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112855074/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-19%2F813f40f4-234a-1b23-833f-f4054c09097e.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 7: Siméon Denis Poisson -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/Poisson.png" alt="Poisson">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-19">Dec 19, 2025</time>
-                  <p class="pod-epi">Episode 7 • 00:13:43</p>
-                </div>
-                <h3 class="h3 card-title">Siméon Denis Poisson 1781 - 1840</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112854831/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-19%2F34a0eca3-28ce-22f8-4d3f-8b1f8b004202.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 6: Abraham de Moivre -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/Abraham de Moivre Pioneer of Probability.png" alt="Abraham de Moivre">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-18">Dec 18, 2025</time>
-                  <p class="pod-epi">Episode 6 • 00:15:47</p>
-                </div>
-                <h3 class="h3 card-title">Abraham de Moivre 1667 - 1754</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112802148/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-18%2Ff216295a-278e-bb31-66a5-62afbfc125ad.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 5: Jean Le Rond d'Alembert -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/Jean d'Alembert.png" alt="d'Alembert">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-18">Dec 18, 2025</time>
-                  <p class="pod-epi">Episode 5 • 00:16:02</p>
-                </div>
-                <h3 class="h3 card-title">Jean Le Rond d'Alembert 1717 - 1783</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112801817/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-18%2Fdacedb91-7d93-22cf-399a-336d39cc77a2.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 4: Pierre-Simon Laplace -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/laplace.png" alt="Laplace">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-18">Dec 18, 2025</time>
-                  <p class="pod-epi">Episode 4 • 00:17:51</p>
-                </div>
-                <h3 class="h3 card-title">Pierre-Simon Laplace 1749 - 1827</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112801624/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-18%2F9e4ca43e-1cdb-b5a7-1ff0-910949a7074d.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 3: François Viète -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/Viète Father of Modern Algebra.png" alt="Viète">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-16">Dec 16, 2025</time>
-                  <p class="pod-epi">Episode 3 • 00:13:21</p>
-                </div>
-                <h3 class="h3 card-title">François Viète 1540 - 1603</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112698673/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-16%2F6f9119b0-8aee-64f2-77e1-ca7bec00139f.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 2: Joseph-Louis Lagrange -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/LaGrangeHistory.png" alt="Lagrange">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-16">Dec 16, 2025</time>
-                  <p class="pod-epi">Episode 2 • 00:14:26</p>
-                </div>
-                <h3 class="h3 card-title">Joseph-Louis Lagrange 1736 - 1813</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112698399/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-16%2Feb2a3a66-20f0-0ffb-137b-09655d2a6437.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-          <!-- Episode 1: Joseph Fourier -->
-          <li>
-            <article class="podcast-card">
-              <figure class="card-banner">
-                <img src="./assets/images/fourier.png" alt="Fourier">
-              </figure>
-              <div class="card-content">
-                <div class="card-meta">
-                  <time datetime="2025-12-16">Dec 16, 2025</time>
-                  <p class="pod-epi">Episode 1 • 00:13:51</p>
-                </div>
-                <h3 class="h3 card-title">Joseph Fourier 1768 - 1830</h3>
-                <audio controls preload="none" src="https://anchor.fm/s/10cdf4708/podcast/play/112697919/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-16%2F954421dc-b796-0e83-42d7-b4809f73619a.m4a"></audio>
-              </div>
-            </article>
-          </li>
-
-        </ul>
+        <podcast-section src="https://anchor.fm/s/10cdf4708/podcast/rss"></podcast-section>
       </section>
 
     </article>
@@ -433,42 +105,22 @@
 
 
 
-  <!-- 
-    - #FOOTER
-  -->
+  <!-- footer component -->
+  <site-footer></site-footer>
 
-  <footer>
-
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="copyright">
-          &copy; Template from 2022 <a href="#">codewithsadee</a>. All Rights Reserved
-        </p>
-      </div>
-    </div>
-
-  </footer>
-
-
-  <!-- 
-    - #GO TO TOP
-  -->
-
-  <a href="#top" class="go-top" data-go-top>
-    <ion-icon name="chevron-up-outline"></ion-icon>
-  </a>
-
-
-  <!-- 
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
 
   <!-- 
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- 
+    - web components
+  -->
+  <script type="module" src="./assets/js/site-header.js"></script>
+  <script type="module" src="./assets/js/podcast-section.js"></script>
+  <script type="module" src="./assets/js/site-footer.js"></script>
 
 </body>
 
