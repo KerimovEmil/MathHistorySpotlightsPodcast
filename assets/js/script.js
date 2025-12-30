@@ -48,38 +48,4 @@ window.addEventListener("scroll", function () {
   }
 
   lastScrollPosition = scrollPosition <= 0 ? 0 : scrollPosition;
-
-});
-
-
-
-/**
- * form validation
- */
-
-const input = document.querySelector("[data-input]");
-const submitBtn = document.querySelector("[data-submit]");
-
-input.addEventListener("input", function () {
-
-  if (input.checkValidity()) {
-    submitBtn.removeAttribute("disabled");
-  } else {
-    submitBtn.setAttribute("disabled", "");
-  }
-
-});
-
-
-
-/**
- * go top
- */
-
-const goTopBtn = document.querySelector("[data-go-top]");
-
-window.addEventListener("scroll", function () {
-
-  window.scrollY >= 200 ? goTopBtn.classList.add("active") : goTopBtn.classList.remove("active");
-
 });
