@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Math History Spotlights Timeline</title>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background: #fafafa;
+  }
+
+  h2 {
+    margin: 20px 40px 0;
+    font-weight: 600;
+  }
+
+  .controls {
+    margin: 10px 40px;
+  }
+
+  .timeline-container {
+    overflow-x: auto;
+    padding: 30px 40px 50px;
+  }
+
+  .timeline {
+    position: relative;
+    height: 650px;
+    transition: width 0.3s ease;
+  }
+
+  .axis {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #ccc;
+  }
+
+  .year {
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    color: #666;
+    transform: translateX(-50%);
+  }
+
+  .person {
+    position: absolute;
+    height: 24px;
+    border-radius: 8px;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+  }
+
+  .person:hover {
+    filter: brightness(1.1);
+  }
+
+  .tooltip {
+    position: absolute;
+    background: #111;
+    color: #fff;
+    padding: 8px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    max-width: 240px;
+    z-index: 10;
+  }
+
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  /* Era colors */
+  .renaissance { background: #0ea5e9; }
+  .enlightenment { background: #22c55e; }
+  .classical { background: #6366f1; }
+  .modern { background: #ef4444; }
+</style>
+</head>
+
+<body>
+
+<h2>Math History Spotlights — Timeline</h2>
+
+<div class="controls">
+  Zoom:
+  <input type="range" id="zoom" min="1200" max="2600" value="1800">
+</div>
+
+<div class="timeline-container">
+  <div class="timeline" id="timeline">
+    <div class="axis"></div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const data = [
+  { name: "François Viète", b: 1540, d: 1603, era: "renaissance", note: "Founder of symbolic algebra." },
+  { name: "Abraham de Moivre", b: 1667, d: 1754, era: "enlightenment", note: "Probability theory; complex numbers." },
+  { name: "Leonhard Euler", b: 1707, d: 1783, era: "enlightenment", note: "Introduced much modern notation." },
+  { name: "Jean Le Rond d'Alembert", b: 1717, d: 1783, era: "enlightenment", note: "Wave equation; Encyclopédie." },
+  { name: "Joseph-Louis Lagrange", b: 1736, d: 1813, era: "classical", note: "Analytical mechanics." },
+  { name: "Pierre-Simon Laplace", b: 1749, d: 1827, era: "classical", note: "Celestial mechanics; probability." },
+  { name: "Joseph Fourier", b: 1768, d: 1830, era: "classical", note: "Fourier series." },
+  { name: "Marie-Sophie Germain", b: 1776, d: 1831, era: "classical", note: "Elasticity; number theory." },
+  { name: "Carl Friedrich Gauss", b: 1777, d: 1855, era: "classical", note: "The “Prince of Mathematicians”." },
+  { name: "Siméon Denis Poisson", b: 1781, d: 1840, era: "classical", note: "Poisson distribution." },
+  { name: "Dirichlet", b: 1805, d: 1859, era: "classical", note: "Foundations of analysis." },
+  { name: "Carl Jacobi", b: 1804, d: 1851, era: "classical", note: "Elliptic functions." },
+  { name: "Joseph Liouville", b: 1809, d: 1882, era: "classical", note: "Transcendental numbers." },
+  { name: "Évariste Galois", b: 1811, d: 1832, era: "classical", note: "Group theory." },
+  { name: "Ada Lovelace", b: 1815, d: 1852, era: "classical", note: "First computer algorithm." },
+  { name: "Bernhard Riemann", b: 1826, d: 1866, era: "classical", note: "Geometry; zeta function." },
+  { name: "Henri Poincaré", b: 1854, d: 1912, era: "modern", note: "Topology; chaos theory." },
+  { name: "Charles Babbage", b: 1791, d: 1871, era: "classical", note: "Analytical Engine." },
+  { name: "John Nash", b: 1928, d: 2015, era: "modern", note: "Game theory." }
+];
+
+const timeline = document.getElementById("timeline");
+const tooltip = document.getElementById("tooltip");
+const zoom = document.getElementById("zoom");
+
+const minYear = Math.min(...data.map(d => d.b));
+const maxYear = Math.max(...data.map(d => d.d));
+
+function render(width) {
+  timeline.style.width = width + "px";
+  timeline.innerHTML = `<div class="axis"></div>`;
+
+  const yearToX = y => ((y - minYear) / (maxYear - minYear)) * width;
+
+  for (let y = minYear; y <= maxYear; y += 50) {
+    const tick = document.createElement("div");
+    tick.className = "year";
+    tick.style.left = yearToX(y) + "px";
+    tick.textContent = y;
+    timeline.appendChild(tick);
+  }
+
+  data.forEach((p, i) => {
+    const bar = document.createElement("div");
+    bar.className = `person ${p.era}`;
+    bar.style.left = yearToX(p.b) + "px";
+    bar.style.width = (yearToX(p.d) - yearToX(p.b)) + "px";
+    bar.style.top = (i * 28) + "px";
+    bar.style.animationDelay = (i * 0.03) + "s";
+    bar.textContent = `${p.name} (${p.b}–${p.d})`;
+
+    bar.addEventListener("mousemove", e => {
+      tooltip.style.opacity = 1;
+      tooltip.style.left = e.pageX + 12 + "px";
+      tooltip.style.top = e.pageY + 12 + "px";
+      tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}`;
+    });
+
+    bar.addEventListener("mouseleave", () => {
+      tooltip.style.opacity = 0;
+    });
+
+    timeline.appendChild(bar);
+  });
+}
+
+zoom.addEventListener("input", e => render(+e.target.value));
+render(+zoom.value);
+</script>
+
+</body>
+</html>
