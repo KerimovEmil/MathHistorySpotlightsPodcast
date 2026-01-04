@@ -36,7 +36,12 @@ class SiteHeader extends HTMLElement {
           <a href="gallery.html" class="navbar-link">Gallery</a>
         </li>
 
+        <li class="navbar-item">
+          <a href="timeline.html" class="navbar-link">Timeline</a>
+        </li>
+
       </ul>
+
 
       <div class="navbar-actions">
 
