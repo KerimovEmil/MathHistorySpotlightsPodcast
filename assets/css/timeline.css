@@ -1,0 +1,166 @@
+/*-----------------------------------*\
+  #timeline.css
+\*-----------------------------------*/
+
+/**
+ * Timeline-specific styles for Math History Spotlights
+ */
+
+.timeline-page {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: var(--dark-violet);
+  color: var(--white);
+}
+
+.timeline-page h2 {
+  margin: 20px var(--section-padding) 0;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.controls {
+  margin: 10px var(--section-padding);
+}
+
+.controls label {
+  color: var(--white);
+}
+
+.legend {
+  margin: 20px var(--section-padding) 10px;
+}
+
+.legend h3 {
+  color: var(--white);
+  font-size: var(--fs-2);
+  margin-bottom: 10px;
+}
+
+.legend-items {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: var(--white);
+}
+
+.timeline-container {
+  overflow-x: auto;
+  padding: 30px var(--section-padding) 50px;
+}
+
+.timeline {
+  position: relative;
+  height: 700px;
+  transition: width 0.3s ease;
+  min-width: 1200px; /* Ensure minimum width for zoom */
+}
+
+.axis {
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--heliotrope-gray);
+}
+
+.year {
+  position: absolute;
+  bottom: 10px;
+  font-size: 12px;
+  color: var(--heliotrope-gray);
+  transform: translateX(-50%);
+}
+
+.person {
+  position: absolute;
+  height: 24px;
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 12px;
+  padding: 2px 8px;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+  transition: filter 0.2s ease;
+}
+
+.person:hover,
+.person:focus {
+  filter: brightness(1.1);
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--russian-violet);
+  color: var(--white);
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  max-width: 240px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Era colors using site palette */
+.renaissance { background: var(--blue-ryb); }
+.enlightenment { background: var(--flourescent-blue); }
+.classical { background: var(--space-cadet); }
+.modern { background: var(--gradient); }
+
+.loading-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--heliotrope-gray);
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline {
+    height: 500px;
+  }
+
+  .person {
+    height: 20px;
+    font-size: 11px;
+    padding: 1px 6px;
+  }
+
+  .timeline-page h2 {
+    font-size: var(--fs-2);
+  }
+}
+
+@media (max-width: 550px) {
+  .timeline-container {
+    padding: 20px 15px 30px;
+  }
+
+  .controls {
+    margin: 10px 15px;
+  }
+
+  .timeline-page h2 {
+    margin: 15px 15px 0;
+  }
+}
