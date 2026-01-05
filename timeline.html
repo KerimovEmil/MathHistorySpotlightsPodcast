@@ -130,14 +130,17 @@ async function fetchEpisodes() {
 
     items.forEach(item => {
       const titleElement = item.querySelector("title");
-      if (titleElement) {
+      const linkElement = item.querySelector("link");
+      if (titleElement && linkElement) {
         const title = titleElement.textContent;
+        const url = linkElement.textContent;
         const parsed = parseTitle(title);
         if (parsed) {
           parsedData.push({
             ...parsed,
             era: getEra(parsed.b),
-            note: `Episode: ${title}`
+            note: `Episode: ${title}`,
+            url: url
           });
         }
       }
@@ -197,13 +200,15 @@ function render(width) {
     bar.textContent = `${p.name} (${p.b}–${p.d})`;
     bar.setAttribute("role", "button");
     bar.setAttribute("tabindex", "0");
-    bar.setAttribute("aria-label", `${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
+    bar.setAttribute("aria-label", `Click to listen: ${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
+
+    bar.addEventListener("click", () => window.open(p.url, '_blank'));
 
     const showTooltip = (e) => {
       tooltip.style.opacity = 1;
       tooltip.style.left = (e.pageX || e.touches[0].pageX) + 12 + "px";
       tooltip.style.top = (e.pageY || e.touches[0].pageY) + 12 + "px";
-      tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}`;
+      tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to listen</em>`;
     };
 
     const hideTooltip = () => {
