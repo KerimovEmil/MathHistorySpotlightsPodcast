@@ -176,26 +176,32 @@ async function fetchEpisodes() {
 
 function render(width) {
   if (data.length === 0) return;
-  
+
   timeline.style.width = width + "px";
-  timeline.innerHTML = `<div class="axis"></div>`;
+  timeline.innerHTML = '';
 
-  const yearToX = y => ((y - minYear) / (maxYear - minYear)) * width;
+  const yearToX = y => (maxYear === minYear ? 0 : ((y - minYear) / (maxYear - minYear)) * width);
 
-  for (let y = minYear; y <= maxYear; y += 50) {
-    const tick = document.createElement("div");
-    tick.className = "year";
-    tick.style.left = yearToX(y) + "px";
-    tick.textContent = y;
-    timeline.appendChild(tick);
-  }
+  // Create axis first so bars and ticks can be positioned relative to it
+  const axisEl = document.createElement('div');
+  axisEl.className = 'axis';
+  axisEl.style.pointerEvents = 'none';
+  axisEl.style.zIndex = '0';
+  timeline.appendChild(axisEl);
 
+  // Row/spacing values used for vertical layout
+  const rowHeight = 28;
+  const barHeight = 24;
+
+  // Add bars
   data.forEach((p, i) => {
     const bar = document.createElement("div");
     bar.className = `person ${p.era}`;
     bar.style.left = yearToX(p.b) + "px";
     bar.style.width = (yearToX(p.d) - yearToX(p.b)) + "px";
-    bar.style.top = (i * 28) + "px";
+    bar.style.top = (i * rowHeight) + "px";
+    // ensure bars render above the axis
+    bar.style.zIndex = '2';
     bar.style.animationDelay = (i * 0.03) + "s";
     bar.textContent = `${p.name} (${p.b}–${p.d})`;
     bar.setAttribute("role", "button");
@@ -206,8 +212,8 @@ function render(width) {
 
     const showTooltip = (e) => {
       tooltip.style.opacity = 1;
-      tooltip.style.left = (e.pageX || e.touches[0].pageX) + 12 + "px";
-      tooltip.style.top = (e.pageY || e.touches[0].pageY) + 12 + "px";
+      tooltip.style.left = (e.pageX || (e.touches && e.touches[0] && e.touches[0].pageX)) + 12 + "px";
+      tooltip.style.top = (e.pageY || (e.touches && e.touches[0] && e.touches[0].pageY)) + 12 + "px";
       tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to listen</em>`;
     };
 
@@ -233,6 +239,29 @@ function render(width) {
 
     timeline.appendChild(bar);
   });
+  // Measure lowest bar and ensure timeline height leaves room for axis/ticks at bottom
+  const bars = timeline.querySelectorAll('.person');
+  let lowest = 0;
+  bars.forEach(b => {
+    const bottom = b.offsetTop + b.offsetHeight;
+    if (bottom > lowest) lowest = bottom;
+  });
+
+  const axisBottomCss = 60; // must match .axis bottom in CSS
+  const ticksBottomCss = 36; // must match .year bottom in CSS
+  const paddingBelow = 12;
+  const minTimelineHeight = 300;
+  const neededHeight = Math.max(minTimelineHeight, lowest + paddingBelow + axisBottomCss + 20);
+  timeline.style.height = neededHeight + 'px';
+
+  // Add year ticks (CSS bottom places them below the axis)
+  for (let y = minYear; y <= maxYear; y += 50) {
+    const tick = document.createElement("div");
+    tick.className = "year";
+    tick.style.left = yearToX(y) + "px";
+    tick.textContent = y;
+    timeline.appendChild(tick);
+  }
 }
 
 zoom.addEventListener("input", e => render(+e.target.value));
