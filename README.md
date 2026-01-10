@@ -13,8 +13,7 @@ python -m http.server 8000
 ```
 
 ## Deployment
-- The project is currently hosted on GitHub Pages at https://kerimovemil.github.io/MathHistorySpotlightsPodcast/
-- To publish updates: commit and push to the `master` branch.
+- The project is hosted on https://www.mathhistoryspotlights.com/
 
 ## Update episodes
 - Episodes are currently embedded in `index.html` using the RSS enclosure audio URLs and local thumbnails in `assets/images/`.
