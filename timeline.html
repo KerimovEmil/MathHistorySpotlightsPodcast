@@ -71,6 +71,17 @@ function getEra(birthYear) {
   return "modern";
 }
 
+// Slugify a name to match generated mathematician page filenames
+function slugify(name) {
+  if (!name) return '';
+  // normalize unicode to decompose diacritics, remove them, then slugify
+  return name.normalize('NFKD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[^\p{L}0-9]+/gu, '-')
+    .replace(/^-+|-+$/g, '')
+    .toLowerCase();
+}
+
 // Function to parse episode title and extract mathematician data
 function parseTitle(title) {
   // Try to extract name and years from patterns like:
@@ -110,7 +121,8 @@ async function fetchEpisodes() {
   if (cached) {
     const { data: cachedData, timestamp } = JSON.parse(cached);
     if (now - timestamp < cacheExpiry) {
-      data = cachedData;
+      // ensure cached items have slugs (older cache may not)
+      data = (cachedData || []).map(item => ({ ...item, slug: item.slug || slugify(item.name) }));
       minYear = Math.min(...data.map(d => d.b));
       maxYear = Math.max(...data.map(d => d.d));
       render(+zoom.value);
@@ -140,6 +152,9 @@ async function fetchEpisodes() {
             ...parsed,
             era: getEra(parsed.b),
             note: `Episode: ${title}`,
+            // compute slug for local mathematician page
+            slug: slugify(parsed.name),
+            // keep original url as fallback
             url: url
           });
         }
@@ -203,18 +218,59 @@ function render(width) {
     // ensure bars render above the axis
     bar.style.zIndex = '2';
     bar.style.animationDelay = (i * 0.03) + "s";
-    bar.textContent = `${p.name} (${p.b}–${p.d})`;
+    // add local-page indicator and name span
+    const icon = document.createElement('span');
+    icon.className = 'local-indicator unknown';
+    icon.title = 'Checking for local page...';
+    bar.appendChild(icon);
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'person-name';
+    nameSpan.textContent = `${p.name} (${p.b}–${p.d})`;
+    bar.appendChild(nameSpan);
     bar.setAttribute("role", "button");
     bar.setAttribute("tabindex", "0");
     bar.setAttribute("aria-label", `Click to listen: ${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
 
-    bar.addEventListener("click", () => window.open(p.url, '_blank'));
+    // Navigate to the local mathematician page with fallback to RSS link
+    bar.addEventListener("click", async () => {
+      const page = `/mathematicians/${p.slug}.html`;
+      try {
+        // Try a HEAD request to see if the local page exists
+        const res = await fetch(page, { method: 'HEAD' });
+        if (res.ok) {
+          window.location.href = page;
+          return;
+        }
+      } catch (err) {
+        // network error or fetch blocked; fall through to open RSS link
+      }
+      // fallback: open the RSS-provided link in a new tab
+      window.open(p.url, '_blank');
+    });
+
+    // Asynchronously check whether the local page exists and update the indicator
+    (async () => {
+      try {
+        const res = await fetch(`/mathematicians/${p.slug}.html`, { method: 'HEAD' });
+        if (res.ok) {
+          icon.className = 'local-indicator present';
+          icon.title = 'Local page available';
+        } else {
+          icon.className = 'local-indicator absent';
+          icon.title = 'Local page not found';
+        }
+      } catch (err) {
+        icon.className = 'local-indicator absent';
+        icon.title = 'Local page not found';
+      }
+    })();
 
     const showTooltip = (e) => {
       tooltip.style.opacity = 1;
       tooltip.style.left = (e.pageX || (e.touches && e.touches[0] && e.touches[0].pageX)) + 12 + "px";
       tooltip.style.top = (e.pageY || (e.touches && e.touches[0] && e.touches[0].pageY)) + 12 + "px";
-      tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to listen</em>`;
+      tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to open page</em>`;
     };
 
     const hideTooltip = () => {

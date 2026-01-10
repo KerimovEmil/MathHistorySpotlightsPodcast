@@ -99,9 +99,25 @@
   z-index: 3;
 }
 
+/* Use flex to align the indicator and name centered inside the bar */
+.person {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+}
+
 .person:hover,
 .person:focus {
   filter: brightness(1.1);
+}
+
+.person .person-name {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
 }
 
 .tooltip {
@@ -138,6 +154,22 @@
   font-size: 18px;
   text-align: center;
 }
+
+/* Local page indicator (small circle shown before person name) */
+.local-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+.local-indicator.unknown { background: #94a3b8; }
+.local-indicator.present { background: #10b981; }
+.local-indicator.absent { background: #ef4444; }
+
+.person .person-name { vertical-align: middle; }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
