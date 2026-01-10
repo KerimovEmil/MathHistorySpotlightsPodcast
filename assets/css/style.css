@@ -278,29 +278,29 @@ header .container {
 
 
 /*-----------------------------------*\
-  #HERO
+  #INTRO (formerly hero)
 \*-----------------------------------*/
 
-.hero { padding: 140px 0 var(--section-padding); }
+.intro { padding: 140px 0 var(--section-padding); }
 
-/* Ensure pages without a hero section have space for the fixed header */
-.no-hero main { padding-top: 140px; }
+/* Ensure pages without an intro section have space for the fixed header */
+.no-intro main { padding-top: 140px; }
 
-.hero-title {
+.intro-title {
   width: 100%;
   max-width: 900px;
   margin-bottom: 20px;
   display: block;
 }
 
-.hero-text {
+.intro-text {
   color: var(--white);
   font-size: var(--fs-4);
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
-.hero .btn-primary { margin-bottom: 25px; }
+.intro .btn-primary { margin-bottom: 25px; }
 
 .btn-title {
   background: var(--gradient);
@@ -313,7 +313,7 @@ header .container {
   margin-bottom: 25px;
 }
 
-.hero .btn-link {
+.intro .btn-link {
   color: var(--white);
   font-size: var(--fs-4);
   display: flex;
@@ -330,9 +330,9 @@ header .container {
   transition: background var(--transition);
 }
 
-.hero .btn-link:is(:hover, :focus) { background-size: 100% 2px; }
+.intro .btn-link:is(:hover, :focus) { background-size: 100% 2px; }
 
-.hero .btn-link { margin-bottom: 15px; }
+.intro .btn-link { margin-bottom: 15px; }
 
 /* Icon sizing for subscribe buttons */
 .btn-link .btn-icon {
@@ -342,12 +342,12 @@ header .container {
   object-fit: contain;
 }
 
-.hero-banner {
+.intro-banner {
   display: block;
   margin-top: 20px;
 }
 
-.hero-banner img {
+.intro-banner img {
   width: 100%;
   max-width: 1200px;
   height: auto;
@@ -684,17 +684,17 @@ header .container {
 
 
   /**
-   * HERO
+   * INTRO
    */
 
-  .hero-title { width: 90%; }
+  .intro-title { width: 90%; }
 
-  .hero :is(.btn-primary, .btn-title, .btn-link) {
+  .intro :is(.btn-primary, .btn-title, .btn-link) {
     --fs-4: 16px;
     margin-bottom: 0;
   }
 
-  .hero-btn-group {
+  .intro-btn-group {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -712,13 +712,13 @@ header .container {
 
   /**
    * PODCAST
+  /**
+   * INTRO
    */
 
-  .podcast-list { grid-template-columns: 1fr 1fr; }
-
-
-
-  /**
+  .intro-content {
+    max-width: 680px;
+  }
    * NEWSLETTER
    */
 
@@ -775,15 +775,15 @@ header .container {
 
   .container { max-width: 980px; }
 
-  /* Make hero area use the full page width on large screens */
-  .hero > .container {
+  /* Make intro area use the full page width on large screens */
+  .intro > .container {
     max-width: 100%;
     padding-left: 48px;
     padding-right: 48px;
     margin-inline: 0;
   }
 
-  .hero-content {
+  .intro-content {
     max-width: 900px;
   }
 
@@ -860,10 +860,10 @@ header .container {
 
 
   /**
-   * HERO
+   * INTRO
    */
 
-  .hero-content {
+  .intro-content {
     max-width: 680px;
     margin-inline: auto;
   }
@@ -942,10 +942,10 @@ header .container {
 
 
   /**
-   * HERO
+   * INTRO
    */
 
-  .hero {
+  .intro {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -953,26 +953,26 @@ header .container {
     padding-top: 160px;
   }
 
-  .hero-content {
+  .intro-content {
     width: 95%;
     margin-inline: 0;
   }
 
-  .hero-title {
+  .intro-title {
     width: 100%;
     margin-bottom: 30px;
   }
 
-  .hero-text { margin-bottom: 25px; }
+  .intro-text { margin-bottom: 25px; }
 
-  .hero-btn-group {
+  .intro-btn-group {
     flex-wrap: wrap-reverse;
     gap: 35px;
   }
 
-  .hero :is(.btn-primary, .btn-title, .btn-link) { --fs-4: 17px; }
+  .intro :is(.btn-primary, .btn-title, .btn-link) { --fs-4: 17px; }
 
-  .hero-banner {
+  .intro-banner {
     display: block;
     width: 100%;
     padding-top: 100%;
@@ -1013,27 +1013,27 @@ header .container {
 
 }
 
-/* Large-screen hero layout: keep logo/banner proportional */
+/* Large-screen intro layout: keep logo/banner proportional */
 @media (min-width: 1024px) {
-  .hero {
+  .intro {
     display: flex;
     align-items: center;
     gap: 40px;
     padding-top: 120px;
   }
 
-  .hero-content {
+  .intro-content {
     flex: 1 1 100%;
     max-width: none;
   }
 
-  .hero-banner {
+  .intro-banner {
     flex: 1 1 60%;
     margin-top: 0;
     display: block;
   }
 
-  .hero-banner img {
+  .intro-banner img {
     width: 100%;
 /*    max-width: 720px;  */
     max-width: 900px;
