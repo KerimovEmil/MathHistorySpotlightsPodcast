@@ -9,8 +9,8 @@ class SiteHeader extends HTMLElement {
     -->
     <div class="overlay" data-overlay></div>
 
-    <a href="index.html" class="logo">
-      <img src="./assets/images/logo.svg" alt="Micro logo">
+    <a href="/index.html" class="logo">
+      <img src="${location.origin}/assets/images/logo.svg" alt="Micro logo">
     </a>
 
     <button class="nav-toggle-btn" data-nav-toggle-btn>
@@ -21,23 +21,27 @@ class SiteHeader extends HTMLElement {
       <ul class="navbar-list">
 
         <li class="navbar-item">
-          <a href="index.html#hero" class="navbar-link">Home</a>
+          <a href="/index.html#hero" class="navbar-link">Home</a>
         </li>
 
         <li class="navbar-item">
-          <a href="index.html#podcast" class="navbar-link">Podcast</a>
+          <a href="/index.html#podcast" class="navbar-link">Podcast</a>
         </li>
 
         <li class="navbar-item">
-          <a href="about.html" class="navbar-link">About</a>
+          <a href="/about.html" class="navbar-link">About</a>
         </li>
 
         <li class="navbar-item">
-          <a href="gallery.html" class="navbar-link">Gallery</a>
+          <a href="/gallery.html" class="navbar-link">Gallery</a>
         </li>
 
         <li class="navbar-item">
-          <a href="timeline.html" class="navbar-link">Timeline</a>
+          <a href="/timeline.html" class="navbar-link">Timeline</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="/mathematicians/index.html" class="navbar-link">Mathematicians</a>
         </li>
 
       </ul>
@@ -55,6 +59,21 @@ class SiteHeader extends HTMLElement {
   </div>
 </header>
 `;
+    // Ensure key asset/link URLs are absolute to avoid relative-path duplication
+    try {
+      const logoImg = this.querySelector('.logo img');
+      if (logoImg) logoImg.src = location.origin + '/assets/images/logo.svg';
+
+      const navLinks = this.querySelectorAll('.navbar-link');
+      navLinks.forEach((a) => {
+        const h = a.getAttribute('href') || '';
+        if (!h.startsWith('http') && !h.startsWith('/')) {
+          a.setAttribute('href', '/' + h);
+        }
+      });
+    } catch (e) {
+      // ignore
+    }
     // header / navbar behavior moved into component
     const elemToggleFunc = (elem) => elem.classList.toggle("active");
 
