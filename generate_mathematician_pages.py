@@ -85,6 +85,7 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
   <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{SITE_STYLE}">
   <link rel="stylesheet" href="{CSS_PATH}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
 </head>
 <body id="top">
 
@@ -92,8 +93,8 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
 
         <main class="card">
                 <a class="back" href="/index.html">← Back</a>
-        <div class="media">
-          {f'<img src="{image_path}" alt="{title}"/>' if image_path else ''}
+        <div class="media" id="gallery">
+          {f'<img src="{image_path}" alt="{title}" class="hero-image"/>' if image_path else ''}
         </div>
         {audio_html}
         <h1 class="name">{title}</h1>
@@ -107,6 +108,36 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script type="module" src="../assets/js/site-header.js"></script>
   <script type="module" src="../assets/js/site-footer.js"></script>
+  
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-lightbox.esm.min.js';
+    import PhotoSwipe from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.esm.min.js';
+
+    const img = document.querySelector('.hero-image');
+    if (img) {{
+        const lightbox = new PhotoSwipeLightbox({{
+            pswpModule: PhotoSwipe,
+            dataSource: [
+                {{
+                    src: img.src,
+                    w: img.naturalWidth || 1000,
+                    h: img.naturalHeight || 1000,
+                    alt: img.alt
+                }}
+            ]
+        }});
+        
+        lightbox.init();
+        
+        img.onclick = () => {{
+            // Updates dimensions just in case they weren't loaded at init
+            lightbox.options.dataSource[0].w = img.naturalWidth;
+            lightbox.options.dataSource[0].h = img.naturalHeight;
+            lightbox.loadAndOpen(0);
+        }};
+        img.style.cursor = 'zoom-in';
+    }}
+  </script>
 </body>
 </html>
 '''
@@ -132,10 +163,10 @@ def build_index(pages, out_index):
 
   <site-header></site-header>
 
-  <header class="index-header">
+  <div class="index-header">
         <h1>Mathematicians</h1>
         <p class="lead">Episodes and quick links to images and sources</p>
-  </header>
+  </div>
   <ul class="grid">
         {"\n    ".join(items)}
   </ul>
