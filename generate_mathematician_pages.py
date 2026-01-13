@@ -82,6 +82,7 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>{title}</title>
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{SITE_STYLE}">
   <link rel="stylesheet" href="{CSS_PATH}">
 </head>
@@ -123,6 +124,7 @@ def build_index(pages, out_index):
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mathematicians</title>
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{SITE_STYLE}">
   <link rel="stylesheet" href="{CSS_PATH}">
 </head>

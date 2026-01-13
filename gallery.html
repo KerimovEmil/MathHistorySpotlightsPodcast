@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery</title>
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/gallery.css">
-  
+
   <!-- PhotoSwipe CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
-    
+
   <!-- 
     - google font link
   -->
@@ -17,8 +19,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body id="top" class="no-intro">
-  <site-header></site-header>  
+  <site-header></site-header>
   <main>
     <article class="container">
       <section class="gallery">
@@ -35,12 +38,12 @@
   <script type="module">
     import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-lightbox.esm.min.js';
     import PhotoSwipe from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.esm.min.js';
-    
+
     // We attach these to window so our regular script can access them easily without needing a bundler setup
     window.PhotoSwipeLightbox = PhotoSwipeLightbox;
     window.PhotoSwipe = PhotoSwipe;
   </script>
-  
+
   <script src="./assets/js/gallery.js" type="module"></script>
 
   <!-- 
@@ -57,4 +60,5 @@
 
 
 </body>
+
 </html>
