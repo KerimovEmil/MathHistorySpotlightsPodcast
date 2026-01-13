@@ -5,7 +5,7 @@ class SiteFooter extends HTMLElement {
     <div class="footer-bottom">
       <div class="container">
         <p class="copyright">
-          &copy; Template from 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+          &copy; Math History Spotlights 2026 <a href="#">Math History Spotlights</a>. All Rights Reserved
         </p>
         <p class="footer-actions">
             <a href="#top" class="go-top" data-go-top title="Go to top">
@@ -19,7 +19,7 @@ class SiteFooter extends HTMLElement {
 `;
 
 
-   
+
 
     const goTop = this.querySelector('[data-go-top]');
     this._goTopHandler = (e) => {
