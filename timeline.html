@@ -1,341 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Math History Spotlights Timeline</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math History Spotlights Timeline</title>
 
-<!-- favicon link -->
-<link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <!-- favicon link -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
 
-<!-- custom css link -->
-<link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="./assets/css/timeline.css">
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/timeline.css">
 
-<!-- google font link -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
 
 </head>
 
 <body id="top" class="timeline-page">
 
-<!-- HEADER -->
-<site-header></site-header>
+  <!-- HEADER -->
+  <site-header></site-header>
 
-<main>
-  <article class="container">
-    <h2>Math History Spotlights — Timeline</h2>
+  <main>
+    <article class="container">
+      <h2>Math History Spotlights — Timeline</h2>
 
 
-<div class="controls">
-  Zoom:
-  <input type="range" id="zoom" min="1200" max="2600" value="1800">
-</div>
+      <div class="controls">
+        <div class="search-wrapper">
+          <ion-icon name="search-outline"></ion-icon>
+          <input type="text" id="search-input" placeholder="Find a mathematician..." aria-label="Search timeline">
+        </div>
 
-<div class="legend">
-  <h3>Eras:</h3>
-  <div class="legend-items">
-    <span class="legend-item renaissance">Renaissance (before 1600)</span>
-    <span class="legend-item enlightenment">Enlightenment (1600-1750)</span>
-    <span class="legend-item classical">Classical (1750-1900)</span>
-    <span class="legend-item modern">Modern (after 1900)</span>
-  </div>
-</div>
+        <div class="zoom-wrapper">
+          <button id="zoom-out" class="zoom-btn" aria-label="Zoom out"><ion-icon
+              name="remove-outline"></ion-icon></button>
+          <label for="zoom" class="sr-only">Zoom Level</label>
+          <input type="range" id="zoom" min="1200" max="4000" value="1800" step="100">
+          <button id="zoom-in" class="zoom-btn" aria-label="Zoom in"><ion-icon name="add-outline"></ion-icon></button>
+        </div>
+      </div>
 
-<div class="timeline-container">
-  <div class="timeline" id="timeline">
-    <div class="loading-message" id="loading">Loading timeline data...</div>
-  </div>
-</div>
+      <div class="legend">
+        <h3>Eras:</h3>
+        <div class="legend-items">
+          <span class="legend-item renaissance">Renaissance (before 1600)</span>
+          <span class="legend-item enlightenment">Enlightenment (1600-1750)</span>
+          <span class="legend-item classical">Classical (1750-1900)</span>
+          <span class="legend-item modern">Modern (after 1900)</span>
+        </div>
+      </div>
 
-<div class="tooltip" id="tooltip"></div>
+      <div class="timeline-container">
+        <div class="timeline" id="timeline">
+          <div class="loading-message" id="loading">Loading timeline data...</div>
+        </div>
+      </div>
 
-<script>
-const timeline = document.getElementById("timeline");
-const tooltip = document.getElementById("tooltip");
-const zoom = document.getElementById("zoom");
+      <div class="tooltip" id="tooltip"></div>
 
-let data = [];
-let minYear = 0;
-let maxYear = 0;
+      <script>
+        const timeline = document.getElementById("timeline");
+        const tooltip = document.getElementById("tooltip");
+        const zoom = document.getElementById("zoom");
+        const searchInput = document.getElementById("search-input");
+        const zoomInBtn = document.getElementById("zoom-in");
+        const zoomOutBtn = document.getElementById("zoom-out");
 
-// Function to determine era based on birth year
-function getEra(birthYear) {
-  if (birthYear < 1600) return "renaissance";
-  if (birthYear < 1750) return "enlightenment";
-  if (birthYear < 1900) return "classical";
-  return "modern";
-}
+        let data = [];
+        let minYear = 0;
+        let maxYear = 0;
 
-// Slugify a name to match generated mathematician page filenames
-function slugify(name) {
-  if (!name) return '';
-  // normalize unicode to decompose diacritics, remove them, then slugify
-  return name.normalize('NFKD')
-    .replace(/\p{Diacritic}/gu, '')
-    .replace(/[^\p{L}0-9]+/gu, '-')
-    .replace(/^-+|-+$/g, '')
-    .toLowerCase();
-}
+        // -- Event Listeners for New Controls --
 
-// Function to parse episode title and extract mathematician data
-function parseTitle(title) {
-  // Try to extract name and years from patterns like:
-  // "Leonhard Euler 1707 - 1783"
-  // "Charles Babbage 1791 Augusta Ada Byron King, Countess of Lovelace 1815 - 1852"
-  
-  // Match pattern: name followed by year - year
-  const match = title.match(/^(.+?)\s+(\d{4})\s*-\s*(\d{4})/);
-  if (match) {
-    return {
-      name: match[1].trim(),
-      b: parseInt(match[2]),
-      d: parseInt(match[3])
-    };
-  }
-  
-  // Try alternative pattern for combined entries
-  const match2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*-\s*(\d{4})/);
-  if (match2) {
-    return {
-      name: match2[2].trim(),
-      b: parseInt(match2[3]),
-      d: parseInt(match2[4])
-    };
-  }
-  
-  return null;
-}
+        // Search
+        searchInput.addEventListener("input", () => {
+          render(+zoom.value);
+        });
 
-// Fetch and parse RSS feed with caching
-async function fetchEpisodes() {
-  const cacheKey = 'timelineData';
-  const cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours
-  const cached = localStorage.getItem(cacheKey);
-  const now = Date.now();
+        // Zoom Buttons
+        zoomInBtn.addEventListener("click", () => {
+          zoom.stepUp();
+          zoom.dispatchEvent(new Event("input"));
+        });
 
-  if (cached) {
-    const { data: cachedData, timestamp } = JSON.parse(cached);
-    if (now - timestamp < cacheExpiry) {
-      // ensure cached items have slugs (older cache may not)
-      data = (cachedData || []).map(item => ({ ...item, slug: item.slug || slugify(item.name) }));
-      minYear = Math.min(...data.map(d => d.b));
-      maxYear = Math.max(...data.map(d => d.d));
-      render(+zoom.value);
-      return;
-    }
-  }
+        zoomOutBtn.addEventListener("click", () => {
+          zoom.stepDown();
+          zoom.dispatchEvent(new Event("input"));
+        });
 
-  try {
-    const response = await fetch('https://anchor.fm/s/10cdf4708/podcast/rss');
-    if (!response.ok) throw new Error('Network response was not ok');
-    const text = await response.text();
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(text, "text/xml");
+        // Function to determine era based on birth year
+        function getEra(birthYear) {
+          if (birthYear < 1600) return "renaissance";
+          if (birthYear < 1750) return "enlightenment";
+          if (birthYear < 1900) return "classical";
+          return "modern";
+        }
 
-    const items = xmlDoc.querySelectorAll("item");
-    const parsedData = [];
+        // Slugify a name to match generated mathematician page filenames
+        function slugify(name) {
+          if (!name) return '';
+          // normalize unicode to decompose diacritics, remove them, then slugify
+          return name.normalize('NFKD')
+            .replace(/\p{Diacritic}/gu, '')
+            .replace(/[^\p{L}0-9]+/gu, '-')
+            .replace(/^-+|-+$/g, '')
+            .toLowerCase();
+        }
 
-    items.forEach(item => {
-      const titleElement = item.querySelector("title");
-      const linkElement = item.querySelector("link");
-      if (titleElement && linkElement) {
-        const title = titleElement.textContent;
-        const url = linkElement.textContent;
-        const parsed = parseTitle(title);
-        if (parsed) {
-          parsedData.push({
-            ...parsed,
-            era: getEra(parsed.b),
-            note: `Episode: ${title}`,
-            // compute slug for local mathematician page
-            slug: slugify(parsed.name),
-            // keep original url as fallback
-            url: url
+        // Function to parse episode title and extract mathematician data
+        function parseTitle(title) {
+          // Try to extract name and years from patterns like:
+          // "Leonhard Euler 1707 - 1783"
+          // "Charles Babbage 1791 Augusta Ada Byron King, Countess of Lovelace 1815 - 1852"
+
+          // Match pattern: name followed by year - year
+          const match = title.match(/^(.+?)\s+(\d{4})\s*-\s*(\d{4})/);
+          if (match) {
+            return {
+              name: match[1].trim(),
+              b: parseInt(match[2]),
+              d: parseInt(match[3])
+            };
+          }
+
+          // Try alternative pattern for combined entries
+          const match2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*-\s*(\d{4})/);
+          if (match2) {
+            return {
+              name: match2[2].trim(),
+              b: parseInt(match2[3]),
+              d: parseInt(match2[4])
+            };
+          }
+
+          return null;
+        }
+
+        // Fetch and parse RSS feed with caching
+        async function fetchEpisodes() {
+          const cacheKey = 'timelineData';
+          const cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours
+          const cached = localStorage.getItem(cacheKey);
+          const now = Date.now();
+
+          if (cached) {
+            const { data: cachedData, timestamp } = JSON.parse(cached);
+            if (now - timestamp < cacheExpiry) {
+              // ensure cached items have slugs (older cache may not)
+              data = (cachedData || []).map(item => ({ ...item, slug: item.slug || slugify(item.name) }));
+              minYear = Math.min(...data.map(d => d.b));
+              maxYear = Math.max(...data.map(d => d.d));
+              render(+zoom.value);
+              return;
+            }
+          }
+
+          try {
+            const response = await fetch('https://anchor.fm/s/10cdf4708/podcast/rss');
+            if (!response.ok) throw new Error('Network response was not ok');
+            const text = await response.text();
+            const parser = new DOMParser();
+            const xmlDoc = parser.parseFromString(text, "text/xml");
+
+            const items = xmlDoc.querySelectorAll("item");
+            const parsedData = [];
+
+            items.forEach(item => {
+              const titleElement = item.querySelector("title");
+              const linkElement = item.querySelector("link");
+              if (titleElement && linkElement) {
+                const title = titleElement.textContent;
+                const url = linkElement.textContent;
+                const parsed = parseTitle(title);
+                if (parsed) {
+                  parsedData.push({
+                    ...parsed,
+                    era: getEra(parsed.b),
+                    note: `Episode: ${title}`,
+                    // compute slug for local mathematician page
+                    slug: slugify(parsed.name),
+                    // keep original url as fallback
+                    url: url
+                  });
+                }
+              }
+            });
+
+            // Sort by birth year
+            parsedData.sort((a, b) => a.b - b.b);
+
+            data = parsedData;
+            localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: now }));
+
+            if (data.length > 0) {
+              minYear = Math.min(...data.map(d => d.b));
+              maxYear = Math.max(...data.map(d => d.d));
+              render(+zoom.value);
+            } else {
+              timeline.innerHTML = '<div style="padding: 20px; color: var(--heliotrope-gray);">No timeline data available.</div>';
+            }
+          } catch (error) {
+            console.error("Error fetching episodes:", error);
+            const cachedFallback = cached ? JSON.parse(cached).data : null;
+            if (cachedFallback) {
+              data = cachedFallback;
+              minYear = Math.min(...data.map(d => d.b));
+              maxYear = Math.max(...data.map(d => d.d));
+              render(+zoom.value);
+              timeline.insertAdjacentHTML('afterbegin', '<div style="padding: 10px; background: #ef4444; color: white; margin-bottom: 10px;">Using cached data. Refresh to try loading latest.</div>');
+            } else {
+              timeline.innerHTML = '<div style="padding: 20px; color: #ef4444;">Unable to load timeline data. Please check your internet connection and try again later.</div>';
+            }
+          }
+        }
+
+        function render(width) {
+          if (data.length === 0) return;
+
+          timeline.style.width = width + "px";
+          timeline.innerHTML = '';
+
+          const yearToX = y => (maxYear === minYear ? 0 : ((y - minYear) / (maxYear - minYear)) * width);
+
+          // Create axis first so bars and ticks can be positioned relative to it
+          const axisEl = document.createElement('div');
+          axisEl.className = 'axis';
+          axisEl.style.pointerEvents = 'none';
+          axisEl.style.zIndex = '0';
+          timeline.appendChild(axisEl);
+
+          // Row/spacing values used for vertical layout
+          const rowHeight = 32; // Increased for better spacing
+          const barHeight = 28;
+
+          // Filter data based on search
+          const query = searchInput.value.toLowerCase();
+          const filteredData = data.filter(p =>
+            p.name.toLowerCase().includes(query) ||
+            (p.note && p.note.toLowerCase().includes(query))
+          );
+
+          if (filteredData.length === 0 && query.length > 0) {
+            timeline.innerHTML += '<div class="loading-message" style="top: 100px;">No results found.</div>';
+            return;
+          }
+
+          // Add bars
+          filteredData.forEach((p, i) => {
+            const bar = document.createElement("div");
+            bar.className = `person ${p.era}`;
+            bar.style.left = yearToX(p.b) + "px";
+            bar.style.width = (yearToX(p.d) - yearToX(p.b)) + "px";
+            bar.style.top = (i * rowHeight) + "px";
+            // ensure bars render above the axis
+            bar.style.zIndex = '2';
+            bar.style.animationDelay = (i * 0.03) + "s";
+            // add local-page indicator and name span
+            const icon = document.createElement('span');
+            icon.className = 'local-indicator unknown';
+            icon.title = 'Checking for local page...';
+            bar.appendChild(icon);
+
+            const nameSpan = document.createElement('span');
+            nameSpan.className = 'person-name';
+            nameSpan.textContent = `${p.name} (${p.b}–${p.d})`;
+            bar.appendChild(nameSpan);
+            bar.setAttribute("role", "button");
+            bar.setAttribute("tabindex", "0");
+            bar.setAttribute("aria-label", `Click to listen: ${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
+
+            // Navigate to the local mathematician page with fallback to RSS link
+            bar.addEventListener("click", async () => {
+              const page = `/mathematicians/${p.slug}.html`;
+              try {
+                // Try a HEAD request to see if the local page exists
+                const res = await fetch(page, { method: 'HEAD' });
+                if (res.ok) {
+                  window.location.href = page;
+                  return;
+                }
+              } catch (err) {
+                // network error or fetch blocked; fall through to open RSS link
+              }
+              // fallback: open the RSS-provided link in a new tab
+              window.open(p.url, '_blank');
+            });
+
+            // Asynchronously check whether the local page exists and update the indicator
+            (async () => {
+              try {
+                const res = await fetch(`/mathematicians/${p.slug}.html`, { method: 'HEAD' });
+                if (res.ok) {
+                  icon.className = 'local-indicator present';
+                  icon.title = 'Local page available';
+                } else {
+                  icon.className = 'local-indicator absent';
+                  icon.title = 'Local page not found';
+                }
+              } catch (err) {
+                icon.className = 'local-indicator absent';
+                icon.title = 'Local page not found';
+              }
+            })();
+
+            const showTooltip = (e) => {
+              tooltip.style.opacity = 1;
+              tooltip.style.left = (e.pageX || (e.touches && e.touches[0] && e.touches[0].pageX)) + 12 + "px";
+              tooltip.style.top = (e.pageY || (e.touches && e.touches[0] && e.touches[0].pageY)) + 12 + "px";
+              tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to open page</em>`;
+            };
+
+            const hideTooltip = () => {
+              tooltip.style.opacity = 0;
+            };
+
+            bar.addEventListener("mousemove", showTooltip);
+            bar.addEventListener("touchstart", showTooltip);
+            bar.addEventListener("mouseleave", hideTooltip);
+            bar.addEventListener("touchend", hideTooltip);
+            bar.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                showTooltip({ pageX: bar.offsetLeft + bar.offsetWidth / 2, pageY: bar.offsetTop });
+                setTimeout(hideTooltip, 3000); // Hide after 3 seconds
+              }
+            });
+            bar.addEventListener("focus", (e) => {
+              showTooltip({ pageX: bar.offsetLeft + bar.offsetWidth / 2, pageY: bar.offsetTop });
+            });
+            bar.addEventListener("blur", hideTooltip);
+
+            timeline.appendChild(bar);
           });
+          // Measure lowest bar and ensure timeline height leaves room for axis/ticks at bottom
+          const bars = timeline.querySelectorAll('.person');
+          let lowest = 0;
+          bars.forEach(b => {
+            const bottom = b.offsetTop + b.offsetHeight;
+            if (bottom > lowest) lowest = bottom;
+          });
+
+          const axisBottomCss = 60; // must match .axis bottom in CSS
+          const ticksBottomCss = 36; // must match .year bottom in CSS
+          const paddingBelow = 12;
+          const minTimelineHeight = 300;
+          const neededHeight = Math.max(minTimelineHeight, lowest + paddingBelow + axisBottomCss + 20);
+          timeline.style.height = neededHeight + 'px';
+
+          // Add year ticks (CSS bottom places them below the axis)
+          for (let y = minYear; y <= maxYear; y += 50) {
+            const tick = document.createElement("div");
+            tick.className = "year";
+            tick.style.left = yearToX(y) + "px";
+            tick.textContent = y;
+            timeline.appendChild(tick);
+          }
         }
-      }
-    });
 
-    // Sort by birth year
-    parsedData.sort((a, b) => a.b - b.b);
+        zoom.addEventListener("input", e => render(+e.target.value));
 
-    data = parsedData;
-    localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: now }));
+        // Initialize by fetching episodes
+        fetchEpisodes();
+      </script>
 
-    if (data.length > 0) {
-      minYear = Math.min(...data.map(d => d.b));
-      maxYear = Math.max(...data.map(d => d.d));
-      render(+zoom.value);
-    } else {
-      timeline.innerHTML = '<div style="padding: 20px; color: var(--heliotrope-gray);">No timeline data available.</div>';
-    }
-  } catch (error) {
-    console.error("Error fetching episodes:", error);
-    const cachedFallback = cached ? JSON.parse(cached).data : null;
-    if (cachedFallback) {
-      data = cachedFallback;
-      minYear = Math.min(...data.map(d => d.b));
-      maxYear = Math.max(...data.map(d => d.d));
-      render(+zoom.value);
-      timeline.insertAdjacentHTML('afterbegin', '<div style="padding: 10px; background: #ef4444; color: white; margin-bottom: 10px;">Using cached data. Refresh to try loading latest.</div>');
-    } else {
-      timeline.innerHTML = '<div style="padding: 20px; color: #ef4444;">Unable to load timeline data. Please check your internet connection and try again later.</div>';
-    }
-  }
-}
+    </article>
+  </main>
 
-function render(width) {
-  if (data.length === 0) return;
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  timeline.style.width = width + "px";
-  timeline.innerHTML = '';
-
-  const yearToX = y => (maxYear === minYear ? 0 : ((y - minYear) / (maxYear - minYear)) * width);
-
-  // Create axis first so bars and ticks can be positioned relative to it
-  const axisEl = document.createElement('div');
-  axisEl.className = 'axis';
-  axisEl.style.pointerEvents = 'none';
-  axisEl.style.zIndex = '0';
-  timeline.appendChild(axisEl);
-
-  // Row/spacing values used for vertical layout
-  const rowHeight = 28;
-  const barHeight = 24;
-
-  // Add bars
-  data.forEach((p, i) => {
-    const bar = document.createElement("div");
-    bar.className = `person ${p.era}`;
-    bar.style.left = yearToX(p.b) + "px";
-    bar.style.width = (yearToX(p.d) - yearToX(p.b)) + "px";
-    bar.style.top = (i * rowHeight) + "px";
-    // ensure bars render above the axis
-    bar.style.zIndex = '2';
-    bar.style.animationDelay = (i * 0.03) + "s";
-    // add local-page indicator and name span
-    const icon = document.createElement('span');
-    icon.className = 'local-indicator unknown';
-    icon.title = 'Checking for local page...';
-    bar.appendChild(icon);
-
-    const nameSpan = document.createElement('span');
-    nameSpan.className = 'person-name';
-    nameSpan.textContent = `${p.name} (${p.b}–${p.d})`;
-    bar.appendChild(nameSpan);
-    bar.setAttribute("role", "button");
-    bar.setAttribute("tabindex", "0");
-    bar.setAttribute("aria-label", `Click to listen: ${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
-
-    // Navigate to the local mathematician page with fallback to RSS link
-    bar.addEventListener("click", async () => {
-      const page = `/mathematicians/${p.slug}.html`;
-      try {
-        // Try a HEAD request to see if the local page exists
-        const res = await fetch(page, { method: 'HEAD' });
-        if (res.ok) {
-          window.location.href = page;
-          return;
-        }
-      } catch (err) {
-        // network error or fetch blocked; fall through to open RSS link
-      }
-      // fallback: open the RSS-provided link in a new tab
-      window.open(p.url, '_blank');
-    });
-
-    // Asynchronously check whether the local page exists and update the indicator
-    (async () => {
-      try {
-        const res = await fetch(`/mathematicians/${p.slug}.html`, { method: 'HEAD' });
-        if (res.ok) {
-          icon.className = 'local-indicator present';
-          icon.title = 'Local page available';
-        } else {
-          icon.className = 'local-indicator absent';
-          icon.title = 'Local page not found';
-        }
-      } catch (err) {
-        icon.className = 'local-indicator absent';
-        icon.title = 'Local page not found';
-      }
-    })();
-
-    const showTooltip = (e) => {
-      tooltip.style.opacity = 1;
-      tooltip.style.left = (e.pageX || (e.touches && e.touches[0] && e.touches[0].pageX)) + 12 + "px";
-      tooltip.style.top = (e.pageY || (e.touches && e.touches[0] && e.touches[0].pageY)) + 12 + "px";
-      tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to open page</em>`;
-    };
-
-    const hideTooltip = () => {
-      tooltip.style.opacity = 0;
-    };
-
-    bar.addEventListener("mousemove", showTooltip);
-    bar.addEventListener("touchstart", showTooltip);
-    bar.addEventListener("mouseleave", hideTooltip);
-    bar.addEventListener("touchend", hideTooltip);
-    bar.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
-        e.preventDefault();
-        showTooltip({ pageX: bar.offsetLeft + bar.offsetWidth / 2, pageY: bar.offsetTop });
-        setTimeout(hideTooltip, 3000); // Hide after 3 seconds
-      }
-    });
-    bar.addEventListener("focus", (e) => {
-      showTooltip({ pageX: bar.offsetLeft + bar.offsetWidth / 2, pageY: bar.offsetTop });
-    });
-    bar.addEventListener("blur", hideTooltip);
-
-    timeline.appendChild(bar);
-  });
-  // Measure lowest bar and ensure timeline height leaves room for axis/ticks at bottom
-  const bars = timeline.querySelectorAll('.person');
-  let lowest = 0;
-  bars.forEach(b => {
-    const bottom = b.offsetTop + b.offsetHeight;
-    if (bottom > lowest) lowest = bottom;
-  });
-
-  const axisBottomCss = 60; // must match .axis bottom in CSS
-  const ticksBottomCss = 36; // must match .year bottom in CSS
-  const paddingBelow = 12;
-  const minTimelineHeight = 300;
-  const neededHeight = Math.max(minTimelineHeight, lowest + paddingBelow + axisBottomCss + 20);
-  timeline.style.height = neededHeight + 'px';
-
-  // Add year ticks (CSS bottom places them below the axis)
-  for (let y = minYear; y <= maxYear; y += 50) {
-    const tick = document.createElement("div");
-    tick.className = "year";
-    tick.style.left = yearToX(y) + "px";
-    tick.textContent = y;
-    timeline.appendChild(tick);
-  }
-}
-
-zoom.addEventListener("input", e => render(+e.target.value));
-
-// Initialize by fetching episodes
-fetchEpisodes();
-</script>
-
-  </article>
-</main>
-
-<!-- ionicon link -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-<!-- web components -->
-<script type="module" src="./assets/js/site-header.js"></script>
-<script type="module" src="./assets/js/site-footer.js"></script>
+  <!-- web components -->
+  <script type="module" src="./assets/js/site-header.js"></script>
+  <script type="module" src="./assets/js/site-footer.js"></script>
 
 </body>
+
 </html>
