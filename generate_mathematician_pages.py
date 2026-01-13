@@ -92,7 +92,7 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
                 <site-header></site-header>
 
         <main class="card">
-                <a class="back" href="/index.html">← Back</a>
+                <a class="back" href="/mathematicians/index.html">← Back to Mathematicians</a>
         <div class="media" id="gallery">
           {f'<img src="{image_path}" alt="{title}" class="hero-image"/>' if image_path else ''}
         </div>
