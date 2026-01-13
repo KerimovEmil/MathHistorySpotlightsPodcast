@@ -47,7 +47,7 @@ class PodcastSection extends HTMLElement {
         let image = (itunesImageEl && itunesImageEl.getAttribute('href'))
           || (mediaThumbEl && mediaThumbEl.getAttribute('url'))
           || xml.querySelector('channel > image > url')?.textContent
-          || './assets/images/math_history_logo.png';
+          || './assets/images/math_history_logo.avif';
 
         const alt = title || 'Episode';
         const epiLabel = this.extractEpisodeLabel(item) || '';
@@ -71,7 +71,7 @@ class PodcastSection extends HTMLElement {
         `;
 
         const img = article.querySelector('img');
-        img.addEventListener('error', () => { img.src = './assets/images/math_history_logo.png'; });
+        img.addEventListener('error', () => { img.src = './assets/images/math_history_logo.avif'; });
 
         li.appendChild(article);
         this.list.appendChild(li);
@@ -96,7 +96,7 @@ class PodcastSection extends HTMLElement {
   }
 
   escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"})[c]);
+    return String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": "&#39;" })[c]);
   }
 }
 

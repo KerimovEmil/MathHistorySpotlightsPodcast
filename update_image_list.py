@@ -7,7 +7,7 @@ json_file_path = os.path.join(image_dir, "image-list.json")
 
 # Get a list of all files in the directory
 try:
-    image_files = [f for f in os.listdir(image_dir) if os.path.isfile(os.path.join(image_dir, f)) and f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif'))]
+    image_files = [f for f in os.listdir(image_dir) if os.path.isfile(os.path.join(image_dir, f)) and f.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.avif'))]
     # Sort files alphabetically to ensure consistent order
     image_files.sort()
 except FileNotFoundError:
