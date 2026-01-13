@@ -6,6 +6,9 @@
   <title>Image Gallery</title>
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/gallery.css">
+  
+  <!-- PhotoSwipe CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
     
   <!-- 
     - google font link
@@ -19,21 +22,26 @@
   <main>
     <article class="container">
       <section class="gallery">
-        <div class="gallery-grid">
+        <!-- Gallery Grid Container -->
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Images will be injected here by JS -->
         </div>
       </section>
-
-      <div id="lightbox" class="lightbox">
-        <span class="close-btn">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <a class="prev-btn">&#10094;</a>
-        <a class="next-btn">&#10095;</a>
-      </div>
     </article>
   </main>
   <site-footer></site-footer>
 
-  <script src="./assets/js/gallery.js"></script>
+  <!-- PhotoSwipe Module Script -->
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-lightbox.esm.min.js';
+    import PhotoSwipe from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.esm.min.js';
+    
+    // We attach these to window so our regular script can access them easily without needing a bundler setup
+    window.PhotoSwipeLightbox = PhotoSwipeLightbox;
+    window.PhotoSwipe = PhotoSwipe;
+  </script>
+  
+  <script src="./assets/js/gallery.js" type="module"></script>
 
   <!-- 
     - ionicon link
