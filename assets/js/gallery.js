@@ -2,81 +2,97 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const galleryGrid = document.getElementById('gallery-grid');
-  const imageListUrl = './assets/images/episodes/image-list.json';
-  const imageFolder = './assets/images/episodes/';
+  const feedUrl = '/assets/feed.xml';
 
-  // Fetch the list of images
-  fetch(imageListUrl)
+  // Fetch the RSS feed
+  fetch(feedUrl)
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
-      return response.json();
+      return response.text();
     })
-    .then(images => {
-      loadGallery(images);
+    .then(str => new DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+      loadGalleryFromFeed(data);
     })
     .catch(error => {
-      console.error('Error loading gallery manifest:', error);
+      console.error('Error loading gallery feed:', error);
       galleryGrid.innerHTML = '<p class="error-msg">Sorry, the gallery could not be loaded.</p>';
     });
 
-  function loadGallery(images) {
-    if (!images || images.length === 0) {
-      galleryGrid.innerHTML = '<p>No images found.</p>';
+  function loadGalleryFromFeed(xml) {
+    const items = Array.from(xml.querySelectorAll("item"));
+    if (!items.length) {
+      galleryGrid.innerHTML = '<p>No images found in feed.</p>';
       return;
     }
 
-    const items = [];
+    const processedImages = new Set();
+    const galleryItems = [];
 
-    images.forEach((filename, index) => {
-      // Create HTML structure
-      const validFilename = filename; // Assuming filename is safe or sanitized
+    items.forEach((item, index) => {
+      // Extract image
+      const itunesImage = item.getElementsByTagName("itunes:image")[0];
+      const mediaThumb = item.getElementsByTagName("media:thumbnail")[0];
+      const imgUrl = (itunesImage && itunesImage.getAttribute("href")) ||
+        (mediaThumb && mediaThumb.getAttribute("url"));
 
-      const itemDiv = document.createElement('div');
-      itemDiv.className = 'gallery-item';
+      if (imgUrl && !processedImages.has(imgUrl)) {
+        processedImages.add(imgUrl);
 
-      const img = document.createElement('img');
-      img.src = `${imageFolder}${validFilename}`;
-      img.alt = validFilename.replace(/\.[^/.]+$/, ""); // Remove extension for alt text
-      img.loading = "lazy"; // Native lazy loading
+        const title = item.querySelector("title")?.textContent || "Untitled";
 
-      // We wrap the image in a figure for semantic correctness and PhotoSwipe usage potentially
-      const figure = document.createElement('figure');
-      figure.appendChild(img);
-      itemDiv.appendChild(figure);
-      galleryGrid.appendChild(itemDiv);
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'gallery-item';
 
-      // Add click event to open lightbox
-      img.addEventListener('click', (e) => {
-        e.preventDefault();
-        openPhotoSwipe(index);
-      });
+        const img = document.createElement('img');
+        img.src = imgUrl; // The feed.xml contains relative local paths now
+        img.alt = title;
+        img.loading = "lazy";
+
+        const figure = document.createElement('figure');
+        figure.appendChild(img);
+        itemDiv.appendChild(figure);
+        galleryGrid.appendChild(itemDiv);
+
+        // Add to lightbox list
+        galleryItems.push({
+          src: imgUrl,
+          title: title,
+          element: img
+        });
+
+        // Click handler
+        img.addEventListener('click', (e) => {
+          e.preventDefault();
+          // Find the current index in the filtered list
+          const idx = galleryItems.findIndex(i => i.src === imgUrl);
+          openPhotoSwipe(galleryItems, idx);
+        });
+      }
     });
+
+    if (galleryItems.length === 0) {
+      galleryGrid.innerHTML = '<p>No images found.</p>';
+    }
   }
 
-  function openPhotoSwipe(startIndex) {
-    const domImages = document.querySelectorAll('.gallery-item img');
-
-    // Create the items array for PhotoSwipe
-    // We must read current dimensions from the loaded images
-    const items = Array.from(domImages).map(img => {
-      return {
-        src: img.src,
-        w: img.naturalWidth || 1000,
-        h: img.naturalHeight || 750,
-        alt: img.alt
-      };
-    });
+  function openPhotoSwipe(items, startIndex) {
+    const dataSource = items.map(i => ({
+      src: i.src,
+      w: i.element.naturalWidth || 1000,
+      h: i.element.naturalHeight || 750,
+      alt: i.title
+    }));
 
     const options = {
-      dataSource: items,
+      dataSource: dataSource,
       pswpModule: window.PhotoSwipe
     };
 
     const lightbox = new window.PhotoSwipeLightbox(options);
-
     lightbox.init();
-    lightbox.loadAndOpen(startIndex); // Correctly triggers the opening at the specific index
+    lightbox.loadAndOpen(startIndex);
   }
 });

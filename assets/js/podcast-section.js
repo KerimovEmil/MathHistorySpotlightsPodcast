@@ -4,7 +4,7 @@ class PodcastSection extends HTMLElement {
   }
 
   connectedCallback() {
-    this.src = this.getAttribute('src');
+    this.src = this.getAttribute('src') || '/assets/feed.xml';
     this.innerHTML = '<ul class="podcast-list"><li class="loading">Loading episodes...</li></ul>';
     this.list = this.querySelector('.podcast-list');
     if (!this.src) {

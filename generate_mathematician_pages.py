@@ -185,12 +185,21 @@ def build_index(pages, out_index):
                 f.write(html)
 
 
+OUT_FEED = os.path.join(ROOT, "assets", "feed.xml")
+
 def main():
         os.makedirs(OUT_DIR, exist_ok=True)
         image_files = list_image_files()
 
-        with urllib.request.urlopen(RSS_URL) as resp:
-                xml = resp.read()
+        print(f"Reading RSS from {OUT_FEED}...")
+        if os.path.exists(OUT_FEED):
+             with open(OUT_FEED, "r", encoding="utf-8") as f:
+                 xml = f.read()
+        else:
+             print("Local feed not found, fetching from remote...")
+             with urllib.request.urlopen(RSS_URL) as resp:
+                 xml = resp.read()
+        
         root = ET.fromstring(xml)
 
         pages = []
@@ -216,10 +225,12 @@ def main():
 
         search_data = []
         for p in pages:
+                # Strip HTML tags from description for search index
+                clean_desc = re.sub(r'<[^>]+>', '', p["description"]).strip()
                 search_data.append({
                         "title": p["title"],
                         "url": f"/mathematicians/{p['file']}",
-                        "description": p["description"],
+                        "description": clean_desc,
                         "image": p["image"]
                 })
     

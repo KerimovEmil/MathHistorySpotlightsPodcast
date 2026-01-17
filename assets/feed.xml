@@ -1,0 +1,666 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:ns3="https://podcastindex.org/namespace/1.0" version="2.0">
+	<channel>
+		<title>Math History Spotlights</title>
+		<description>Highlighting the lives of some of histories greatest mathematicians.
+
+These episodes are created through the use of the great resources from https://mathshistory.st-andrews.ac.uk/Biographies and Google's Notebook LLM.
+
+See more on https://www.mathhistoryspotlights.com/
+</description>
+		<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum</link>
+		<generator>Anchor Podcasts</generator>
+		<lastBuildDate>Sat, 17 Jan 2026 15:34:59 GMT</lastBuildDate>
+		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
+		<author>MathHistoryMuseum</author>
+		<copyright>MathHistoryMuseum</copyright>
+		<language>en-ca</language>
+		<atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+		<itunes:author>MathHistoryMuseum</itunes:author>
+		<itunes:summary>Highlighting the lives of some of histories greatest mathematicians.
+
+These episodes are created through the use of the great resources from https://mathshistory.st-andrews.ac.uk/Biographies and Google's Notebook LLM.
+
+See more on https://www.mathhistoryspotlights.com/
+</itunes:summary>
+		<itunes:type>episodic</itunes:type>
+		<itunes:owner>
+			<itunes:name>MathHistoryMuseum</itunes:name>
+			<itunes:email>mathhistorymuseum@gmail.com</itunes:email>
+		</itunes:owner>
+		<itunes:explicit>false</itunes:explicit>
+		<itunes:category text="History" />
+		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Evangelista Torricelli 1608 - 1647</title>
+			<description>&lt;p&gt;The life of Evangelista Torricelli - Galileo&amp;#39;s Successor and the Vacuum&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Torricelli/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Evangelista-Torricelli-1608---1647-e3dijjh</link>
+			<guid isPermaLink="false">a35e4d2c-548c-4669-a942-800a29eb4478</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sat, 17 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113904689/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-13%2Fae6a5e11-2b3b-eb37-9852-b1815d1ecfd9.m4a" length="22594223" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6K8LVxQtSHhd0Q5gcPaY1J/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Evangelista Torricelli - Galileo&amp;#39;s Successor and the Vacuum&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Torricelli/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:42</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Evangelista Torricelli.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>John Wallis 1616 - 1703</title>
+			<description>&lt;p&gt;The life of John Wallis - the Infinity of Genius. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Wallis/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/John-Wallis-1616---1703-e3dija6</link>
+			<guid isPermaLink="false">e2f5bb57-4e95-4d34-a116-a455bd70b9bb</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 16 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113904390/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-13%2F5d136ae0-3604-6a79-8b89-2671cdca0361.m4a" length="22512796" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/7E16IS8jVoclZzdXYkXDDf/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of John Wallis - the Infinity of Genius. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Wallis/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:39</itunes:duration>
+			<itunes:image href="/assets/images/episodes/John Wallis.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Srinivasa Aiyangar Ramanujan 1887 - 1920</title>
+			<description>&lt;p&gt;The life of Srinivasa Aiyangar Ramanujan - Genius and System Failure.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Srinivasa-Aiyangar-Ramanujan-1887---1920-e3dg8ec</link>
+			<guid isPermaLink="false">abbaddb8-2bc3-47d7-afbf-a6ba6f3ee01e</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 15 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113827724/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-11%2F1f3b614e-e2f4-db4f-e846-65731498e319.m4a" length="22931253" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/71RaQQ6DdsQ9Aphz1aVHKK/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Srinivasa Aiyangar Ramanujan - Genius and System Failure.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:52</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Srinivasa Aiyangar Ramanujan.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>William Rowan Hamilton 1805 - 1865</title>
+			<description>&lt;p&gt;The life of William Rowan Hamilton - Mathematician Poet Paradox&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hamilton/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/William-Rowan-Hamilton-1805---1865-e3deiah</link>
+			<guid isPermaLink="false">e062cec6-499b-4c48-9b23-9c5dfd57c8fe</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 14 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113772305/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-10%2F1d63e706-2d0a-1124-e857-358d3ed6fe25.m4a" length="28034636" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6vK212ux9PZ2OxNI6wAbAD/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of William Rowan Hamilton - Mathematician Poet Paradox&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hamilton/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:14:31</itunes:duration>
+			<itunes:image href="/assets/images/episodes/William Rowan Hamilton.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Augustus De Morgan 1806 - 1871</title>
+			<description>&lt;p&gt;The life of Augustus De Morgan - Mathematical Logic and Pure Principle&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/De_Morgan/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Augustus-De-Morgan-1806---1871-e3dei4u</link>
+			<guid isPermaLink="false">0ee66017-52b2-4edb-b4dc-640f2835cebe</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 13 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113772126/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-10%2F55c7dd2e-69d2-846b-9835-ab0868cb7942.m4a" length="24434875" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6TGr0QJMSRzbumtXdF6s49/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Augustus De Morgan - Mathematical Logic and Pure Principle&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/De_Morgan/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:39</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Augustus De Morgan.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>George Boole 1815 - 1864</title>
+			<description>&lt;p&gt;The life of George Boole - The Inventor of Digital Logic&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Boole/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/George-Boole-1815---1864-e3dehpd</link>
+			<guid isPermaLink="false">5e23f296-a43d-4ddf-aea6-a5d6335e7776</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 12 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113771757/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-10%2Fd1d23afd-2b20-92c8-3696-dbc0fc2d675d.m4a" length="21654100" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5Q1EamCL39H0wTDrwHaHOd/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of George Boole - The Inventor of Digital Logic&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Boole/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:12</itunes:duration>
+			<itunes:image href="/assets/images/episodes/George Boole.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Claude Elwood Shannon 1916 - 2001</title>
+			<description>&lt;p&gt;The life of Claude Elwood Shannon - The Father of the Bit.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Shannon/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Claude-Elwood-Shannon-1916---2001-e3dd4qf</link>
+			<guid isPermaLink="false">22dbd2d0-a211-4599-a930-d01b7dc6dfe1</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sun, 11 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113725711/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-9%2F7b5100a6-14cf-d02e-6c76-05cf578ce37b.m4a" length="22704785" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4ZrAjO7MzTC6XCpeMwXM3F/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Claude Elwood Shannon - The Father of the Bit.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Shannon/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:45</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Claude Elwood Shannon.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>John von Neumann 1903 - 1957</title>
+			<description>&lt;p&gt;The life of John von Neumann - Architect of the Modern World.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Von_Neumann/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/John-von-Neumann-1903---1957-e3d80cl</link>
+			<guid isPermaLink="false">d9ae5af3-b774-4e7d-8838-0866ff6f1ac4</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sat, 10 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113557333/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-9%2Fbf7f1628-34d7-5878-cbf0-bfcbe522dc72.m4a" length="25515441" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3CLjWG6sm1WOenLreGwPkr/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of John von Neumann - Architect of the Modern World.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Von_Neumann/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:12</itunes:duration>
+			<itunes:image href="/assets/images/episodes/John von Neumann.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>René Descartes 1596 - 1650</title>
+			<description>&lt;p&gt;The life of René Descartes - Analytical Geometry and Secret Life&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Ren-Descartes-1596---1650-e3d7uu0</link>
+			<guid isPermaLink="false">67d2d0a0-d0f6-4b65-9c49-874bc50f9887</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 09 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113555840/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-6%2F47ecb497-26b1-1e20-d7d2-b1d54a6c4152.m4a" length="26193984" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5zBEMVt2bVJWSGUWLZUgzE/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of René Descartes - Analytical Geometry and Secret Life&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:33</itunes:duration>
+			<itunes:image href="/assets/images/episodes/René Descartes.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>John Edensor Littlewood 1885 - 1977</title>
+			<description>&lt;p&gt;The life of John Edensor Littlewood - Depression &amp;amp; Chaos.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Littlewood/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/John-Edensor-Littlewood-1885---1977-e3d69a5</link>
+			<guid isPermaLink="false">02cbb6a4-a98d-4700-8af4-dd3f98eb9092</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 08 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113500933/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-5%2Ff6011a39-01da-93a2-6849-03fcf8f5b198.m4a" length="29669736" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of John Edensor Littlewood - Depression &amp;amp; Chaos.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Littlewood/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:21</itunes:duration>
+			<itunes:image href="/assets/images/episodes/John Edensor Littlewood.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Blaise Pascal 1623 - 1662</title>
+			<description>&lt;p&gt;The life of Blaise Pascal - the 39 Year Sprint.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Pascal/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Blaise-Pascal-1623---1662-e3d4j9l</link>
+			<guid isPermaLink="false">82fe2a0d-0310-4a53-9ed3-79545ebaf724</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 07 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113445621/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-3%2F20611dd7-e29a-f243-07bf-ef202b68a4d8.m4a" length="28975505" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Blaise Pascal - the 39 Year Sprint.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Pascal/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:00</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Blaise Pascal.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Andrei Andreyevich Markov 1856 - 1922</title>
+			<description>&lt;p&gt;The life of Andrei Andreyevich Markov - Chains and Challenging the Tsar.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Markov/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Andrei-Andreyevich-Markov-1856---1922-e3d4il2</link>
+			<guid isPermaLink="false">3c2e597a-9844-4ef4-b547-a21c87ab7ecf</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 06 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113444962/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-3%2F7f2b317c-a8f9-82dd-ebd3-c9fe3d5db3cc.m4a" length="27323970" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Andrei Andreyevich Markov - Chains and Challenging the Tsar.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Markov/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:14:08</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Andrei Andreyevich Markov.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Pierre de Fermat 1601 - 1665</title>
+			<description>&lt;p&gt;The life of Pierre de Fermat - Secret Double Life and Plague Career&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Pierre-de-Fermat-1601---1665-e3d4ig4</link>
+			<guid isPermaLink="false">9961dd26-54e8-4b34-9f87-80c090ba0d4e</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 05 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113444804/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-3%2F90d3e09a-3b12-d268-f9de-6883f5aea7d6.m4a" length="27908270" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Pierre de Fermat - Secret Double Life and Plague Career&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Fermat/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:14:27</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Pierre de Fermat.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Andrey Nikolaevich Kolmogorov 1903 - 1987</title>
+			<description>&lt;p&gt;The life of Andrey Nikolaevich Kolmogorov - Probability, Turbulence, and Planetary Stability.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Kolmogorov/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Andrey-Nikolaevich-Kolmogorov-1903---1987-e3d2em7</link>
+			<guid isPermaLink="false">960677eb-854b-4891-ae77-9aeb372a7066</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sun, 04 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113375367/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-1%2Ff8f5fa91-ce30-15e0-8adb-6ca8e132941f.m4a" length="29507513" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Andrey Nikolaevich Kolmogorov - Probability, Turbulence, and Planetary Stability.&lt;/p&gt;&lt;p&gt; &lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Kolmogorov/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:16</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Andrey Nikolaevich Kolmogorov.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Godfrey Harold Hardy 1877 - 1947</title>
+			<description>&lt;p&gt;The life of G. H. Hardy - Pure Math and Creative Decline.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hardy/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Godfrey-Harold-Hardy-1877---1947-e3d2dmo</link>
+			<guid isPermaLink="false">d5e643bb-277a-44fa-ba53-ae5bc1f6bad7</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sat, 03 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113374360/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-1%2Fe415bd38-5420-c303-001d-5d1ad904df53.m4a" length="24741161" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of G. H. Hardy - Pure Math and Creative Decline.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hardy/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:48</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Godfrey Harold Hardy.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Hermann Minkowski 1864 - 1909</title>
+			<description>&lt;p&gt;The life of Hermann Minkowski - Geometry defined SpaceTime.&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Minkowski/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Hermann-Minkowski-1864---1909-e3d2dfd</link>
+			<guid isPermaLink="false">920b8513-c89c-425e-b4dc-35a3a4fae29b</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 02 Jan 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113374125/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-1%2F66a03a56-51c7-84b2-c4e3-b76399d4e054.m4a" length="25076066" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Hermann Minkowski - Geometry defined SpaceTime.&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Minkowski/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:59</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Hermann Minkowski.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>David Hilbert 1862 - 1943</title>
+			<description>&lt;p&gt;The life of David Hilbert - The Mathematician Who Redefined Truth &lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hilbert/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/David-Hilbert-1862---1943-e3d1jek</link>
+			<guid isPermaLink="false">6cf0dd3d-e658-4937-984c-4abb86247bce</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 01 Jan 2026 18:40:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113347476/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-31%2Fb851851b-6d0c-28ff-9bf0-f52dbedc4adb.m4a" length="25526646" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of David Hilbert - The Mathematician Who Redefined Truth &lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hilbert/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:13</itunes:duration>
+			<itunes:image href="/assets/images/episodes/David Hilbert.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Adrien-Marie Legendre 1752 - 1833</title>
+			<description>&lt;p&gt;The life of Adrien-Marie Legendre - the Man Who Defined the Meter.&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Legendre/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Adrien-Marie-Legendre-1752---1833-e3cv8gi</link>
+			<guid isPermaLink="false">0bdcbbe4-e8ab-4f8c-9641-e71530e8491a</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 01 Jan 2026 14:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113270738/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-30%2F84b3f976-330b-4381-d3b2-d4b3f2cd5e2c.m4a" length="24965388" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Adrien-Marie Legendre - the Man Who Defined the Meter.&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Legendre/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:55</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Adrien-Marie Legendre.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Charles Babbage 1791 - 1871</title>
+			<description>&lt;p&gt;The life of Charles Babbage - Invented the Computer and We Missed It. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Babbage/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Charles-Babbage-1791---1871-e3cv89s</link>
+			<guid isPermaLink="false">03f1064b-fa7c-41c1-bb9f-4526dfc29a30</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 31 Dec 2025 14:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113270524/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-30%2F87d1dbc1-86fb-b18e-1218-6a7839525bc4.m4a" length="23940850" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Charles Babbage - Invented the Computer and We Missed It. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Babbage/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:23</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Charles Babbage.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Augusta Ada Byron King, Countess of Lovelace 1815 - 1852</title>
+			<description>&lt;p&gt;The life of Augusta Ada Byron King, Countess of Lovelace (Ada Lovelace) - Invented Computer Programming&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Augusta-Ada-Byron-King--Countess-of-Lovelace-1815---1852-e3cv7rf</link>
+			<guid isPermaLink="false">11a94391-13cc-4a40-bb19-cf43c8d8e925</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 30 Dec 2025 14:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113270063/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-30%2Fb282c5e1-e4de-e8f3-a55f-8387a53611fd.m4a" length="25664101" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Augusta Ada Byron King, Countess of Lovelace (Ada Lovelace) - Invented Computer Programming&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Lovelace/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:17</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Augusta Ada Byron King, Countess of Lovelace.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Leonhard Euler 1707 - 1783</title>
+			<description>&lt;p&gt;The life of Leonhard Euler - The Master of Us All.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Euler/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Leonhard-Euler-1707---1783-e3ctb6o</link>
+			<guid isPermaLink="false">4f01d2d6-d01b-45fd-a699-0dc8287880ca</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 29 Dec 2025 18:05:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113207960/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2Fe126294e-a4ad-2ff0-4a3a-08f2e7f21f04.m4a" length="25041586" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Leonhard Euler - The Master of Us All.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Euler/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:58</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Leonhard Euler.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>17</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Joseph Liouville 1809 - 1882</title>
+			<description>&lt;p&gt;The life of Joseph Liouville - Science, Politics, and Galois. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Liouville/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Joseph-Liouville-1809---1882-e3ctata</link>
+			<guid isPermaLink="false">db93ca4a-e975-4d9a-a2a3-0e3f2a680134</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sun, 28 Dec 2025 20:29:13 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113207658/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2F1868906b-269f-46be-0fda-4cb3ab54c8e3.m4a" length="24758459" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Joseph Liouville - Science, Politics, and Galois. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Liouville/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:49</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Joseph Liouville.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Évariste Galois 1811 - 1832</title>
+			<description>&lt;p&gt;The life of Évariste Galois - The Duelist Who Defined Algebra&amp;#39;s Limits&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Galois/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/variste-Galois-1811---1832-e3ctail</link>
+			<guid isPermaLink="false">748faf84-3cb5-494d-adac-17d02b070f7f</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sun, 28 Dec 2025 20:20:20 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113207317/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2F0aeee8d6-90c2-93c6-ac45-255fdc77cde3.m4a" length="30359485" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Évariste Galois - The Duelist Who Defined Algebra&amp;#39;s Limits&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Galois/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:43</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Évariste Galois.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>John F Nash 1928 - 2015</title>
+			<description>&lt;p&gt;The life of John Forbes Nash Jr. - Game Theory Genius and Madness&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Nash/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/John-F-Nash-1928---2015-e3cta1g</link>
+			<guid isPermaLink="false">4e226d21-6839-4e06-9b3d-a1d4b60fe9ce</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Sun, 28 Dec 2025 20:05:41 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113206768/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-28%2Fead99591-a2b4-506b-3d7a-0f4018e14a67.m4a" length="22076293" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of John Forbes Nash Jr. - Game Theory Genius and Madness&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Nash/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:25</itunes:duration>
+			<itunes:image href="/assets/images/episodes/John F Nash.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>14</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Jules Henri Poincaré 1854 - 1912</title>
+			<description>&lt;p&gt;The life of Jules Henri Poincaré - the Universalist Who Invented Chaos.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Jules-Henri-Poincar-1854---1912-e3cqcp4</link>
+			<guid isPermaLink="false">c72384ef-1f2e-4b90-8bcc-696549f1fcf5</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 25 Dec 2025 17:44:44 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113111268/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-25%2F7eb38dd8-8e04-9537-9cb6-1b199293f83d.m4a" length="31082850" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Jules Henri Poincaré - the Universalist Who Invented Chaos.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Poincare/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:16:05</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Jules Henri Poincaré.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>13</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Johann Carl Friedrich Gauss 1777 - 1855</title>
+			<description>&lt;p&gt;The life of Johann Carl Friedrich Gauss - The Prince of Mathematics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Gauss/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Johann-Carl-Friedrich-Gauss-1777---1855-e3cmqv0</link>
+			<guid isPermaLink="false">2a2a9a7c-6b34-4640-bc1d-b1be978d73f3</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 22 Dec 2025 17:25:52 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112994720/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-22%2Fe922fb97-9660-7e93-616e-84e8a0fbb8a3.m4a" length="32572278" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Johann Carl Friedrich Gauss - The Prince of Mathematics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Gauss/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:16:52</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Johann Carl Friedrich Gauss.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>12</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Georg Friedrich Bernhard Riemann 1826 - 1866</title>
+			<description>&lt;p&gt;The life of Georg Friedrich Bernhard Riemann - Geometry and the Primes.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Riemann/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Georg-Friedrich-Bernhard-Riemann-1826---1866-e3cmqq0</link>
+			<guid isPermaLink="false">b686cd01-d8ed-45e5-922f-678698bc37f0</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 22 Dec 2025 17:22:12 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112994560/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-22%2Feb9fc9f2-cfb5-aaf6-271b-b6f8fb52743a.m4a" length="25777767" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Georg Friedrich Bernhard Riemann - Geometry and the Primes.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Riemann/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:20</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Georg Friedrich Bernhard Riemann.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>11</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Johann Peter Gustav Lejeune Dirichlet 1805 - 1859</title>
+			<description>&lt;p&gt;The life of Johann Peter Gustav Lejeune Dirichlet - Defined the Modern Function.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Dirichlet/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Johann-Peter-Gustav-Lejeune-Dirichlet-1805---1859-e3cmqii</link>
+			<guid isPermaLink="false">86b4c460-a45c-43ab-8eee-4247363c2727</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 22 Dec 2025 17:19:26 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112994322/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-22%2F5cbe26d6-cfa6-b16b-942a-29d79c898aa4.m4a" length="27897064" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Johann Peter Gustav Lejeune Dirichlet - Defined the Modern Function.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Dirichlet/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:14:26</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Johann Peter Gustav Lejeune Dirichlet.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>10</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Marie-Sophie Germain 1776 - 1831</title>
+			<description>&lt;p&gt;The life of Marie-Sophie Germain - The Woman Who Invented Math to Be Heard&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Germain/ &lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Marie-Sophie-Germain-1776---1831-e3ciikt</link>
+			<guid isPermaLink="false">cbe2423b-2bcf-461c-b443-78bab1f1d86b</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 19 Dec 2025 03:50:02 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112855133/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-19%2Faa7397a9-3518-49df-f699-b8887ea01085.m4a" length="32430971" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Marie-Sophie Germain - The Woman Who Invented Math to Be Heard&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Germain/ &lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:16:47</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Marie-Sophie Germain.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>9</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Carl Gustav Jacob Jacobi 1804 - 1851</title>
+			<description>&lt;p&gt;The life of Carl Gustav Jacob Jacobi - A Revolutionary Mathematical Life&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Jacobi/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Carl-Gustav-Jacob-Jacobi-1804---1851-e3ciij2</link>
+			<guid isPermaLink="false">9b3604c8-aa5c-4fa1-8c61-7be944ab468f</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 19 Dec 2025 03:45:56 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112855074/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-19%2F813f40f4-234a-1b23-833f-f4054c09097e.m4a" length="33836731" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Carl Gustav Jacob Jacobi - A Revolutionary Mathematical Life&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Jacobi/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:17:31</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Carl Gustav Jacob Jacobi.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>8</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Siméon Denis Poisson 1781 - 1840</title>
+			<description>&lt;p&gt;The life of Siméon Denis Poisson - The Clumsy Surgeon &lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Poisson/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Simon-Denis-Poisson-1781---1840-e3ciibf</link>
+			<guid isPermaLink="false">c5a06172-49ad-4d1d-a009-b8c9f1f128f3</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 19 Dec 2025 03:36:36 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112854831/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-19%2F34a0eca3-28ce-22f8-4d3f-8b1f8b004202.m4a" length="26502627" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Siméon Denis Poisson - The Clumsy Surgeon &lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Poisson/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:43</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Siméon Denis Poisson.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>7</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Abraham de Moivre 1667 - 1754</title>
+			<description>&lt;p&gt;The life of Abraham de Moivre - Calculated His Own Death.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Abraham-de-Moivre-1667---1754-e3cgut4</link>
+			<guid isPermaLink="false">b5e73bba-be8f-4050-a504-2b16ce589792</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 18 Dec 2025 02:38:13 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112802148/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-18%2Ff216295a-278e-bb31-66a5-62afbfc125ad.m4a" length="30501422" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Abraham de Moivre - Calculated His Own Death.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:47</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Abraham de Moivre.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>6</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Jean Le Rond d'Alembert 1717 - 1783</title>
+			<description>&lt;p&gt;The life of Jean Le Rond d&amp;#39;Alembert - Calculus Genius and Social Fighter.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/DAlembert/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Jean-Le-Rond-dAlembert-1717---1783-e3cguip</link>
+			<guid isPermaLink="false">3262526f-d6ae-4797-b50f-1423c985862c</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 18 Dec 2025 02:26:57 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112801817/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-18%2Fdacedb91-7d93-22cf-399a-336d39cc77a2.m4a" length="30986482" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Jean Le Rond d&amp;#39;Alembert - Calculus Genius and Social Fighter.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/DAlembert/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:16:02</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Jean Le Rond d'Alembert.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>5</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Pierre-Simon Laplace 1749 - 1827</title>
+			<description>&lt;p&gt;The life of François Pierre-Simon Laplace - Unified Probability and Cosmos.&lt;/p&gt;&lt;p&gt;Source:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Pierre-Simon-Laplace-1749---1827-e3cguco</link>
+			<guid isPermaLink="false">c8ac8d68-49e6-4430-9f1f-ae70836eecb7</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 18 Dec 2025 02:21:07 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112801624/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-18%2F9e4ca43e-1cdb-b5a7-1ff0-910949a7074d.m4a" length="34486886" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of François Pierre-Simon Laplace - Unified Probability and Cosmos.&lt;/p&gt;&lt;p&gt;Source:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:17:51</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Pierre-Simon Laplace.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>4</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>François Viète 1540 - 1603</title>
+			<description>&lt;p&gt;The life of François Viète - Invented Algebra Under Banishment.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Viete/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Franois-Vite-1540---1603-e3cdprh</link>
+			<guid isPermaLink="false">d0f15f3f-c84e-4a41-ac44-596d4d89e1b3</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 16 Dec 2025 05:07:33 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112698673/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-16%2F6f9119b0-8aee-64f2-77e1-ca7bec00139f.m4a" length="25785238" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of François Viète - Invented Algebra Under Banishment.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Viete/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:21</itunes:duration>
+			<itunes:image href="/assets/images/episodes/François Viète.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>3</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Joseph-Louis Lagrange 1736 - 1813</title>
+			<description>&lt;p&gt;The life of Joseph-Louis Lagrange - Quest for Pure Algebra.&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Joseph-Louis-Lagrange-1736---1813-e3cdpiv</link>
+			<guid isPermaLink="false">d35dc1ae-7ddf-4017-87fa-d0ae3f170019</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 16 Dec 2025 04:56:45 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112698399/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-16%2Feb2a3a66-20f0-0ffb-137b-09655d2a6437.m4a" length="27890341" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Joseph-Louis Lagrange - Quest for Pure Algebra.&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Lagrange/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:14:26</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Joseph-Louis Lagrange.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>2</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Joseph Fourier 1768 - 1830</title>
+			<description>&lt;p&gt;The life of Joseph Fourier - The Revolutionary Who Solved Heat.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Fourier/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Joseph-Fourier-1768---1830-e3cdp3v</link>
+			<guid isPermaLink="false">0e7e3746-7f2a-45fa-a755-617623d1d2b4</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 16 Dec 2025 04:41:15 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/112697919/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-16%2F954421dc-b796-0e83-42d7-b4809f73619a.m4a" length="26762712" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Joseph Fourier - The Revolutionary Who Solved Heat.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Fourier/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:13:51</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Joseph Fourier.avif" />
+			<itunes:season>1</itunes:season>
+			<itunes:episode>1</itunes:episode>
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+	</channel>
+</rss>
