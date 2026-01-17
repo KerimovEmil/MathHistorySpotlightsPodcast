@@ -3,6 +3,7 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 import unicodedata
+import json
 
 RSS_URL = "https://anchor.fm/s/10cdf4708/podcast/rss"
 ROOT = os.path.dirname(__file__)
@@ -209,9 +210,22 @@ def main():
                 page_rel = f"{slug}.html"
                 audio_url = extract_audio_url(item)
                 build_page(name, desc_clean, source_link, image, audio_url, out_file)
-                pages.append({"title": name, "file": page_rel, "image": image})
+                pages.append({"title": name, "file": page_rel, "image": image, "description": desc_clean})
 
         build_index(pages, os.path.join(OUT_DIR, "index.html"))
+
+        search_data = []
+        for p in pages:
+                search_data.append({
+                        "title": p["title"],
+                        "url": f"/mathematicians/{p['file']}",
+                        "description": p["description"],
+                        "image": p["image"]
+                })
+    
+        with open(os.path.join(ROOT, "assets", "search.json"), "w", encoding="utf-8") as f:
+                json.dump(search_data, f, indent=2)
+
 
 
 if __name__ == "__main__":
