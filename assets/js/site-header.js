@@ -25,11 +25,11 @@ class SiteHeader extends HTMLElement {
         </li>
 
         <li class="navbar-item">
-          <a href="/index.html#podcast" class="navbar-link">Podcast</a>
+          <a href="/timeline.html" class="navbar-link">Timeline</a>
         </li>
 
         <li class="navbar-item">
-          <a href="/about.html" class="navbar-link">About</a>
+          <a href="/index.html#podcast" class="navbar-link">Podcast</a>
         </li>
 
         <li class="navbar-item">
@@ -37,11 +37,11 @@ class SiteHeader extends HTMLElement {
         </li>
 
         <li class="navbar-item">
-          <a href="/timeline.html" class="navbar-link">Timeline</a>
+          <a href="/mathematicians/index.html" class="navbar-link">Mathematicians</a>
         </li>
 
         <li class="navbar-item">
-          <a href="/mathematicians/index.html" class="navbar-link">Mathematicians</a>
+          <a href="/about.html" class="navbar-link">About</a>
         </li>
 
       </ul>
