@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jacob (Jacques) Bernoulli</title>
+  <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/mathematicians.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
+</head>
+<body id="top">
+
+                <site-header></site-header>
+
+        <main class="card">
+                <a class="back" href="/mathematicians/index.html">← Back to Mathematicians</a>
+        <div class="media" id="gallery">
+          <img src="/assets/images/episodes/Jacob (Jacques) Bernoulli.avif" alt="Jacob (Jacques) Bernoulli" class="hero-image"/>
+        </div>
+        <audio controls src="https://anchor.fm/s/10cdf4708/podcast/play/114073539/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-16%2Ff0acc9ce-715f-6b75-52ce-423d44e2fb22.m4a">Your browser does not support the audio element.</audio>
+        <h1 class="name">Jacob (Jacques) Bernoulli</h1>
+        <div class="desc"><p>The life of Jacob (Jacques) Bernoulli - the Family Feuds and Integral. <br></p><p><br></p><p><br></p></div>
+        <p class="sources">Sources: —</p>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="../assets/js/site-header.js"></script>
+  <script type="module" src="../assets/js/site-footer.js"></script>
+  
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe-lightbox.esm.min.js';
+    import PhotoSwipe from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.esm.min.js';
+
+    const img = document.querySelector('.hero-image');
+    if (img) {
+        const lightbox = new PhotoSwipeLightbox({
+            pswpModule: PhotoSwipe,
+            dataSource: [
+                {
+                    src: img.src,
+                    w: img.naturalWidth || 1000,
+                    h: img.naturalHeight || 1000,
+                    alt: img.alt
+                }
+            ]
+        });
+        
+        lightbox.init();
+        
+        img.onclick = () => {
+            // Updates dimensions just in case they weren't loaded at init
+            lightbox.options.dataSource[0].w = img.naturalWidth;
+            lightbox.options.dataSource[0].h = img.naturalHeight;
+            lightbox.loadAndOpen(0);
+        };
+        img.style.cursor = 'zoom-in';
+    }
+  </script>
+</body>
+</html>
