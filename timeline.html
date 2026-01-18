@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math History Spotlights Timeline</title>
+  <title>Math History Spotlights Timeline (Experimental)</title>
 
   <!-- favicon link -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
@@ -29,7 +29,7 @@
 
   <main>
     <article class="container">
-      <h2>Math History Spotlights — Timeline</h2>
+      <h2>Math History Spotlights — Timeline (Experimental)</h2>
 
 
       <div class="controls">
@@ -163,9 +163,17 @@
           }
 
           try {
-            const response = await fetch('https://anchor.fm/s/10cdf4708/podcast/rss');
-            if (!response.ok) throw new Error('Network response was not ok');
-            const text = await response.text();
+            const response = await fetch('/assets/feed.xml'); // Use local feed if available, or fallback
+            let text;
+            if (response.ok) {
+              text = await response.text();
+            } else {
+              // Fallback to caching/remote if local feed fails (development convenience)
+              const remoteParams = await fetch('https://anchor.fm/s/10cdf4708/podcast/rss');
+              if (!remoteParams.ok) throw new Error('Network response was not ok');
+              text = await remoteParams.text();
+            }
+
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(text, "text/xml");
 
@@ -238,7 +246,6 @@
 
           // Row/spacing values used for vertical layout
           const rowHeight = 32; // Increased for better spacing
-          const barHeight = 28;
 
           // Filter data based on search
           const query = searchInput.value.toLowerCase();
@@ -252,16 +259,55 @@
             return;
           }
 
-          // Add bars
+          // ** TRACK PACKING ALGORITHM **
+          // We want to pack items into rows (tracks) such that no two items 
+          // in the same row overlap.
+          // Items are already sorted by birth year (start time).
+
+          // Tracks stores the end_year of the last item placed in that track.
+          let tracks = [];
+
           filteredData.forEach((p, i) => {
+            // Find the first track where this item fits (starts after the last item ended)
+            // Add a small buffer (e.g., 2 years) to ensure visual separation
+            const buffer = 5 * ((maxYear - minYear) / width); // dynamic buffer based on width approx pixels? No, just use years.
+            // Let's us a fixed pixel buffer -> converted to years
+            // pixels = (years / span) * width
+            // years = (pixels * span) / width
+            // Let's say 50px buffer for name readability if strict packing
+            // But here the bar width is life span. Text label is inside.
+            // Let's just assume we can't overlap life spans.
+            // The labels might overflow if the life is short. 
+            // For now, simple packing based on life span.
+
+            let trackIndex = -1;
+
+            // Heuristic: try to fill top tracks first
+            for (let t = 0; t < tracks.length; t++) {
+              if (tracks[t] <= p.b) {
+                trackIndex = t;
+                break;
+              }
+            }
+
+            if (trackIndex === -1) {
+              // New track needed
+              trackIndex = tracks.length;
+              tracks.push(p.d);
+            } else {
+              // Update track end time
+              tracks[trackIndex] = p.d;
+            }
+
             const bar = document.createElement("div");
             bar.className = `person ${p.era}`;
             bar.style.left = yearToX(p.b) + "px";
-            bar.style.width = (yearToX(p.d) - yearToX(p.b)) + "px";
-            bar.style.top = (i * rowHeight) + "px";
+            bar.style.width = Math.max(2, (yearToX(p.d) - yearToX(p.b))) + "px"; // Ensure at least 2px width
+            bar.style.top = (trackIndex * rowHeight) + "px";
             // ensure bars render above the axis
             bar.style.zIndex = '2';
             bar.style.animationDelay = (i * 0.03) + "s";
+
             // add local-page indicator and name span
             const icon = document.createElement('span');
             icon.className = 'local-indicator unknown';
@@ -339,19 +385,16 @@
 
             timeline.appendChild(bar);
           });
+
           // Measure lowest bar and ensure timeline height leaves room for axis/ticks at bottom
-          const bars = timeline.querySelectorAll('.person');
-          let lowest = 0;
-          bars.forEach(b => {
-            const bottom = b.offsetTop + b.offsetHeight;
-            if (bottom > lowest) lowest = bottom;
-          });
+          const totalRows = tracks.length;
+          const contentHeight = totalRows * rowHeight;
 
           const axisBottomCss = 60; // must match .axis bottom in CSS
           const ticksBottomCss = 36; // must match .year bottom in CSS
           const paddingBelow = 12;
           const minTimelineHeight = 300;
-          const neededHeight = Math.max(minTimelineHeight, lowest + paddingBelow + axisBottomCss + 20);
+          const neededHeight = Math.max(minTimelineHeight, contentHeight + paddingBelow + axisBottomCss + 20);
           timeline.style.height = neededHeight + 'px';
 
           // Add year ticks (CSS bottom places them below the axis)
