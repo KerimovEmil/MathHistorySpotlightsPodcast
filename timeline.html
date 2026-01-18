@@ -299,7 +299,7 @@
               tracks[trackIndex] = p.d;
             }
 
-            const bar = document.createElement("div");
+            const bar = document.createElement("a");
             bar.className = `person ${p.era}`;
             bar.style.left = yearToX(p.b) + "px";
             bar.style.width = Math.max(2, (yearToX(p.d) - yearToX(p.b))) + "px"; // Ensure at least 2px width
@@ -307,6 +307,11 @@
             // ensure bars render above the axis
             bar.style.zIndex = '2';
             bar.style.animationDelay = (i * 0.03) + "s";
+
+            // Set default link to RSS/external url
+            bar.href = p.url;
+            bar.target = "_blank";
+            bar.rel = "noopener noreferrer";
 
             // add local-page indicator and name span
             const icon = document.createElement('span');
@@ -318,34 +323,20 @@
             nameSpan.className = 'person-name';
             nameSpan.textContent = `${p.name} (${p.b}–${p.d})`;
             bar.appendChild(nameSpan);
-            bar.setAttribute("role", "button");
-            bar.setAttribute("tabindex", "0");
+
             bar.setAttribute("aria-label", `Click to listen: ${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
 
-            // Navigate to the local mathematician page with fallback to RSS link
-            bar.addEventListener("click", async () => {
-              const page = `/mathematicians/${p.slug}.html`;
-              try {
-                // Try a HEAD request to see if the local page exists
-                const res = await fetch(page, { method: 'HEAD' });
-                if (res.ok) {
-                  window.location.href = page;
-                  return;
-                }
-              } catch (err) {
-                // network error or fetch blocked; fall through to open RSS link
-              }
-              // fallback: open the RSS-provided link in a new tab
-              window.open(p.url, '_blank');
-            });
-
-            // Asynchronously check whether the local page exists and update the indicator
+            // Asynchronously check whether the local page exists and update the indicator AND the link
             (async () => {
               try {
-                const res = await fetch(`/mathematicians/${p.slug}.html`, { method: 'HEAD' });
+                const page = `/mathematicians/${p.slug}.html`;
+                const res = await fetch(page, { method: 'HEAD' });
                 if (res.ok) {
                   icon.className = 'local-indicator present';
                   icon.title = 'Local page available';
+                  bar.href = page;
+                  bar.target = "_self";
+                  bar.removeAttribute("rel");
                 } else {
                   icon.className = 'local-indicator absent';
                   icon.title = 'Local page not found';

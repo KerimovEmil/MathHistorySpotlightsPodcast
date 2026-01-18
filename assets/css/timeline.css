@@ -97,6 +97,7 @@
 
 input[type="range"] {
   -webkit-appearance: none;
+  appearance: none;
   width: 100%;
   height: 6px;
   background: rgba(255, 255, 255, 0.2);
@@ -216,6 +217,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border-radius: 4px;
   /* Sharper corners look cleaner for timelines */
   color: var(--white);
+  text-decoration: none;
   font-size: 13px;
   /* Larger text */
   font-weight: 500;
