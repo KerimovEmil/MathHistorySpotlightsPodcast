@@ -133,9 +133,9 @@ class SiteHeader extends HTMLElement {
     <nav class="navbar" data-navbar>
       <ul class="navbar-list">
         <li class="navbar-item"><a href="/index.html" class="navbar-link">Home</a></li>
-        <li class="navbar-item"><a href="/collections.html" class="navbar-link">Collections</a></li>
         <li class="navbar-item"><a href="/timeline.html" class="navbar-link">Timeline</a></li>
         <li class="navbar-item"><a href="/index.html#podcast" class="navbar-link">Podcast</a></li>
+        <li class="navbar-item"><a href="/collections.html" class="navbar-link">Collections</a></li>
         <li class="navbar-item"><a href="/gallery.html" class="navbar-link">Gallery</a></li>
         <li class="navbar-item"><a href="/mathematicians/index.html" class="navbar-link">Mathematicians</a></li>
         <li class="navbar-item"><a href="/about.html" class="navbar-link">About</a></li>
