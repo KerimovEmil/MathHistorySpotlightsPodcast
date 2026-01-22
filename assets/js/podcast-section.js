@@ -16,7 +16,9 @@ class PodcastSection extends HTMLElement {
 
   async fetchFeed() {
     try {
-      const res = await fetch(this.src);
+      // Add a timestamp to bypass browser/CDN cache
+      const fetchUrl = this.src + (this.src.includes('?') ? '&' : '?') + 'v=' + Date.now();
+      const res = await fetch(fetchUrl);
       if (!res.ok) throw new Error('Network response was not ok');
       const text = await res.text();
       const parser = new DOMParser();

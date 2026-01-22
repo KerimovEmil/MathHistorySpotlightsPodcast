@@ -145,8 +145,8 @@
 
         // Fetch and parse RSS feed with caching
         async function fetchEpisodes() {
-          const cacheKey = 'timelineData';
-          const cacheExpiry = 24 * 60 * 60 * 1000; // 24 hours
+          const cacheKey = 'timelineData_v2'; // versioned key to force update
+          const cacheExpiry = 1 * 60 * 60 * 1000; // 1 hour
           const cached = localStorage.getItem(cacheKey);
           const now = Date.now();
 
@@ -163,7 +163,8 @@
           }
 
           try {
-            const response = await fetch('/assets/feed.xml'); // Use local feed if available, or fallback
+            // Add a timestamp to the URL to bypass browser/CDN cache for the feed file itself
+            const response = await fetch('/assets/feed.xml?v=' + now);
             let text;
             if (response.ok) {
               text = await response.text();
