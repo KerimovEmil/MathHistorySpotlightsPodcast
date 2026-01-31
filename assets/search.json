@@ -2,7 +2,7 @@
   {
     "title": "Leonardo Pisano Fibonacci",
     "url": "/mathematicians/leonardo-pisano-fibonacci.html",
-    "description": "The life of Leonardo Pisano Fibonacci - Taught The West to Count",
+    "description": "The life of Leonardo Pisano Fibonacci - Taught The West to Count\n\nFamous Equations\n\n    1. Fibonacci Sequence\n    A sequence where each number is the sum of the two preceding ones.\n    $$ F_n = F_{n-1} + F_{n-2}, \\quad F_0=0, F_1=1 $$\n\n    2. Golden Ratio limit\n    The ratio of consecutive Fibonacci numbers converges to \\(\\phi\\).\n    $$ \\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi = \\frac{1+\\sqrt{5}}{2} $$",
     "image": "/assets/images/episodes/Leonardo Pisano Fibonacci.avif"
   },
   {
@@ -20,31 +20,31 @@
   {
     "title": "Daniel Bernoulli",
     "url": "/mathematicians/daniel-bernoulli.html",
-    "description": "The life of Daniel Bernoulli - the Turbulent Genius",
+    "description": "The life of Daniel Bernoulli - the Turbulent Genius\n\nFamous Equations\n\n    1. Bernoulli's Principle\n    Conservation of energy for flowing fluids.\n    $$ \\frac{1}{2}\\rho v^2 + \\rho g h + P = \\text{constant} $$",
     "image": "/assets/images/episodes/Daniel Bernoulli.avif"
   },
   {
     "title": "Johann Bernoulli",
     "url": "/mathematicians/johann-bernoulli.html",
-    "description": "The life of Johann Bernoulli - Toxic Genius and Stolen Calculus",
+    "description": "The life of Johann Bernoulli - Toxic Genius and Stolen Calculus\n\nFamous Problems\n\n    1. Brachistochrone Problem\n    Finding the curve of fastest descent between two points.\n    $$ \\frac{\\sin \\theta}{\\sqrt{v}} = \\text{constant} \\implies y(1 + (y')^2) = C $$\n\n    2. L'H\u00f4pital's Rule\n    Taught to L'H\u00f4pital by Johann Bernoulli (for a fee).\n    $$ \\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)} $$",
     "image": "/assets/images/episodes/Johann Bernoulli.avif"
   },
   {
     "title": "Jacob (Jacques) Bernoulli",
     "url": "/mathematicians/jacob-jacques-bernoulli.html",
-    "description": "The life of Jacob (Jacques) Bernoulli - the Family Feuds and Integral.",
+    "description": "The life of Jacob (Jacques) Bernoulli - the Family Feuds and Integral. \n\nFamous Equations\n\n    1. Law of Large Numbers\n    Bernoulli proved the first version of this fundamental probability theorem.\n    $$ \\lim_{n \\to \\infty} P\\left( \\left| \\frac{S_n}{n} - p \\right| 2. Compound Interest Limit\n    The discovery of the constant \\(e\\).\n    $$ e = \\lim_{n \\to \\infty} \\left( 1 + \\frac{1}{n} \\right)^n $$",
     "image": "/assets/images/episodes/Jacob (Jacques) Bernoulli.avif"
   },
   {
     "title": "Evangelista Torricelli",
     "url": "/mathematicians/evangelista-torricelli.html",
-    "description": "The life of Evangelista Torricelli - Galileo&#39;s Successor and the Vacuum",
+    "description": "The life of Evangelista Torricelli - Galileo&#39;s Successor and the Vacuum\n\nFamous Equations\n\n    1. Torricelli's Law\n    Describes the speed of fluid flowing out of an opening.\n    $$ v = \\sqrt{2gh} $$\n\n    2. Torricelli's Trumpet (Gabriel's Horn)\n    A geometric figure with infinite surface area but finite volume.\n    $$ V = \\pi \\int_1^\\infty \\frac{1}{x^2} dx = \\pi $$",
     "image": "/assets/images/episodes/Evangelista Torricelli.avif"
   },
   {
     "title": "John Wallis",
     "url": "/mathematicians/john-wallis.html",
-    "description": "The life of John Wallis - the Infinity of Genius.",
+    "description": "The life of John Wallis - the Infinity of Genius. \n\nFamous Equations\n\n    1. Wallis Product\n    An infinite product for \\(\\pi\\) involving only rational numbers.\n    $$ \\frac{\\pi}{2} = \\prod_{n=1}^\\infty \\left( \\frac{2n}{2n-1} \\cdot \\frac{2n}{2n+1} \\right) = \\frac{2}{1} \\cdot \\frac{2}{3} \\cdot \\frac{4}{3} \\cdot \\frac{4}{5} \\dots $$",
     "image": "/assets/images/episodes/John Wallis.avif"
   },
   {
@@ -56,37 +56,37 @@
   {
     "title": "William Rowan Hamilton",
     "url": "/mathematicians/william-rowan-hamilton.html",
-    "description": "The life of William Rowan Hamilton - Mathematician Poet Paradox",
+    "description": "The life of William Rowan Hamilton - Mathematician Poet Paradox\n\nFamous Equations\n\n    1. Hamiltonian\n    The operator corresponding to the total energy of the system.\n    $$ H = T + V $$\n\n    2. Quaternion Rules\n    The fundamental formula for quaternion multiplication carved into Broome Bridge.\n    $$ i^2 = j^2 = k^2 = ijk = -1 $$",
     "image": "/assets/images/episodes/William Rowan Hamilton.avif"
   },
   {
     "title": "Augustus De Morgan",
     "url": "/mathematicians/augustus-de-morgan.html",
-    "description": "The life of Augustus De Morgan - Mathematical Logic and Pure Principle",
+    "description": "The life of Augustus De Morgan - Mathematical Logic and Pure Principle\n\nFamous Logic\n\n    1. De Morgan's Laws\n    Fundamental rules of logic and set theory relating conjunctions and disjunctions.\n    $$ \\neg(A \\land B) \\iff (\\neg A) \\lor (\\neg B) $$\n    $$ \\neg(A \\lor B) \\iff (\\neg A) \\land (\\neg B) $$",
     "image": "/assets/images/episodes/Augustus De Morgan.avif"
   },
   {
     "title": "George Boole",
     "url": "/mathematicians/george-boole.html",
-    "description": "The life of George Boole - The Inventor of Digital Logic",
+    "description": "The life of George Boole - The Inventor of Digital Logic\n\nFamous Logic\n\n    1. Boolean Algebra\n    The algebraic structure that underlies modern digital logic.\n    $$ x \\cdot (y + z) = (x \\cdot y) + (x \\cdot z) $$\n    $$ x + x = x, \\quad x \\cdot x = x $$",
     "image": "/assets/images/episodes/George Boole.avif"
   },
   {
     "title": "Claude Elwood Shannon",
     "url": "/mathematicians/claude-elwood-shannon.html",
-    "description": "The life of Claude Elwood Shannon - The Father of the Bit.",
+    "description": "The life of Claude Elwood Shannon - The Father of the Bit.\n\nFamous Equations\n\n    1. Information Entropy\n    The measure of uncertainty or information content in a source.\n    $$ H(X) = - \\sum_{i} P(x_i) \\log_2 P(x_i) $$\n\n    2. Channel Capacity\n    The upper bound on the rate of information transmission.\n    $$ C = B \\log_2\\left(1 + \\frac{S}{N}\\right) $$",
     "image": "/assets/images/episodes/Claude Elwood Shannon.avif"
   },
   {
     "title": "John von Neumann",
     "url": "/mathematicians/john-von-neumann.html",
-    "description": "The life of John von Neumann - Architect of the Modern World.",
+    "description": "The life of John von Neumann - Architect of the Modern World.\n\nFamous Equations\n\n    1. Von Neumann Entropy\n    Extension of classical entropy to quantum mechanics.\n    $$ S(\\rho) = -\\text{Tr}(\\rho \\ln \\rho) $$\n\n    2. Minimax Theorem\n    The foundation of game theory.\n    $$ \\max_x \\min_y v(x, y) = \\min_y \\max_x v(x, y) $$",
     "image": "/assets/images/episodes/John von Neumann.avif"
   },
   {
     "title": "Ren\u00e9 Descartes",
     "url": "/mathematicians/rene-descartes.html",
-    "description": "The life of Ren\u00e9 Descartes - Analytical Geometry and Secret Life",
+    "description": "The life of Ren\u00e9 Descartes - Analytical Geometry and Secret Life\n\nFamous Equations\n\n    1. Descartes' Rule of Signs\n    Determines the number of positive real roots of a polynomial.\n    $$ v - p = 2k $$\n\n    2. Polyhedral Formula\n    A precursor to Euler's formula for polyhedra.\n    $$ \\sum (V - 2) = 2(F - 4) $$",
     "image": "/assets/images/episodes/Ren\u00e9 Descartes.avif"
   },
   {
@@ -98,49 +98,49 @@
   {
     "title": "Blaise Pascal",
     "url": "/mathematicians/blaise-pascal.html",
-    "description": "The life of Blaise Pascal - the 39 Year Sprint.",
+    "description": "The life of Blaise Pascal - the 39 Year Sprint.\n\nFamous Equations\n\n    1. Pascal's Identity\n    The recurrence relation defining Pascal's Triangle.\n    $$ \\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k} $$\n\n    2. Principle of Hydrostatics\n    Pascal's law regarding pressure in a fluid.\n    $$ \\Delta P = \\rho g \\Delta h $$",
     "image": "/assets/images/episodes/Blaise Pascal.avif"
   },
   {
     "title": "Andrei Andreyevich Markov",
     "url": "/mathematicians/andrei-andreyevich-markov.html",
-    "description": "The life of Andrei Andreyevich Markov - Chains and Challenging the Tsar.",
+    "description": "The life of Andrei Andreyevich Markov - Chains and Challenging the Tsar.\n\nFamous Concepts\n\n    1. Markov Property\n    The principle that the future state depends only on the current state, not the past.\n    $$ P(X_{n+1} = x \\mid X_1 = x_1, \\dots, X_n = x_n) = P(X_{n+1} = x \\mid X_n = x_n) $$\n\n    2. Markov Inequality\n    A fundamental bound in probability theory.\n    $$ P(X \\ge a) \\le \\frac{E[X]}{a} $$",
     "image": "/assets/images/episodes/Andrei Andreyevich Markov.avif"
   },
   {
     "title": "Pierre de Fermat",
     "url": "/mathematicians/pierre-de-fermat.html",
-    "description": "The life of Pierre de Fermat - Secret Double Life and Plague Career",
+    "description": "The life of Pierre de Fermat - Secret Double Life and Plague Career\n\nFamous Equations\n\n    1. Fermat's Last Theorem\n    No three positive integers fit this equation for \\(n > 2\\).\n    $$ a^n + b^n = c^n $$\n\n    2. Fermat's Little Theorem\n    A fundamental property of prime numbers.\n    $$ a^{p-1} \\equiv 1 \\pmod{p} $$\n\n    3. Fermat's Principle\n    Light travels between two points along the path of least time.\n    $$ \\delta \\int_{A}^{B} dt = 0 $$",
     "image": "/assets/images/episodes/Pierre de Fermat.avif"
   },
   {
     "title": "Andrey Nikolaevich Kolmogorov",
     "url": "/mathematicians/andrey-nikolaevich-kolmogorov.html",
-    "description": "The life of Andrey Nikolaevich Kolmogorov - Probability, Turbulence, and Planetary Stability.",
+    "description": "The life of Andrey Nikolaevich Kolmogorov - Probability, Turbulence, and Planetary Stability. \n\nFamous Equations\n\n    1. Kolmogorov Axioms\n    The foundation of modern probability theory.\n    $$ P(E) \\ge 0, \\quad P(\\Omega) = 1, \\quad P\\left(\\bigcup E_i\\right) = \\sum P(E_i) $$\n\n    2. Chapman-Kolmogorov Equation\n    Relates joint probability distributions of stochastic processes.\n    $$ p_{ij}(t+s) = \\sum_k p_{ik}(t) p_{kj}(s) $$",
     "image": "/assets/images/episodes/Andrey Nikolaevich Kolmogorov.avif"
   },
   {
     "title": "Godfrey Harold Hardy",
     "url": "/mathematicians/godfrey-harold-hardy.html",
-    "description": "The life of G. H. Hardy - Pure Math and Creative Decline.",
+    "description": "The life of G. H. Hardy - Pure Math and Creative Decline.\n\nFamous Equations\n\n    1. Hardy-Weinberg Principle\n    Allele frequencies in a population remain constant in equilibrium.\n    $$ p^2 + 2pq + q^2 = 1 $$\n\n    2. Hardy-Littlewood Circle Method\n    An analytic technique for estimating the number of solutions to additive number theory problems.\n    $$ R(n) = \\int_0^1 S(\\alpha)^s e(-n\\alpha) d\\alpha $$",
     "image": "/assets/images/episodes/Godfrey Harold Hardy.avif"
   },
   {
     "title": "Hermann Minkowski",
     "url": "/mathematicians/hermann-minkowski.html",
-    "description": "The life of Hermann Minkowski - Geometry defined SpaceTime.",
+    "description": "The life of Hermann Minkowski - Geometry defined SpaceTime.\n\nFamous Equations\n\n    1. Spacetime Interval\n    The invariant metric of special relativity combining space and time.\n    $$ ds^2 = c^2dt^2 - (dx^2 + dy^2 + dz^2) $$\n\n    2. Minkowski Inequality\n    The triangle inequality for \\(L^p\\) spaces.\n    $$ \\left( \\sum |x_i + y_i|^p \\right)^{1/p} \\le \\left( \\sum |x_i|^p \\right)^{1/p} + \\left( \\sum |y_i|^p \\right)^{1/p} $$",
     "image": "/assets/images/episodes/Hermann Minkowski.avif"
   },
   {
     "title": "David Hilbert",
     "url": "/mathematicians/david-hilbert.html",
-    "description": "The life of David Hilbert - The Mathematician Who Redefined Truth",
+    "description": "The life of David Hilbert - The Mathematician Who Redefined Truth \n\nFamous Equations\n\n    1. Einstein-Hilbert Action\n    The action that yields the Einstein field equations of general relativity.\n    $$ S = \\int \\sqrt{-g} R \\, d^4x $$\n\n    2. Hilbert Space Inner Product\n    Generalizing Euclidean space to infinite dimensions.\n    $$ \\langle f, g \\rangle = \\int_a^b f(x) \\overline{g(x)} \\, dx $$",
     "image": "/assets/images/episodes/David Hilbert.avif"
   },
   {
     "title": "Adrien-Marie Legendre",
     "url": "/mathematicians/adrien-marie-legendre.html",
-    "description": "The life of Adrien-Marie Legendre - the Man Who Defined the Meter.",
+    "description": "The life of Adrien-Marie Legendre - the Man Who Defined the Meter.\n\nFamous Equations\n\n    1. Legendre Polynomials\n    Solutions to Legendre's differential equation, essential in physics and engineering.\n    $$ P_n(x) = \\frac{1}{2^n n!} \\frac{d^n}{dx^n} (x^2 - 1)^n $$\n\n    2. Legedre Symbol\n    A notation in number theory to specify quadratic residues.\n    $$ \\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p} $$",
     "image": "/assets/images/episodes/Adrien-Marie Legendre.avif"
   },
   {
@@ -170,7 +170,7 @@
   {
     "title": "\u00c9variste Galois",
     "url": "/mathematicians/evariste-galois.html",
-    "description": "The life of \u00c9variste Galois - The Duelist Who Defined Algebra&#39;s Limits",
+    "description": "The life of \u00c9variste Galois - The Duelist Who Defined Algebra&#39;s Limits\n\nFamous Concepts\n\n    1. Galois Group Solvability\n    The criterion for whether a polynomial is solvable by radicals.\n    $$ \\text{Gal}(L/K) \\text{ is a solvable group} \\iff \\text{Solvable by radicals} $$",
     "image": "/assets/images/episodes/\u00c9variste Galois.avif"
   },
   {
@@ -182,7 +182,7 @@
   {
     "title": "Jules Henri Poincar\u00e9",
     "url": "/mathematicians/jules-henri-poincare.html",
-    "description": "The life of Jules Henri Poincar\u00e9 - the Universalist Who Invented Chaos.",
+    "description": "The life of Jules Henri Poincar\u00e9 - the Universalist Who Invented Chaos.\n\nFamous Concepts\n\n    1. Poincar\u00e9 Recurrence Theorem\n    States that certain systems will eventually return to a state very close to the initial one.\n    $$ T^n (A) \\cap A \\neq \\emptyset $$\n\n    2. Poincar\u00e9-Hopf Index Theorem\n    Relating vector fields to the Euler characteristic.\n    $$ \\sum_i \\text{index}_{x_i}(v) = \\chi(M) $$",
     "image": "/assets/images/episodes/Jules Henri Poincar\u00e9.avif"
   },
   {
@@ -194,61 +194,61 @@
   {
     "title": "Georg Friedrich Bernhard Riemann",
     "url": "/mathematicians/georg-friedrich-bernhard-riemann.html",
-    "description": "The life of Georg Friedrich Bernhard Riemann - Geometry and the Primes.",
+    "description": "The life of Georg Friedrich Bernhard Riemann - Geometry and the Primes.\n\nFamous Equations\n\n    1. Riemann Zeta Function\n    The subject of the Riemann Hypothesis regarding the distribution of prime numbers.\n    $$ \\zeta(s) = \\sum_{n=1}^\\infty \\frac{1}{n^s} $$\n\n    2. Riemann Curvature Tensor\n    The central mathematical tool in General Relativity.\n    $$ R^\\rho_{\\sigma\\mu\\nu} = \\partial_\\mu \\Gamma^\\rho_{\\nu\\sigma} - \\partial_\\nu \\Gamma^\\rho_{\\mu\\sigma} + \\Gamma^\\rho_{\\mu\\lambda}\\Gamma^\\lambda_{\\nu\\sigma} - \\Gamma^\\rho_{\\nu\\lambda}\\Gamma^\\lambda_{\\mu\\sigma} $$",
     "image": "/assets/images/episodes/Georg Friedrich Bernhard Riemann.avif"
   },
   {
     "title": "Johann Peter Gustav Lejeune Dirichlet",
     "url": "/mathematicians/johann-peter-gustav-lejeune-dirichlet.html",
-    "description": "The life of Johann Peter Gustav Lejeune Dirichlet - Defined the Modern Function.",
+    "description": "The life of Johann Peter Gustav Lejeune Dirichlet - Defined the Modern Function.\n\nFamous Equations\n\n    1. Dirichlet Series\n    A generalization of the Zeta function.\n    $$ F(s) = \\sum_{n=1}^\\infty \\frac{a_n}{n^s} $$\n\n    2. Class Number Formula\n    Relating algebraic number theory quantities to L-function values.\n    $$ h = \\frac{w\\sqrt{|D|}}{2\\pi} L(1, \\chi) $$",
     "image": "/assets/images/episodes/Johann Peter Gustav Lejeune Dirichlet.avif"
   },
   {
     "title": "Marie-Sophie Germain",
     "url": "/mathematicians/marie-sophie-germain.html",
-    "description": "The life of Marie-Sophie Germain - The Woman Who Invented Math to Be Heard",
+    "description": "The life of Marie-Sophie Germain - The Woman Who Invented Math to Be Heard\n\nFamous Equations\n\n    1. Germain's Identity\n    A factorization identity.\n    $$ a^4 + 4b^4 = (a^2 + 2b^2 + 2ab)(a^2 + 2b^2 - 2ab) $$\n\n    2. Sophie Germain Primes\n    A prime \\(p\\) where \\(2p+1\\) is also prime, crucial in her work on Fermat's Last Theorem.\n    $$ p \\in \\mathbb{P}, \\quad 2p+1 \\in \\mathbb{P} $$",
     "image": "/assets/images/episodes/Marie-Sophie Germain.avif"
   },
   {
     "title": "Carl Gustav Jacob Jacobi",
     "url": "/mathematicians/carl-gustav-jacob-jacobi.html",
-    "description": "The life of Carl Gustav Jacob Jacobi - A Revolutionary Mathematical Life",
+    "description": "The life of Carl Gustav Jacob Jacobi - A Revolutionary Mathematical Life\n\nFamous Equations\n\n    1. Jacobian Determinant\n    Used for changing variables in multiple integrals.\n    $$ J = \\det \\frac{\\partial(y_1, \\dots, y_n)}{\\partial(x_1, \\dots, x_n)} $$\n\n    2. Jacobi Identity\n    A property of the Poisson bracket and Lie algebras.\n    $$ [A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0 $$",
     "image": "/assets/images/episodes/Carl Gustav Jacob Jacobi.avif"
   },
   {
     "title": "Sim\u00e9on Denis Poisson",
     "url": "/mathematicians/simeon-denis-poisson.html",
-    "description": "The life of Sim\u00e9on Denis Poisson - The Clumsy Surgeon",
+    "description": "The life of Sim\u00e9on Denis Poisson - The Clumsy Surgeon \n\nFamous Equations\n\n    1. Poisson Distribution\n    Probability of a given number of events occurring in a fixed interval.\n    $$ P(k) = \\frac{\\lambda^k e^{-\\lambda}}{k!} $$\n\n    2. Poisson Equation\n    Generalization of Laplace's equation for systems with charge/mass density.\n    $$ \\nabla^2 \\varphi = f $$",
     "image": "/assets/images/episodes/Sim\u00e9on Denis Poisson.avif"
   },
   {
     "title": "Abraham de Moivre",
     "url": "/mathematicians/abraham-de-moivre.html",
-    "description": "The life of Abraham de Moivre - Calculated His Own Death.",
+    "description": "The life of Abraham de Moivre - Calculated His Own Death.\n\nFamous Equations\n\n    1. De Moivre's Formula\n    A fundamental bridge between complex numbers and trigonometry.\n    $$ (\\cos x + i\\sin x)^n = \\cos(nx) + i\\sin(nx) $$\n\n    2. Normal Approximation to Binomial\n    De Moivre was the first to discover the normal curve as an approximation to the binomial distribution.\n    $$ P\\left( \\frac{S_n - np}{\\sqrt{np(1-p)}} \\le x \\right) \\approx \\Phi(x) $$",
     "image": "/assets/images/episodes/Abraham de Moivre.avif"
   },
   {
     "title": "Jean Le Rond d'Alembert",
     "url": "/mathematicians/jean-le-rond-d-alembert.html",
-    "description": "The life of Jean Le Rond d&#39;Alembert - Calculus Genius and Social Fighter.",
+    "description": "The life of Jean Le Rond d&#39;Alembert - Calculus Genius and Social Fighter.\n\nFamous Equations\n\n    1. Wave Equation\n    The first solution to the vibrating string problem.\n    $$ \\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2} $$\n\n    2. D'Alembert's Principle\n    Converting a dynamic problem into a static one by introducing inertial forces.\n    $$ \\mathbf{F} - \\frac{d\\mathbf{p}}{dt} = 0 $$",
     "image": "/assets/images/episodes/Jean Le Rond d'Alembert.avif"
   },
   {
     "title": "Pierre-Simon Laplace",
     "url": "/mathematicians/pierre-simon-laplace.html",
-    "description": "The life of Fran\u00e7ois Pierre-Simon Laplace - Unified Probability and Cosmos.Source:- https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/",
+    "description": "The life of Fran\u00e7ois Pierre-Simon Laplace - Unified Probability and Cosmos.Source:- https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/\n\nFamous Equations\n\n    1. Laplace Equation\n    Describes potentials in physics.\n    $$ \\nabla^2 \\varphi = 0 $$\n\n    2. Laplace Transform\n    Transforms differential equations into algebraic ones.\n    $$ F(s) = \\int_0^\\infty f(t) e^{-st} dt $$",
     "image": "/assets/images/episodes/Pierre-Simon Laplace.avif"
   },
   {
     "title": "Fran\u00e7ois Vi\u00e8te",
     "url": "/mathematicians/francois-viete.html",
-    "description": "The life of Fran\u00e7ois Vi\u00e8te - Invented Algebra Under Banishment.",
+    "description": "The life of Fran\u00e7ois Vi\u00e8te - Invented Algebra Under Banishment.\n\nFamous Equations\n\n    1. Vieta's Formulas\n    Relations between the coefficients of a polynomial and sums/products of its roots.\n    $$ \\sum r_i = -\\frac{a_{n-1}}{a_n}, \\quad \\prod r_i = (-1)^n \\frac{a_0}{a_n} $$\n\n    2. Infinite Product for \\(\\pi\\)\n    The first infinite product formula in mathematics.\n    $$ \\frac{2}{\\pi} = \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{2+\\sqrt{2}}}{2} \\cdot \\frac{\\sqrt{2+\\sqrt{2+\\sqrt{2}}}}{2} \\dots $$",
     "image": "/assets/images/episodes/Fran\u00e7ois Vi\u00e8te.avif"
   },
   {
     "title": "Joseph-Louis Lagrange",
     "url": "/mathematicians/joseph-louis-lagrange.html",
-    "description": "The life of Joseph-Louis Lagrange - Quest for Pure Algebra.",
+    "description": "The life of Joseph-Louis Lagrange - Quest for Pure Algebra.\n\nFamous Equations\n\n    1. Lagrange Multipliers\n    Method for finding local maxima/minima subject to constraints.\n    $$ \\nabla f = \\lambda \\nabla g $$\n\n    2. Lagrangian Mechanics\n    A reformulation of classical mechanics.\n    $$ \\frac{d}{dt} \\left( \\frac{\\partial L}{\\partial \\dot{q}_i} \\right) - \\frac{\\partial L}{\\partial q_i} = 0 $$",
     "image": "/assets/images/episodes/Joseph-Louis Lagrange.avif"
   },
   {
