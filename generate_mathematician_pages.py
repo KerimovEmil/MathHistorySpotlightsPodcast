@@ -87,6 +87,8 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
   <link rel="stylesheet" href="{SITE_STYLE}">
   <link rel="stylesheet" href="{CSS_PATH}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.8/photoswipe.min.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body id="top">
 
@@ -186,10 +188,17 @@ def build_index(pages, out_index):
 
 
 OUT_FEED = os.path.join(ROOT, "assets", "feed.xml")
+STATIC_CONTENT_FILE = os.path.join(ROOT, "assets", "static_content.json")
 
 def main():
         os.makedirs(OUT_DIR, exist_ok=True)
         image_files = list_image_files()
+
+        static_content = {}
+        if os.path.exists(STATIC_CONTENT_FILE):
+             print(f"Loading static content from {STATIC_CONTENT_FILE}...")
+             with open(STATIC_CONTENT_FILE, "r", encoding="utf-8") as f:
+                 static_content = json.load(f)
 
         print(f"Reading RSS from {OUT_FEED}...")
         if os.path.exists(OUT_FEED):
@@ -215,6 +224,10 @@ def main():
                 source_link = extract_source_link(desc)
                 image = find_image_for_title(name, image_files)
                 slug = normalize_text(name)
+                
+                if slug in static_content:
+                     desc_clean += f"\n\n{static_content[slug]}"
+
                 out_file = os.path.join(OUT_DIR, f"{slug}.html")
                 page_rel = f"{slug}.html"
                 audio_url = extract_audio_url(item)
