@@ -77,6 +77,11 @@
         let minYear = 0;
         let maxYear = 0;
 
+        const globalEvents = [
+          { name: "WWI", b: 1914, d: 1918 },
+          { name: "WWII", b: 1939, d: 1945 }
+        ];
+
         // -- Event Listeners for New Controls --
 
         // Search
@@ -244,6 +249,25 @@
           axisEl.style.pointerEvents = 'none';
           axisEl.style.zIndex = '0';
           timeline.appendChild(axisEl);
+
+          // Add Global Events
+          globalEvents.forEach(event => {
+            if (event.d < minYear || event.b > maxYear) return;
+
+            const eventEl = document.createElement('div');
+            eventEl.className = 'global-event';
+            const left = yearToX(Math.max(event.b, minYear));
+            const right = yearToX(Math.min(event.d, maxYear));
+            eventEl.style.left = left + "px";
+            eventEl.style.width = (right - left) + "px";
+
+            const label = document.createElement('div');
+            label.className = 'global-event-label';
+            label.textContent = event.name;
+            eventEl.appendChild(label);
+
+            timeline.appendChild(eventEl);
+          });
 
           // Row/spacing values used for vertical layout
           const rowHeight = 32; // Increased for better spacing
