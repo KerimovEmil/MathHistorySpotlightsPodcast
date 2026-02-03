@@ -63,6 +63,15 @@ body {
   margin-bottom: 14px
 }
 
+.math-list h4 a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.math-list h4 a:hover {
+  text-decoration: underline;
+}
+
 .sources {
   color: var(--muted)
 }
