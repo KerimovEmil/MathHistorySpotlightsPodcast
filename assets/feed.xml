@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Tue, 03 Feb 2026 02:59:56 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 05 Feb 2026 03:52:07 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,23 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Isaac Newton 1643 - 1727</title>
+			<description>&lt;p&gt;The life of Isaac Newton - Secret Life of Rage.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Newton/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Isaac-Newton-1643---1727-e3e2brk</link>
+			<guid isPermaLink="false">b3702e5c-1f9c-4359-9316-0bea09dac957</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 04 Feb 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114421044/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-23%2F11e736bc-6d97-b82f-6ad9-524e662f143b.m4a" length="24857068" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/33UU5n3HotU2SecnGvRWpz/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Isaac Newton - Secret Life of Rage.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Newton/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:12:52</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Isaac Newton.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Gottfried Wilhelm von Leibniz 1646 - 1716</title>
 			<description>&lt;p&gt;The life of Gottfried Wilhelm von Leibniz - Universal Polymath&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/ &lt;/p&gt;
