@@ -168,10 +168,15 @@ class SiteHeader extends HTMLElement {
       if (logoImg) logoImg.src = location.origin + '/assets/images/logo.svg';
 
       const navLinks = this.querySelectorAll('.navbar-link');
+      const currentPath = window.location.pathname;
       navLinks.forEach((a) => {
-        const h = a.getAttribute('href') || '';
+        let h = a.getAttribute('href') || '#';
         if (!h.startsWith('http') && !h.startsWith('/')) {
-          a.setAttribute('href', '/' + h);
+            h = '/' + h;
+            a.setAttribute('href', h);
+        }
+        if (h === currentPath || (h === '/index.html' && currentPath === '/')) {
+            a.classList.add('active');
         }
       });
     } catch (e) { }

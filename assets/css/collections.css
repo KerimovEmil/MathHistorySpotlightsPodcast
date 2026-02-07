@@ -179,6 +179,39 @@
     }
 }
 
+/* Table of Contents */
+.toc-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.toc-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.toc-nav a {
+    color: var(--heliotrope-gray);
+    font-size: 14px;
+    background: hsla(0, 0%, 100%, 0.05);
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.25s ease;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+
+.toc-nav a:hover {
+    background: hsla(0, 0%, 100%, 0.1);
+    color: var(--white);
+    border-color: var(--flourescent-blue);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .collections-title {

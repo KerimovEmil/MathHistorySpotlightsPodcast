@@ -270,8 +270,9 @@ header .container {
   border-radius: 4px;
 }
 
-.navbar-link:is(:hover, :focus) {
+.navbar-link:is(:hover, :focus, .active) {
   background: hsla(0, 0%, 100%, 0.1);
+  color: var(--flourescent-blue);
 }
 
 .navbar-actions {
