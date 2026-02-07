@@ -1,5 +1,17 @@
 [
   {
+    "title": "Renaissance Cubic Equation Wars",
+    "url": "/mathematicians/renaissance-cubic-equation-wars.html",
+    "description": "Topic Episode - the Cubic Equation Wars",
+    "image": null
+  },
+  {
+    "title": "Emil Artin",
+    "url": "/mathematicians/emil-artin.html",
+    "description": "The life of Emil Artin - The Architecture of Algebra",
+    "image": "/assets/images/episodes/Emil Artin.avif"
+  },
+  {
     "title": "Isaac Newton",
     "url": "/mathematicians/isaac-newton.html",
     "description": "The life of Isaac Newton - Secret Life of Rage.\n\nFamous Equations\n\n    1.\n            Newton\u2019s Second Law\n    Published in Principia (1687), this equation mathematically formalized motion in a way that dominated\n        physics for over two centuries.\n    $$ \\mathbf{F} = m\\mathbf{a} $$\n\n    2. Law of\n            Universal Gravitation\n    Newton introduced this in 1687, unifying celestial and terrestrial mechanics under a single mathematical law.\n    $$ F = G\\frac{m_1 m_2}{r^2} $$\n\n    3. Binomial Series\n    Developed in the 1660s, this expansion was part of Newton\u2019s broader creation of infinite series methods before\n        calculus was formalized.\n    $$ (1+x)^n = \\sum_{k=0}^{\\infty} \\binom{n}{k} x^k $$\n\n    4.\n            Newton\u2013Leibniz Calculus (Fluxions)\n    Newton devised fluxions in the mid-1660s, though publication delays fueled the famous priority dispute with\n        Leibniz.\n    $$ \\frac{dy}{dx} $$",
