@@ -431,6 +431,7 @@ header .container {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
 }
 
 .podcast-card:is(:hover, :focus) .card-banner::before {
