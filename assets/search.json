@@ -1,5 +1,23 @@
 [
   {
+    "title": "Scipione del Ferro",
+    "url": "/mathematicians/scipione-del-ferro.html",
+    "description": "The life of Scipione del Ferro - The Secret Cubic Solution for Math Duels",
+    "image": "/assets/images/episodes/Scipione del Ferro.avif"
+  },
+  {
+    "title": "Girolamo Cardano",
+    "url": "/mathematicians/girolamo-cardano.html",
+    "description": "The life of Girolamo Cardano - The Knife Wielding Gambler",
+    "image": "/assets/images/episodes/Girolamo Cardano.avif"
+  },
+  {
+    "title": "Niccol\u00f2 Tartaglia",
+    "url": "/mathematicians/niccolo-tartaglia.html",
+    "description": "The life of Niccol\u00f2 Tartaglia - The Stolen Secret of the Cubic Equation",
+    "image": "/assets/images/episodes/Niccol\u00f2 Tartaglia.avif"
+  },
+  {
     "title": "Renaissance Cubic Equation Wars",
     "url": "/mathematicians/renaissance-cubic-equation-wars.html",
     "description": "Topic Episode - the Cubic Equation Wars",
