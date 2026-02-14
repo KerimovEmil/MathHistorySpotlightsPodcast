@@ -58,9 +58,13 @@ class PodcastSection extends HTMLElement {
         const article = document.createElement('article');
         article.className = 'podcast-card';
 
+        const mathematicianUrl = this.getMathematicianLink(title);
+
         article.innerHTML = `
           <figure class="card-banner">
-            <img src="${image}" alt="${this.escapeHtml(alt)}">
+            <a href="${mathematicianUrl}">
+              <img src="${image}" alt="${this.escapeHtml(alt)}">
+            </a>
           </figure>
           <div class="card-content">
             <div class="card-meta">
@@ -91,6 +95,21 @@ class PodcastSection extends HTMLElement {
     const itEp = itEpEl ? itEpEl.textContent : null;
     if (itEp) return 'Episode ' + itEp;
     return '';
+  }
+
+  getMathematicianLink(title) {
+    // Remove year patterns like " 1898 - 1962"
+    let slug = title.replace(/\s\d{4}\s-\s\d{4}/g, '');
+    // Normalize unicode characters (remove accents)
+    slug = slug.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    // Convert to lowercase
+    slug = slug.toLowerCase();
+    // Replace non-alphanumeric characters with hyphens
+    slug = slug.replace(/[^a-z0-9]+/g, '-');
+    // Remove leading/trailing hyphens
+    slug = slug.replace(/^-+|-+$/g, '');
+    
+    return `./mathematicians/${slug}.html`;
   }
 
   showError(msg) {
