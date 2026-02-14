@@ -354,12 +354,13 @@ def main():
                         related_pages=related
                 )
                 
-                pages_for_index.append({
+                if page["slug"] != "renaissance-cubic-equation-wars":
+                    pages_for_index.append({
                         "title": page["title"], 
                         "file": page["file"], 
                         "image": page["image"], 
                         "description": page["description"]
-                })
+                    })
 
         build_index(pages_for_index, os.path.join(OUT_DIR, "index.html"))
 
