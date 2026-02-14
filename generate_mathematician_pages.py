@@ -4,6 +4,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 import unicodedata
 import json
+import random
 
 RSS_URL = "https://anchor.fm/s/10cdf4708/podcast/rss"
 ROOT = os.path.dirname(__file__)
@@ -20,6 +21,17 @@ def normalize_text(s):
         s = s.lower()
         s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
         return s
+
+
+def extract_years(title):
+        """Extracts birth and death years from title string, e.g. "Name 1643 - 1727" -> (1643, 1727)"""
+        if not title:
+                return None, None
+        # Look for pattern like "1643 - 1727" or "1643-1727"
+        m = re.search(r"(\d{3,4})\s*[\-–—]\s*(\d{3,4})", title)
+        if m:
+                return int(m.group(1)), int(m.group(2))
+        return None, None
 
 
 def strip_years(s):
@@ -75,8 +87,24 @@ def extract_source_link(description):
         return None
 
 
-def build_page(title, description, source_link, image_path, audio_url, out_path):
+def build_page(title, description, source_link, image_path, audio_url, out_path, related_pages=None):
         audio_html = f'<audio controls src="{audio_url}">Your browser does not support the audio element.</audio>' if audio_url else ''
+        
+        see_also_html = ""
+        if related_pages:
+                items_html = ""
+                for p in related_pages:
+                        img_tag = f'<img src="{p["image"]}" alt="{p["title"]}" loading="lazy"/>' if p.get("image") else ''
+                        items_html += f'<li><a href="{p["file"]}">{img_tag}<span>{p["title"]}</span></a></li>'
+                see_also_html = f'''
+                <div class="see-also" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                        <h3 style="color:var(--accent); margin-bottom: 20px;">See Also</h3>
+                        <ul class="grid" style="padding: 0; margin: 0; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); box-shadow: none; border: none; background: none;">
+                                {items_html}
+                        </ul>
+                </div>
+                '''
+
         html = f'''<!doctype html>
 <html lang="en">
 <head>
@@ -103,6 +131,7 @@ def build_page(title, description, source_link, image_path, audio_url, out_path)
         <h1 class="name">{title}</h1>
         <div class="desc">{description or ''}</div>
         <p class="sources">Sources: {f'<a href="{source_link}" target="_blank" rel="noopener">{source_link}</a>' if source_link else '—'}</p>
+        {see_also_html}
   </main>
 
   <site-footer></site-footer>
@@ -205,11 +234,15 @@ def main():
         
         root = ET.fromstring(xml)
 
-        pages = []
+        all_pages_data = []
+
         for item in root.findall("./channel/item"):
                 title_el = item.find("title")
                 desc_el = item.find("description")
                 raw_title = title_el.text.strip() if title_el is not None and title_el.text else "untitled"
+                
+                birth_year, death_year = extract_years(raw_title)
+
                 # strip trailing years for display and matching
                 name = strip_years(raw_title)
                 desc = desc_el.text if desc_el is not None else ''
@@ -228,15 +261,63 @@ def main():
                 out_file = os.path.join(OUT_DIR, f"{slug}.html")
                 page_rel = f"{slug}.html"
                 audio_url = extract_audio_url(item)
-                build_page(name, desc_clean, source_link, image, audio_url, out_file)
-                pages.append({"title": name, "file": page_rel, "image": image, "description": desc_clean})
+                
+                all_pages_data.append({
+                    "title": name,
+                    "description": desc_clean,
+                    "source_link": source_link,
+                    "image": image,
+                    "audio_url": audio_url,
+                    "out_file": out_file,
+                    "file": page_rel,
+                    "slug": slug,
+                    "birth_year": birth_year
+                })
 
+        pages_for_index = []
 
+        for page in all_pages_data:
+                related = []
+                if page["birth_year"]:
+                        # Find closest birth years
+                        candidates = []
+                        for other in all_pages_data:
+                                if other["slug"] == page["slug"]:
+                                        continue
+                                if other["birth_year"]:
+                                        diff = abs(other["birth_year"] - page["birth_year"])
+                                        candidates.append((diff, other))
+                                else:
+                                        candidates.append((9999, other))
+                        
+                        candidates.sort(key=lambda x: x[0])
+                        related = [c[1] for c in candidates[:3]]
+                else:
+                        others = [p for p in all_pages_data if p["slug"] != page["slug"]]
+                        if others:
+                                related = random.sample(others, min(3, len(others)))
 
-        build_index(pages, os.path.join(OUT_DIR, "index.html"))
+                build_page(
+                        page["title"], 
+                        page["description"], 
+                        page["source_link"], 
+                        page["image"], 
+                        page["audio_url"], 
+                        page["out_file"],
+                        related_pages=related
+                )
+                
+                pages_for_index.append({
+                        "title": page["title"], 
+                        "file": page["file"], 
+                        "image": page["image"], 
+                        "description": page["description"]
+                })
+
+        build_index(pages_for_index, os.path.join(OUT_DIR, "index.html"))
 
         search_data = []
-        for p in pages:
+        for p in pages_for_index:
                 # Strip HTML tags from description for search index
                 clean_desc = re.sub(r'<[^>]+>', '', p["description"]).strip()
                 search_data.append({
