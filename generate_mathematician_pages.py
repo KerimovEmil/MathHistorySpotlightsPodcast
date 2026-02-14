@@ -12,6 +12,7 @@ IMAGES_DIR = os.path.join(ROOT, "assets", "images", "episodes")
 OUT_DIR = os.path.join(ROOT, "mathematicians")
 CSS_PATH = "../assets/css/mathematicians.css"
 SITE_STYLE = "../assets/css/style.css"
+COLLECTIONS_FILE = os.path.join(ROOT, "collections.html")
 
 
 def normalize_text(s):
@@ -21,6 +22,42 @@ def normalize_text(s):
         s = s.lower()
         s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
         return s
+
+
+def load_collections():
+        """Parses collections.html to return a dictionary mapping slugs to a list of related slugs from the same collection."""
+        if not os.path.exists(COLLECTIONS_FILE):
+             print(f"Warning: {COLLECTIONS_FILE} not found.")
+             return {}
+        
+        with open(COLLECTIONS_FILE, "r", encoding="utf-8") as f:
+             content = f.read()
+
+        # Find all collection groups
+        # Groups are div.collection-group
+        # Inside are links to /mathematicians/slug.html
+        
+        # Simple regex approach: find overlapping groups
+        # We can split by class="collection-group"
+        
+        groups = content.split('class="collection-group"')
+        related_map = {}
+        
+        # Skip the first split as it's before the first group
+        for group in groups[1:]:
+             # Find all hrefs like /mathematicians/some-slug.html
+             matches = re.findall(r'href="/mathematicians/([^"]+)\.html"', group)
+             slugs = [m for m in matches]
+             
+             # For each slug in this group, add all other slugs as related
+             for s in slugs:
+                  if s not in related_map:
+                       related_map[s] = set()
+                  for other in slugs:
+                       if other != s:
+                            related_map[s].add(other)
+                            
+        return related_map
 
 
 def extract_years(title):
@@ -236,6 +273,9 @@ def main():
 
         all_pages_data = []
 
+        # Parse collections for relationships
+        collections_map = load_collections()
+
         for item in root.findall("./channel/item"):
                 title_el = item.find("title")
                 desc_el = item.find("description")
@@ -278,24 +318,31 @@ def main():
 
         for page in all_pages_data:
                 related = []
-                if page["birth_year"]:
-                        # Find closest birth years
+                # 1. Prioritize Collection Peers
+                collection_peers_slugs = collections_map.get(page["slug"], set())
+                for other in all_pages_data:
+                     if other["slug"] in collection_peers_slugs:
+                          related.append(other)
+                
+                # 2. Fill remaining slots with time-proximity peers
+                needed = 3 - len(related)
+                if needed > 0:
                         candidates = []
                         for other in all_pages_data:
                                 if other["slug"] == page["slug"]:
                                         continue
-                                if other["birth_year"]:
+                                if other in related:
+                                        continue
+                                
+                                if page["birth_year"] and other["birth_year"]:
                                         diff = abs(other["birth_year"] - page["birth_year"])
                                         candidates.append((diff, other))
                                 else:
                                         candidates.append((9999, other))
                         
                         candidates.sort(key=lambda x: x[0])
-                        related = [c[1] for c in candidates[:3]]
-                else:
-                        others = [p for p in all_pages_data if p["slug"] != page["slug"]]
-                        if others:
-                                related = random.sample(others, min(3, len(others)))
+                        # Add up to 'needed' more items
+                        related.extend([c[1] for c in candidates[:needed]])
 
                 build_page(
                         page["title"], 
