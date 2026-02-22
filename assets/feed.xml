@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Sat, 14 Feb 2026 03:11:38 GMT</lastBuildDate>
+		<lastBuildDate>Sat, 21 Feb 2026 08:11:20 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,57 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Nasir al-Din al-Tusi 1201 - 1274</title>
+			<description>&lt;p&gt;The life of Nasir al-Din al-Tusi - Architect of Islamic Scientific Revival&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Al-Tusi_Nasir/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Nasir-al-Din-al-Tusi-1201---1274-e3elkuf</link>
+			<guid isPermaLink="false">e4449336-d161-472c-8c19-f80dae797c31</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Fri, 20 Feb 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115052943/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-5%2F79e3f2c9-7260-b441-bdbc-e49c54e19154.m4a" length="29801962" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3TqLeJwqoQKF7Es2lnqTKq/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Nasir al-Din al-Tusi - Architect of Islamic Scientific Revival&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Al-Tusi_Nasir/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:25</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Nasir al-Din al-Tusi.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>William Thomson (Lord Kelvin) 1824 - 1907</title>
+			<description>&lt;p&gt;The life of William Thomson (Lord Kelvin) - The Polymath who Wired the World&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Thomson/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/William-Thomson-Lord-Kelvin-1824---1907-e3ef2uv</link>
+			<guid isPermaLink="false">86df4cdd-2979-4d05-9b97-69cecd16a94f</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 18 Feb 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114837919/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-31%2F143a5d12-490c-e463-ffcf-2c72f547ba8a.m4a" length="30476770" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/14WUgGTe9Ik10ImU8AMXx5/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of William Thomson (Lord Kelvin) - The Polymath who Wired the World&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Thomson/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:15:46</itunes:duration>
+			<itunes:image href="/assets/images/episodes/William Thomson (Lord Kelvin).avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Lodovico Ferrari 1522 - 1565</title>
+			<description>&lt;p&gt;The life of Lodovico Ferrari - The Poisoned Prodigy Behind the Quartic Equation&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferrari/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Lodovico-Ferrari-1522---1565-e3ef2t3</link>
+			<guid isPermaLink="false">f0d0ecc6-2238-45dd-b7ff-57330cf10f6e</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 16 Feb 2026 13:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114837859/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-31%2Feb2f63b5-1f7b-5447-34fd-2ee140e01ead.m4a" length="22603187" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2sk45RIrM9Rt0am8go3HqC/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Lodovico Ferrari - The Poisoned Prodigy Behind the Quartic Equation&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferrari/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:11:42</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Lodovico Ferrari.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Scipione del Ferro 1465 - 1526</title>
 			<description>&lt;p&gt;The life of Scipione del Ferro - The Secret Cubic Solution for Math Duels&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferro/&lt;/p&gt;

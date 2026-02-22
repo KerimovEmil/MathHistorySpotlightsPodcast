@@ -1,5 +1,23 @@
 [
   {
+    "title": "Nasir al-Din al-Tusi",
+    "url": "/mathematicians/nasir-al-din-al-tusi.html",
+    "description": "The life of Nasir al-Din al-Tusi - Architect of Islamic Scientific Revival",
+    "image": "/assets/images/episodes/Nasir al-Din al-Tusi.avif"
+  },
+  {
+    "title": "William Thomson (Lord Kelvin)",
+    "url": "/mathematicians/william-thomson-lord-kelvin.html",
+    "description": "The life of William Thomson (Lord Kelvin) - The Polymath who Wired the World",
+    "image": "/assets/images/episodes/William Thomson (Lord Kelvin).avif"
+  },
+  {
+    "title": "Lodovico Ferrari",
+    "url": "/mathematicians/lodovico-ferrari.html",
+    "description": "The life of Lodovico Ferrari - The Poisoned Prodigy Behind the Quartic Equation",
+    "image": "/assets/images/episodes/Lodovico Ferrari.avif"
+  },
+  {
     "title": "Scipione del Ferro",
     "url": "/mathematicians/scipione-del-ferro.html",
     "description": "The life of Scipione del Ferro - The Secret Cubic Solution for Math Duels",
