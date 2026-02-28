@@ -1,5 +1,23 @@
 [
   {
+    "title": "Carl Gustav Jacob Jacobi",
+    "url": "/mathematicians/carl-gustav-jacob-jacobi.html",
+    "description": "The life of Carl Gustav Jacob Jacobi - Revolution and Ruin\n\nFamous Equations\n\n    1. Jacobian\n            Determinant\n    Used for changing variables in multiple integrals.\n    $$ J = \\det \\frac{\\partial(y_1, \\dots, y_n)}{\\partial(x_1, \\dots, x_n)} $$\n\n    2. Jacobi Identity\n    A property of the Poisson bracket and Lie algebras.\n    $$ [A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0 $$",
+    "image": "/assets/images/episodes/Carl Gustav Jacob Jacobi.avif"
+  },
+  {
+    "title": "Georges Louis Leclerc Comte de Buffon",
+    "url": "/mathematicians/georges-louis-leclerc-comte-de-buffon.html",
+    "description": "The life of Georges Louis Leclerc Comte de Buffon - The Needle and the Age of Earth",
+    "image": "/assets/images/episodes/Georges Louis Leclerc Comte de Buffon.avif"
+  },
+  {
+    "title": "John Horton Conway",
+    "url": "/mathematicians/john-horton-conway.html",
+    "description": "The life of John Horton Conway - Mathematical Play",
+    "image": "/assets/images/episodes/John Horton Conway.avif"
+  },
+  {
     "title": "Nasir al-Din al-Tusi",
     "url": "/mathematicians/nasir-al-din-al-tusi.html",
     "description": "The life of Nasir al-Din al-Tusi - Architect of Islamic Scientific Revival",
