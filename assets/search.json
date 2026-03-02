@@ -1,5 +1,11 @@
 [
   {
+    "title": "Niels Henrik Abel",
+    "url": "/mathematicians/niels-henrik-abel.html",
+    "description": "The life of Niels Henrik Abel - The Starving Genius Who Rewrote Algebra",
+    "image": "/assets/images/episodes/Niels Henrik Abel.avif"
+  },
+  {
     "title": "Carl Gustav Jacob Jacobi",
     "url": "/mathematicians/carl-gustav-jacob-jacobi.html",
     "description": "The life of Carl Gustav Jacob Jacobi - Revolution and Ruin\n\nFamous Equations\n\n    1. Jacobian\n            Determinant\n    Used for changing variables in multiple integrals.\n    $$ J = \\det \\frac{\\partial(y_1, \\dots, y_n)}{\\partial(x_1, \\dots, x_n)} $$\n\n    2. Jacobi Identity\n    A property of the Poisson bracket and Lie algebras.\n    $$ [A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0 $$",

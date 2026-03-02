@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Sun, 01 Mar 2026 22:42:59 GMT</lastBuildDate>
+		<lastBuildDate>Mon, 02 Mar 2026 17:04:24 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,23 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Niels Henrik Abel 1802 - 1829</title>
+			<description>&lt;p&gt;The life of Niels Henrik Abel - The Starving Genius Who Rewrote Algebra&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Abel/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Niels-Henrik-Abel-1802---1829-e3f3pn7</link>
+			<guid isPermaLink="false">f6b8b099-cb3c-4a3a-8b96-e774f461dafe</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Mon, 02 Mar 2026 12:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115516583/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-15%2F70e85136-d73f-7d36-2e07-cceff9b2a6f0.m4a" length="36692956" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6vpL8X5F4RFTBO7BxbBVOv/transcript.srt" type="application/x-subrip" />
+			<itunes:summary>&lt;p&gt;The life of Niels Henrik Abel - The Starving Genius Who Rewrote Algebra&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Abel/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:19:00</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Niels Henrik Abel.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Carl Gustav Jacob Jacobi 1804 - 1851</title>
 			<description>&lt;p&gt;The life of Carl Gustav Jacob Jacobi - Revolution and Ruin&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Jacobi/&lt;/p&gt;
