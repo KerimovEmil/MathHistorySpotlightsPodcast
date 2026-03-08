@@ -270,7 +270,7 @@
           });
 
           // Row/spacing values used for vertical layout
-          const rowHeight = 32; // Increased for better spacing
+          const rowHeight = 24; // Compact row height
 
           // Filter data based on search
           const query = searchInput.value.toLowerCase();
@@ -408,8 +408,8 @@
 
           const axisBottomCss = 60; // must match .axis bottom in CSS
           const ticksBottomCss = 36; // must match .year bottom in CSS
-          const paddingBelow = 12;
-          const minTimelineHeight = 300;
+          const paddingBelow = 6;
+          const minTimelineHeight = 220;
           const neededHeight = Math.max(minTimelineHeight, contentHeight + paddingBelow + axisBottomCss + 20);
           timeline.style.height = neededHeight + 'px';
 
