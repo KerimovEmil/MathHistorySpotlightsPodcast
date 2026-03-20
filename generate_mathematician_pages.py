@@ -13,6 +13,7 @@ OUT_DIR = os.path.join(ROOT, "mathematicians")
 CSS_PATH = "../assets/css/mathematicians.css"
 SITE_STYLE = "../assets/css/style.css"
 COLLECTIONS_FILE = os.path.join(ROOT, "collections.html")
+OVERRIDES_FILE = os.path.join(ROOT, "see_also_overrides.json")
 
 
 def normalize_text(s):
@@ -22,6 +23,14 @@ def normalize_text(s):
         s = s.lower()
         s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
         return s
+
+
+def load_see_also_overrides():
+        """Loads see_also_overrides.json, returning a dict of slug -> [list of slugs]."""
+        if not os.path.exists(OVERRIDES_FILE):
+                return {}
+        with open(OVERRIDES_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
 
 
 def load_collections():
@@ -273,6 +282,9 @@ def main():
 
         all_pages_data = []
 
+        # Load manual See Also overrides
+        see_also_overrides = load_see_also_overrides()
+
         # Parse collections for relationships
         collections_map = load_collections()
 
@@ -318,31 +330,38 @@ def main():
 
         for page in all_pages_data:
                 related = []
-                # 1. Prioritize Collection Peers
-                collection_peers_slugs = collections_map.get(page["slug"], set())
-                for other in all_pages_data:
-                     if other["slug"] in collection_peers_slugs:
-                          related.append(other)
-                
-                # 2. Fill remaining slots with time-proximity peers
-                needed = 3 - len(related)
-                if needed > 0:
-                        candidates = []
+
+                # 0. Check for manual overrides
+                if page["slug"] in see_also_overrides:
+                        override_slugs = see_also_overrides[page["slug"]]
+                        slug_to_page = {p["slug"]: p for p in all_pages_data}
+                        related = [slug_to_page[s] for s in override_slugs if s in slug_to_page]
+                else:
+                        # 1. Prioritize Collection Peers
+                        collection_peers_slugs = collections_map.get(page["slug"], set())
                         for other in all_pages_data:
-                                if other["slug"] == page["slug"]:
-                                        continue
-                                if other in related:
-                                        continue
-                                
-                                if page["birth_year"] and other["birth_year"]:
-                                        diff = abs(other["birth_year"] - page["birth_year"])
-                                        candidates.append((diff, other))
-                                else:
-                                        candidates.append((9999, other))
+                             if other["slug"] in collection_peers_slugs:
+                                  related.append(other)
                         
-                        candidates.sort(key=lambda x: x[0])
-                        # Add up to 'needed' more items
-                        related.extend([c[1] for c in candidates[:needed]])
+                        # 2. Fill remaining slots with time-proximity peers
+                        needed = 3 - len(related)
+                        if needed > 0:
+                                candidates = []
+                                for other in all_pages_data:
+                                        if other["slug"] == page["slug"]:
+                                                continue
+                                        if other in related:
+                                                continue
+                                        
+                                        if page["birth_year"] and other["birth_year"]:
+                                                diff = abs(other["birth_year"] - page["birth_year"])
+                                                candidates.append((diff, other))
+                                        else:
+                                                candidates.append((9999, other))
+                                
+                                candidates.sort(key=lambda x: x[0])
+                                # Add up to 'needed' more items
+                                related.extend([c[1] for c in candidates[:needed]])
 
                 build_page(
                         page["title"], 
