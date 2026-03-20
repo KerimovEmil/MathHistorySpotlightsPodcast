@@ -1,7 +1,312 @@
 {
+  "abraham-de-moivre": [
+    "blaise-pascal",
+    "pierre-de-fermat",
+    "jacob-jacques-bernoulli"
+  ],
+  "adrien-marie-legendre": [
+    "joseph-fourier",
+    "simeon-denis-poisson",
+    "pierre-simon-laplace"
+  ],
+  "andrei-andreyevich-markov": [
+    "andrey-nikolaevich-kolmogorov",
+    "pierre-simon-laplace",
+    "blaise-pascal"
+  ],
+  "andrey-nikolaevich-kolmogorov": [
+    "andrei-andreyevich-markov",
+    "jules-henri-poincare",
+    "david-hilbert"
+  ],
+  "augusta-ada-byron-king-countess-of-lovelace": [
+    "charles-babbage",
+    "george-boole",
+    "marie-sophie-germain"
+  ],
+  "augustus-de-morgan": [
+    "george-boole",
+    "charles-babbage",
+    "william-rowan-hamilton"
+  ],
+  "blaise-pascal": [
+    "pierre-de-fermat",
+    "abraham-de-moivre",
+    "gottfried-wilhelm-von-leibniz"
+  ],
+  "carl-gustav-jacob-jacobi": [
+    "niels-henrik-abel",
+    "adrien-marie-legendre",
+    "johann-carl-friedrich-gauss"
+  ],
+  "charles-babbage": [
+    "augusta-ada-byron-king-countess-of-lovelace",
+    "george-boole",
+    "claude-elwood-shannon"
+  ],
+  "claude-elwood-shannon": [
+    "george-boole",
+    "john-von-neumann",
+    "charles-babbage"
+  ],
+  "daniel-bernoulli": [
+    "jacob-jacques-bernoulli",
+    "johann-bernoulli",
+    "leonhard-euler"
+  ],
+  "david-hilbert": [
+    "georg-friedrich-bernhard-riemann",
+    "emmy-amalie-noether",
+    "felix-christian-klein"
+  ],
+  "emil-artin": [
+    "emmy-amalie-noether",
+    "david-hilbert",
+    "evariste-galois"
+  ],
+  "emmy-amalie-noether": [
+    "marie-sophie-germain",
+    "david-hilbert",
+    "felix-christian-klein"
+  ],
+  "erich-hecke": [
+    "david-hilbert",
+    "georg-friedrich-bernhard-riemann",
+    "carl-gustav-jacob-jacobi"
+  ],
+  "evangelista-torricelli": [
+    "blaise-pascal",
+    "rene-descartes",
+    "robert-hooke"
+  ],
+  "evariste-galois": [
+    "niels-henrik-abel",
+    "adrien-marie-legendre",
+    "joseph-liouville"
+  ],
+  "felix-christian-klein": [
+    "david-hilbert",
+    "georg-friedrich-bernhard-riemann",
+    "emmy-amalie-noether"
+  ],
+  "francois-viete": [
+    "rene-descartes",
+    "girolamo-cardano",
+    "nasir-al-din-al-tusi"
+  ],
+  "georg-friedrich-bernhard-riemann": [
+    "david-hilbert",
+    "johann-carl-friedrich-gauss",
+    "felix-christian-klein"
+  ],
+  "george-biddell-airy": [
+    "william-rowan-hamilton",
+    "oliver-heaviside",
+    "william-thomson-lord-kelvin"
+  ],
+  "george-boole": [
+    "charles-babbage",
+    "augusta-ada-byron-king-countess-of-lovelace",
+    "claude-elwood-shannon"
+  ],
+  "georges-louis-leclerc-comte-de-buffon": [
+    "blaise-pascal",
+    "pierre-de-fermat",
+    "pierre-simon-laplace"
+  ],
+  "girolamo-cardano": [
+    "niccolo-tartaglia",
+    "lodovico-ferrari",
+    "scipione-del-ferro"
+  ],
+  "godfrey-harold-hardy": [
+    "john-edensor-littlewood",
+    "srinivasa-aiyangar-ramanujan",
+    "georg-friedrich-bernhard-riemann"
+  ],
+  "gottfried-wilhelm-von-leibniz": [
+    "isaac-newton",
+    "robert-hooke",
+    "jacob-jacques-bernoulli"
+  ],
+  "heinrich-rudolf-hertz": [
+    "oliver-heaviside",
+    "william-thomson-lord-kelvin",
+    "george-biddell-airy"
+  ],
+  "hermann-minkowski": [
+    "david-hilbert",
+    "felix-christian-klein",
+    "georg-friedrich-bernhard-riemann"
+  ],
+  "isaac-newton": [
+    "gottfried-wilhelm-von-leibniz",
+    "robert-hooke",
+    "john-wallis"
+  ],
+  "jacob-jacques-bernoulli": [
+    "johann-bernoulli",
+    "daniel-bernoulli",
+    "gottfried-wilhelm-von-leibniz"
+  ],
+  "jean-le-rond-d-alembert": [
+    "joseph-louis-lagrange",
+    "leonhard-euler",
+    "joseph-fourier"
+  ],
+  "johann-bernoulli": [
+    "jacob-jacques-bernoulli",
+    "daniel-bernoulli",
+    "leonhard-euler"
+  ],
+  "johann-carl-friedrich-gauss": [
+    "georg-friedrich-bernhard-riemann",
+    "adrien-marie-legendre",
+    "niels-henrik-abel"
+  ],
+  "johann-peter-gustav-lejeune-dirichlet": [
+    "georg-friedrich-bernhard-riemann",
+    "adrien-marie-legendre",
+    "niels-henrik-abel"
+  ],
+  "john-edensor-littlewood": [
+    "godfrey-harold-hardy",
+    "srinivasa-aiyangar-ramanujan",
+    "georg-friedrich-bernhard-riemann"
+  ],
+  "john-f-nash": [
+    "john-von-neumann",
+    "andrey-nikolaevich-kolmogorov",
+    "david-hilbert"
+  ],
+  "john-horton-conway": [
+    "john-von-neumann",
+    "claude-elwood-shannon",
+    "john-f-nash"
+  ],
+  "john-von-neumann": [
+    "claude-elwood-shannon",
+    "john-f-nash",
+    "david-hilbert"
+  ],
+  "john-wallis": [
+    "isaac-newton",
+    "gottfried-wilhelm-von-leibniz",
+    "blaise-pascal"
+  ],
+  "joseph-fourier": [
+    "simeon-denis-poisson",
+    "adrien-marie-legendre",
+    "jean-le-rond-d-alembert"
+  ],
+  "joseph-liouville": [
+    "evariste-galois",
+    "niels-henrik-abel",
+    "adrien-marie-legendre"
+  ],
+  "joseph-louis-lagrange": [
+    "jean-le-rond-d-alembert",
+    "leonhard-euler",
+    "pierre-simon-laplace"
+  ],
+  "jules-henri-poincare": [
+    "georg-friedrich-bernhard-riemann",
+    "david-hilbert",
+    "andrey-nikolaevich-kolmogorov"
+  ],
+  "leonardo-da-vinci": [
+    "girolamo-cardano",
+    "niccolo-tartaglia",
+    "francois-viete"
+  ],
+  "leonardo-pisano-fibonacci": [
+    "nasir-al-din-al-tusi",
+    "madhava-of-sangamagrama",
+    "francois-viete"
+  ],
+  "leonhard-euler": [
+    "daniel-bernoulli",
+    "joseph-louis-lagrange",
+    "jean-le-rond-d-alembert"
+  ],
+  "lodovico-ferrari": [
+    "girolamo-cardano",
+    "niccolo-tartaglia",
+    "scipione-del-ferro"
+  ],
   "madhava-of-sangamagrama": [
     "srinivasa-aiyangar-ramanujan",
     "isaac-newton",
     "gottfried-wilhelm-von-leibniz"
+  ],
+  "marie-sophie-germain": [
+    "augusta-ada-byron-king-countess-of-lovelace",
+    "emmy-amalie-noether",
+    "joseph-louis-lagrange"
+  ],
+  "nasir-al-din-al-tusi": [
+    "leonardo-pisano-fibonacci",
+    "madhava-of-sangamagrama",
+    "francois-viete"
+  ],
+  "niccolo-tartaglia": [
+    "girolamo-cardano",
+    "lodovico-ferrari",
+    "scipione-del-ferro"
+  ],
+  "niels-henrik-abel": [
+    "evariste-galois",
+    "carl-gustav-jacob-jacobi",
+    "adrien-marie-legendre"
+  ],
+  "oliver-heaviside": [
+    "william-thomson-lord-kelvin",
+    "heinrich-rudolf-hertz",
+    "george-biddell-airy"
+  ],
+  "pierre-de-fermat": [
+    "blaise-pascal",
+    "abraham-de-moivre",
+    "leonhard-euler"
+  ],
+  "pierre-simon-laplace": [
+    "joseph-louis-lagrange",
+    "joseph-fourier",
+    "simeon-denis-poisson"
+  ],
+  "rene-descartes": [
+    "pierre-de-fermat",
+    "blaise-pascal",
+    "francois-viete"
+  ],
+  "robert-hooke": [
+    "isaac-newton",
+    "gottfried-wilhelm-von-leibniz",
+    "evangelista-torricelli"
+  ],
+  "scipione-del-ferro": [
+    "girolamo-cardano",
+    "niccolo-tartaglia",
+    "lodovico-ferrari"
+  ],
+  "simeon-denis-poisson": [
+    "joseph-fourier",
+    "adrien-marie-legendre",
+    "pierre-simon-laplace"
+  ],
+  "srinivasa-aiyangar-ramanujan": [
+    "godfrey-harold-hardy",
+    "john-edensor-littlewood",
+    "madhava-of-sangamagrama"
+  ],
+  "william-rowan-hamilton": [
+    "george-biddell-airy",
+    "augustus-de-morgan",
+    "oliver-heaviside"
+  ],
+  "william-thomson-lord-kelvin": [
+    "oliver-heaviside",
+    "heinrich-rudolf-hertz",
+    "george-biddell-airy"
   ]
 }
