@@ -55,19 +55,19 @@
     "leonhard-euler"
   ],
   "david-hilbert": [
-    "georg-friedrich-bernhard-riemann",
     "emmy-amalie-noether",
-    "felix-christian-klein"
+    "felix-christian-klein",
+    "emil-artin"
   ],
   "emil-artin": [
     "emmy-amalie-noether",
     "david-hilbert",
-    "evariste-galois"
+    "felix-christian-klein"
   ],
   "emmy-amalie-noether": [
     "marie-sophie-germain",
-    "david-hilbert",
-    "felix-christian-klein"
+    "augusta-ada-byron-king-countess-of-lovelace",
+    "david-hilbert"
   ],
   "erich-hecke": [
     "david-hilbert",
@@ -81,8 +81,8 @@
   ],
   "evariste-galois": [
     "niels-henrik-abel",
-    "adrien-marie-legendre",
-    "joseph-liouville"
+    "joseph-liouville",
+    "adrien-marie-legendre"
   ],
   "felix-christian-klein": [
     "david-hilbert",
@@ -176,7 +176,7 @@
   ],
   "john-f-nash": [
     "john-von-neumann",
-    "andrey-nikolaevich-kolmogorov",
+    "claude-elwood-shannon",
     "david-hilbert"
   ],
   "john-horton-conway": [
@@ -256,8 +256,8 @@
   ],
   "niels-henrik-abel": [
     "evariste-galois",
-    "carl-gustav-jacob-jacobi",
-    "adrien-marie-legendre"
+    "joseph-liouville",
+    "carl-gustav-jacob-jacobi"
   ],
   "oliver-heaviside": [
     "william-thomson-lord-kelvin",
@@ -285,8 +285,8 @@
     "evangelista-torricelli"
   ],
   "scipione-del-ferro": [
-    "girolamo-cardano",
     "niccolo-tartaglia",
+    "girolamo-cardano",
     "lodovico-ferrari"
   ],
   "simeon-denis-poisson": [
