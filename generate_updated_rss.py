@@ -37,14 +37,23 @@ def list_image_files():
 
 def find_image_for_title(title, image_files):
     norm_title = normalize_text(title)
+    
+    # Try exact match first
     for f in image_files:
         name, _ = os.path.splitext(f)
         if normalize_text(name) == norm_title:
-             # Use absolute path from root for the local server / website
-             # Note: standard RSS readers need a full domain, but for internal use relative might work
-             # or we rely on the implementation knowing how to handle it.
-             # However, podcast-section.js renders it directly into <img src>.
              return f"/assets/images/episodes/{f}"
+    
+    # Try match with "-timeline" suffix or common variations
+    # The user mentioned "Equations" (plural) in their request, while the feed and filename use "Equation" (singular).
+    plural_variation = norm_title.replace("-equation-", "-equations-")
+    
+    for f in image_files:
+        name, _ = os.path.splitext(f)
+        norm_name = normalize_text(name)
+        if norm_name == f"{norm_title}-timeline" or norm_name == f"{plural_variation}-timeline":
+             return f"/assets/images/episodes/{f}"
+    
     return None
 
 def main():
