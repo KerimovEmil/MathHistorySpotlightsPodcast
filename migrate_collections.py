@@ -40,23 +40,26 @@ def main():
         description = match.group("description").strip()
         grid_content = match.group("grid_content")
 
-        # Extract mathematicians from the grid
-        math_pattern = re.compile(
-            r'<a href="/mathematicians/(?P<slug>[^"]+)\.html" class="math-card">.*?'
-            r'<img src="(?P<image>[^"]+)" alt="(?P<alt>[^"]+)">.*?'
-            r'<h3 class="card-name">(?P<name>[^<]+)</h3>\s*'
-            r'<p class="card-role">(?P<role>[^<]+)</p>',
-            re.DOTALL
-        )
-
+        # Extract mathematician cards first
+        card_pattern = re.compile(r'<a href="/mathematicians/([^"]+)\.html" class="math-card">(.*?)</a>', re.DOTALL)
+        
         mathematicians = []
-        for math_match in math_pattern.finditer(grid_content):
-            mathematicians.append({
-                "slug": math_match.group("slug"),
-                "name": math_match.group("name").strip(),
-                "role": math_match.group("role").strip(),
-                "image": math_match.group("image")
-            })
+        for card_match in card_pattern.finditer(grid_content):
+            slug = card_match.group(1)
+            card_inner = card_match.group(2)
+            
+            # Find name, image, and role within the card
+            name_match = re.search(r'<h3 class="card-name">([^<]+)</h3>', card_inner)
+            role_match = re.search(r'<p class="card-role">([^<]+)</p>', card_inner)
+            image_match = re.search(r'<img src="([^"]+)"', card_inner)
+            
+            if name_match and role_match and image_match:
+                mathematicians.append({
+                    "slug": slug,
+                    "name": name_match.group(1).strip(),
+                    "role": role_match.group(1).strip(),
+                    "image": image_match.group(1)
+                })
 
         collections_data.append({
             "id": group_id,
