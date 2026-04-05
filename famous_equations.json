@@ -91,6 +91,28 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Jacobi_identity"
     }
   ],
+  "claude-elwood-shannon": [
+    {
+      "label": "Information Entropy",
+      "description": "The measure of uncertainty or information content in a source.",
+      "equation": "H(X) = - \\sum_{i} P(x_i) \\log_2 P(x_i)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Entropy_(information_theory)"
+    },
+    {
+      "label": "Channel Capacity",
+      "description": "The upper bound on the rate of information transmission.",
+      "equation": "C = B \\log_2\\left(1 + \\frac{S}{N}\\right)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Noisy-channel_coding_theorem"
+    }
+  ],
+  "daniel-bernoulli": [
+    {
+      "label": "Bernoulli's Principle",
+      "description": "Conservation of energy for flowing fluids.",
+      "equation": "\\frac{1}{2}\\rho v^2 + \\rho g h + P = \\text{constant}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Bernoulli%27s_principle"
+    }
+  ],
   "david-hilbert": [
     {
       "label": "Einstein-Hilbert\n            Action",
@@ -133,6 +155,12 @@
       "description": "Relations between the coefficients of a polynomial and sums/products of its roots.",
       "equation": "\\sum r_i = -\\frac{a_{n-1}}{a_n}, \\quad \\prod r_i = (-1)^n \\frac{a_0}{a_n}",
       "wikipedia": "https://en.wikipedia.org/wiki/Vieta%27s_formulas"
+    },
+    {
+      "label": "Infinite Product for \\(\\pi\\)",
+      "description": "The first infinite product formula in mathematics.",
+      "equation": "\\frac{2}{\\pi} = \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{2+\\sqrt{2}}}{2} \\cdot \\frac{\\sqrt{2+\\sqrt{2+\\sqrt{2}}}}{2}\n    \\dots",
+      "wikipedia": "https://en.wikipedia.org/wiki/Vieta%27s_formula"
     }
   ],
   "georg-friedrich-bernhard-riemann": [
@@ -141,6 +169,12 @@
       "description": "The subject of the Riemann Hypothesis regarding the distribution of prime numbers.",
       "equation": "\\zeta(s) = \\sum_{n=1}^\\infty \\frac{1}{n^s}",
       "wikipedia": "https://en.wikipedia.org/wiki/Riemann_zeta_function"
+    },
+    {
+      "label": "Riemann Curvature Tensor",
+      "description": "The central mathematical tool in General Relativity.",
+      "equation": "R^\\rho_{\\sigma\\mu\\nu} = \\partial_\\mu \\Gamma^\\rho_{\\nu\\sigma} - \\partial_\\nu \\Gamma^\\rho_{\\mu\\sigma} +\n    \\Gamma^\\rho_{\\mu\\lambda}\\Gamma^\\lambda_{\\nu\\sigma} - \\Gamma^\\rho_{\\nu\\lambda}\\Gamma^\\lambda_{\\mu\\sigma}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Riemann_curvature_tensor"
     }
   ],
   "george-boole": [
@@ -213,9 +247,21 @@
       "description": "The first solution to the vibrating string problem.",
       "equation": "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}",
       "wikipedia": "https://en.wikipedia.org/wiki/Wave_equation"
+    },
+    {
+      "label": "D'Alembert's Principle",
+      "description": "Converting a dynamic problem into a static one by introducing inertial forces.",
+      "equation": "\\mathbf{F} - \\frac{d\\mathbf{p}}{dt} = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/D%27Alembert%27s_principle"
     }
   ],
   "johann-bernoulli": [
+    {
+      "label": "Brachistochrone Problem",
+      "description": "Finding the curve of fastest descent between two points.",
+      "equation": "\\frac{\\sin \\theta}{\\sqrt{v}} = \\text{constant} \\implies y(1 + (y')^2) = C",
+      "wikipedia": "https://en.wikipedia.org/wiki/Brachistochrone_curve"
+    },
     {
       "label": "L'H\u00f4pital's Rule",
       "description": "Taught to L'H\u00f4pital by Johann Bernoulli (for a fee).",
@@ -241,6 +287,12 @@
       "description": "Developed in the 1830s, this law became foundational to electromagnetism decades before Maxwell unified the\n        field.",
       "equation": "\\oint_{\\partial V} \\mathbf{E}\\cdot d\\mathbf{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}",
       "wikipedia": "https://en.wikipedia.org/wiki/Gauss%27s_law"
+    },
+    {
+      "label": "Quadratic Reciprocity Law",
+      "description": "Gauss proved this in 1801 and famously called it the \u201cgolden theorem\u201d of number theory.",
+      "equation": "\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{\\frac{(p-1)(q-1)}{4}}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Quadratic_reciprocity"
     }
   ],
   "johann-peter-gustav-lejeune-dirichlet": [
@@ -355,6 +407,12 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Euler%27s_formula"
     },
     {
+      "label": "Euler\u2019s Polyhedron Formula",
+      "description": "Discovered in 1752, this relation marked one of the earliest results in topology, long before the field had a\n        name.",
+      "equation": "V - E + F = 2",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler_characteristic"
+    },
+    {
       "label": "Basel Problem Solution",
       "description": "Euler solved this famous problem in 1734, astonishing contemporaries by linking infinite series to \\(\\pi\\).",
       "equation": "\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}",
@@ -387,6 +445,12 @@
   ],
   "marie-sophie-germain": [
     {
+      "label": "Germain's Identity",
+      "description": "A factorization identity.",
+      "equation": "a^4 + 4b^4 = (a^2 + 2b^2 + 2ab)(a^2 + 2b^2 - 2ab)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sophie_Germain%27s_identity"
+    },
+    {
       "label": "Sophie Germain Primes",
       "description": "A prime \\(p\\) where \\(2p+1\\) is also prime, crucial in her work on Fermat's Last Theorem.",
       "equation": "p \\in \\mathbb{P}, \\quad 2p+1 \\in \\mathbb{P}",
@@ -394,6 +458,18 @@
     }
   ],
   "pierre-de-fermat": [
+    {
+      "label": "Fermat's Last Theorem",
+      "description": "No three positive integers fit this equation for \\(n > 2\\).",
+      "equation": "a^n + b^n = c^n",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fermat%27s_Last_Theorem"
+    },
+    {
+      "label": "Fermat's Little Theorem",
+      "description": "A fundamental property of prime numbers.",
+      "equation": "a^{p-1} \\equiv 1 \\pmod{p}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fermat%27s_little_theorem"
+    },
     {
       "label": "Fermat's Principle",
       "description": "Light travels between two points along the path of least time.",
@@ -451,6 +527,12 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Ramanujan%E2%80%93Sato_series#Series_of_type_1/pi"
     },
     {
+      "label": "Ramanujan Tau Function",
+      "description": "Introduced in 1916, this function linked modular forms and number theory in ways only fully understood decades\n        later.",
+      "equation": "\\sum_{n=1}^{\\infty} \\tau(n) q^n = q \\prod_{n=1}^{\\infty} (1 - q^n)^{24}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ramanujan_tau_function"
+    },
+    {
       "label": "Hardy\u2013Ramanujan Partition Formula",
       "description": "Derived in 1918, this asymptotic formula revolutionized understanding of integer partitions using analytic\n        methods.",
       "equation": "p(n) \\sim \\frac{1}{4n\\sqrt{3}} e^{\\pi\\sqrt{\\frac{2n}{3}}}",
@@ -505,8 +587,6 @@
   "gottfried-wilhelm-von-leibniz": [],
   "leonardo-da-vinci": [],
   "robert-hooke": [],
-  "daniel-bernoulli": [],
-  "claude-elwood-shannon": [],
   "john-edensor-littlewood": [],
   "charles-babbage": [],
   "augusta-ada-byron-king-countess-of-lovelace": [],

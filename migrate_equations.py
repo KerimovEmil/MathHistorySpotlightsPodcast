@@ -3,7 +3,7 @@ import re
 import json
 
 ROOT = os.path.dirname(__file__)
-FRAGMENTS_DIR = os.path.join(ROOT, "assets", "fragments")
+FRAGMENTS_DIR = os.path.join(ROOT, "assets", "fragments_migrated")
 EQUATIONS_FILE = os.path.join(ROOT, "famous_equations.json")
 
 def parse_fragment(content):
@@ -18,7 +18,7 @@ def parse_fragment(content):
     # Note: Regex can be fragile for HTML, but these fragments are very consistent.
     
     # Pattern to find h4, p, and $$ sections. We use re.DOTALL to match across lines.
-    pattern = r'<h4>(?:<a href="([^"]+)"[^>]*>)?\s*(?:[\d\.]+\s+)?([^<]+)(?:</a>)?</h4>\s*<p>([^<]+)</p>\s*\$\$\s*(.+?)\s*\$\$'
+    pattern = r'<h4>\s*(?:<a href="([^"]+)"[^>]*>)?\s*(?:[\d\.]+\s+)?([^<]+?)(?:\s*</a>)?\s*</h4>\s*<p>([^<]+?)</p>\s*\$\$\s*(.+?)\s*\$\$'
     matches = re.finditer(pattern, content, re.DOTALL)
     
     equations = []
