@@ -458,7 +458,6 @@ def build_index(pages, out_index):
 
 
 OUT_FEED = os.path.join(ROOT, "assets", "feed.xml")
-FRAGMENTS_DIR = os.path.join(ROOT, "assets", "fragments")
 
 def main():
         os.makedirs(OUT_DIR, exist_ok=True)
@@ -500,12 +499,6 @@ def main():
                 source_link = extract_source_link(desc)
                 image = find_image_for_title(name, image_files)
                 slug = normalize_text(name)
-                
-                # Check for static content fragment
-                fragment_path = os.path.join(FRAGMENTS_DIR, f"{slug}.html")
-                if os.path.exists(fragment_path):
-                     with open(fragment_path, "r", encoding="utf-8") as f:
-                          desc_clean += f"\n\n{f.read()}"
 
                 out_file = os.path.join(OUT_DIR, f"{slug}.html")
                 page_rel = f"{slug}.html"
