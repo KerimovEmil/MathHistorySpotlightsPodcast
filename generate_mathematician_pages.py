@@ -14,6 +14,7 @@ CSS_PATH = "../assets/css/mathematicians.css"
 SITE_STYLE = "../assets/css/style.css"
 COLLECTIONS_FILE = os.path.join(ROOT, "collections.html")
 OVERRIDES_FILE = os.path.join(ROOT, "see_also_overrides.json")
+EQUATIONS_FILE = os.path.join(ROOT, "famous_equations.json")
 
 
 def normalize_text(s):
@@ -29,8 +30,53 @@ def load_see_also_overrides():
         """Loads see_also_overrides.json, returning a dict of slug -> [list of slugs]."""
         if not os.path.exists(OVERRIDES_FILE):
                 return {}
-        with open(OVERRIDES_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
+        try:
+                with open(OVERRIDES_FILE, "r", encoding="utf-8") as f:
+                        return json.load(f)
+        except (json.JSONDecodeError, Exception) as e:
+                print(f"Warning: Error loading {OVERRIDES_FILE}: {e}")
+                return {}
+
+
+def load_equations():
+        """Loads famous_equations.json, returning a dict of slug -> {equation: str, label: str}."""
+        if not os.path.exists(EQUATIONS_FILE):
+                return {}
+        try:
+                with open(EQUATIONS_FILE, "r", encoding="utf-8") as f:
+                        return json.load(f)
+        except (json.JSONDecodeError, Exception) as e:
+                print(f"Warning: Error loading {EQUATIONS_FILE}: {e}")
+                return {}
+
+
+def sync_metadata_placeholders(all_slugs):
+        """Ensures see_also_overrides.json and famous_equations.json have entries for all slugs."""
+        # 1. Sync See Also Overrides
+        overrides = load_see_also_overrides()
+        changed_overrides = False
+        for slug in all_slugs:
+                if slug not in overrides:
+                        overrides[slug] = []
+                        changed_overrides = True
+        
+        if changed_overrides:
+                with open(OVERRIDES_FILE, "w", encoding="utf-8") as f:
+                        json.dump(overrides, f, indent=2)
+                print(f"Updated {OVERRIDES_FILE} with missing placeholders.")
+
+        # 2. Sync Famous Equations
+        equations = load_equations()
+        changed_equations = False
+        for slug in all_slugs:
+                if slug not in equations:
+                        equations[slug] = {"equation": "", "label": ""}
+                        changed_equations = True
+        
+        if changed_equations:
+                with open(EQUATIONS_FILE, "w", encoding="utf-8") as f:
+                        json.dump(equations, f, indent=2)
+                print(f"Updated {EQUATIONS_FILE} with missing placeholders.")
 
 
 def load_collections():
@@ -133,7 +179,7 @@ def extract_source_link(description):
         return None
 
 
-def build_page(title, description, source_link, image_path, audio_url, out_path, related_pages=None):
+def build_page(title, description, source_link, image_path, audio_url, out_path, related_pages=None, equation_data=None):
         audio_html = f'<audio controls src="{audio_url}">Your browser does not support the audio element.</audio>' if audio_url else ''
         
         see_also_html = ""
@@ -148,6 +194,19 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
                         <ul class="grid" style="padding: 0; margin: 0; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); box-shadow: none; border: none; background: none;">
                                 {items_html}
                         </ul>
+                </div>
+                '''
+
+        equation_html = ""
+        if equation_data and equation_data.get("equation"):
+                eq = equation_data["equation"]
+                label = equation_data.get("label", "Famous Equation")
+                equation_html = f'''
+                <div class="equation-box" style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid var(--accent); text-align: center;">
+                        <h3 style="color:var(--accent); margin-top: 0; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1.2px; text-align: left;">{label}</h3>
+                        <div style="font-size: 1.4em; padding: 10px 0; overflow-x: auto;">
+                                \\[ {eq} \\]
+                        </div>
                 </div>
                 '''
 
@@ -175,6 +234,7 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
         </div>
         {audio_html}
         <h1 class="name">{title}</h1>
+        {equation_html}
         <div class="desc">{description or ''}</div>
         <p class="sources">Sources: {f'<a href="{source_link}" target="_blank" rel="noopener">{source_link}</a>' if source_link else '—'}</p>
         {see_also_html}
@@ -326,6 +386,14 @@ def main():
                     "birth_year": birth_year
                 })
 
+        # Get all slugs for synchronization
+        all_slugs = [p["slug"] for p in all_pages_data]
+        sync_metadata_placeholders(all_slugs)
+        
+        # Reload metadata after synchronization
+        see_also_overrides = load_see_also_overrides()
+        famous_equations = load_equations()
+
         pages_for_index = []
 
         for page in all_pages_data:
@@ -370,7 +438,8 @@ def main():
                         page["image"], 
                         page["audio_url"], 
                         page["out_file"],
-                        related_pages=related
+                        related_pages=related,
+                        equation_data=famous_equations.get(page["slug"])
                 )
                 
                 if page["slug"] != "renaissance-cubic-equation-wars":
