@@ -4,90 +4,361 @@
     "title": "The Trinity",
     "tag": "Mathematical Partnership",
     "description": "Experience the legendary collaboration between G.H. Hardy and J.E. Littlewood, and their\n                        discovery of the self-taught genius Srinivasa Ramanujan. This group represents one of the most\n                        productive and poetic eras in Cambridge mathematics.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "godfrey-harold-hardy",
+        "name": "G.H. Hardy",
+        "role": "Pure Mathematician",
+        "image": "/assets/images/episodes/Godfrey Harold Hardy.avif"
+      },
+      {
+        "slug": "john-edensor-littlewood",
+        "name": "J.E. Littlewood",
+        "role": "The Theory of Chaos",
+        "image": "/assets/images/episodes/John Edensor Littlewood.avif"
+      },
+      {
+        "slug": "srinivasa-aiyangar-ramanujan",
+        "name": "Srinivasa Ramanujan",
+        "role": "Mathematical Genius",
+        "image": "/assets/images/episodes/Srinivasa Aiyangar Ramanujan.avif"
+      }
+    ]
   },
   {
     "id": "bernoulli",
     "title": "The Bernoulli Dynasty",
     "tag": "Family Feuds",
     "description": "The Bernoullis were a family of Swiss mathematicians whose brilliance was matched only by their\n                        fierce internal rivalries. From the foundations of calculus to the principles of fluid dynamics,\n                        they redefined what a scientific family could achieve.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "jacob-jacques-bernoulli",
+        "name": "Jacob Bernoulli",
+        "role": "Probability & Calculus",
+        "image": "/assets/images/episodes/Jacob (Jacques) Bernoulli.avif"
+      },
+      {
+        "slug": "johann-bernoulli",
+        "name": "Johann Bernoulli",
+        "role": "Universal Calculus",
+        "image": "/assets/images/episodes/Johann Bernoulli.avif"
+      },
+      {
+        "slug": "daniel-bernoulli",
+        "name": "Daniel Bernoulli",
+        "role": "Fluid Mechanics",
+        "image": "/assets/images/episodes/Daniel Bernoulli.avif"
+      }
+    ]
   },
   {
     "id": "rivalries",
     "title": "The Great Rivalries",
     "tag": "Scientific Revolution",
     "description": "Behind the most profound discoveries in science and mathematics lay fierce intellectual battles.\n                        From the dispute over the invention of calculus to the nature of gravity, discover the\n                        intense rivalries between these giants of the 17th century.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "isaac-newton",
+        "name": "Isaac Newton",
+        "role": "Laws of Motion & Calculus",
+        "image": "/assets/images/episodes/Isaac Newton.avif"
+      },
+      {
+        "slug": "robert-hooke",
+        "name": "Robert Hooke",
+        "role": "The English Leonardo",
+        "image": "/assets/images/episodes/Robert Hooke.avif"
+      },
+      {
+        "slug": "gottfried-wilhelm-von-leibniz",
+        "name": "Gottfried Leibniz",
+        "role": "Universal Calculus",
+        "image": "/assets/images/episodes/Gottfried Wilhelm von Leibniz.avif"
+      }
+    ]
   },
   {
     "id": "computing",
     "title": "Foundations of Computing",
     "tag": "Digital Revolution",
     "description": "Long before the first silicon chip, these visionaries laid the intellectual groundwork for the\n                        modern computer. From mechanical engines to Boolean logic, information theory, and game theory,\n                        discover how the digital age was born across two centuries.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "charles-babbage",
+        "name": "Charles Babbage",
+        "role": "The Difference Engine",
+        "image": "/assets/images/episodes/Charles Babbage.avif"
+      },
+      {
+        "slug": "augusta-ada-byron-king-countess-of-lovelace",
+        "name": "Ada Lovelace",
+        "role": "First Programmer",
+        "image": "/assets/images/episodes/Augusta Ada Byron King, Countess of Lovelace.avif"
+      },
+      {
+        "slug": "george-boole",
+        "name": "George Boole",
+        "role": "Digital Logic",
+        "image": "/assets/images/episodes/George Boole.avif"
+      },
+      {
+        "slug": "claude-elwood-shannon",
+        "name": "Claude Shannon",
+        "role": "Information Theory",
+        "image": "/assets/images/episodes/Claude Elwood Shannon.avif"
+      },
+      {
+        "slug": "john-von-neumann",
+        "name": "John von Neumann",
+        "role": "Computer Architecture",
+        "image": "/assets/images/episodes/John von Neumann.avif"
+      }
+    ]
   },
   {
     "id": "probability",
     "title": "Probability Begins",
     "tag": "Risk & Logic",
     "description": "From gambling problems to classical probability theory. These thinkers transformed our\n                        understanding of chance, risk, and uncertainty, moving mathematics from deterministic proofs to\n                        statistical models.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "blaise-pascal",
+        "name": "Blaise Pascal",
+        "role": "Probability & Pressure",
+        "image": "/assets/images/episodes/Blaise Pascal.avif"
+      },
+      {
+        "slug": "pierre-de-fermat",
+        "name": "Pierre de Fermat",
+        "role": "Number Theory Explorer",
+        "image": "/assets/images/episodes/Pierre de Fermat.avif"
+      },
+      {
+        "slug": "abraham-de-moivre",
+        "name": "Abraham de Moivre",
+        "role": "Normal Distribution",
+        "image": "/assets/images/episodes/Abraham de Moivre.avif"
+      }
+    ]
   },
   {
     "id": "french-analysis",
     "title": "French Analysis Trio",
     "tag": "Applied Analysis",
     "description": "PDEs, heat, orthogonal functions, and applied analysis. During a golden age of French\n                        mathematics, these three redefined how we use math to describe the physical world.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "joseph-fourier",
+        "name": "Joseph Fourier",
+        "role": "Heat & Harmony",
+        "image": "/assets/images/episodes/Joseph Fourier.avif"
+      },
+      {
+        "slug": "simeon-denis-poisson",
+        "name": "Sim\u00e9on Denis Poisson",
+        "role": "Statistical Pioneer",
+        "image": "/assets/images/episodes/Sim\u00e9on Denis Poisson.avif"
+      },
+      {
+        "slug": "adrien-marie-legendre",
+        "name": "Adrien-Marie Legendre",
+        "role": "Number Theory & Integrals",
+        "image": "/assets/images/episodes/Adrien-Marie Legendre.avif"
+      }
+    ]
   },
   {
     "id": "women-math",
     "title": "Women in Early Mathematics",
     "tag": "Pioneering Spirits",
     "description": "Breaking through the barriers of their time, these women made fundamental contributions to\n                        theoretical and applied mathematics, inspiring generations of mathematicians to follow.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "marie-sophie-germain",
+        "name": "Sophie Germain",
+        "role": "Elasticity &amp; Primes",
+        "image": "/assets/images/episodes/Marie-Sophie Germain.avif"
+      },
+      {
+        "slug": "augusta-ada-byron-king-countess-of-lovelace",
+        "name": "Ada Lovelace",
+        "role": "The Visionary",
+        "image": "/assets/images/episodes/Augusta Ada Byron King, Countess of Lovelace.avif"
+      },
+      {
+        "slug": "emmy-amalie-noether",
+        "name": "Emmy Noether",
+        "role": "Abstract Algebra",
+        "image": "/assets/images/episodes/Emmy Amalie Noether.avif"
+      }
+    ]
   },
   {
     "id": "cubic-wars",
     "title": "The Italian Cubic Wars",
     "tag": "Renaissance Drama",
     "description": "One of the most dramatic episodes in mathematical history. Stolen proofs, public debates,\n                        and accusations of poisoning surrounded the race to solve the cubic equation in 16th-century\n                        Italy. Listen to these four stories together to follow the full, scandalous saga.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "scipione-del-ferro",
+        "name": "Scipione del Ferro",
+        "role": "The Secret Keeper",
+        "image": "/assets/images/episodes/Scipione del Ferro.avif"
+      },
+      {
+        "slug": "niccolo-tartaglia",
+        "name": "Niccol\u00f2 Tartaglia",
+        "role": "The Stammerer",
+        "image": "/assets/images/episodes/Niccol\u00f2 Tartaglia.avif"
+      },
+      {
+        "slug": "girolamo-cardano",
+        "name": "Girolamo Cardano",
+        "role": "The Gambler",
+        "image": "/assets/images/episodes/Girolamo Cardano.avif"
+      },
+      {
+        "slug": "lodovico-ferrari",
+        "name": "Lodovico Ferrari",
+        "role": "The Prodigy",
+        "image": "/assets/images/episodes/Lodovico Ferrari.avif"
+      }
+    ]
   },
   {
     "id": "abel-galois",
     "title": "The Abel\u2013Galois Generation",
     "tag": "Tragic Geniuses",
     "description": "Two of the greatest mathematical minds of the 19th century, both dead before 30. Abel and\n                        Galois independently revolutionized algebra and group theory while struggling for recognition.\n                        Liouville was the man who finally brought Galois's work to the world.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "niels-henrik-abel",
+        "name": "Niels Henrik Abel",
+        "role": "Elliptic Functions",
+        "image": "/assets/images/episodes/Niels Henrik Abel.avif"
+      },
+      {
+        "slug": "evariste-galois",
+        "name": "\u00c9variste Galois",
+        "role": "Group Theory",
+        "image": "/assets/images/episodes/\u00c9variste Galois.avif"
+      },
+      {
+        "slug": "joseph-liouville",
+        "name": "Joseph Liouville",
+        "role": "Galois's Champion",
+        "image": "/assets/images/episodes/Joseph Liouville.avif"
+      }
+    ]
   },
   {
     "id": "gottingen",
     "title": "The G\u00f6ttingen School",
     "tag": "Abstract Algebra &amp; Modern Math",
     "description": "From roughly 1870 to 1933, the University of G\u00f6ttingen was the world center of mathematics.\n                        These four figures shaped modern abstract mathematics \u2014 from the 23 Hilbert problems\n                        to the birth of abstract algebra \u2014 before the school was tragically dismantled by the Nazis.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "david-hilbert",
+        "name": "David Hilbert",
+        "role": "The 23 Problems",
+        "image": "/assets/images/episodes/David Hilbert.avif"
+      },
+      {
+        "slug": "felix-christian-klein",
+        "name": "Felix Klein",
+        "role": "Erlangen Program",
+        "image": "/assets/images/episodes/Felix Christian Klein.avif"
+      },
+      {
+        "slug": "emmy-amalie-noether",
+        "name": "Emmy Noether",
+        "role": "Abstract Algebra",
+        "image": "/assets/images/episodes/Emmy Amalie Noether.avif"
+      },
+      {
+        "slug": "emil-artin",
+        "name": "Emil Artin",
+        "role": "Algebraic Number Theory",
+        "image": "/assets/images/episodes/Emil Artin.avif"
+      }
+    ]
   },
   {
     "id": "electromagnetic",
     "title": "The Electromagnetic Theorists",
     "tag": "Physics-Math Bridge",
     "description": "Maxwell unified electricity and magnetism with mathematics \u2014 and then these three took that\n                        torch and ran with it. Kelvin, Heaviside, and Hertz each extended and experimentally confirmed\n                        electromagnetic theory, reshaping how we understand waves, fields, and energy.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "william-thomson-lord-kelvin",
+        "name": "Lord Kelvin",
+        "role": "Thermodynamics &amp; Telegraphy",
+        "image": "/assets/images/episodes/William Thomson (Lord Kelvin).avif"
+      },
+      {
+        "slug": "oliver-heaviside",
+        "name": "Oliver Heaviside",
+        "role": "Operational Calculus",
+        "image": "/assets/images/episodes/Oliver Heaviside.avif"
+      },
+      {
+        "slug": "heinrich-rudolf-hertz",
+        "name": "Heinrich Hertz",
+        "role": "Proving Radio Waves",
+        "image": "/assets/images/episodes/Heinrich Rudolf Hertz.avif"
+      }
+    ]
   },
   {
     "id": "game-theory",
     "title": "Game Theory &amp; Information Age",
     "tag": "20th Century Icons",
     "description": "Three towering figures who defined how the 20th century thinks about strategy, computation,\n                        and information. Von Neumann invented game theory; Shannon invented information theory;\n                        Nash extended both into new and unexpected territory.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "john-von-neumann",
+        "name": "John von Neumann",
+        "role": "Game Theory &amp; Computing",
+        "image": "/assets/images/episodes/John von Neumann.avif"
+      },
+      {
+        "slug": "claude-elwood-shannon",
+        "name": "Claude Shannon",
+        "role": "Information Theory",
+        "image": "/assets/images/episodes/Claude Elwood Shannon.avif"
+      },
+      {
+        "slug": "john-f-nash",
+        "name": "John Nash",
+        "role": "Nash Equilibrium",
+        "image": "/assets/images/episodes/John F Nash.avif"
+      }
+    ]
   },
   {
     "id": "precalculus",
     "title": "The Precalculus Pioneers",
     "tag": "Medieval &amp; Renaissance",
     "description": "Centuries before Newton and Leibniz, mathematicians across the Islamic world, South Asia,\n                        and Europe were quietly building the foundations that calculus would rest upon \u2014 infinite\n                        series, trigonometry, positional arithmetic, and algebraic notation.",
-    "mathematicians": []
+    "mathematicians": [
+      {
+        "slug": "nasir-al-din-al-tusi",
+        "name": "Nasir al-Din al-Tusi",
+        "role": "Trigonometry &amp; Astronomy",
+        "image": "/assets/images/episodes/Nasir al-Din al-Tusi.avif"
+      },
+      {
+        "slug": "leonardo-pisano-fibonacci",
+        "name": "Fibonacci",
+        "role": "Numbers &amp; the West",
+        "image": "/assets/images/episodes/Leonardo Pisano Fibonacci.avif"
+      },
+      {
+        "slug": "madhava-of-sangamagrama",
+        "name": "Madhava of Sangamagrama",
+        "role": "Infinite Series",
+        "image": "/assets/images/episodes/Madhava of Sangamagrama.avif"
+      }
+    ]
   }
 ]
