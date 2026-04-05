@@ -155,9 +155,9 @@
       },
       {
         "slug": "simeon-denis-poisson",
-        "name": "Sim\u00e9on Denis Poisson",
+        "name": "Siméon Denis Poisson",
         "role": "Statistical Pioneer",
-        "image": "/assets/images/episodes/Sim\u00e9on Denis Poisson.avif"
+        "image": "/assets/images/episodes/Siméon Denis Poisson.avif"
       },
       {
         "slug": "adrien-marie-legendre",
@@ -207,9 +207,9 @@
       },
       {
         "slug": "niccolo-tartaglia",
-        "name": "Niccol\u00f2 Tartaglia",
+        "name": "Niccolò Tartaglia",
         "role": "The Stammerer",
-        "image": "/assets/images/episodes/Niccol\u00f2 Tartaglia.avif"
+        "image": "/assets/images/episodes/Niccolò Tartaglia.avif"
       },
       {
         "slug": "girolamo-cardano",
@@ -227,7 +227,7 @@
   },
   {
     "id": "abel-galois",
-    "title": "The Abel\u2013Galois Generation",
+    "title": "The Abel–Galois Generation",
     "tag": "Tragic Geniuses",
     "description": "Two of the greatest mathematical minds of the 19th century, both dead before 30. Abel and\n                        Galois independently revolutionized algebra and group theory while struggling for recognition.\n                        Liouville was the man who finally brought Galois's work to the world.",
     "mathematicians": [
@@ -239,9 +239,9 @@
       },
       {
         "slug": "evariste-galois",
-        "name": "\u00c9variste Galois",
+        "name": "Évariste Galois",
         "role": "Group Theory",
-        "image": "/assets/images/episodes/\u00c9variste Galois.avif"
+        "image": "/assets/images/episodes/Évariste Galois.avif"
       },
       {
         "slug": "joseph-liouville",
@@ -253,9 +253,9 @@
   },
   {
     "id": "gottingen",
-    "title": "The G\u00f6ttingen School",
+    "title": "The Göttingen School",
     "tag": "Abstract Algebra &amp; Modern Math",
-    "description": "From roughly 1870 to 1933, the University of G\u00f6ttingen was the world center of mathematics.\n                        These four figures shaped modern abstract mathematics \u2014 from the 23 Hilbert problems\n                        to the birth of abstract algebra \u2014 before the school was tragically dismantled by the Nazis.",
+    "description": "From roughly 1870 to 1933, the University of Göttingen was the world center of mathematics.\n                        These four figures shaped modern abstract mathematics — from the 23 Hilbert problems\n                        to the birth of abstract algebra — before the school was tragically dismantled by the Nazis.",
     "mathematicians": [
       {
         "slug": "david-hilbert",
@@ -287,7 +287,7 @@
     "id": "electromagnetic",
     "title": "The Electromagnetic Theorists",
     "tag": "Physics-Math Bridge",
-    "description": "Maxwell unified electricity and magnetism with mathematics \u2014 and then these three took that\n                        torch and ran with it. Kelvin, Heaviside, and Hertz each extended and experimentally confirmed\n                        electromagnetic theory, reshaping how we understand waves, fields, and energy.",
+    "description": "Maxwell unified electricity and magnetism with mathematics — and then these three took that\n                        torch and ran with it. Kelvin, Heaviside, and Hertz each extended and experimentally confirmed\n                        electromagnetic theory, reshaping how we understand waves, fields, and energy.",
     "mathematicians": [
       {
         "slug": "william-thomson-lord-kelvin",
@@ -339,7 +339,7 @@
     "id": "precalculus",
     "title": "The Precalculus Pioneers",
     "tag": "Medieval &amp; Renaissance",
-    "description": "Centuries before Newton and Leibniz, mathematicians across the Islamic world, South Asia,\n                        and Europe were quietly building the foundations that calculus would rest upon \u2014 infinite\n                        series, trigonometry, positional arithmetic, and algebraic notation.",
+    "description": "Centuries before Newton and Leibniz, mathematicians across the Islamic world, South Asia,\n                        and Europe were quietly building the foundations that calculus would rest upon — infinite\n                        series, trigonometry, positional arithmetic, and algebraic notation.",
     "mathematicians": [
       {
         "slug": "nasir-al-din-al-tusi",
@@ -358,6 +358,104 @@
         "name": "Madhava of Sangamagrama",
         "role": "Infinite Series",
         "image": "/assets/images/episodes/Madhava of Sangamagrama.avif"
+      }
+    ]
+  },
+  {
+    "id": "kings-of-math",
+    "title": "The Kings of Mathematics",
+    "tag": "The Unrivaled Titans",
+    "description": "A collection dedicated to the absolute titans who dominated mathematics in the 18th and 19th centuries, fundamentally shifting every discipline they touched—from number theory to physics and topology.",
+    "mathematicians": [
+      {
+        "slug": "leonhard-euler",
+        "name": "Leonhard Euler",
+        "role": "The Master of Us All",
+        "image": "/assets/images/episodes/Leonhard Euler.avif"
+      },
+      {
+        "slug": "johann-carl-friedrich-gauss",
+        "name": "Johann Carl Friedrich Gauss",
+        "role": "The Prince of Mathematics",
+        "image": "/assets/images/episodes/Johann Carl Friedrich Gauss.avif"
+      },
+      {
+        "slug": "georg-friedrich-bernhard-riemann",
+        "name": "Bernhard Riemann",
+        "role": "Geometry & Primes",
+        "image": "/assets/images/episodes/Georg Friedrich Bernhard Riemann.avif"
+      }
+    ]
+  },
+  {
+    "id": "foundations-of-truth",
+    "title": "Foundations of Truth",
+    "tag": "Logic and Infinity",
+    "description": "How paradoxes and infinities broke mathematics, and the logicians who tried to fix it. These three thinkers challenged the very definition of a mathematical proof and showed us the limits of computation and truth.",
+    "mathematicians": [
+      {
+        "slug": "georg-ferdinand-ludwig-philipp-cantor",
+        "name": "Georg Cantor",
+        "role": "The Master of Infinite",
+        "image": "/assets/images/episodes/Georg Ferdinand Ludwig Philipp Cantor.avif"
+      },
+      {
+        "slug": "bertrand-arthur-william-russell",
+        "name": "Bertrand Russell",
+        "role": "The Paradox Maker",
+        "image": "/assets/images/episodes/Bertrand Arthur William Russell.avif"
+      },
+      {
+        "slug": "kurt-godel",
+        "name": "Kurt Gödel",
+        "role": "Incompleteness Theorem",
+        "image": "/assets/images/episodes/Kurt Gödel.avif"
+      }
+    ]
+  },
+  {
+    "id": "russian-probability",
+    "title": "The Russian Probability School",
+    "tag": "Rigorous Chance",
+    "description": "While the French established early probability through gambling, it was the Russian mathematicians who turned it into a rigorous, axiomatic discipline capable of modeling complex, real-world phenomena.",
+    "mathematicians": [
+      {
+        "slug": "andrei-andreyevich-markov",
+        "name": "Andrei Markov",
+        "role": "Chain Reactions",
+        "image": "/assets/images/episodes/Andrei Andreyevich Markov.avif"
+      },
+      {
+        "slug": "andrey-nikolaevich-kolmogorov",
+        "name": "Andrey Kolmogorov",
+        "role": "Axioms of Chance",
+        "image": "/assets/images/episodes/Andrey Nikolaevich Kolmogorov.avif"
+      }
+    ]
+  },
+  {
+    "id": "heavenly-mechanics",
+    "title": "Mechanics of the Heavens",
+    "tag": "Celestial Predictability",
+    "description": "Exploring how mathematics became the ultimate language of celestial mechanics and the cosmos. These minds developed the theoretical tools needed to prove that the solar system functioned like a massive, deterministic clockwork.",
+    "mathematicians": [
+      {
+        "slug": "joseph-louis-lagrange",
+        "name": "Joseph-Louis Lagrange",
+        "role": "Analytical Mechanics",
+        "image": "/assets/images/episodes/Joseph-Louis Lagrange.avif"
+      },
+      {
+        "slug": "pierre-simon-laplace",
+        "name": "Pierre-Simon Laplace",
+        "role": "The French Newton",
+        "image": "/assets/images/episodes/Pierre-Simon Laplace.avif"
+      },
+      {
+        "slug": "jules-henri-poincare",
+        "name": "Henri Poincaré",
+        "role": "The Last Universalist",
+        "image": "/assets/images/episodes/Jules Henri Poincaré.avif"
       }
     ]
   }
