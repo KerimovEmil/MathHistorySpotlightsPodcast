@@ -12,7 +12,9 @@ IMAGES_DIR = os.path.join(ROOT, "assets", "images", "episodes")
 OUT_DIR = os.path.join(ROOT, "mathematicians")
 CSS_PATH = "../assets/css/mathematicians.css"
 SITE_STYLE = "../assets/css/style.css"
-COLLECTIONS_FILE = os.path.join(ROOT, "collections.html")
+COLLECTIONS_JSON = os.path.join(ROOT, "collections.json")
+COLLECTIONS_PAGE = os.path.join(ROOT, "collections.html")
+SEARCH_INDEX_FILE = os.path.join(ROOT, "search.json")
 OVERRIDES_FILE = os.path.join(ROOT, "see_also_overrides.json")
 EQUATIONS_FILE = os.path.join(ROOT, "famous_equations.json")
 
@@ -80,40 +82,136 @@ def sync_metadata_placeholders(all_slugs):
                 print(f"Updated {EQUATIONS_FILE} with missing placeholders.")
 
 
-def load_collections():
-        """Parses collections.html to return a dictionary mapping slugs to a list of related slugs from the same collection."""
-        if not os.path.exists(COLLECTIONS_FILE):
-             print(f"Warning: {COLLECTIONS_FILE} not found.")
-             return {}
-        
-        with open(COLLECTIONS_FILE, "r", encoding="utf-8") as f:
-             content = f.read()
+def load_collections_data():
+        """Loads collections data from collections.json."""
+        if not os.path.exists(COLLECTIONS_JSON):
+             print(f"Warning: {COLLECTIONS_JSON} not found.")
+             return []
+        with open(COLLECTIONS_JSON, "r", encoding="utf-8") as f:
+             return json.load(f)
 
-        # Find all collection groups
-        # Groups are div.collection-group
-        # Inside are links to /mathematicians/slug.html
-        
-        # Simple regex approach: find overlapping groups
-        # We can split by class="collection-group"
-        
-        groups = content.split('class="collection-group"')
+def load_related_map(collections):
+        """Returns a dictionary mapping slugs to a set of related slugs from the same collections."""
         related_map = {}
-        
-        # Skip the first split as it's before the first group
-        for group in groups[1:]:
-             # Find all hrefs like /mathematicians/some-slug.html
-             matches = re.findall(r'href="/mathematicians/([^"]+)\.html"', group)
-             slugs = [m for m in matches]
-             
-             # For each slug in this group, add all other slugs as related
+        for coll in collections:
+             slugs = [m['slug'] for m in coll.get('mathematicians', [])]
              for s in slugs:
                   if s not in related_map:
                        related_map[s] = set()
                   for other in slugs:
                        if other != s:
                             related_map[s].add(other)
-                            
         return related_map
+
+
+def build_collections_page(collections):
+        """Generates collections.html from collections data."""
+        toc_items = "\n".join([f'                            <li><a href="#{c["id"]}">{c["title"]}</a></li>' for c in collections])
+        
+        groups_html = []
+        for i, c in enumerate(collections, 1):
+            math_cards = []
+            for m in c.get('mathematicians', []):
+                math_cards.append(f'''
+                        <a href="/mathematicians/{m['slug']}.html" class="math-card">
+                            <div class="card-image-wrapper">
+                                <img src="{m['image']}" alt="{m['name']}" loading="lazy">
+                                <div class="card-overlay"></div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-name">{m['name']}</h3>
+                                <p class="card-role">{m['role']}</p>
+                            </div>
+                        </a>''')
+            
+            groups_html.append(f'''
+                <!-- Collection {i}: {c['title']} -->
+                <div class="collection-group" id="{c['id']}">
+                    <div class="group-header">
+                        <h2 class="group-title">{c['title']}</h2>
+                        <span class="group-tag">{c['tag']}</span>
+                    </div>
+                    <p class="group-description">
+                        {c['description']}
+                    </p>
+
+                    <div class="mathematician-grid">
+                        {"".join(math_cards)}
+                    </div>
+                </div>''')
+
+        html = f'''<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections — Math History Spotlights</title>
+    <meta name="description" content="Curated collections of mathematicians to listen to as a group.">
+
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/collections.css">
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top" class="no-intro">
+
+    <!-- #HEADER -->
+    <site-header></site-header>
+
+    <main>
+        <article class="container">
+
+            <section class="collections">
+
+                <div class="collections-header">
+                    <h1 class="collections-title">Curated Collections</h1>
+                    <p class="collections-subtitle">
+                        Explore themed groups of mathematicians. Listen to their stories together to understand the deep
+                        connections in mathematical history.
+                    </p>
+
+                    <nav class="toc-nav">
+                        <ul>
+{toc_items}
+                        </ul>
+                    </nav>
+                </div>
+
+                {"".join(groups_html)}
+
+            </section>
+
+        </article>
+    </main>
+
+    <!-- footer component -->
+    <site-footer></site-footer>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- web components -->
+    <script type="module" src="./assets/js/site-header.js"></script>
+    <script type="module" src="./assets/js/site-footer.js"></script>
+
+</body>
+
+</html>
+'''
+        with open(COLLECTIONS_PAGE, "w", encoding="utf-8") as f:
+            f.write(html)
+        print(f"Generated {COLLECTIONS_PAGE}")
 
 
 def extract_years(title):
@@ -383,7 +481,9 @@ def main():
         see_also_overrides = load_see_also_overrides()
 
         # Parse collections for relationships
-        collections_map = load_collections()
+        collections = load_collections_data()
+        collections_map = load_related_map(collections)
+        build_collections_page(collections)
 
         for item in root.findall("./channel/item"):
                 title_el = item.find("title")

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "trinity",
+    "title": "The Trinity",
+    "tag": "Mathematical Partnership",
+    "description": "Experience the legendary collaboration between G.H. Hardy and J.E. Littlewood, and their\n                        discovery of the self-taught genius Srinivasa Ramanujan. This group represents one of the most\n                        productive and poetic eras in Cambridge mathematics.",
+    "mathematicians": []
+  },
+  {
+    "id": "bernoulli",
+    "title": "The Bernoulli Dynasty",
+    "tag": "Family Feuds",
+    "description": "The Bernoullis were a family of Swiss mathematicians whose brilliance was matched only by their\n                        fierce internal rivalries. From the foundations of calculus to the principles of fluid dynamics,\n                        they redefined what a scientific family could achieve.",
+    "mathematicians": []
+  },
+  {
+    "id": "rivalries",
+    "title": "The Great Rivalries",
+    "tag": "Scientific Revolution",
+    "description": "Behind the most profound discoveries in science and mathematics lay fierce intellectual battles.\n                        From the dispute over the invention of calculus to the nature of gravity, discover the\n                        intense rivalries between these giants of the 17th century.",
+    "mathematicians": []
+  },
+  {
+    "id": "computing",
+    "title": "Foundations of Computing",
+    "tag": "Digital Revolution",
+    "description": "Long before the first silicon chip, these visionaries laid the intellectual groundwork for the\n                        modern computer. From mechanical engines to Boolean logic, information theory, and game theory,\n                        discover how the digital age was born across two centuries.",
+    "mathematicians": []
+  },
+  {
+    "id": "probability",
+    "title": "Probability Begins",
+    "tag": "Risk & Logic",
+    "description": "From gambling problems to classical probability theory. These thinkers transformed our\n                        understanding of chance, risk, and uncertainty, moving mathematics from deterministic proofs to\n                        statistical models.",
+    "mathematicians": []
+  },
+  {
+    "id": "french-analysis",
+    "title": "French Analysis Trio",
+    "tag": "Applied Analysis",
+    "description": "PDEs, heat, orthogonal functions, and applied analysis. During a golden age of French\n                        mathematics, these three redefined how we use math to describe the physical world.",
+    "mathematicians": []
+  },
+  {
+    "id": "women-math",
+    "title": "Women in Early Mathematics",
+    "tag": "Pioneering Spirits",
+    "description": "Breaking through the barriers of their time, these women made fundamental contributions to\n                        theoretical and applied mathematics, inspiring generations of mathematicians to follow.",
+    "mathematicians": []
+  },
+  {
+    "id": "cubic-wars",
+    "title": "The Italian Cubic Wars",
+    "tag": "Renaissance Drama",
+    "description": "One of the most dramatic episodes in mathematical history. Stolen proofs, public debates,\n                        and accusations of poisoning surrounded the race to solve the cubic equation in 16th-century\n                        Italy. Listen to these four stories together to follow the full, scandalous saga.",
+    "mathematicians": []
+  },
+  {
+    "id": "abel-galois",
+    "title": "The Abel\u2013Galois Generation",
+    "tag": "Tragic Geniuses",
+    "description": "Two of the greatest mathematical minds of the 19th century, both dead before 30. Abel and\n                        Galois independently revolutionized algebra and group theory while struggling for recognition.\n                        Liouville was the man who finally brought Galois's work to the world.",
+    "mathematicians": []
+  },
+  {
+    "id": "gottingen",
+    "title": "The G\u00f6ttingen School",
+    "tag": "Abstract Algebra &amp; Modern Math",
+    "description": "From roughly 1870 to 1933, the University of G\u00f6ttingen was the world center of mathematics.\n                        These four figures shaped modern abstract mathematics \u2014 from the 23 Hilbert problems\n                        to the birth of abstract algebra \u2014 before the school was tragically dismantled by the Nazis.",
+    "mathematicians": []
+  },
+  {
+    "id": "electromagnetic",
+    "title": "The Electromagnetic Theorists",
+    "tag": "Physics-Math Bridge",
+    "description": "Maxwell unified electricity and magnetism with mathematics \u2014 and then these three took that\n                        torch and ran with it. Kelvin, Heaviside, and Hertz each extended and experimentally confirmed\n                        electromagnetic theory, reshaping how we understand waves, fields, and energy.",
+    "mathematicians": []
+  },
+  {
+    "id": "game-theory",
+    "title": "Game Theory &amp; Information Age",
+    "tag": "20th Century Icons",
+    "description": "Three towering figures who defined how the 20th century thinks about strategy, computation,\n                        and information. Von Neumann invented game theory; Shannon invented information theory;\n                        Nash extended both into new and unexpected territory.",
+    "mathematicians": []
+  },
+  {
+    "id": "precalculus",
+    "title": "The Precalculus Pioneers",
+    "tag": "Medieval &amp; Renaissance",
+    "description": "Centuries before Newton and Leibniz, mathematicians across the Islamic world, South Asia,\n                        and Europe were quietly building the foundations that calculus would rest upon \u2014 infinite\n                        series, trigonometry, positional arithmetic, and algebraic notation.",
+    "mathematicians": []
+  }
+]
