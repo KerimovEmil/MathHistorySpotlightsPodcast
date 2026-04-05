@@ -210,12 +210,15 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
                     
                     label = eq.get("label", "Famous Equation")
                     desc = f'<p style="margin: 5px 0 10px 0; opacity: 0.8; font-size: 0.9em;">{eq["description"]}</p>' if eq.get("description") else ""
-                    wiki = f'<a href="{eq["wikipedia"]}" target="_blank" style="color:var(--accent); text-decoration: none; font-size: 0.7em; vertical-align: middle; margin-left: 10px;">[Wiki ↗]</a>' if eq.get("wikipedia") else ""
+                    
+                    label_html = label
+                    if eq.get("wikipedia"):
+                         label_html = f'<a href="{eq["wikipedia"]}" target="_blank" style="color:inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.2);">{label} <span style="font-size: 0.8em; opacity: 0.6; margin-left: 4px;">↗</span></a>'
                     
                     items.append(f'''
                     <div class="equation-item" style="margin-bottom: 25px; text-align: center;">
-                        <h3 style="color:var(--accent); margin: 0; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; text-align: left;">
-                            {label}{wiki}
+                        <h3 style="color:var(--accent); margin: 0; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1.2px; text-align: left;">
+                            {label_html}
                         </h3>
                         {desc}
                         <div style="font-size: 1.3em; padding: 15px 0; overflow-x: auto; background: rgba(255,255,255,0.03); border-radius: 4px; margin-top: 10px;">
