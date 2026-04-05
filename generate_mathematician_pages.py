@@ -271,8 +271,8 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
         </div>
         {audio_html}
         <h1 class="name">{title}</h1>
-        {equation_html}
         <div class="desc">{description or ''}</div>
+        {equation_html}
         <p class="sources">Sources: {f'<a href="{source_link}" target="_blank" rel="noopener">{source_link}</a>' if source_link else '—'}</p>
         {see_also_html}
   </main>
