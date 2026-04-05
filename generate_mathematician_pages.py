@@ -213,7 +213,7 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
                     
                     label_html = label
                     if eq.get("wikipedia"):
-                         label_html = f'<a href="{eq["wikipedia"]}" target="_blank" style="color:inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.2);">{label} <span style="font-size: 0.8em; opacity: 0.6; margin-left: 4px;">↗</span></a>'
+                         label_html = f'<a href="{eq["wikipedia"]}" target="_blank" style="color:inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.2);">{label}</a>'
                     
                     items.append(f'''
                     <div class="equation-item" style="margin-bottom: 25px; text-align: center;">
