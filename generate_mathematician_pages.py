@@ -62,7 +62,7 @@ def sync_metadata_placeholders(all_slugs):
         
         if changed_overrides:
                 with open(OVERRIDES_FILE, "w", encoding="utf-8") as f:
-                        json.dump(overrides, f, indent=2)
+                        json.dump(overrides, f, indent=2, sort_keys=True)
                 print(f"Updated {OVERRIDES_FILE} with missing placeholders.")
 
         # 2. Sync Famous Equations
@@ -70,12 +70,13 @@ def sync_metadata_placeholders(all_slugs):
         changed_equations = False
         for slug in all_slugs:
                 if slug not in equations:
-                        equations[slug] = {"equation": "", "label": ""}
+                        equations[slug] = []
                         changed_equations = True
         
         if changed_equations:
+                # To maintain existing data, we only add missing ones.
                 with open(EQUATIONS_FILE, "w", encoding="utf-8") as f:
-                        json.dump(equations, f, indent=2)
+                        json.dump(equations, f, indent=2, sort_keys=True)
                 print(f"Updated {EQUATIONS_FILE} with missing placeholders.")
 
 
@@ -198,17 +199,37 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
                 '''
 
         equation_html = ""
-        if equation_data and equation_data.get("equation"):
-                eq = equation_data["equation"]
-                label = equation_data.get("label", "Famous Equation")
-                equation_html = f'''
-                <div class="equation-box" style="margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px; border-left: 4px solid var(--accent); text-align: center;">
-                        <h3 style="color:var(--accent); margin-top: 0; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1.2px; text-align: left;">{label}</h3>
-                        <div style="font-size: 1.4em; padding: 10px 0; overflow-x: auto;">
-                                \\[ {eq} \\]
+        if equation_data:
+                # If it's a single dict (old style), wrap it
+                if isinstance(equation_data, dict):
+                    equation_data = [equation_data]
+                
+                items = []
+                for eq in equation_data:
+                    if not eq.get("equation"): continue
+                    
+                    label = eq.get("label", "Famous Equation")
+                    desc = f'<p style="margin: 5px 0 10px 0; opacity: 0.8; font-size: 0.9em;">{eq["description"]}</p>' if eq.get("description") else ""
+                    wiki = f'<a href="{eq["wikipedia"]}" target="_blank" style="color:var(--accent); text-decoration: none; font-size: 0.7em; vertical-align: middle; margin-left: 10px;">[Wiki ↗]</a>' if eq.get("wikipedia") else ""
+                    
+                    items.append(f'''
+                    <div class="equation-item" style="margin-bottom: 25px; text-align: center;">
+                        <h3 style="color:var(--accent); margin: 0; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; text-align: left;">
+                            {label}{wiki}
+                        </h3>
+                        {desc}
+                        <div style="font-size: 1.3em; padding: 15px 0; overflow-x: auto; background: rgba(255,255,255,0.03); border-radius: 4px; margin-top: 10px;">
+                            \\[ {eq["equation"]} \\]
                         </div>
-                </div>
-                '''
+                    </div>
+                    ''')
+
+                if items:
+                    equation_html = f'''
+                    <div class="equations-section" style="margin: 40px 0; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                        {"".join(items)}
+                    </div>
+                    '''
 
         html = f'''<!doctype html>
 <html lang="en">

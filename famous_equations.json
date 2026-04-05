@@ -1,282 +1,515 @@
 {
-  "bertrand-arthur-william-russell": {
-    "equation": "",
-    "label": ""
-  },
-  "andre-abraham-weil": {
-    "equation": "",
-    "label": ""
-  },
-  "paul-erdos": {
-    "equation": "",
-    "label": ""
-  },
-  "georg-ferdinand-ludwig-philipp-cantor": {
-    "equation": "",
-    "label": ""
-  },
-  "julius-wilhelm-richard-dedekind": {
-    "equation": "",
-    "label": ""
-  },
-  "kurt-godel": {
-    "equation": "",
-    "label": ""
-  },
-  "james-clerk-maxwell": {
-    "equation": "",
-    "label": ""
-  },
-  "madhava-of-sangamagrama": {
-    "equation": "",
-    "label": ""
-  },
-  "oliver-heaviside": {
-    "equation": "",
-    "label": ""
-  },
-  "george-biddell-airy": {
-    "equation": "",
-    "label": ""
-  },
-  "heinrich-rudolf-hertz": {
-    "equation": "",
-    "label": ""
-  },
-  "felix-christian-klein": {
-    "equation": "",
-    "label": ""
-  },
-  "erich-hecke": {
-    "equation": "",
-    "label": ""
-  },
-  "emmy-amalie-noether": {
-    "equation": "",
-    "label": ""
-  },
-  "niels-henrik-abel": {
-    "equation": "",
-    "label": ""
-  },
-  "carl-gustav-jacob-jacobi": {
-    "equation": "",
-    "label": ""
-  },
-  "georges-louis-leclerc-comte-de-buffon": {
-    "equation": "",
-    "label": ""
-  },
-  "john-horton-conway": {
-    "equation": "",
-    "label": ""
-  },
-  "nasir-al-din-al-tusi": {
-    "equation": "",
-    "label": ""
-  },
-  "william-thomson-lord-kelvin": {
-    "equation": "",
-    "label": ""
-  },
-  "lodovico-ferrari": {
-    "equation": "",
-    "label": ""
-  },
-  "scipione-del-ferro": {
-    "equation": "",
-    "label": ""
-  },
-  "girolamo-cardano": {
-    "equation": "",
-    "label": ""
-  },
-  "niccolo-tartaglia": {
-    "equation": "",
-    "label": ""
-  },
-  "renaissance-cubic-equation-wars": {
-    "equation": "",
-    "label": ""
-  },
-  "emil-artin": {
-    "equation": "",
-    "label": ""
-  },
-  "isaac-newton": {
-    "equation": "",
-    "label": ""
-  },
-  "gottfried-wilhelm-von-leibniz": {
-    "equation": "",
-    "label": ""
-  },
-  "leonardo-pisano-fibonacci": {
-    "equation": "",
-    "label": ""
-  },
-  "leonardo-da-vinci": {
-    "equation": "",
-    "label": ""
-  },
-  "robert-hooke": {
-    "equation": "",
-    "label": ""
-  },
-  "daniel-bernoulli": {
-    "equation": "",
-    "label": ""
-  },
-  "johann-bernoulli": {
-    "equation": "",
-    "label": ""
-  },
-  "jacob-jacques-bernoulli": {
-    "equation": "",
-    "label": ""
-  },
-  "evangelista-torricelli": {
-    "equation": "",
-    "label": ""
-  },
-  "john-wallis": {
-    "equation": "",
-    "label": ""
-  },
-  "srinivasa-aiyangar-ramanujan": {
-    "equation": "",
-    "label": ""
-  },
-  "william-rowan-hamilton": {
-    "equation": "",
-    "label": ""
-  },
-  "augustus-de-morgan": {
-    "equation": "",
-    "label": ""
-  },
-  "george-boole": {
-    "equation": "",
-    "label": ""
-  },
-  "claude-elwood-shannon": {
-    "equation": "",
-    "label": ""
-  },
-  "john-von-neumann": {
-    "equation": "",
-    "label": ""
-  },
-  "rene-descartes": {
-    "equation": "",
-    "label": ""
-  },
-  "john-edensor-littlewood": {
-    "equation": "",
-    "label": ""
-  },
-  "blaise-pascal": {
-    "equation": "",
-    "label": ""
-  },
-  "andrei-andreyevich-markov": {
-    "equation": "",
-    "label": ""
-  },
-  "pierre-de-fermat": {
-    "equation": "",
-    "label": ""
-  },
-  "andrey-nikolaevich-kolmogorov": {
-    "equation": "",
-    "label": ""
-  },
-  "godfrey-harold-hardy": {
-    "equation": "",
-    "label": ""
-  },
-  "hermann-minkowski": {
-    "equation": "",
-    "label": ""
-  },
-  "david-hilbert": {
-    "equation": "",
-    "label": ""
-  },
-  "adrien-marie-legendre": {
-    "equation": "",
-    "label": ""
-  },
-  "charles-babbage": {
-    "equation": "",
-    "label": ""
-  },
-  "augusta-ada-byron-king-countess-of-lovelace": {
-    "equation": "",
-    "label": ""
-  },
-  "leonhard-euler": {
-    "equation": "e^{i\\pi} + 1 = 0",
-    "label": "Euler's Identity"
-  },
-  "joseph-liouville": {
-    "equation": "",
-    "label": ""
-  },
-  "evariste-galois": {
-    "equation": "",
-    "label": ""
-  },
-  "john-f-nash": {
-    "equation": "",
-    "label": ""
-  },
-  "jules-henri-poincare": {
-    "equation": "",
-    "label": ""
-  },
-  "johann-carl-friedrich-gauss": {
-    "equation": "",
-    "label": ""
-  },
-  "georg-friedrich-bernhard-riemann": {
-    "equation": "",
-    "label": ""
-  },
-  "johann-peter-gustav-lejeune-dirichlet": {
-    "equation": "",
-    "label": ""
-  },
-  "marie-sophie-germain": {
-    "equation": "",
-    "label": ""
-  },
-  "simeon-denis-poisson": {
-    "equation": "",
-    "label": ""
-  },
-  "abraham-de-moivre": {
-    "equation": "",
-    "label": ""
-  },
-  "jean-le-rond-d-alembert": {
-    "equation": "",
-    "label": ""
-  },
-  "pierre-simon-laplace": {
-    "equation": "",
-    "label": ""
-  },
-  "francois-viete": {
-    "equation": "",
-    "label": ""
-  },
-  "joseph-louis-lagrange": {
-    "equation": "",
-    "label": ""
-  },
-  "joseph-fourier": {
-    "equation": "",
-    "label": ""
-  }
+  "abraham-de-moivre": [
+    {
+      "label": "De Moivre's Formula",
+      "description": "A fundamental bridge between complex numbers and trigonometry.",
+      "equation": "(\\cos x + i\\sin x)^n = \\cos(nx) + i\\sin(nx)",
+      "wikipedia": "https://en.wikipedia.org/wiki/De_Moivre%27s_formula"
+    },
+    {
+      "label": "Normal\n            Approximation to Binomial",
+      "description": "De Moivre was the first to discover the normal curve as an approximation to the binomial distribution.",
+      "equation": "P\\left( \\frac{S_n - np}{\\sqrt{np(1-p)}} \\le x \\right) \\approx \\Phi(x)",
+      "wikipedia": "https://en.wikipedia.org/wiki/De_Moivre%E2%80%93Laplace_theorem"
+    }
+  ],
+  "adrien-marie-legendre": [
+    {
+      "label": "Legendre Polynomials",
+      "description": "Solutions to Legendre's differential equation, essential in physics and engineering.",
+      "equation": "P_n(x) = \\frac{1}{2^n n!} \\frac{d^n}{dx^n} (x^2 - 1)^n",
+      "wikipedia": "https://en.wikipedia.org/wiki/Legendre_polynomials"
+    },
+    {
+      "label": "Legedre Symbol",
+      "description": "A notation in number theory to specify quadratic residues.",
+      "equation": "\\left(\\frac{a}{p}\\right) \\equiv a^{(p-1)/2} \\pmod{p}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Legendre_symbol"
+    }
+  ],
+  "andrei-andreyevich-markov": [
+    {
+      "label": "Markov Property",
+      "description": "The principle that the future state depends only on the current state, not the past.",
+      "equation": "P(X_{n+1} = x \\mid X_1 = x_1, \\dots, X_n = x_n) = P(X_{n+1} = x \\mid X_n = x_n)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Markov_property"
+    },
+    {
+      "label": "Markov Inequality",
+      "description": "A fundamental bound in probability theory.",
+      "equation": "P(X \\ge a) \\le \\frac{E[X]}{a}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Markov%27s_inequality"
+    }
+  ],
+  "andrey-nikolaevich-kolmogorov": [
+    {
+      "label": "Kolmogorov Axioms",
+      "description": "The foundation of modern probability theory.",
+      "equation": "P(E) \\ge 0, \\quad P(\\Omega) = 1, \\quad P\\left(\\bigcup E_i\\right) = \\sum P(E_i)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Probability_axioms"
+    },
+    {
+      "label": "Chapman-Kolmogorov Equation",
+      "description": "Relates joint probability distributions of stochastic processes.",
+      "equation": "p_{ij}(t+s) = \\sum_k p_{ik}(t) p_{kj}(s)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Chapman%E2%80%93Kolmogorov_equation"
+    }
+  ],
+  "augustus-de-morgan": [
+    {
+      "label": "De Morgan's Laws",
+      "description": "Fundamental rules of logic and set theory relating conjunctions and disjunctions.",
+      "equation": "\\neg(A \\land B) \\iff (\\neg A) \\lor (\\neg B)",
+      "wikipedia": "https://en.wikipedia.org/wiki/De_Morgan%27s_laws"
+    }
+  ],
+  "blaise-pascal": [
+    {
+      "label": "Pascal's Identity",
+      "description": "The recurrence relation defining Pascal's Triangle.",
+      "equation": "\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pascal%27s_rule"
+    },
+    {
+      "label": "Principle of Hydrostatics",
+      "description": "Pascal's law regarding pressure in a fluid.",
+      "equation": "\\Delta P = \\rho g \\Delta h",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pascal%27s_law"
+    }
+  ],
+  "carl-gustav-jacob-jacobi": [
+    {
+      "label": "Jacobian\n            Determinant",
+      "description": "Used for changing variables in multiple integrals.",
+      "equation": "J = \\det \\frac{\\partial(y_1, \\dots, y_n)}{\\partial(x_1, \\dots, x_n)}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Jacobian_matrix_and_determinant"
+    },
+    {
+      "label": "Jacobi Identity",
+      "description": "A property of the Poisson bracket and Lie algebras.",
+      "equation": "[A, [B, C]] + [B, [C, A]] + [C, [A, B]] = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Jacobi_identity"
+    }
+  ],
+  "david-hilbert": [
+    {
+      "label": "Einstein-Hilbert\n            Action",
+      "description": "The action that yields the Einstein field equations of general relativity.",
+      "equation": "S = \\int \\sqrt{-g} R \\, d^4x",
+      "wikipedia": "https://en.wikipedia.org/wiki/Einstein%E2%80%93Hilbert_action"
+    },
+    {
+      "label": "Hilbert Space Inner Product",
+      "description": "Generalizing Euclidean space to infinite dimensions.",
+      "equation": "\\langle f, g \\rangle = \\int_a^b f(x) \\overline{g(x)} \\, dx",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hilbert_space"
+    }
+  ],
+  "evangelista-torricelli": [
+    {
+      "label": "Torricelli's Law",
+      "description": "Describes the speed of fluid flowing out of an opening.",
+      "equation": "v = \\sqrt{2gh}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Torricelli%27s_law"
+    },
+    {
+      "label": "Torricelli's Trumpet (Gabriel's\n            Horn)",
+      "description": "A geometric figure with infinite surface area but finite volume.",
+      "equation": "V = \\pi \\int_1^\\infty \\frac{1}{x^2} dx = \\pi",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gabriel%27s_horn"
+    }
+  ],
+  "evariste-galois": [
+    {
+      "label": "Galois Group Solvability",
+      "description": "The criterion for whether a polynomial is solvable by radicals.",
+      "equation": "\\text{Gal}(L/K) \\text{ is a solvable group} \\iff \\text{Solvable by radicals}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Solvable_group"
+    }
+  ],
+  "francois-viete": [
+    {
+      "label": "Vieta's Formulas",
+      "description": "Relations between the coefficients of a polynomial and sums/products of its roots.",
+      "equation": "\\sum r_i = -\\frac{a_{n-1}}{a_n}, \\quad \\prod r_i = (-1)^n \\frac{a_0}{a_n}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Vieta%27s_formulas"
+    }
+  ],
+  "georg-friedrich-bernhard-riemann": [
+    {
+      "label": "Riemann Zeta Function",
+      "description": "The subject of the Riemann Hypothesis regarding the distribution of prime numbers.",
+      "equation": "\\zeta(s) = \\sum_{n=1}^\\infty \\frac{1}{n^s}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Riemann_zeta_function"
+    }
+  ],
+  "george-boole": [
+    {
+      "label": "Boolean Algebra",
+      "description": "The algebraic structure that underlies modern digital logic.",
+      "equation": "x \\cdot (y + z) = (x \\cdot y) + (x \\cdot z)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Boolean_algebra"
+    }
+  ],
+  "godfrey-harold-hardy": [
+    {
+      "label": "Hardy-Weinberg\n            Principle",
+      "description": "Allele frequencies in a population remain constant in equilibrium.",
+      "equation": "p^2 + 2pq + q^2 = 1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hardy%E2%80%93Weinberg_principle"
+    },
+    {
+      "label": "Hardy-Littlewood Circle Method",
+      "description": "An analytic technique for estimating the number of solutions to additive number theory problems.",
+      "equation": "R(n) = \\int_0^1 S(\\alpha)^s e(-n\\alpha) d\\alpha",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hardy%E2%80%93Littlewood_circle_method"
+    }
+  ],
+  "hermann-minkowski": [
+    {
+      "label": "Spacetime Interval",
+      "description": "The invariant metric of special relativity combining space and time.",
+      "equation": "ds^2 = c^2dt^2 - (dx^2 + dy^2 + dz^2)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Minkowski_space"
+    },
+    {
+      "label": "Minkowski Inequality",
+      "description": "The triangle inequality for \\(L^p\\) spaces.",
+      "equation": "\\left( \\sum |x_i + y_i|^p \\right)^{1/p} \\le \\left( \\sum |x_i|^p \\right)^{1/p} + \\left( \\sum |y_i|^p \\right)^{1/p}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Minkowski_inequality"
+    }
+  ],
+  "isaac-newton": [
+    {
+      "label": "Law of\n            Universal Gravitation",
+      "description": "Newton introduced this in 1687, unifying celestial and terrestrial mechanics under a single mathematical law.",
+      "equation": "F = G\\frac{m_1 m_2}{r^2}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation"
+    },
+    {
+      "label": "Binomial Series",
+      "description": "Developed in the 1660s, this expansion was part of Newton\u2019s broader creation of infinite series methods before\n        calculus was formalized.",
+      "equation": "(1+x)^n = \\sum_{k=0}^{\\infty} \\binom{n}{k} x^k",
+      "wikipedia": "https://en.wikipedia.org/wiki/Binomial_series"
+    },
+    {
+      "label": "Newton\u2013Leibniz Calculus (Fluxions)",
+      "description": "Newton devised fluxions in the mid-1660s, though publication delays fueled the famous priority dispute with\n        Leibniz.",
+      "equation": "\\frac{dy}{dx}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Leibniz%E2%80%93Newton_calculus_controversy"
+    }
+  ],
+  "jacob-jacques-bernoulli": [
+    {
+      "label": "Law of Large Numbers",
+      "description": "Bernoulli proved the first version of this fundamental probability theorem.",
+      "equation": "\\lim_{n \\to \\infty} P\\left( \\left| \\frac{S_n}{n} - p \\right| < \\epsilon \\right)=1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Law_of_large_numbers"
+    }
+  ],
+  "jean-le-rond-d-alembert": [
+    {
+      "label": "Wave Equation",
+      "description": "The first solution to the vibrating string problem.",
+      "equation": "\\frac{\\partial^2 u}{\\partial t^2} = c^2 \\frac{\\partial^2 u}{\\partial x^2}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Wave_equation"
+    }
+  ],
+  "johann-bernoulli": [
+    {
+      "label": "L'H\u00f4pital's Rule",
+      "description": "Taught to L'H\u00f4pital by Johann Bernoulli (for a fee).",
+      "equation": "\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}",
+      "wikipedia": "https://en.wikipedia.org/wiki/L%27H%C3%B4pital%27s_rule"
+    }
+  ],
+  "johann-carl-friedrich-gauss": [
+    {
+      "label": "Fundamental Theorem of\n            Algebra",
+      "description": "Gauss gave the first rigorous proof in 1799, helping legitimize complex numbers within mainstream mathematics.",
+      "equation": "p(z) = 0 \\quad \\text{has at least one complex root}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fundamental_theorem_of_algebra"
+    },
+    {
+      "label": "Gaussian Integral",
+      "description": "This result appeared in Gauss\u2019s early 19th-century work on probability and error theory tied to astronomical\n        observations.",
+      "equation": "\\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx = \\sqrt{\\pi}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gaussian_integral"
+    },
+    {
+      "label": "Gauss\u2019s Law (Electrostatics)",
+      "description": "Developed in the 1830s, this law became foundational to electromagnetism decades before Maxwell unified the\n        field.",
+      "equation": "\\oint_{\\partial V} \\mathbf{E}\\cdot d\\mathbf{A} = \\frac{Q_{\\text{enc}}}{\\varepsilon_0}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Gauss%27s_law"
+    }
+  ],
+  "johann-peter-gustav-lejeune-dirichlet": [
+    {
+      "label": "Dirichlet Series",
+      "description": "A generalization of the Zeta function.",
+      "equation": "F(s) = \\sum_{n=1}^\\infty \\frac{a_n}{n^s}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Dirichlet_series"
+    },
+    {
+      "label": "Class Number Formula",
+      "description": "Relating algebraic number theory quantities to L-function values.",
+      "equation": "h = \\frac{w\\sqrt{|D|}}{2\\pi} L(1, \\chi)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Class_number_formula"
+    }
+  ],
+  "john-von-neumann": [
+    {
+      "label": "Von Neumann Entropy",
+      "description": "Extension of classical entropy to quantum mechanics.",
+      "equation": "S(\\rho) = -\\text{Tr}(\\rho \\ln \\rho)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Von_Neumann_entropy"
+    },
+    {
+      "label": "Minimax Theorem",
+      "description": "The foundation of game theory.",
+      "equation": "\\max_x \\min_y v(x, y) = \\min_y \\max_x v(x, y)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Minimax_theorem"
+    }
+  ],
+  "john-wallis": [
+    {
+      "label": "Wallis Product",
+      "description": "An infinite product for \\(\\pi\\) involving only rational numbers.",
+      "equation": "\\frac{\\pi}{2} = \\prod_{n=1}^\\infty \\left( \\frac{2n}{2n-1} \\cdot \\frac{2n}{2n+1} \\right) = \\frac{2}{1} \\cdot\n    \\frac{2}{3} \\cdot \\frac{4}{3} \\cdot \\frac{4}{5} \\dots",
+      "wikipedia": "https://en.wikipedia.org/wiki/Wallis_product"
+    }
+  ],
+  "joseph-fourier": [
+    {
+      "label": "Fourier Series",
+      "description": "Introduced in 1807, this idea was initially controversial for claiming arbitrary functions could be represented\n        by trigonometric series.",
+      "equation": "f(x) = a_0 + \\sum_{n=1}^{\\infty} \\left(a_n \\cos nx + b_n \\sin nx\\right)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fourier_series"
+    },
+    {
+      "label": "Fourier Transform",
+      "description": "Developed from Fourier\u2019s heat theory, this transform later became essential to physics, engineering, and signal\n        processing.",
+      "equation": "\\hat{f}(\\xi) = \\int_{-\\infty}^{\\infty} f(x)e^{-2\\pi i \\xi x}dx",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fourier_transform"
+    },
+    {
+      "label": "Heat Equation",
+      "description": "Fourier formulated this equation in 1807 while studying heat diffusion, laying groundwork for modern partial\n        differential equations.",
+      "equation": "\\frac{\\partial u}{\\partial t} = \\alpha \\nabla^2 u",
+      "wikipedia": "https://en.wikipedia.org/wiki/Heat_equation"
+    }
+  ],
+  "joseph-louis-lagrange": [
+    {
+      "label": "Lagrange Multipliers",
+      "description": "Method for finding local maxima/minima subject to constraints.",
+      "equation": "\\nabla f = \\lambda \\nabla g",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lagrange_multiplier"
+    },
+    {
+      "label": "Lagrangian Mechanics",
+      "description": "A reformulation of classical mechanics.",
+      "equation": "\\frac{d}{dt} \\left( \\frac{\\partial L}{\\partial \\dot{q}_i} \\right) - \\frac{\\partial L}{\\partial q_i} = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Lagrangian_mechanics"
+    }
+  ],
+  "jules-henri-poincare": [
+    {
+      "label": "Poincar\u00e9\n            Recurrence Theorem",
+      "description": "States that certain systems will eventually return to a state very close to the initial one.",
+      "equation": "T^n (A) \\cap A \\neq \\emptyset",
+      "wikipedia": "https://en.wikipedia.org/wiki/Poincar%E2%80%93Recurrence_Theorem"
+    },
+    {
+      "label": "Poincar\u00e9-Hopf Index\n            Theorem",
+      "description": "Relating vector fields to the Euler characteristic.",
+      "equation": "\\sum_i \\text{index}_{x_i}(v) = \\chi(M)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Poincar%E2%80%93Hopf_theorem"
+    }
+  ],
+  "leonardo-pisano-fibonacci": [
+    {
+      "label": "Fibonacci Sequence",
+      "description": "A sequence where each number is the sum of the two preceding ones.",
+      "equation": "F_n = F_{n-1} + F_{n-2}, \\quad F_0=0, F_1=1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fibonacci_sequence"
+    },
+    {
+      "label": "Golden Ratio limit",
+      "description": "The ratio of consecutive Fibonacci numbers converges to \\(\\phi\\).",
+      "equation": "\\lim_{n \\to \\infty} \\frac{F_{n+1}}{F_n} = \\phi = \\frac{1+\\sqrt{5}}{2}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Golden_ratio"
+    }
+  ],
+  "leonhard-euler": [
+    {
+      "label": "Euler\u2019s Identity",
+      "description": "Published in the 1740s, this formula became iconic for uniting analysis, geometry, and arithmetic at a time when\n        complex numbers were still controversial.",
+      "equation": "e^{i\\pi} + 1 = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler%27s_identity"
+    },
+    {
+      "label": "Euler\u2019s Formula (Complex\n            Exponentials)",
+      "description": "Euler introduced this in the mid-18th century, giving complex numbers a geometric interpretation that transformed\n        trigonometry and analysis.",
+      "equation": "e^{ix} = \\cos x + i\\sin x",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler%27s_formula"
+    },
+    {
+      "label": "Basel Problem Solution",
+      "description": "Euler solved this famous problem in 1734, astonishing contemporaries by linking infinite series to \\(\\pi\\).",
+      "equation": "\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Basel_problem"
+    },
+    {
+      "label": "Euler\u2013Lagrange\n            Equation (Euler\u2019s Original Form)",
+      "description": "Euler developed this equation in the 1740s while founding the calculus of variations, later refined with\n        Lagrange.",
+      "equation": "\\frac{d}{dx}\\left(\\frac{\\partial L}{\\partial y'}\\right) - \\frac{\\partial L}{\\partial y} = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler%E2%80%93Lagrange_equation"
+    },
+    {
+      "label": "Euler\u2019s Totient\n            Formula",
+      "description": "Introduced in the 1760s, this identity emerged from Euler\u2019s systematic generalization of Fermat\u2019s\n        number-theoretic ideas.",
+      "equation": "\\sum_{d \\mid n} \\varphi(d) = n",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler%27s_totient_function"
+    },
+    {
+      "label": "Euler\u2019s Product\n            Formula for the Zeta Function",
+      "description": "Euler discovered this in 1737, revealing for the first time a deep analytic link between prime numbers and\n        infinite series.",
+      "equation": "\\sum_{n=1}^{\\infty} \\frac{1}{n^s} = \\prod_{p \\text{ prime}} \\frac{1}{1 - p^{-s}}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Riemann_zeta_function#Euler_product"
+    },
+    {
+      "label": "Euler\u2019s Identity for Homogeneous Functions",
+      "description": "Formulated in the 1750s, this result arose from Euler\u2019s broader effort to formalize scaling laws in mechanics and\n        geometry.",
+      "equation": "x f_x + y f_y = k f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Homogeneous_function#Euler's_homogeneous_function_theorem"
+    }
+  ],
+  "marie-sophie-germain": [
+    {
+      "label": "Sophie Germain Primes",
+      "description": "A prime \\(p\\) where \\(2p+1\\) is also prime, crucial in her work on Fermat's Last Theorem.",
+      "equation": "p \\in \\mathbb{P}, \\quad 2p+1 \\in \\mathbb{P}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sophie_Germain_prime"
+    }
+  ],
+  "pierre-de-fermat": [
+    {
+      "label": "Fermat's Principle",
+      "description": "Light travels between two points along the path of least time.",
+      "equation": "\\delta \\int_{A}^{B} dt = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Fermat%27s_principle"
+    }
+  ],
+  "pierre-simon-laplace": [
+    {
+      "label": "Laplace Equation",
+      "description": "Describes potentials in physics.",
+      "equation": "\\nabla^2 \\varphi = 0",
+      "wikipedia": "https://en.wikipedia.org/wiki/Laplace%27s_equation"
+    },
+    {
+      "label": "Laplace Transform",
+      "description": "Transforms differential equations into algebraic ones.",
+      "equation": "F(s) = \\int_0^\\infty f(t) e^{-st} dt",
+      "wikipedia": "https://en.wikipedia.org/wiki/Laplace_transform"
+    }
+  ],
+  "rene-descartes": [
+    {
+      "label": "Descartes' Rule of\n            Signs",
+      "description": "Determines the number of positive real roots of a polynomial.",
+      "equation": "v - p = 2k",
+      "wikipedia": "https://en.wikipedia.org/wiki/Descartes%27_rule_of_signs"
+    },
+    {
+      "label": "Polyhedral Formula",
+      "description": "A precursor to Euler's formula for polyhedra.",
+      "equation": "\\sum (V - 2) = 2(F - 4)",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler_characteristic"
+    }
+  ],
+  "simeon-denis-poisson": [
+    {
+      "label": "Poisson Distribution",
+      "description": "Probability of a given number of events occurring in a fixed interval.",
+      "equation": "P(k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Poisson_distribution"
+    },
+    {
+      "label": "Poisson Equation",
+      "description": "Generalization of Laplace's equation for systems with charge/mass density.",
+      "equation": "\\nabla^2 \\varphi = f",
+      "wikipedia": "https://en.wikipedia.org/wiki/Poisson%27s_equation"
+    }
+  ],
+  "srinivasa-aiyangar-ramanujan": [
+    {
+      "label": "Ramanujan\u2019s Series for \\(\\frac{1}{\\pi}\\)",
+      "description": "Discovered in 1914, this formula stunned mathematicians and later became central to high-precision computations\n        of \\(\\pi\\).",
+      "equation": "\\frac{1}{\\pi} = \\frac{2\\sqrt{2}}{9801} \\sum_{k=0}^{\\infty} \\frac{(4k)!(1103+26390k)}{(k!)^4 396^{4k}}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Ramanujan%E2%80%93Sato_series#Series_of_type_1/pi"
+    },
+    {
+      "label": "Hardy\u2013Ramanujan Partition Formula",
+      "description": "Derived in 1918, this asymptotic formula revolutionized understanding of integer partitions using analytic\n        methods.",
+      "equation": "p(n) \\sim \\frac{1}{4n\\sqrt{3}} e^{\\pi\\sqrt{\\frac{2n}{3}}}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hardy%E2%80%93Ramanujan_asymptotic_formula"
+    },
+    {
+      "label": "Ramanujan\u2019s Continued Fractions",
+      "description": "These formulas emerged from Ramanujan\u2019s notebooks and baffled mathematicians until modern modular theory\n        explained them.",
+      "equation": "R(q) = q^{1/5}\\prod_{n=1}^{\\infty}\\frac{(1-q^{5n-1})(1-q^{5n-4})}{(1-q^{5n-2})(1-q^{5n-3})}",
+      "wikipedia": "https://en.wikipedia.org/wiki/Rogers%E2%80%93Ramanujan_continued_fraction"
+    }
+  ],
+  "william-rowan-hamilton": [
+    {
+      "label": "Hamiltonian",
+      "description": "The operator corresponding to the total energy of the system.",
+      "equation": "H = T + V",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hamiltonian_(quantum_mechanics)"
+    },
+    {
+      "label": "Quaternion Rules",
+      "description": "The fundamental formula for quaternion multiplication carved into Broome Bridge.",
+      "equation": "i^2 = j^2 = k^2 = ijk = -1",
+      "wikipedia": "https://en.wikipedia.org/wiki/Quaternion"
+    }
+  ],
+  "bertrand-arthur-william-russell": [],
+  "andre-abraham-weil": [],
+  "paul-erdos": [],
+  "georg-ferdinand-ludwig-philipp-cantor": [],
+  "julius-wilhelm-richard-dedekind": [],
+  "kurt-godel": [],
+  "james-clerk-maxwell": [],
+  "madhava-of-sangamagrama": [],
+  "oliver-heaviside": [],
+  "george-biddell-airy": [],
+  "heinrich-rudolf-hertz": [],
+  "felix-christian-klein": [],
+  "erich-hecke": [],
+  "emmy-amalie-noether": [],
+  "niels-henrik-abel": [],
+  "georges-louis-leclerc-comte-de-buffon": [],
+  "john-horton-conway": [],
+  "nasir-al-din-al-tusi": [],
+  "william-thomson-lord-kelvin": [],
+  "lodovico-ferrari": [],
+  "scipione-del-ferro": [],
+  "girolamo-cardano": [],
+  "niccolo-tartaglia": [],
+  "renaissance-cubic-equation-wars": [],
+  "emil-artin": [],
+  "gottfried-wilhelm-von-leibniz": [],
+  "leonardo-da-vinci": [],
+  "robert-hooke": [],
+  "daniel-bernoulli": [],
+  "claude-elwood-shannon": [],
+  "john-edensor-littlewood": [],
+  "charles-babbage": [],
+  "augusta-ada-byron-king-countess-of-lovelace": [],
+  "joseph-liouville": [],
+  "john-f-nash": []
 }
