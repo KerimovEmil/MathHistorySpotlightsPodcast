@@ -234,12 +234,25 @@ def build_page(title, description, source_link, image_path, audio_url, out_path,
                     </div>
                     '''
 
+        # Prepare SEO meta description (strip HTML tags)
+        meta_desc = re.sub(r'<[^>]+>', '', description or '').strip()
+        if len(meta_desc) > 160:
+            meta_desc = meta_desc[:157] + "..."
+        
+        # Open Graph image URL (absolute path would be better, but root-relative works for some crawlers)
+        og_image = f"https://www.mathhistoryspotlights.com{image_path}" if image_path else ""
+
         html = f'''<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>{title}</title>
+  <title>{title} - Math History Spotlights</title>
+  <meta name="description" content="{meta_desc}" />
+  <meta property="og:title" content="{title} - Math History Spotlights" />
+  <meta property="og:description" content="{meta_desc}" />
+  {f'<meta property="og:image" content="{og_image}" />' if og_image else ''}
+  <meta property="og:type" content="article" />
   <link rel="shortcut icon" href="../favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="{SITE_STYLE}">
   <link rel="stylesheet" href="{CSS_PATH}">

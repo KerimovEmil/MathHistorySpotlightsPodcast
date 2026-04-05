@@ -26,7 +26,13 @@ body {
   background: linear-gradient(180deg, var(--card), rgba(255, 255, 255, 0.02));
   border-radius: 14px;
   box-shadow: 0 8px 30px rgba(2, 6, 23, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.03)
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(2, 6, 23, 0.9);
 }
 
 .back {
@@ -116,7 +122,14 @@ body {
   padding: 12px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.02);
-  text-align: center
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.grid li:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(125, 211, 252, 0.4);
 }
 
 .grid img {
