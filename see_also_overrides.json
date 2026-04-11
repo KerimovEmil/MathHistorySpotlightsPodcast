@@ -9,6 +9,7 @@
     "pierre-simon-laplace",
     "carl-gustav-jacob-jacobi"
   ],
+  "andre-abraham-weil": [],
   "andrei-andreyevich-markov": [
     "andrey-nikolaevich-kolmogorov",
     "pierre-simon-laplace",
@@ -29,6 +30,7 @@
     "charles-babbage",
     "george-biddell-airy"
   ],
+  "bertrand-arthur-william-russell": [],
   "blaise-pascal": [
     "rene-descartes",
     "pierre-de-fermat",
@@ -74,6 +76,7 @@
     "julius-wilhelm-richard-dedekind",
     "georg-friedrich-bernhard-riemann"
   ],
+  "eugene-charles-catalan": [],
   "evangelista-torricelli": [
     "pierre-de-fermat",
     "blaise-pascal",
@@ -94,6 +97,7 @@
     "rene-descartes",
     "nasir-al-din-al-tusi"
   ],
+  "georg-ferdinand-ludwig-philipp-cantor": [],
   "georg-friedrich-bernhard-riemann": [
     "johann-peter-gustav-lejeune-dirichlet",
     "johann-carl-friedrich-gauss",
@@ -149,6 +153,7 @@
     "daniel-bernoulli",
     "gottfried-wilhelm-von-leibniz"
   ],
+  "james-clerk-maxwell": [],
   "jean-le-rond-d-alembert": [
     "leonhard-euler",
     "daniel-bernoulli",
@@ -214,6 +219,9 @@
     "felix-christian-klein",
     "johann-peter-gustav-lejeune-dirichlet"
   ],
+  "julius-wilhelm-richard-dedekind": [],
+  "karl-theodor-wilhelm-weierstrass": [],
+  "kurt-godel": [],
   "leonardo-da-vinci": [
     "girolamo-cardano",
     "niccolo-tartaglia",
@@ -264,6 +272,7 @@
     "william-thomson-lord-kelvin",
     "heinrich-rudolf-hertz"
   ],
+  "paul-erdos": [],
   "pierre-de-fermat": [
     "rene-descartes",
     "blaise-pascal",
@@ -274,6 +283,7 @@
     "joseph-louis-lagrange",
     "adrien-marie-legendre"
   ],
+  "renaissance-cubic-equation-wars": [],
   "rene-descartes": [
     "john-wallis",
     "isaac-newton",
@@ -294,6 +304,7 @@
     "joseph-louis-lagrange",
     "joseph-fourier"
   ],
+  "sofia-vasilyevna-kovalevskaya": [],
   "srinivasa-aiyangar-ramanujan": [
     "godfrey-harold-hardy",
     "john-edensor-littlewood",
@@ -308,13 +319,5 @@
     "joseph-fourier",
     "james-clerk-maxwell",
     "joseph-liouville"
-  ],
-  "bertrand-arthur-william-russell": [],
-  "andre-abraham-weil": [],
-  "paul-erdos": [],
-  "georg-ferdinand-ludwig-philipp-cantor": [],
-  "julius-wilhelm-richard-dedekind": [],
-  "kurt-godel": [],
-  "james-clerk-maxwell": [],
-  "renaissance-cubic-equation-wars": []
+  ]
 }
