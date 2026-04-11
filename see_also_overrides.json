@@ -220,7 +220,11 @@
     "johann-peter-gustav-lejeune-dirichlet"
   ],
   "julius-wilhelm-richard-dedekind": [],
-  "karl-theodor-wilhelm-weierstrass": [],
+  "karl-theodor-wilhelm-weierstrass": [
+    "sofia-vasilyevna-kovalevskaya",
+    "georg-cantor",
+    "bernhard-riemann"
+  ],
   "kurt-godel": [],
   "leonardo-da-vinci": [
     "girolamo-cardano",
@@ -304,7 +308,11 @@
     "joseph-louis-lagrange",
     "joseph-fourier"
   ],
-  "sofia-vasilyevna-kovalevskaya": [],
+  "sofia-vasilyevna-kovalevskaya": [
+    "karl-theodor-wilhelm-weierstrass",
+    "emmy-amalie-noether",
+    "marie-sophie-germain"
+  ],
   "srinivasa-aiyangar-ramanujan": [
     "godfrey-harold-hardy",
     "john-edensor-littlewood",

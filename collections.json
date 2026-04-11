@@ -190,6 +190,12 @@
         "name": "Emmy Noether",
         "role": "Abstract Algebra",
         "image": "/assets/images/episodes/Emmy Amalie Noether.avif"
+      },
+      {
+        "slug": "sofia-vasilyevna-kovalevskaya",
+        "name": "Sofia Kovalevskaya",
+        "role": "Analysis & Physics",
+        "image": "/assets/images/episodes/Sofia Vasilyevna Kovalevskaya.avif"
       }
     ]
   },
@@ -456,6 +462,26 @@
         "name": "Henri Poincaré",
         "role": "The Last Universalist",
         "image": "/assets/images/episodes/Jules Henri Poincaré.avif"
+      }
+    ]
+  },
+  {
+    "id": "analysis-duo",
+    "title": "A Lifelong Mentorship",
+    "tag": "Mathematical Partnership",
+    "description": "Karl Weierstrass, the 'father of modern analysis,' and his most brilliant student, Sofia Kovalevskaya. Their intellectual bond overcame the gender-based restrictions of 19th-century academia, leading to fundamental breakthroughs in differential equations and mathematical physics.",
+    "mathematicians": [
+      {
+        "slug": "karl-theodor-wilhelm-weierstrass",
+        "name": "Karl Weierstrass",
+        "role": "Modern Analysis",
+        "image": "/assets/images/episodes/Karl Theodor Wilhelm Weierstrass.avif"
+      },
+      {
+        "slug": "sofia-vasilyevna-kovalevskaya",
+        "name": "Sofia Kovalevskaya",
+        "role": "Differential Equations",
+        "image": "/assets/images/episodes/Sofia Vasilyevna Kovalevskaya.avif"
       }
     ]
   }

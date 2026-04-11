@@ -500,6 +500,7 @@ def main():
                 image = find_image_for_title(name, image_files)
                 slug = normalize_text(name)
 
+
                 out_file = os.path.join(OUT_DIR, f"{slug}.html")
                 page_rel = f"{slug}.html"
                 audio_url = extract_audio_url(item)
