@@ -250,16 +250,22 @@ class SiteHeader extends HTMLElement {
     });
 
     // Filtering
+    const normalizeSearch = (str) => {
+      if (!str) return '';
+      return str.normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+    };
+
     input.addEventListener("input", (e) => {
-      const term = e.target.value.toLowerCase().trim();
+      const term = normalizeSearch(e.target.value).trim();
       if (!term) {
         resultsContainer.innerHTML = "";
         return;
       }
 
       const results = searchIndex.filter(item => {
-        return (item.title && item.title.toLowerCase().includes(term)) ||
-          (item.description && item.description.toLowerCase().includes(term));
+        const title = normalizeSearch(item.title || "");
+        const desc = normalizeSearch(item.description || "");
+        return title.includes(term) || desc.includes(term);
       });
 
       this.renderResults(results, resultsContainer);
