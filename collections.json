@@ -112,6 +112,12 @@
         "name": "John von Neumann",
         "role": "Computer Architecture",
         "image": "/assets/images/episodes/John von Neumann.avif"
+      },
+      {
+        "slug": "john-wilder-tukey",
+        "name": "John Wilder Tukey",
+        "role": "Fast Fourier Transform & EDA",
+        "image": "/assets/images/episodes/John Wilder Tukey.avif"
       }
     ]
   },
@@ -482,6 +488,38 @@
         "name": "Sofia Kovalevskaya",
         "role": "Differential Equations",
         "image": "/assets/images/episodes/Sofia Vasilyevna Kovalevskaya.avif"
+      }
+    ]
+  },
+  {
+    "id": "symmetry",
+    "title": "The Symmetry Revolution",
+    "tag": "Abstract Symmetries",
+    "description": "The transition from solving equations directly to studying the underlying structures and symmetries. These visionaries pioneered Group Theory, Lie Algebras, and the Erlangen Program.",
+    "mathematicians": [
+      {
+        "slug": "evariste-galois",
+        "name": "Évariste Galois",
+        "role": "Group Theory Pioneer",
+        "image": "/assets/images/episodes/Évariste Galois.avif"
+      },
+      {
+        "slug": "marie-ennemond-camille-jordan",
+        "name": "Camille Jordan",
+        "role": "Foundations of Group Theory",
+        "image": "/assets/images/episodes/Marie Ennemond Camille Jordan.avif"
+      },
+      {
+        "slug": "marius-sophus-lie",
+        "name": "Sophus Lie",
+        "role": "Continuous Symmetries",
+        "image": "/assets/images/episodes/Marius Sophus Lie.avif"
+      },
+      {
+        "slug": "felix-christian-klein",
+        "name": "Felix Klein",
+        "role": "Erlangen Program",
+        "image": "/assets/images/episodes/Felix Christian Klein.avif"
       }
     ]
   }
