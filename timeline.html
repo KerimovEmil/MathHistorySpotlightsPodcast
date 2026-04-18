@@ -119,6 +119,12 @@
             .toLowerCase();
         }
 
+        // Function to remove diacritics for search
+        function normalizeSearch(str) {
+          if (!str) return '';
+          return str.normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLowerCase();
+        }
+
         // Function to parse episode title and extract mathematician data
         function parseTitle(title) {
           // Try to extract name and years from patterns like:
@@ -126,7 +132,7 @@
           // "Charles Babbage 1791 Augusta Ada Byron King, Countess of Lovelace 1815 - 1852"
 
           // Match pattern: name followed by year - year
-          const match = title.match(/^(.+?)\s+(\d{4})\s*-\s*(\d{4})/);
+          const match = title.match(/^(.+?)\s+(\d{4})\s*[\-–—]\s*(\d{4})/);
           if (match) {
             return {
               name: match[1].trim(),
@@ -136,7 +142,7 @@
           }
 
           // Try alternative pattern for combined entries
-          const match2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*-\s*(\d{4})/);
+          const match2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*[\-–—]\s*(\d{4})/);
           if (match2) {
             return {
               name: match2[2].trim(),
@@ -150,7 +156,7 @@
 
         // Fetch and parse RSS feed with caching
         async function fetchEpisodes() {
-          const cacheKey = 'timelineData_v2'; // versioned key to force update
+          const cacheKey = 'timelineData_v3'; // versioned key to force update
           const cacheExpiry = 1 * 60 * 60 * 1000; // 1 hour
           const cached = localStorage.getItem(cacheKey);
           const now = Date.now();
@@ -169,7 +175,7 @@
 
           try {
             // Add a timestamp to the URL to bypass browser/CDN cache for the feed file itself
-            const response = await fetch('/assets/feed.xml?v=' + now);
+            const response = await fetch('./assets/feed.xml?v=' + now);
             let text;
             if (response.ok) {
               text = await response.text();
@@ -273,10 +279,10 @@
           const rowHeight = 24; // Compact row height
 
           // Filter data based on search
-          const query = searchInput.value.toLowerCase();
+          const query = normalizeSearch(searchInput.value);
           const filteredData = data.filter(p =>
-            p.name.toLowerCase().includes(query) ||
-            (p.note && p.note.toLowerCase().includes(query))
+            normalizeSearch(p.name).includes(query) ||
+            (p.note && normalizeSearch(p.note).includes(query))
           );
 
           if (filteredData.length === 0 && query.length > 0) {
@@ -354,7 +360,7 @@
             // Asynchronously check whether the local page exists and update the indicator AND the link
             (async () => {
               try {
-                const page = `/mathematicians/${p.slug}.html`;
+                const page = `./mathematicians/${p.slug}.html`;
                 const res = await fetch(page, { method: 'HEAD' });
                 if (res.ok) {
                   icon.className = 'local-indicator present';
