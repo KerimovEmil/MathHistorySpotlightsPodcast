@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Sat, 11 Apr 2026 21:33:55 GMT</lastBuildDate>
+		<lastBuildDate>Fri, 17 Apr 2026 14:03:44 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,38 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>David Gawen Champernowne 1912 - 2000</title>
+			<description>&lt;p&gt;The life of David Gawen Champernowne - The Man Who Built AI on Paper.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Champernowne/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/David-Gawen-Champernowne-1912---2000-e3hoqpg</link>
+			<guid isPermaLink="false">562a9985-e2d7-47a2-b57d-fa544a0d807a</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Thu, 16 Apr 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118302960/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-11%2F1911c731-38f2-4b21-2493-10a346fa7bc1.m4a" length="41730483" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of David Gawen Champernowne - The Man Who Built AI on Paper.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Champernowne/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:21:36</itunes:duration>
+			<itunes:image href="/assets/images/episodes/David Gawen Champernowne.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
+			<title>Félix Edouard Justin Émile Borel 1871 - 1956</title>
+			<description>&lt;p&gt;The life of Félix Edouard Justin Émile Borel - The mathematician who fought the Gestapo.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Borel/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Flix-Edouard-Justin-mile-Borel-1871---1956-e3hoqls</link>
+			<guid isPermaLink="false">cfcd5936-f28e-4a68-8dd6-4a7d68852045</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Tue, 14 Apr 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118302844/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-11%2Fd067b1da-9f04-eca1-db19-ef9f5874752a.m4a" length="33519871" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Félix Edouard Justin Émile Borel - The mathematician who fought the Gestapo.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Borel/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:17:21</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Félix Edouard Justin Émile Borel.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Eugène Charles Catalan 1814 - 1894</title>
 			<description>&lt;p&gt;The life of Eugène Charles Catalan - &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Catalan/&lt;/p&gt;
