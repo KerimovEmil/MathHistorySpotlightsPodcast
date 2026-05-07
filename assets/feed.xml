@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Tue, 05 May 2026 14:32:49 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 07 May 2026 15:15:19 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Marie Ennemond Camille Jordan 1838 - 1922</title>
+			<description>&lt;p&gt;The life of Marie Ennemond Camille Jordan - The civil engineer who built modern mathematics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Jordan/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Marie-Ennemond-Camille-Jordan-1838---1922-e3i3v93</link>
+			<guid isPermaLink="false">0efae140-2891-468e-a86c-52a2974fc1d5</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 06 May 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118668003/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-18%2Ff03075e2-654f-d068-81df-5300e7f22463.m4a" length="41186523" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Marie Ennemond Camille Jordan - The civil engineer who built modern mathematics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Jordan/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:21:19</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Marie Ennemond Camille Jordan.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>John Wilder Tukey 1915 - 2000</title>
 			<description>&lt;p&gt;The life of John Wilder Tukey - Invented Data Analysis&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Tukey/&lt;/p&gt;
