@@ -55,6 +55,31 @@
     font-weight: var(--fw-700);
 }
 
+.header-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.header-link:hover {
+    color: var(--flourescent-blue);
+}
+
+.header-link::after {
+    content: "#";
+    font-size: 0.8em;
+    color: var(--heliotrope-gray);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.header-link:hover::after {
+    opacity: 1;
+}
+
 .group-tag {
     background: var(--gradient);
     padding: 4px 12px;

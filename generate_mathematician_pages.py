@@ -128,7 +128,7 @@ def build_collections_page(collections):
                 <!-- Collection {i}: {c['title']} -->
                 <div class="collection-group" id="{c['id']}">
                     <div class="group-header">
-                        <h2 class="group-title">{c['title']}</h2>
+                        <h2 class="group-title"><a href="#{c['id']}" class="header-link">{c['title']}</a></h2>
                         <span class="group-tag">{c['tag']}</span>
                     </div>
                     <p class="group-description">
