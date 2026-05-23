@@ -8,9 +8,9 @@ def run_command(command, description):
         # shell=True is often needed on Windows for git commands or complex arguments
         # check=True will raise CalledProcessError if the command fails
         subprocess.run(command, check=True, shell=True)
-        print(f"✓ {description} completed successfully.")
+        print(f"[OK] {description} completed successfully.")
     except subprocess.CalledProcessError as e:
-        print(f"❌ Error during: {description}")
+        print(f"[ERROR] Error during: {description}")
         print(f"Command failed with exit code {e.returncode}")
         sys.exit(e.returncode)
 
@@ -34,13 +34,13 @@ def main():
     print(f"\n--- Committing changes ---")
     try:
         subprocess.run(f'git commit -m "{commit_msg}"', check=True, shell=True)
-        print("✓ Changes committed.")
+        print("[OK] Changes committed.")
     except subprocess.CalledProcessError:
         print("Note: No changes to commit (or commit failed). Continuing...")
 
     run_command("git push", "Pushing to remote repository")
 
-    print("\n✅ Website update complete!")
+    print("\n[SUCCESS] Website update complete!")
 
 if __name__ == "__main__":
     main()
