@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Fri, 29 May 2026 16:23:33 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 03 Jun 2026 17:27:12 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Hermann Günter Grassmann 1809 - 1877</title>
+			<description>&lt;p&gt;The life of Hermann Günter Grassmann - The High School Teacher Who Invented Vectors&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Grassmann/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Hermann-Gnter-Grassmann-1809---1877-e3jd16f</link>
+			<guid isPermaLink="false">5f18af92-9892-4107-8cb8-763dd7595f77</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 03 Jun 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120013455/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-15%2F71a8c1cc-8c65-0e2b-3b39-11c4de2d264f.m4a" length="36838629" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Hermann Günter Grassmann - The High School Teacher Who Invented Vectors&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Grassmann/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:19:04</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Hermann Günter Grassmann.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Ehrenfried Walter von Tschirnhaus 1651 - 1708</title>
 			<description>&lt;p&gt;The life of Ehrenfried Walter von Tschirnhaus - The Man Who Invented European Porcelain&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt; - https://mathshistory.st-andrews.ac.uk/Biographies/Tschirnhaus/&lt;/p&gt;
