@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Mon, 15 Jun 2026 17:32:33 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 17 Jun 2026 16:23:34 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Georg Mohr 1640 - 1697</title>
+			<description>&lt;p&gt;The life of Georg Mohr - Compass Only Geometry&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mohr/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Georg-Mohr-1640---1697-e3jgggd</link>
+			<guid isPermaLink="false">b7066209-8fd8-4ce0-bd71-1678d0e6ef8f</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 17 Jun 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120127437/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-17%2F632a0b3f-9e3d-3973-2918-628d1b0aec43.m4a" length="38281740" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Georg Mohr - Compass Only Geometry&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mohr/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:19:49</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Georg Mohr.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Lorenzo Mascheroni 1750 - 1800</title>
 			<description>&lt;p&gt;The life of Lorenzo Mascheroni - The Priest Who Banished the Ruler&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mascheroni/&lt;/p&gt;
