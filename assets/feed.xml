@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Mon, 22 Jun 2026 17:15:35 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 24 Jun 2026 15:19:17 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Christiaan Huygens 1821 - 1895</title>
+			<description>&lt;p&gt;The life of Christiaan Huygens - The Man Who Solved Saturn and Time&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Huygens/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Christiaan-Huygens-1821---1895-e3jpuv1</link>
+			<guid isPermaLink="false">14190393-3053-4ecc-ab11-1b8a9df56152</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 24 Jun 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120437153/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-23%2Ffe2aebef-4ea1-667a-78e5-388c40a8a899.m4a" length="50568209" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Christiaan Huygens - The Man Who Solved Saturn and Time&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Huygens/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:26:11</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Christiaan Huygens.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Georg Mohr 1640 - 1697</title>
 			<description>&lt;p&gt;The life of Georg Mohr - Compass Only Geometry&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mohr/&lt;/p&gt;
