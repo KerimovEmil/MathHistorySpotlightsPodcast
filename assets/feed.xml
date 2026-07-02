@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Mon, 29 Jun 2026 13:17:45 GMT</lastBuildDate>
+		<lastBuildDate>Thu, 02 Jul 2026 14:40:32 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Arthur Cayley 1821 - 1895</title>
+			<description>&lt;p&gt;The life of Arthur Cayley - The Property Lawyer Who Invented Matrices&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cayley/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Arthur-Cayley-1821---1895-e3jpv1p</link>
+			<guid isPermaLink="false">ca9471fc-5b08-400f-a9e4-03fc6f805627</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 01 Jul 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120437241/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-23%2Fe9937e4c-8c31-9ac0-91d6-7e4fbb3697b8.m4a" length="41051193" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Arthur Cayley - The Property Lawyer Who Invented Matrices&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cayley/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:21:15</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Arthur Cayley.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Christiaan Huygens 1821 - 1895</title>
 			<description>&lt;p&gt;The life of Christiaan Huygens - The Man Who Solved Saturn and Time&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Huygens/&lt;/p&gt;
