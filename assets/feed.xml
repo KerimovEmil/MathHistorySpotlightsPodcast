@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:ns3="https://podcastindex.org/namespace/1.0" version="2.0">
 	<channel>
 		<title>Math History Spotlights</title>
 		<description>Highlighting the lives of some of histories greatest mathematicians.
@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Wed, 08 Jul 2026 14:56:32 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 15 Jul 2026 14:20:12 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -32,6 +32,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
 		<item>
+			<title>Goro Shimura 1930 - 2019</title>
+			<description>&lt;p&gt;The life of Goro Shimura - from wartime Japan to Princeton. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Shimura/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Goro-Shimura-1930---2019-e3llbgn</link>
+			<guid isPermaLink="false">5a7b2bed-a70a-4c8c-9c92-1fbd4b4e1f19</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 15 Jul 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/122383319/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-4%2Fb05a5ac2-38d2-c313-a679-2c2d6baac2b7.m4a" length="38926666" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Goro Shimura - from wartime Japan to Princeton. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Shimura/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:20:09</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Goro Shimura.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
+		<item>
 			<title>William Burnside 1852 - 1927</title>
 			<description>&lt;p&gt;The life of William Burnside - How rowing created modern group theory&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Burnside/&lt;/p&gt;
 </description>
@@ -40,6 +56,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 08 Jul 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120437314/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-23%2F7268310d-55b5-c4fd-03e0-4f4e33afbe7c.m4a" length="43329726" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/07w7FXHPeFATuGwPT0UhdC/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of William Burnside - How rowing created modern group theory&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Burnside/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -56,6 +73,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 01 Jul 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120437241/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-23%2Fe9937e4c-8c31-9ac0-91d6-7e4fbb3697b8.m4a" length="41051193" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4U19o7FLHXOz2Ymsjjwgl9/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Arthur Cayley - The Property Lawyer Who Invented Matrices&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cayley/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -72,6 +90,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 24 Jun 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120437153/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-23%2Ffe2aebef-4ea1-667a-78e5-388c40a8a899.m4a" length="50568209" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3uGIKAreQhRMijqeMoZMZ7/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Christiaan Huygens - The Man Who Solved Saturn and Time&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Huygens/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -88,6 +107,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 17 Jun 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120127437/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-17%2F632a0b3f-9e3d-3973-2918-628d1b0aec43.m4a" length="38281740" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/1GOS94gCUpvDPDdknXh1Fj/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Georg Mohr - Compass Only Geometry&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mohr/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -104,6 +124,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 10 Jun 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120127338/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-17%2Fe0f1e527-7a48-e165-a1a9-f53ddb3b3917.m4a" length="38634458" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2jepuBkgBqdV2FEiqo0w98/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Lorenzo Mascheroni - The Priest Who Banished the Ruler&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mascheroni/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -120,6 +141,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 03 Jun 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120013455/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-15%2F71a8c1cc-8c65-0e2b-3b39-11c4de2d264f.m4a" length="36838629" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6Zk6PeD3NTu7TcI5JE7hRY/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Hermann Günter Grassmann - The High School Teacher Who Invented Vectors&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Grassmann/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -136,6 +158,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 27 May 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/120127520/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-17%2F400ffc0b-3741-4cd1-0749-54fadd01eb02.m4a" length="41226116" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2mQhOI0PUeTSiAYeovpWLs/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Ehrenfried Walter von Tschirnhaus - The Man Who Invented European Porcelain&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt; - https://mathshistory.st-andrews.ac.uk/Biographies/Tschirnhaus/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -152,6 +175,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Sun, 24 May 2026 10:15:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/119492356/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-5%2Fed6a0322-fc06-4e3b-c123-48aba068e3ad.m4a" length="37777257" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/1bGHttqvsUOFEJyhhMRpck/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Marin Mersenne - The monk who networked the scientific revolution&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mersenne/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -168,6 +192,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 22 May 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/119492274/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-22%2F52cea54d-2b4e-b370-3e98-6b76bd1c08ad.m4a" length="42152045" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/0neZC2Noo1nYSUTEroWmZ4/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of August Ferdinand Möbius - The Patient Rebel&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Mobius/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -184,6 +209,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 13 May 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/119492213/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-5%2Fecb741c7-fb47-55f1-d6d5-5c6cf11f69bc.m4a" length="44322141" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3JD9CPXLfmTmgHc3nd4Kas/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Augustin Louis Cauchy - The Mathematical Genius Who Alienated Everyone&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cauchy/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -200,6 +226,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 06 May 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118668003/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-18%2Ff03075e2-654f-d068-81df-5300e7f22463.m4a" length="41186523" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4vtrSYHLfuEFd2ZGyjqk9J/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Marie Ennemond Camille Jordan - The civil engineer who built modern mathematics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Jordan/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -216,6 +243,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 29 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118667952/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-18%2F4f71dcb9-2137-0195-9939-0746764aa2c1.m4a" length="38577603" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6V0el0A7rfcw0XLU9mUVxe/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of John Wilder Tukey - Invented Data Analysis&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Tukey/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -232,6 +260,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Thu, 23 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118667868/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-18%2Fa01b4695-d394-dcc8-1dd5-6083f4cd5460.m4a" length="45174113" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/7lhoC09rHzQc2sPGVx4ptb/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Marius Sophus Lie - Midnight Epiphany and Stolen Legacy&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Lie/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -248,6 +277,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Tue, 21 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118303019/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-11%2Fea819f55-ece3-2f37-991e-deb3e79ce566.m4a" length="41093774" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/1LMDCErwdNfXuBXE0BKWad/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Aleksandr Yakovlevich Khinchin - The Theatre Kid Who Built Information Theory&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Khinchin/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -264,6 +294,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Thu, 16 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118302960/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-11%2F1911c731-38f2-4b21-2493-10a346fa7bc1.m4a" length="41730483" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5bCC8ekEJaHAymY6MScRj8/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of David Gawen Champernowne - The Man Who Built AI on Paper.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Champernowne/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -280,6 +311,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Tue, 14 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/118302844/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-11%2Fd067b1da-9f04-eca1-db19-ef9f5874752a.m4a" length="33519871" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/42tlSLOD5tUrv48RJBTsQI/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Félix Edouard Justin Émile Borel - The mathematician who fought the Gestapo.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Borel/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -296,6 +328,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 10 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/117312645/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-22%2F843c89e9-f4a7-5f3b-f7cf-8550494d5a0c.m4a" length="38457294" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3kHKRvYaefzZzfdzMgL1jp/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Eugène Charles Catalan - &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Catalan/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -312,6 +345,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 08 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/117312561/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-22%2Fe84bdf0f-fb9f-39d6-12a3-0e5c3241619d.m4a" length="43098891" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/0cOs2usJhmOhZwR4ukark1/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Karl Theodor Wilhelm Weierstrass - The Gymnastics Teacher Who Rewrote Mathematics&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Weierstrass/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -328,6 +362,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 06 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/117312407/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-22%2F9f928114-883c-7f53-120c-11b1c443b458.m4a" length="39835297" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6rP9wx7uYreerRGUg6MgMK/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Sofia Vasilyevna Kovalevskaya - She Learned Calculus From Wallpaper&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Kovalevskaya/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -344,6 +379,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 03 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/117276150/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-21%2F6837dfeb-22e1-a10b-7c6a-1a44308f2172.m4a" length="39182901" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3irejf84X55bhbU0qoviXO/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Bertrand Arthur William Russell - The Man Who Broke Mathematics. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Russell/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -360,6 +396,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 01 Apr 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/117276098/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-21%2Fd1e0ff0b-77ed-8395-cd99-6da423b15b54.m4a" length="44349138" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/7j8yFyzJCcLJZSX17S0ryk/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of André Abraham Weil - The Mathematician Who Survived A Firing Squad&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Weil/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -376,6 +413,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 30 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/117276034/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-21%2F26a73059-a458-c34b-584a-c76157874b84.m4a" length="44356621" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4MinTyuaRuO4WamzKyjqde/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Paul Erdős - The Most Social Mathematician&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Erdos/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -392,6 +430,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 27 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116557422/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-7%2Fdb4c2b09-07ee-aff7-ea57-657ec67b84b2.m4a" length="39045446" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/27yzUfASaQbipwa3aaAbKW/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Georg Ferdinand Ludwig Philipp Cantor - Some Infinites Are Larger Than Others&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cantor/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -408,6 +447,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 25 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116557350/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-7%2F46b98d23-3023-e32b-ad71-3ccd7c6f26b9.m4a" length="38509587" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4Oe1JIqzd3QahdavPBhQRJ/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Julius Wilhelm Richard Dedekind - the &amp;quot;Dedekind Cut&amp;quot;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Dedekind/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -424,6 +464,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 23 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116557282/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-7%2F0a8be661-83d7-3caf-a223-b14ab9849f64.m4a" length="45620958" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/35UXkXgJ9O7XjU6eSlEotX/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Kurt Gödel - The Provable Unprovable&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Godel/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -440,6 +481,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 20 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116241436/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-1%2Fd78c2d77-64d6-43fb-3386-06855288e725.m4a" length="43233358" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6bAlOsN5Pzgk1zlGNiVUc2/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of James Clerk Maxwell - Unified Light and Electricity&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Maxwell/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -456,6 +498,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 18 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116241333/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-1%2F5c11ad6c-2feb-2adc-d863-b4e58d971eb0.m4a" length="31783057" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/1gasNIOXMSzjnwV3fXGPq6/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Madhava of Sangamagrama - The Forgotten Father of Calculus&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Madhava/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -472,6 +515,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 16 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116192161/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-28%2F746a60ca-282a-9fb3-f0ca-6274850c5b8c.m4a" length="47557231" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/61ggSasigDwHhNM6lZe5od/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Oliver Heaviside - The Hermit who Rewrote Maxwell&amp;#39;s Laws&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Heaviside/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -488,6 +532,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 13 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116192098/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-28%2F1c8cf26c-3d68-d4e8-0e5d-84272833307a.m4a" length="33897241" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2rcpLpIu4EV4hpjLGRq8Ws/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of George Biddell Airy - The Bureaucrat Who Organized The Stars&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt; - https://mathshistory.st-andrews.ac.uk/Biographies/Airy/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -504,6 +549,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 11 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/116191990/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-28%2F2e4c9a6c-0c9a-8556-8428-603ba025184b.m4a" length="35147500" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6FMxMDJdLRsu7yOR3EnZoM/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Heinrich Rudolf Hertz - The Useless Waves&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hertz_Heinrich/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -520,6 +566,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 09 Mar 2026 11:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115889372/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-22%2Fcd07cc07-a6cb-e49c-8bb7-312c20a00d88.m4a" length="42708705" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3TtRt42f9Xy7XbxObWRw8x/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Felix Christian Klein - Organized the Chaos of Mathematics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Klein/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -536,6 +583,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 06 Mar 2026 12:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115889302/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-22%2F620ee605-081e-f73d-c87d-b3508fa276bf.m4a" length="34891897" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4SLDB5lqXzZwwaFKsDXuKP/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Erich Hecke - Bridge between Primes and Calculus&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hecke/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -552,6 +600,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 04 Mar 2026 12:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115889231/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-22%2Ff66cfa1b-f5d4-835a-8b7a-3dc5e2dacf57.m4a" length="37079291" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/0IXaeWRGoNUIjlTZEa4Gbl/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Emmy Amalie Noether - Rewrote The Rules of Physics&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -568,6 +617,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 02 Mar 2026 12:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115516583/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-15%2F70e85136-d73f-7d36-2e07-cceff9b2a6f0.m4a" length="36692956" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6vpL8X5F4RFTBO7BxbBVOv/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Niels Henrik Abel - The Starving Genius Who Rewrote Algebra&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Abel/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -584,6 +634,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 25 Feb 2026 12:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115516463/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-15%2F5c1df7e8-f8b4-5ffe-fca9-9084b98f55b3.m4a" length="32520732" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3XHBJ54dEbmEWF9rjgnk5I/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Georges Louis Leclerc Comte de Buffon - The Needle and the Age of Earth&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Buffon/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -600,6 +651,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 23 Feb 2026 05:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115053495/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-5%2F1483931c-a629-f437-2771-c845bd8afe77.m4a" length="37129343" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3N5jXdvdz5DWXKlStCKLA1/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of John Horton Conway - Mathematical Play&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Conway/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -616,6 +668,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 20 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/115052943/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-5%2F79e3f2c9-7260-b441-bdbc-e49c54e19154.m4a" length="29801962" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3TqLeJwqoQKF7Es2lnqTKq/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Nasir al-Din al-Tusi - Architect of Islamic Scientific Revival&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Al-Tusi_Nasir/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -632,6 +685,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 18 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114837919/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-31%2F143a5d12-490c-e463-ffcf-2c72f547ba8a.m4a" length="30476770" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/14WUgGTe9Ik10ImU8AMXx5/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of William Thomson (Lord Kelvin) - The Polymath who Wired the World&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Thomson/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -648,6 +702,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 16 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114837859/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-31%2Feb2f63b5-1f7b-5447-34fd-2ee140e01ead.m4a" length="22603187" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2sk45RIrM9Rt0am8go3HqC/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Lodovico Ferrari - The Poisoned Prodigy Behind the Quartic Equation&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferrari/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -664,6 +719,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 13 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114658422/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-28%2F4e29891b-245b-b1d7-ffe2-8f0556b7d184.m4a" length="26931543" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5RqLv4rzoQZBNNrQDX26zg/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Scipione del Ferro - The Secret Cubic Solution for Math Duels&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferro/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -680,6 +736,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 11 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114658144/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-27%2F5c0d4623-ec33-9cb2-6d0f-10031d19b854.m4a" length="33810585" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6yWJWVXVZkxJ80pEf16E3P/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Girolamo Cardano - The Knife Wielding Gambler&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cardan/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -696,6 +753,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 09 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114658041/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-27%2F116d58a5-08ed-0a0f-2331-99f0cf94ce43.m4a" length="25414590" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2Xh8nzFH8oUj5G0SuSFFG8/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Niccolò Tartaglia - The Stolen Secret of the Cubic Equation&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -712,6 +770,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Sat, 07 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114838608/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-31%2Fc4fad362-7a34-8219-ea4b-a24b6fa75f69.m4a" length="31615720" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2y8hGHsxETMEDNBsYkYHjq/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;Topic Episode - the Cubic Equation Wars&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/HistTopics/Tartaglia_v_Cardan/&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/HistTopics/Quadratic_etc_equations/&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferro/- https://mathshistory.st-andrews.ac.uk/Biographies/Tartaglia/&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Cardan/&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ferrari/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -728,6 +787,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 06 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114421349/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-23%2F7f5876a2-76f5-1ff0-da78-1eb18a20d18b.m4a" length="30419995" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2qAct5OdtyeiA0dN6LUlu5/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Emil Artin - The Architecture of Algebra&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Artin/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -744,6 +804,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 04 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114421044/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-23%2F11e736bc-6d97-b82f-6ad9-524e662f143b.m4a" length="24857068" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/33UU5n3HotU2SecnGvRWpz/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Isaac Newton - Secret Life of Rage.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Newton/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -760,6 +821,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 02 Feb 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114420706/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-23%2F2e588fd7-55f3-e2ec-06b8-450fb621709f.m4a" length="32062565" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4r1DOqfqjNhDUOfwA0lW5o/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Gottfried Wilhelm von Leibniz - Universal Polymath&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/ &lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -776,6 +838,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 30 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114182224/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-18%2F7fa13a13-29be-ac52-e692-9722c6972ac9.m4a" length="33108092" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/2F5b4MZZskPaFyFShosQXD/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Leonardo Pisano Fibonacci - Taught The West to Count&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Fibonacci/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -792,6 +855,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 28 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114181721/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-18%2F52559183-31b3-c443-cf4c-2a63ad383ba3.m4a" length="21327529" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/0p0TXz5QKgRvaa31ZdRJTc/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Leonardo da Vinci - Painting Was His Side Hustle&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Leonardo/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -808,6 +872,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 26 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114181063/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-18%2Ffb257907-e6f6-e7ff-fe62-50c2503dee14.m4a" length="34038431" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/15B1ewqyncHF6yFCpmQ7b0/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Robert Hooke - The Forgotten Genius Who Rebuilt London&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hooke/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -824,6 +889,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Thu, 22 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114074110/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-16%2F64afb64c-2bf2-2f95-3c99-bfec2c63b7b6.m4a" length="24221106" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/1nbkzeVZxa6LbTqDZdzvDQ/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Daniel Bernoulli - the Turbulent Genius&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Daniel/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -840,6 +906,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Tue, 20 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114073778/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-16%2Fe5636c81-127d-e3a8-93f1-143043103f3a.m4a" length="23111290" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/0BzU4RbgvxDf9WXlEO7CCB/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Johann Bernoulli - Toxic Genius and Stolen Calculus&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Bernoulli_Johann/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -856,6 +923,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Sun, 18 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/114073539/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-16%2Ff0acc9ce-715f-6b75-52ce-423d44e2fb22.m4a" length="21744492" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5aR9clj77XeZfO3CAwqQ0I/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Jacob (Jacques) Bernoulli - the Family Feuds and Integral. &lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -872,6 +940,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Sat, 17 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113904689/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-13%2Fae6a5e11-2b3b-eb37-9852-b1815d1ecfd9.m4a" length="22594223" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6K8LVxQtSHhd0Q5gcPaY1J/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Evangelista Torricelli - Galileo&amp;#39;s Successor and the Vacuum&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Torricelli/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -888,6 +957,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 16 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113904390/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-13%2F5d136ae0-3604-6a79-8b89-2671cdca0361.m4a" length="22512796" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/7E16IS8jVoclZzdXYkXDDf/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of John Wallis - the Infinity of Genius. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Wallis/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -904,6 +974,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Thu, 15 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113827724/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-11%2F1f3b614e-e2f4-db4f-e846-65731498e319.m4a" length="22931253" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/71RaQQ6DdsQ9Aphz1aVHKK/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Srinivasa Aiyangar Ramanujan - Genius and System Failure.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -920,6 +991,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Wed, 14 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113772305/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-10%2F1d63e706-2d0a-1124-e857-358d3ed6fe25.m4a" length="28034636" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6vK212ux9PZ2OxNI6wAbAD/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of William Rowan Hamilton - Mathematician Poet Paradox&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hamilton/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -936,6 +1008,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Tue, 13 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113772126/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-10%2F55c7dd2e-69d2-846b-9835-ab0868cb7942.m4a" length="24434875" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/6TGr0QJMSRzbumtXdF6s49/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Augustus De Morgan - Mathematical Logic and Pure Principle&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/De_Morgan/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -952,6 +1025,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Mon, 12 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113771757/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-10%2Fd1d23afd-2b20-92c8-3696-dbc0fc2d675d.m4a" length="21654100" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5Q1EamCL39H0wTDrwHaHOd/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of George Boole - The Inventor of Digital Logic&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Boole/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -968,6 +1042,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Sun, 11 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113725711/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-9%2F7b5100a6-14cf-d02e-6c76-05cf578ce37b.m4a" length="22704785" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/4ZrAjO7MzTC6XCpeMwXM3F/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of Claude Elwood Shannon - The Father of the Bit.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Shannon/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -984,6 +1059,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Sat, 10 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113557333/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-9%2Fbf7f1628-34d7-5878-cbf0-bfcbe522dc72.m4a" length="25515441" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/3CLjWG6sm1WOenLreGwPkr/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of John von Neumann - Architect of the Modern World.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Von_Neumann/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
@@ -1000,6 +1076,7 @@ See more on https://www.mathhistoryspotlights.com/
 			<dc:creator>MathHistoryMuseum</dc:creator>
 			<pubDate>Fri, 09 Jan 2026 13:00:00 GMT</pubDate>
 			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/113555840/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-6%2F47ecb497-26b1-1e20-d7d2-b1d54a6c4152.m4a" length="26193984" type="audio/x-m4a" />
+			<ns3:transcript url="https://transcript-files.spotifycdn.com/2fgTEsVOZH7zOcI3P8u7nE/5zBEMVt2bVJWSGUWLZUgzE/transcript.srt" type="application/x-subrip" />
 			<itunes:summary>&lt;p&gt;The life of René Descartes - Analytical Geometry and Secret Life&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Descartes/&lt;/p&gt;
 </itunes:summary>
 			<itunes:explicit>false</itunes:explicit>
