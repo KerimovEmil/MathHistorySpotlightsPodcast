@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Tue, 28 Jul 2026 15:00:26 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 29 Jul 2026 14:51:23 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Helmut Hasse 1898 - 1979</title>
+			<description>&lt;p&gt;The life of Helmut Hasse - Discovered the Local-Global principle. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hasse/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Helmut-Hasse-1898---1979-e3llblm</link>
+			<guid isPermaLink="false">5d92cce7-8568-4772-8498-bde54fba2975</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 29 Jul 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/122383478/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-4%2Fd4b3978b-8c37-9708-c6f9-aec8b6b25625.m4a" length="37328918" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Helmut Hasse - Discovered the Local-Global principle. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hasse/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:19:19</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Helmut Hasse.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Peter Ludwig Mejdell Sylow 1832 - 1918</title>
 			<description>&lt;p&gt;The life of Peter Ludwig Mejdell Sylow - High school teacher who proved what is perhaps the most profound result in the theory of finite groups.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources: &lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Sylow/&lt;/p&gt;
