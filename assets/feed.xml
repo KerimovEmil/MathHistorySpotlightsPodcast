@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Sun, 02 Aug 2026 18:19:03 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 05 Aug 2026 14:55:31 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Leopold Kronecker 1823 - 1891</title>
+			<description>&lt;p&gt;The life of Leopold Kronecker - the Finitist. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Kronecker/&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Leopold-Kronecker-1823---1891-e3mlfcg</link>
+			<guid isPermaLink="false">625b0058-ce06-43ae-a7f0-ac771854b0b5</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 05 Aug 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/123435856/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-28%2Fdbedf7b0-91b1-960e-448a-0e784ac7a880.m4a" length="47016259" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Leopold Kronecker - the Finitist. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Kronecker/&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:24:20</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Leopold Kronecker.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Helmut Hasse 1898 - 1979</title>
 			<description>&lt;p&gt;The life of Helmut Hasse - Discovered the Local-Global principle. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- https://mathshistory.st-andrews.ac.uk/Biographies/Hasse/&lt;/p&gt;
