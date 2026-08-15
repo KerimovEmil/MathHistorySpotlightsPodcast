@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -29,53 +29,64 @@
     .era-lane {
       display: flex;
       flex-direction: column;
-      margin: 0 var(--section-padding) 20px;
-      border-radius: 10px;
+      margin: 0 var(--section-padding) 16px;
+      border-radius: 0;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
     }
     .era-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 18px;
-      font-size: 13px;
+      padding: 10px 18px 10px 14px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #fff;
+      color: rgba(255,255,255,0.65);
+      background: var(--dark-violet);
+      border-left: 3px solid transparent;
       cursor: pointer;
       user-select: none;
-      transition: filter 0.15s;
+      transition: background 0.15s, color 0.15s;
     }
-    .era-header:hover { filter: brightness(1.15); }
+    .era-header:hover {
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.9);
+    }
     .era-header .era-range {
       font-weight: 400;
-      font-size: 12px;
-      opacity: 0.75;
+      font-size: 11px;
+      opacity: 0.55;
       letter-spacing: 0.04em;
+      margin-left: 6px;
     }
     .era-header .era-count {
+      flex: 1;
+      text-align: right;
       font-size: 11px;
-      opacity: 0.65;
+      opacity: 0.45;
       font-weight: 500;
+      margin-right: 12px;
     }
     .era-header .era-toggle-icon {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1;
+      opacity: 0.5;
       transition: transform 0.25s ease;
     }
     .era-lane.collapsed .era-toggle-icon {
       transform: rotate(-90deg);
     }
-    .renaissance  .era-header { background: hsl(221, 80%, 38%); }
-    .enlightenment .era-header { background: hsl(178, 100%, 28%); }
-    .classical    .era-header { background: hsl(265, 50%, 33%); }
-    .modern       .era-header { background: linear-gradient(90deg, hsl(178,100%,28%), hsl(221,80%,38%)); }
+    /* Era accent: left border only — no fill */
+    .renaissance  .era-header { border-left-color: hsl(221, 80%, 55%); }
+    .enlightenment .era-header { border-left-color: hsl(178, 100%, 42%); }
+    .classical    .era-header { border-left-color: hsl(265, 50%, 55%); }
+    .modern       .era-header { border-left-color: hsl(30, 90%, 55%); }
     .era-scroll {
       overflow-x: auto;
-      background: rgba(255,255,255,0.025);
+      background: var(--dark-violet);
       scrollbar-width: thin;
       scrollbar-color: rgba(255,255,255,0.15) transparent;
       transition: max-height 0.35s ease, opacity 0.25s ease;
@@ -116,20 +127,21 @@
     .era-event {
       position: absolute;
       top: 0;
-      background: rgba(239, 68, 68, 0.12);
-      border-left: 1px dashed rgba(239,68,68,0.35);
-      border-right: 1px dashed rgba(239,68,68,0.35);
+      /* Above bars (z-index 2) so war shading is never buried */
+      z-index: 10;
+      background: rgba(239, 68, 68, 0.18);
+      border-left: 1px dashed rgba(239,68,68,0.6);
+      border-right: 1px dashed rgba(239,68,68,0.6);
       pointer-events: none;
-      z-index: 1;
     }
     .era-event-label {
       position: absolute;
-      bottom: 4px;
+      top: 6px;
       left: 50%;
       transform: translateX(-50%);
       color: #fff;
-      background: rgba(239,68,68,0.8);
-      padding: 1px 5px;
+      background: rgba(239,68,68,0.85);
+      padding: 2px 6px;
       border-radius: 3px;
       font-size: 9px;
       font-weight: 700;
