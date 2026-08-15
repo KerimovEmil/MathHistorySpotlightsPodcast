@@ -437,6 +437,12 @@
       "equation": "\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}",
       "label": "Clairaut-Schwarz Theorem",
       "wikipedia": "https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives"
+    },
+    {
+      "description": "One of the most widely used inequalities in mathematics, linking inner products and norms.",
+      "equation": "|\\langle \\mathbf{u}, \\mathbf{v} \\rangle|^2 \\le \\langle \\mathbf{u}, \\mathbf{u} \\rangle \\langle \\mathbf{v}, \\mathbf{v} \\rangle",
+      "label": "Cauchy-Schwarz Inequality",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality"
     }
   ],
   "hermann-gunter-grassmann": [
