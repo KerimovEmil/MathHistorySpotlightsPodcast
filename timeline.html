@@ -156,7 +156,7 @@
 
         // Fetch and parse RSS feed with caching
         async function fetchEpisodes() {
-          const cacheKey = 'timelineData_v3'; // versioned key to force update
+          const cacheKey = 'timelineData_v4'; // versioned key to force update
           const cacheExpiry = 1 * 60 * 60 * 1000; // 1 hour
           const cached = localStorage.getItem(cacheKey);
           const now = Date.now();
