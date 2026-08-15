@@ -27,7 +27,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Legendre_symbol"
     }
   ],
-  "aleksandr-yakovlevich-khinchin": [],
+  "aleksandr-yakovlevich-khinchin": [
+    {
+      "description": "Relates the power spectral density of a wide-sense-stationary random process to its autocorrelation function.",
+      "equation": "S(\\omega) = \\int_{-\\infty}^{\\infty} R(\\tau) e^{-i\\omega \\tau} d\\tau",
+      "label": "Wiener\u2013Khinchin Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Wiener%E2%80%93Khinchin_theorem"
+    }
+  ],
   "andre-abraham-weil": [
     {
       "description": "Laying the foundations for algebraic geometry and the Riemann hypothesis over finite fields.",
@@ -64,8 +71,28 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Chapman%E2%80%93Kolmogorov_equation"
     }
   ],
-  "arthur-cayley": [],
-  "august-ferdinand-mobius": [],
+  "arthur-cayley": [
+    {
+      "description": "States that every square matrix satisfies its own characteristic equation.",
+      "equation": "p(\\mathbf{A}) = \\det(\\mathbf{A} - \\lambda \\mathbf{I}) \\implies p(\\mathbf{A}) = \\mathbf{0}",
+      "label": "Cayley-Hamilton Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cayley%E2%80%93Hamilton_theorem"
+    },
+    {
+      "description": "A classic result in combinatorics counting the number of labeled trees on n vertices.",
+      "equation": "T_n = n^{n-2}",
+      "label": "Cayley's Formula",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cayley%27s_formula"
+    }
+  ],
+  "august-ferdinand-mobius": [
+    {
+      "description": "A fundamental relation in arithmetic functions that allows expressing one function in terms of another.",
+      "equation": "g(n) = \\sum_{d \\mid n} f(d) \\iff f(n) = \\sum_{d \\mid n} \\mu\\left(\\frac{n}{d}\\right) g(d)",
+      "label": "M\u00f6bius Inversion Formula",
+      "wikipedia": "https://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula"
+    }
+  ],
   "augusta-ada-byron-king-countess-of-lovelace": [
     {
       "description": "From the first published algorithm intended for implementation on a computer.",
@@ -74,7 +101,20 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Ada_Lovelace"
     }
   ],
-  "augustin-louis-cauchy": [],
+  "augustin-louis-cauchy": [
+    {
+      "description": "One of the most widely used inequalities in mathematics, linking inner products and norms.",
+      "equation": "|\\langle \\mathbf{u}, \\mathbf{v} \\rangle|^2 \\le \\langle \\mathbf{u}, \\mathbf{u} \\rangle \\langle \\mathbf{v}, \\mathbf{v} \\rangle",
+      "label": "Cauchy-Schwarz Inequality",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality"
+    },
+    {
+      "description": "A central statement in complex analysis showing that values of a holomorphic function inside a disk are determined by values on its boundary.",
+      "equation": "f(a) = \\frac{1}{2\\pi i} \\oint_C \\frac{f(z)}{z-a} dz",
+      "label": "Cauchy's Integral Formula",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cauchy%27s_integral_formula"
+    }
+  ],
   "augustus-de-morgan": [
     {
       "description": "Fundamental rules of logic and set theory relating conjunctions and disjunctions.",
@@ -127,7 +167,20 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Difference_engine"
     }
   ],
-  "christiaan-huygens": [],
+  "christiaan-huygens": [
+    {
+      "description": "The formula derived by Huygens for the period of a simple gravity pendulum.",
+      "equation": "T = 2\\pi \\sqrt{\\frac{L}{g}}",
+      "label": "Period of a Pendulum",
+      "wikipedia": "https://en.wikipedia.org/wiki/Pendulum"
+    },
+    {
+      "description": "Also known as the Huygens-Steiner theorem, it relates the moment of inertia about parallel axes.",
+      "equation": "I = I_{cm} + md^2",
+      "label": "Parallel Axis Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Parallel_axis_theorem"
+    }
+  ],
   "claude-elwood-shannon": [
     {
       "description": "The measure of uncertainty or information content in a source.",
@@ -150,7 +203,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Bernoulli%27s_principle"
     }
   ],
-  "david-gawen-champernowne": [],
+  "david-gawen-champernowne": [
+    {
+      "description": "A real transcendental constant whose decimal expansion is normal to base 10, constructed by concatenating consecutive integers.",
+      "equation": "C_{10} = 0.123456789101112131415\\dots",
+      "label": "Champernowne Constant",
+      "wikipedia": "https://en.wikipedia.org/wiki/Champernowne_constant"
+    }
+  ],
   "david-hilbert": [
     {
       "description": "The action that yields the Einstein field equations of general relativity.",
@@ -165,7 +225,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Hilbert_space"
     }
   ],
-  "ehrenfried-walter-von-tschirnhaus": [],
+  "ehrenfried-walter-von-tschirnhaus": [
+    {
+      "description": "A transformation used to eliminate one or more coefficient terms from a polynomial equation.",
+      "equation": "y_k = \\sum_{j=0}^{n-1} a_j x_k^j",
+      "label": "Tschirnhaus Transformation",
+      "wikipedia": "https://en.wikipedia.org/wiki/Tschirnhausen_transformation"
+    }
+  ],
   "emil-artin": [
     {
       "description": "A centerpiece of class field theory.",
@@ -190,7 +257,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Hecke_operator"
     }
   ],
-  "eugene-charles-catalan": [],
+  "eugene-charles-catalan": [
+    {
+      "description": "A sequence of natural numbers occurring in various counting problems in combinatorics, such as polygon triangulation.",
+      "equation": "C_n = \\frac{1}{n+1} \\binom{2n}{n}",
+      "label": "Catalan Numbers",
+      "wikipedia": "https://en.wikipedia.org/wiki/Catalan_number"
+    }
+  ],
   "evangelista-torricelli": [
     {
       "description": "Describes the speed of fluid flowing out of an opening.",
@@ -221,7 +295,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Erlangen_program"
     }
   ],
-  "felix-edouard-justin-emile-borel": [],
+  "felix-edouard-justin-emile-borel": [
+    {
+      "description": "A fundamental theorem in probability theory about the limit of sequence events.",
+      "equation": "\\sum_{n=1}^{\\infty} P(E_n) < \\infty \\implies P\\left(\\limsup_{n\\to\\infty} E_n\\right) = 0",
+      "label": "Borel-Cantelli Lemma",
+      "wikipedia": "https://en.wikipedia.org/wiki/Borel%E2%80%93Cantelli_lemma"
+    }
+  ],
   "francois-viete": [
     {
       "description": "Relations between the coefficients of a polynomial and sums/products of its roots.",
@@ -264,7 +345,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Riemann_curvature_tensor"
     }
   ],
-  "georg-mohr": [],
+  "georg-mohr": [
+    {
+      "description": "States that any geometric construction executable by compass and straightedge can be done with a compass alone.",
+      "equation": "(x - x_1)^2 + (y - y_1)^2 = r_1^2 \\quad \\text{and} \\quad (x - x_2)^2 + (y - y_2)^2 = r_2^2",
+      "label": "Mohr-Mascheroni Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mohr%E2%80%93Mascheroni_theorem"
+    }
+  ],
   "george-biddell-airy": [
     {
       "description": "A differential equation describing the intensity of light near a caustic.",
@@ -311,7 +399,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Hardy%E2%80%93Littlewood_circle_method"
     }
   ],
-  "goro-shimura": [],
+  "goro-shimura": [
+    {
+      "description": "The deep statement that every elliptic curve over the rationals is modular, paving the way to Fermat's Last Theorem.",
+      "equation": "L(E, s) = L(f, s)",
+      "label": "Modularity Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Modularity_theorem"
+    }
+  ],
   "gottfried-wilhelm-von-leibniz": [
     {
       "description": "The formula for the derivative of a product of functions.",
@@ -328,9 +423,30 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Heinrich_Hertz"
     }
   ],
-  "helmut-hasse": [],
-  "hermann-amandus-schwarz": [],
-  "hermann-gunter-grassmann": [],
+  "helmut-hasse": [
+    {
+      "description": "A global quadratic form has rational solutions if and only if it has local solutions in all p-adic fields and the real numbers.",
+      "equation": "Q(x) = 0 \\text{ in } \\mathbb{Q} \\iff Q(x) = 0 \\text{ in } \\mathbb{R} \\text{ and } \\mathbb{Q}_p \\ \\forall p",
+      "label": "Hasse-Minkowski Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Hasse%E2%80%93Minkowski_theorem"
+    }
+  ],
+  "hermann-amandus-schwarz": [
+    {
+      "description": "Assures that if the mixed partial derivatives of a function exist and are continuous, they must be equal.",
+      "equation": "\\frac{\\partial^2 f}{\\partial x \\partial y} = \\frac{\\partial^2 f}{\\partial y \\partial x}",
+      "label": "Clairaut-Schwarz Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Symmetry_of_second_derivatives"
+    }
+  ],
+  "hermann-gunter-grassmann": [
+    {
+      "description": "The anti-symmetric product characterizing the exterior algebra, defining modern differential geometry.",
+      "equation": "v \\wedge w = - w \\wedge v",
+      "label": "Exterior Product",
+      "wikipedia": "https://en.wikipedia.org/wiki/Exterior_algebra"
+    }
+  ],
   "hermann-minkowski": [
     {
       "description": "The invariant metric of special relativity combining space and time.",
@@ -585,7 +701,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Dedekind_cut"
     }
   ],
-  "karl-theodor-wilhelm-weierstrass": [],
+  "karl-theodor-wilhelm-weierstrass": [
+    {
+      "description": "A test to determine if an infinite series of functions converges uniformly and absolutely.",
+      "equation": "|f_n(x)| \\le M_n \\quad \\text{and} \\quad \\sum_{n=1}^\\infty M_n < \\infty \\implies \\sum_{n=1}^\\infty f_n(x) \\text{ converges uniformly}",
+      "label": "Weierstrass M-Test",
+      "wikipedia": "https://en.wikipedia.org/wiki/Weierstrass_M-test"
+    }
+  ],
   "kurt-godel": [
     {
       "description": "Proves that in any consistent formal system, there are true statements that cannot be proven.",
@@ -666,7 +789,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Homogeneous_function#Euler's_homogeneous_function_theorem"
     }
   ],
-  "leopold-kronecker": [],
+  "leopold-kronecker": [
+    {
+      "description": "A foundational function of two variables which equals one if they are equal, and zero otherwise.",
+      "equation": "\\delta_{ij} = \\begin{cases} 1 & \\text{if } i = j \\\\ 0 & \\text{if } i \\neq j \\end{cases}",
+      "label": "Kronecker Delta",
+      "wikipedia": "https://en.wikipedia.org/wiki/Kronecker_delta"
+    }
+  ],
   "lodovico-ferrari": [
     {
       "description": "He discovered the general solution for quartic equations.",
@@ -675,7 +805,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Quartic_equation"
     }
   ],
-  "lorenzo-mascheroni": [],
+  "lorenzo-mascheroni": [
+    {
+      "description": "The mathematical constant defined as the limiting difference between the harmonic series and the natural logarithm.",
+      "equation": "\\gamma = \\lim_{n \\to \\infty} \\left( \\sum_{k=1}^n \\frac{1}{k} - \\ln n \\right) \\approx 0.57721",
+      "label": "Euler-Mascheroni Constant",
+      "wikipedia": "https://en.wikipedia.org/wiki/Euler%E2%80%93Mascheroni_constant"
+    }
+  ],
   "madhava-of-sangamagrama": [
     {
       "description": "An infinite series for \u03c0 discovered centuries before European mathematicians.",
@@ -712,7 +849,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Sophie_Germain_prime"
     }
   ],
-  "marin-mersenne": [],
+  "marin-mersenne": [
+    {
+      "description": "Prime numbers that can be written in the form of one less than a power of two.",
+      "equation": "M_p = 2^p - 1",
+      "label": "Mersenne Primes",
+      "wikipedia": "https://en.wikipedia.org/wiki/Mersenne_prime"
+    }
+  ],
   "marius-sophus-lie": [
     {
       "description": "An algebraic structure essential to the study of continuous transformations.",
@@ -761,7 +905,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Prime_number_theorem"
     }
   ],
-  "peter-ludwig-mejdell-sylow": [],
+  "peter-ludwig-mejdell-sylow": [
+    {
+      "description": "An algebraic theorem providing constraints on the number of Sylow p-subgroups in a finite group.",
+      "equation": "n_p \\equiv 1 \\pmod{p} \\quad \\text{and} \\quad n_p \\mid m",
+      "label": "Sylow's Third Theorem",
+      "wikipedia": "https://en.wikipedia.org/wiki/Sylow_theorems"
+    }
+  ],
   "pierre-de-fermat": [
     {
       "description": "No three positive integers fit this equation for \\(n > 2\\).",
@@ -796,7 +947,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Laplace_transform"
     }
   ],
-  "renaissance-cubic-equation-wars": [],
+  "renaissance-cubic-equation-wars": [
+    {
+      "description": "The canonical reduced cubic equation solved algebraically during the Renaissance competitions.",
+      "equation": "x^3 + px = q",
+      "label": "Depressed Cubic Equation",
+      "wikipedia": "https://en.wikipedia.org/wiki/Cubic_equation"
+    }
+  ],
   "rene-descartes": [
     {
       "description": "Determines the number of positive real roots of a polynomial.",
@@ -881,7 +1039,14 @@
       "wikipedia": "https://en.wikipedia.org/wiki/Rogers%E2%80%93Ramanujan_continued_fraction"
     }
   ],
-  "william-burnside": [],
+  "william-burnside": [
+    {
+      "description": "A group-theory lemma used to count the number of equivalence classes of objects under group actions.",
+      "equation": "|X/G| = \\frac{1}{|G|} \\sum_{g \\in G} |X^g|",
+      "label": "Burnside's Lemma",
+      "wikipedia": "https://en.wikipedia.org/wiki/Burnside%27s_lemma"
+    }
+  ],
   "william-rowan-hamilton": [
     {
       "description": "The operator corresponding to the total energy of the system.",
