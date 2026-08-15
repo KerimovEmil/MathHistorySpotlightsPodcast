@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,6 +19,179 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
+  <style>
+    /* Era Swim-Lane Layout */
+    .era-lanes {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .era-lane {
+      display: flex;
+      flex-direction: column;
+      margin: 0 var(--section-padding) 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    }
+    .era-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+      transition: filter 0.15s;
+    }
+    .era-header:hover { filter: brightness(1.15); }
+    .era-header .era-range {
+      font-weight: 400;
+      font-size: 12px;
+      opacity: 0.75;
+      letter-spacing: 0.04em;
+    }
+    .era-header .era-count {
+      font-size: 11px;
+      opacity: 0.65;
+      font-weight: 500;
+    }
+    .era-header .era-toggle-icon {
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 0.25s ease;
+    }
+    .era-lane.collapsed .era-toggle-icon {
+      transform: rotate(-90deg);
+    }
+    .renaissance  .era-header { background: hsl(221, 80%, 38%); }
+    .enlightenment .era-header { background: hsl(178, 100%, 28%); }
+    .classical    .era-header { background: hsl(265, 50%, 33%); }
+    .modern       .era-header { background: linear-gradient(90deg, hsl(178,100%,28%), hsl(221,80%,38%)); }
+    .era-scroll {
+      overflow-x: auto;
+      background: rgba(255,255,255,0.025);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.15) transparent;
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+      max-height: 2000px;
+      opacity: 1;
+    }
+    .era-lane.collapsed .era-scroll {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+    .era-scroll::-webkit-scrollbar { height: 8px; }
+    .era-scroll::-webkit-scrollbar-track { background: transparent; }
+    .era-scroll::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.2);
+      border-radius: 4px;
+    }
+    .era-canvas {
+      position: relative;
+    }
+    .era-axis {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: rgba(255,255,255,0.2);
+      pointer-events: none;
+    }
+    .era-tick {
+      position: absolute;
+      font-size: 11px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.45);
+      transform: translateX(-50%);
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .era-event {
+      position: absolute;
+      top: 0;
+      background: rgba(239, 68, 68, 0.12);
+      border-left: 1px dashed rgba(239,68,68,0.35);
+      border-right: 1px dashed rgba(239,68,68,0.35);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .era-event-label {
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff;
+      background: rgba(239,68,68,0.8);
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+      pointer-events: none;
+    }
+    .person {
+      position: absolute;
+      height: 26px;
+      border-radius: 4px;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 0 8px;
+      white-space: nowrap;
+      cursor: pointer;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+      transition: transform 0.2s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      overflow: hidden;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+      border: 1px solid rgba(255,255,255,0.15);
+      z-index: 2;
+    }
+    .person:hover, .person:focus {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.55);
+      z-index: 100;
+      outline: 1px solid rgba(255,255,255,0.8);
+    }
+    .person .person-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    .person.search-match {
+      outline: 2px solid #fff;
+      z-index: 50;
+    }
+    .person.search-dim {
+      opacity: 0.18 !important;
+      animation: none;
+    }
+    .lane-no-results {
+      padding: 14px 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      font-style: italic;
+    }
+    .tooltip {
+      position: fixed !important;
+    }
+  </style>
 
 </head>
 
@@ -29,26 +202,22 @@
 
   <main>
     <article class="container">
-      <h2>Math History Spotlights — Timeline</h2>
-
+      <h2>Math History Spotlights &mdash; Timeline</h2>
 
       <div class="controls">
         <div class="search-wrapper">
           <ion-icon name="search-outline"></ion-icon>
           <input type="text" id="search-input" placeholder="Find a mathematician..." aria-label="Search timeline">
         </div>
-
         <div class="zoom-wrapper">
-          <button id="zoom-out" class="zoom-btn" aria-label="Zoom out"><ion-icon
-              name="remove-outline"></ion-icon></button>
+          <button id="zoom-out" class="zoom-btn" aria-label="Zoom out"><ion-icon name="remove-outline"></ion-icon></button>
           <label for="zoom" class="sr-only">Zoom Level</label>
-          <input type="range" id="zoom" min="1200" max="4000" value="1800" step="100">
+          <input type="range" id="zoom" min="600" max="3600" value="1400" step="100">
           <button id="zoom-in" class="zoom-btn" aria-label="Zoom in"><ion-icon name="add-outline"></ion-icon></button>
         </div>
       </div>
 
       <div class="legend">
-        <h3>Eras:</h3>
         <div class="legend-items">
           <span class="legend-item renaissance">Renaissance (before 1600)</span>
           <span class="legend-item enlightenment">Enlightenment (1600-1750)</span>
@@ -57,61 +226,43 @@
         </div>
       </div>
 
-      <div class="timeline-container">
-        <div class="timeline" id="timeline">
-          <div class="loading-message" id="loading">Loading timeline data...</div>
+      <div class="era-lanes" id="era-lanes">
+        <div class="loading-message" style="position:relative;transform:none;left:auto;top:auto;padding:40px 0;text-align:center;">
+          Loading timeline data...
         </div>
       </div>
 
       <div class="tooltip" id="tooltip"></div>
 
       <script>
-        const timeline = document.getElementById("timeline");
-        const tooltip = document.getElementById("tooltip");
-        const zoom = document.getElementById("zoom");
-        const searchInput = document.getElementById("search-input");
-        const zoomInBtn = document.getElementById("zoom-in");
-        const zoomOutBtn = document.getElementById("zoom-out");
-
-        let data = [];
-        let minYear = 0;
-        let maxYear = 0;
-
-        const globalEvents = [
-          { name: "WWI", b: 1914, d: 1918 },
-          { name: "WWII", b: 1939, d: 1945 }
+        const ERAS = [
+          { key: 'renaissance',   label: 'Renaissance',   start: 1100, end: 1600, tickStep: 50 },
+          { key: 'enlightenment', label: 'Enlightenment', start: 1600, end: 1750, tickStep: 25 },
+          { key: 'classical',     label: 'Classical',     start: 1750, end: 1900, tickStep: 25 },
+          { key: 'modern',        label: 'Modern',        start: 1900, end: 2030, tickStep: 25 },
         ];
 
-        // -- Event Listeners for New Controls --
+        const GLOBAL_EVENTS = [
+          { name: 'WWI',  b: 1914, d: 1918 },
+          { name: 'WWII', b: 1939, d: 1945 },
+        ];
 
-        // Search
-        searchInput.addEventListener("input", () => {
-          render(+zoom.value);
-        });
+        const ROW_HEIGHT   = 30;
+        const ROW_PADDING  = 4;
+        const AXIS_H       = 30;
+        const LANE_PAD_TOP = 8;
 
-        // Zoom Buttons
-        zoomInBtn.addEventListener("click", () => {
-          zoom.stepUp();
-          zoom.dispatchEvent(new Event("input"));
-        });
+        const lanesContainer = document.getElementById('era-lanes');
+        const tooltip        = document.getElementById('tooltip');
+        const zoom           = document.getElementById('zoom');
+        const searchInput    = document.getElementById('search-input');
+        const zoomInBtn      = document.getElementById('zoom-in');
+        const zoomOutBtn     = document.getElementById('zoom-out');
 
-        zoomOutBtn.addEventListener("click", () => {
-          zoom.stepDown();
-          zoom.dispatchEvent(new Event("input"));
-        });
+        let allData = [];
 
-        // Function to determine era based on birth year
-        function getEra(birthYear) {
-          if (birthYear < 1600) return "renaissance";
-          if (birthYear < 1750) return "enlightenment";
-          if (birthYear < 1900) return "classical";
-          return "modern";
-        }
-
-        // Slugify a name to match generated mathematician page filenames
         function slugify(name) {
           if (!name) return '';
-          // normalize unicode to decompose diacritics, remove them, then slugify
           return name.normalize('NFKD')
             .replace(/\p{Diacritic}/gu, '')
             .replace(/[^\p{L}0-9]+/gu, '-')
@@ -119,319 +270,285 @@
             .toLowerCase();
         }
 
-        // Function to remove diacritics for search
         function normalizeSearch(str) {
           if (!str) return '';
           return str.normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLowerCase();
         }
 
-        // Function to parse episode title and extract mathematician data
+        function getEra(birthYear) {
+          if (birthYear < 1600) return 'renaissance';
+          if (birthYear < 1750) return 'enlightenment';
+          if (birthYear < 1900) return 'classical';
+          return 'modern';
+        }
+
         function parseTitle(title) {
-          // Try to extract name and years from patterns like:
-          // "Leonhard Euler 1707 - 1783"
-          // "Charles Babbage 1791 Augusta Ada Byron King, Countess of Lovelace 1815 - 1852"
-
-          // Match pattern: name followed by year - year
-          const match = title.match(/^(.+?)\s+(\d{4})\s*[\-–—]\s*(\d{4})/);
-          if (match) {
-            return {
-              name: match[1].trim(),
-              b: parseInt(match[2]),
-              d: parseInt(match[3])
-            };
-          }
-
-          // Try alternative pattern for combined entries
-          const match2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*[\-–—]\s*(\d{4})/);
-          if (match2) {
-            return {
-              name: match2[2].trim(),
-              b: parseInt(match2[3]),
-              d: parseInt(match2[4])
-            };
-          }
-
+          const m = title.match(/^(.+?)\s+(\d{4})\s*[-\u2013\u2014]\s*(\d{4})/);
+          if (m) return { name: m[1].trim(), b: +m[2], d: +m[3] };
+          const m2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*[-\u2013\u2014]\s*(\d{4})/);
+          if (m2) return { name: m2[2].trim(), b: +m2[3], d: +m2[4] };
           return null;
         }
 
-        // Fetch and parse RSS feed with caching
+        function packTracks(items) {
+          const tracks = [];
+          return items.map(p => {
+            let t = tracks.findIndex(endY => endY <= p.b);
+            if (t === -1) { t = tracks.length; tracks.push(p.d); }
+            else tracks[t] = p.d;
+            return { ...p, track: t };
+          });
+        }
+
+        function render() {
+          if (allData.length === 0) return;
+
+          const width = +zoom.value;
+          const query = normalizeSearch(searchInput.value);
+
+          lanesContainer.innerHTML = '';
+
+          ERAS.forEach(era => {
+            const eraItems = allData.filter(p => p.era === era.key);
+            if (eraItems.length === 0) return;
+
+            const span = era.end - era.start;
+            const toX  = y => ((y - era.start) / span) * width;
+
+            const matched = query.length > 0
+              ? eraItems.filter(p =>
+                  normalizeSearch(p.name).includes(query) ||
+                  (p.note && normalizeSearch(p.note).includes(query)))
+              : null;
+
+            const sorted    = [...eraItems].sort((a, b) => a.b - b.b);
+            const packed    = packTracks(sorted);
+            const numTracks = packed.reduce((mx, p) => Math.max(mx, p.track), 0) + 1;
+            const canvasH   = LANE_PAD_TOP + numTracks * (ROW_HEIGHT + ROW_PADDING) + AXIS_H;
+
+            // Lane wrapper
+            const lane = document.createElement('div');
+            lane.className = 'era-lane ' + era.key;
+
+            // Header
+            const header = document.createElement('div');
+            header.className = 'era-header';
+            const matchCount = matched ? matched.length : eraItems.length;
+            header.innerHTML =
+              '<span>' + era.label + ' <span class="era-range">' + era.start + '\u2013' + era.end + '</span></span>' +
+              '<span class="era-count">' + matchCount + ' mathematician' + (matchCount !== 1 ? 's' : '') + '</span>' +
+              '<span class="era-toggle-icon">\u25be</span>';
+            header.addEventListener('click', () => lane.classList.toggle('collapsed'));
+            lane.appendChild(header);
+
+            // Scroll wrapper
+            const scroll = document.createElement('div');
+            scroll.className = 'era-scroll';
+
+            // Canvas
+            const canvas = document.createElement('div');
+            canvas.className = 'era-canvas';
+            canvas.style.width  = width + 'px';
+            canvas.style.height = canvasH + 'px';
+
+            // Axis
+            const axisY = LANE_PAD_TOP + numTracks * (ROW_HEIGHT + ROW_PADDING);
+            const axis = document.createElement('div');
+            axis.className = 'era-axis';
+            axis.style.top = axisY + 'px';
+            canvas.appendChild(axis);
+
+            // Global events
+            GLOBAL_EVENTS.forEach(ev => {
+              const evStart = Math.max(ev.b, era.start);
+              const evEnd   = Math.min(ev.d, era.end);
+              if (evStart >= evEnd) return;
+              const evEl = document.createElement('div');
+              evEl.className = 'era-event';
+              evEl.style.left   = toX(evStart) + 'px';
+              evEl.style.width  = (toX(evEnd) - toX(evStart)) + 'px';
+              evEl.style.top    = LANE_PAD_TOP + 'px';
+              evEl.style.height = (axisY - LANE_PAD_TOP) + 'px';
+              const evLabel = document.createElement('div');
+              evLabel.className = 'era-event-label';
+              evLabel.textContent = ev.name;
+              evEl.appendChild(evLabel);
+              canvas.appendChild(evEl);
+            });
+
+            // Year ticks
+            const tickY = axisY + 6;
+            for (let y = era.start; y <= era.end; y += era.tickStep) {
+              const tick = document.createElement('div');
+              tick.className = 'era-tick';
+              tick.style.left = toX(y) + 'px';
+              tick.style.top  = tickY + 'px';
+              tick.textContent = y;
+              canvas.appendChild(tick);
+            }
+
+            // Bars
+            packed.forEach((p, i) => {
+              const barLeft = Math.max(0, toX(p.b));
+              const barRight = Math.min(width, toX(p.d));
+              const barW    = Math.max(3, barRight - barLeft);
+              const barTop  = LANE_PAD_TOP + p.track * (ROW_HEIGHT + ROW_PADDING);
+
+              const isDimmed     = matched !== null && !matched.includes(p);
+              const isHighlighted = matched !== null && matched.includes(p);
+
+              const bar = document.createElement('a');
+              bar.className = 'person ' + p.era;
+              if (isHighlighted) bar.classList.add('search-match');
+              if (isDimmed)      bar.classList.add('search-dim');
+
+              bar.style.left  = barLeft + 'px';
+              bar.style.width = barW + 'px';
+              bar.style.top   = barTop + 'px';
+              bar.style.animationDelay = (i * 0.025) + 's';
+              bar.href   = p.url;
+              bar.target = '_blank';
+              bar.rel    = 'noopener noreferrer';
+              bar.setAttribute('aria-label',
+                'Click to listen: ' + p.name + ', born ' + p.b + ', died ' + p.d + '. ' + p.note);
+
+              const icon = document.createElement('span');
+              icon.className = 'local-indicator unknown';
+              icon.title = 'Checking for local page...';
+              bar.appendChild(icon);
+
+              const nameSpan = document.createElement('span');
+              nameSpan.className = 'person-name';
+              nameSpan.textContent = p.name + ' (' + p.b + '\u2013' + p.d + ')';
+              bar.appendChild(nameSpan);
+
+              (async () => {
+                try {
+                  const page = './mathematicians/' + p.slug + '.html';
+                  const res  = await fetch(page, { method: 'HEAD' });
+                  if (res.ok) {
+                    icon.className = 'local-indicator present';
+                    icon.title = 'Local page available';
+                    bar.href   = page;
+                    bar.target = '_self';
+                    bar.removeAttribute('rel');
+                  } else {
+                    icon.className = 'local-indicator absent';
+                    icon.title = 'Local page not found';
+                  }
+                } catch (e) {
+                  icon.className = 'local-indicator absent';
+                  icon.title = 'Local page not found';
+                }
+              })();
+
+              const showTip = (e) => {
+                const cx = e.clientX || (e.touches && e.touches[0] && e.touches[0].clientX) || 0;
+                const cy = e.clientY || (e.touches && e.touches[0] && e.touches[0].clientY) || 0;
+                tooltip.style.opacity = '1';
+                tooltip.style.left = (cx + 14) + 'px';
+                tooltip.style.top  = (cy + 14) + 'px';
+                tooltip.innerHTML  = '<strong>' + p.name + '</strong><br>' + p.note + '<br><em>Click to open page</em>';
+              };
+              const hideTip = () => { tooltip.style.opacity = '0'; };
+
+              bar.addEventListener('mousemove', showTip);
+              bar.addEventListener('touchstart', showTip);
+              bar.addEventListener('mouseleave', hideTip);
+              bar.addEventListener('touchend',   hideTip);
+              bar.addEventListener('blur',       hideTip);
+              bar.addEventListener('focus', () => {
+                const r = bar.getBoundingClientRect();
+                showTip({ clientX: r.left + r.width / 2, clientY: r.top });
+              });
+
+              canvas.appendChild(bar);
+            });
+
+            if (matched !== null && matched.length === 0) {
+              const msg = document.createElement('div');
+              msg.className = 'lane-no-results';
+              msg.textContent = 'No matches in this era.';
+              scroll.appendChild(msg);
+            }
+
+            scroll.appendChild(canvas);
+            lane.appendChild(scroll);
+            lanesContainer.appendChild(lane);
+          });
+        }
+
+        zoom.addEventListener('input', render);
+        zoomInBtn.addEventListener('click',  () => { zoom.stepUp();   render(); });
+        zoomOutBtn.addEventListener('click', () => { zoom.stepDown(); render(); });
+        searchInput.addEventListener('input', render);
+
         async function fetchEpisodes() {
-          const cacheKey = 'timelineData_v4'; // versioned key to force update
-          const cacheExpiry = 1 * 60 * 60 * 1000; // 1 hour
-          const cached = localStorage.getItem(cacheKey);
-          const now = Date.now();
+          const cacheKey    = 'timelineData_v5';
+          const cacheExpiry = 1 * 60 * 60 * 1000;
+          const cached      = localStorage.getItem(cacheKey);
+          const now         = Date.now();
 
           if (cached) {
-            const { data: cachedData, timestamp } = JSON.parse(cached);
+            const { data: cd, timestamp } = JSON.parse(cached);
             if (now - timestamp < cacheExpiry) {
-              // ensure cached items have slugs (older cache may not)
-              data = (cachedData || []).map(item => ({ ...item, slug: item.slug || slugify(item.name) }));
-              minYear = Math.min(...data.map(d => d.b));
-              maxYear = Math.max(...data.map(d => d.d));
-              render(+zoom.value);
+              allData = (cd || []).map(d => ({ ...d, slug: d.slug || slugify(d.name) }));
+              render();
               return;
             }
           }
 
           try {
-            // Add a timestamp to the URL to bypass browser/CDN cache for the feed file itself
             const response = await fetch('./assets/feed.xml?v=' + now);
             let text;
             if (response.ok) {
               text = await response.text();
             } else {
-              // Fallback to caching/remote if local feed fails (development convenience)
-              const remoteParams = await fetch('https://anchor.fm/s/10cdf4708/podcast/rss');
-              if (!remoteParams.ok) throw new Error('Network response was not ok');
-              text = await remoteParams.text();
+              const remote = await fetch('https://anchor.fm/s/10cdf4708/podcast/rss');
+              if (!remote.ok) throw new Error('Network error');
+              text = await remote.text();
             }
 
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(text, "text/xml");
-
-            const items = xmlDoc.querySelectorAll("item");
-            const parsedData = [];
+            const xml   = new DOMParser().parseFromString(text, 'text/xml');
+            const items = xml.querySelectorAll('item');
+            const parsed = [];
 
             items.forEach(item => {
-              const titleElement = item.querySelector("title");
-              const linkElement = item.querySelector("link");
-              if (titleElement && linkElement) {
-                const title = titleElement.textContent;
-                const url = linkElement.textContent;
-                const parsed = parseTitle(title);
-                if (parsed) {
-                  parsedData.push({
-                    ...parsed,
-                    era: getEra(parsed.b),
-                    note: `Episode: ${title}`,
-                    // compute slug for local mathematician page
-                    slug: slugify(parsed.name),
-                    // keep original url as fallback
-                    url: url
-                  });
-                }
-              }
+              const titleEl = item.querySelector('title');
+              const linkEl  = item.querySelector('link');
+              if (!titleEl || !linkEl) return;
+              const title = titleEl.textContent;
+              const url   = linkEl.textContent;
+              const p = parseTitle(title);
+              if (!p) return;
+              parsed.push({
+                ...p,
+                era:  getEra(p.b),
+                note: 'Episode: ' + title,
+                slug: slugify(p.name),
+                url,
+              });
             });
 
-            // Sort by birth year
-            parsedData.sort((a, b) => a.b - b.b);
-
-            data = parsedData;
-            localStorage.setItem(cacheKey, JSON.stringify({ data, timestamp: now }));
-
-            if (data.length > 0) {
-              minYear = Math.min(...data.map(d => d.b));
-              maxYear = Math.max(...data.map(d => d.d));
-              render(+zoom.value);
+            parsed.sort((a, b) => a.b - b.b);
+            allData = parsed;
+            localStorage.setItem(cacheKey, JSON.stringify({ data: allData, timestamp: now }));
+            render();
+          } catch (err) {
+            console.error('Error fetching episodes:', err);
+            if (cached) {
+              allData = JSON.parse(cached).data || [];
+              render();
+              lanesContainer.insertAdjacentHTML('afterbegin',
+                '<div style="padding:10px;background:#ef4444;color:#fff;margin:0 var(--section-padding) 10px;border-radius:6px;">' +
+                'Using cached data &mdash; refresh to load latest.</div>');
             } else {
-              timeline.innerHTML = '<div style="padding: 20px; color: var(--heliotrope-gray);">No timeline data available.</div>';
-            }
-          } catch (error) {
-            console.error("Error fetching episodes:", error);
-            const cachedFallback = cached ? JSON.parse(cached).data : null;
-            if (cachedFallback) {
-              data = cachedFallback;
-              minYear = Math.min(...data.map(d => d.b));
-              maxYear = Math.max(...data.map(d => d.d));
-              render(+zoom.value);
-              timeline.insertAdjacentHTML('afterbegin', '<div style="padding: 10px; background: #ef4444; color: white; margin-bottom: 10px;">Using cached data. Refresh to try loading latest.</div>');
-            } else {
-              timeline.innerHTML = '<div style="padding: 20px; color: #ef4444;">Unable to load timeline data. Please check your internet connection and try again later.</div>';
+              lanesContainer.innerHTML =
+                '<div style="padding:20px;color:#ef4444;text-align:center;">Unable to load timeline data. Check your connection and try again.</div>';
             }
           }
         }
 
-        function render(width) {
-          if (data.length === 0) return;
-
-          timeline.style.width = width + "px";
-          timeline.innerHTML = '';
-
-          const yearToX = y => (maxYear === minYear ? 0 : ((y - minYear) / (maxYear - minYear)) * width);
-
-          // Create axis first so bars and ticks can be positioned relative to it
-          const axisEl = document.createElement('div');
-          axisEl.className = 'axis';
-          axisEl.style.pointerEvents = 'none';
-          axisEl.style.zIndex = '0';
-          timeline.appendChild(axisEl);
-
-          // Add Global Events
-          globalEvents.forEach(event => {
-            if (event.d < minYear || event.b > maxYear) return;
-
-            const eventEl = document.createElement('div');
-            eventEl.className = 'global-event';
-            const left = yearToX(Math.max(event.b, minYear));
-            const right = yearToX(Math.min(event.d, maxYear));
-            eventEl.style.left = left + "px";
-            eventEl.style.width = (right - left) + "px";
-
-            const label = document.createElement('div');
-            label.className = 'global-event-label';
-            label.textContent = event.name;
-            eventEl.appendChild(label);
-
-            timeline.appendChild(eventEl);
-          });
-
-          // Row/spacing values used for vertical layout
-          const rowHeight = 24; // Compact row height
-
-          // Filter data based on search
-          const query = normalizeSearch(searchInput.value);
-          const filteredData = data.filter(p =>
-            normalizeSearch(p.name).includes(query) ||
-            (p.note && normalizeSearch(p.note).includes(query))
-          );
-
-          if (filteredData.length === 0 && query.length > 0) {
-            timeline.innerHTML += '<div class="loading-message" style="top: 100px;">No results found.</div>';
-            return;
-          }
-
-          // ** TRACK PACKING ALGORITHM **
-          // We want to pack items into rows (tracks) such that no two items 
-          // in the same row overlap.
-          // Items are already sorted by birth year (start time).
-
-          // Tracks stores the end_year of the last item placed in that track.
-          let tracks = [];
-
-          filteredData.forEach((p, i) => {
-            // Find the first track where this item fits (starts after the last item ended)
-            // Add a small buffer (e.g., 2 years) to ensure visual separation
-            const buffer = 5 * ((maxYear - minYear) / width); // dynamic buffer based on width approx pixels? No, just use years.
-            // Let's us a fixed pixel buffer -> converted to years
-            // pixels = (years / span) * width
-            // years = (pixels * span) / width
-            // Let's say 50px buffer for name readability if strict packing
-            // But here the bar width is life span. Text label is inside.
-            // Let's just assume we can't overlap life spans.
-            // The labels might overflow if the life is short. 
-            // For now, simple packing based on life span.
-
-            let trackIndex = -1;
-
-            // Heuristic: try to fill top tracks first
-            for (let t = 0; t < tracks.length; t++) {
-              if (tracks[t] <= p.b) {
-                trackIndex = t;
-                break;
-              }
-            }
-
-            if (trackIndex === -1) {
-              // New track needed
-              trackIndex = tracks.length;
-              tracks.push(p.d);
-            } else {
-              // Update track end time
-              tracks[trackIndex] = p.d;
-            }
-
-            const bar = document.createElement("a");
-            bar.className = `person ${p.era}`;
-            bar.style.left = yearToX(p.b) + "px";
-            bar.style.width = Math.max(2, (yearToX(p.d) - yearToX(p.b))) + "px"; // Ensure at least 2px width
-            bar.style.top = (trackIndex * rowHeight) + "px";
-            // ensure bars render above the axis
-            bar.style.zIndex = '2';
-            bar.style.animationDelay = (i * 0.03) + "s";
-
-            // Set default link to RSS/external url
-            bar.href = p.url;
-            bar.target = "_blank";
-            bar.rel = "noopener noreferrer";
-
-            // add local-page indicator and name span
-            const icon = document.createElement('span');
-            icon.className = 'local-indicator unknown';
-            icon.title = 'Checking for local page...';
-            bar.appendChild(icon);
-
-            const nameSpan = document.createElement('span');
-            nameSpan.className = 'person-name';
-            nameSpan.textContent = `${p.name} (${p.b}–${p.d})`;
-            bar.appendChild(nameSpan);
-
-            bar.setAttribute("aria-label", `Click to listen: ${p.name}, born ${p.b}, died ${p.d}. ${p.note}`);
-
-            // Asynchronously check whether the local page exists and update the indicator AND the link
-            (async () => {
-              try {
-                const page = `./mathematicians/${p.slug}.html`;
-                const res = await fetch(page, { method: 'HEAD' });
-                if (res.ok) {
-                  icon.className = 'local-indicator present';
-                  icon.title = 'Local page available';
-                  bar.href = page;
-                  bar.target = "_self";
-                  bar.removeAttribute("rel");
-                } else {
-                  icon.className = 'local-indicator absent';
-                  icon.title = 'Local page not found';
-                }
-              } catch (err) {
-                icon.className = 'local-indicator absent';
-                icon.title = 'Local page not found';
-              }
-            })();
-
-            const showTooltip = (e) => {
-              tooltip.style.opacity = 1;
-              tooltip.style.left = (e.pageX || (e.touches && e.touches[0] && e.touches[0].pageX)) + 12 + "px";
-              tooltip.style.top = (e.pageY || (e.touches && e.touches[0] && e.touches[0].pageY)) + 12 + "px";
-              tooltip.innerHTML = `<strong>${p.name}</strong><br>${p.note}<br><em>Click to open page</em>`;
-            };
-
-            const hideTooltip = () => {
-              tooltip.style.opacity = 0;
-            };
-
-            bar.addEventListener("mousemove", showTooltip);
-            bar.addEventListener("touchstart", showTooltip);
-            bar.addEventListener("mouseleave", hideTooltip);
-            bar.addEventListener("touchend", hideTooltip);
-            bar.addEventListener("keydown", (e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                showTooltip({ pageX: bar.offsetLeft + bar.offsetWidth / 2, pageY: bar.offsetTop });
-                setTimeout(hideTooltip, 3000); // Hide after 3 seconds
-              }
-            });
-            bar.addEventListener("focus", (e) => {
-              showTooltip({ pageX: bar.offsetLeft + bar.offsetWidth / 2, pageY: bar.offsetTop });
-            });
-            bar.addEventListener("blur", hideTooltip);
-
-            timeline.appendChild(bar);
-          });
-
-          // Measure lowest bar and ensure timeline height leaves room for axis/ticks at bottom
-          const totalRows = tracks.length;
-          const contentHeight = totalRows * rowHeight;
-
-          const axisBottomCss = 60; // must match .axis bottom in CSS
-          const ticksBottomCss = 36; // must match .year bottom in CSS
-          const paddingBelow = 6;
-          const minTimelineHeight = 220;
-          const neededHeight = Math.max(minTimelineHeight, contentHeight + paddingBelow + axisBottomCss + 20);
-          timeline.style.height = neededHeight + 'px';
-
-          // Add year ticks (CSS bottom places them below the axis)
-          for (let y = minYear; y <= maxYear; y += 50) {
-            const tick = document.createElement("div");
-            tick.className = "year";
-            tick.style.left = yearToX(y) + "px";
-            tick.textContent = y;
-            timeline.appendChild(tick);
-          }
-        }
-
-        zoom.addEventListener("input", e => render(+e.target.value));
-
-        // Initialize by fetching episodes
         fetchEpisodes();
       </script>
 
