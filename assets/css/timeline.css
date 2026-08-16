@@ -156,6 +156,12 @@ input[type="range"]::-webkit-slider-thumb:hover {
   color: var(--white);
 }
 
+.legend-item.medieval    { background: hsl(221, 80%, 45%); }
+.legend-item.scientific  { background: hsl(178, 100%, 32%); }
+.legend-item.euler       { background: hsl(38, 90%, 42%); }
+.legend-item.rigor       { background: hsl(265, 50%, 45%); }
+.legend-item.modern      { background: hsl(340, 65%, 42%); }
+
 .timeline-container {
   overflow-x: auto;
   padding: 30px 20px 40px;
@@ -321,24 +327,21 @@ input[type="range"]::-webkit-slider-thumb:hover {
   }
 }
 
-/* Era colors adjustments for better contrast with shadows */
-.renaissance {
+/* Era bar colours — one per era */
+.medieval {
   background: hsl(221, 80%, 45%);
 }
-
-/* Variable: --blue-ryb (adjusted) */
-.enlightenment {
-  background: hsl(178, 100%, 35%);
+.scientific {
+  background: hsl(178, 100%, 32%);
 }
-
-/* Darkened from 49% to 35% for better text contrast */
-.classical {
-  background: hsl(265, 50%, 40%);
+.euler {
+  background: hsl(38, 90%, 42%);
 }
-
-/* Distinct from space-cadet */
+.rigor {
+  background: hsl(265, 50%, 45%);
+}
 .modern {
-  background: linear-gradient(135deg, hsl(178, 100%, 35%), hsl(221, 80%, 45%));
+  background: hsl(340, 65%, 42%);
 }
 
 .loading-message {

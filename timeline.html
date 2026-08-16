@@ -80,10 +80,11 @@
       transform: rotate(-90deg);
     }
     /* Era accent: left border only — no fill */
-    .renaissance  .era-header { border-left-color: hsl(221, 80%, 55%); }
-    .enlightenment .era-header { border-left-color: hsl(178, 100%, 42%); }
-    .classical    .era-header { border-left-color: hsl(265, 50%, 55%); }
-    .modern       .era-header { border-left-color: hsl(30, 90%, 55%); }
+    .medieval    .era-header { border-left-color: hsl(221, 80%, 55%); }
+    .scientific  .era-header { border-left-color: hsl(178, 100%, 42%); }
+    .euler       .era-header { border-left-color: hsl(38,  95%, 55%); }
+    .rigor       .era-header { border-left-color: hsl(265, 50%, 60%); }
+    .modern      .era-header { border-left-color: hsl(340, 70%, 55%); }
     .era-scroll {
       overflow-x: auto;
       background: var(--dark-violet);
@@ -231,10 +232,11 @@
 
       <div class="legend">
         <div class="legend-items">
-          <span class="legend-item renaissance">Renaissance (before 1600)</span>
-          <span class="legend-item enlightenment">Enlightenment (1600-1750)</span>
-          <span class="legend-item classical">Classical (1750-1900)</span>
-          <span class="legend-item modern">Modern (after 1900)</span>
+          <span class="legend-item medieval">Medieval &amp; Renaissance (1100&ndash;1600)</span>
+          <span class="legend-item scientific">Scientific Revolution (1600&ndash;1700)</span>
+          <span class="legend-item euler">The Euler Century (1700&ndash;1800)</span>
+          <span class="legend-item rigor">Age of Rigor (1800&ndash;1875)</span>
+          <span class="legend-item modern">Modern (1875&ndash;present)</span>
         </div>
       </div>
 
@@ -248,10 +250,11 @@
 
       <script>
         const ERAS = [
-          { key: 'renaissance',   label: 'Renaissance',   start: 1100, end: 1600, tickStep: 50 },
-          { key: 'enlightenment', label: 'Enlightenment', start: 1600, end: 1750, tickStep: 25 },
-          { key: 'classical',     label: 'Classical',     start: 1750, end: 1900, tickStep: 25 },
-          { key: 'modern',        label: 'Modern',        start: 1900, end: 2030, tickStep: 25 },
+          { key: 'medieval',   label: 'Medieval \u0026 Renaissance',  start: 1100, end: 1600, tickStep: 50 },
+          { key: 'scientific', label: 'Scientific Revolution',        start: 1600, end: 1700, tickStep: 20 },
+          { key: 'euler',      label: 'The Euler Century',            start: 1700, end: 1800, tickStep: 20 },
+          { key: 'rigor',      label: 'Age of Rigor',                 start: 1800, end: 1875, tickStep: 15 },
+          { key: 'modern',     label: 'Modern',                       start: 1875, end: 2030, tickStep: 25 },
         ];
 
         const GLOBAL_EVENTS = [
@@ -288,9 +291,10 @@
         }
 
         function getEra(birthYear) {
-          if (birthYear < 1600) return 'renaissance';
-          if (birthYear < 1750) return 'enlightenment';
-          if (birthYear < 1900) return 'classical';
+          if (birthYear < 1600) return 'medieval';
+          if (birthYear < 1700) return 'scientific';
+          if (birthYear < 1800) return 'euler';
+          if (birthYear < 1875) return 'rigor';
           return 'modern';
         }
 
@@ -496,7 +500,7 @@
         searchInput.addEventListener('input', render);
 
         async function fetchEpisodes() {
-          const cacheKey    = 'timelineData_v5';
+          const cacheKey    = 'timelineData_v6';
           const cacheExpiry = 1 * 60 * 60 * 1000;
           const cached      = localStorage.getItem(cacheKey);
           const now         = Date.now();
