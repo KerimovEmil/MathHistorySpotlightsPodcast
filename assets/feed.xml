@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Wed, 02 Sep 2026 16:47:19 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 09 Sep 2026 16:50:04 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Edsger Wybe Dijkstra 1930 - 2002</title>
+			<description>&lt;p&gt;The life of Edsger Wybe Dijkstra - The Shortest Path.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- &lt;a href="https://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra/" target="_blank" rel="noopener noreferer"&gt;https://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra/&lt;/a&gt;&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Edsger-Wybe-Dijkstra-1930---2002-e3net82</link>
+			<guid isPermaLink="false">97a3b108-e8c2-4891-92f2-bc52657525ec</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 09 Sep 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/124269250/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-15%2F105c20cc-d304-7f01-1ea8-1e555a52902c.m4a" length="88143626" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;The life of Edsger Wybe Dijkstra - The Shortest Path.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- &lt;a href="https://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra/" target="_blank" rel="noopener noreferer"&gt;https://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra/&lt;/a&gt;&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:45:38</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Edsger Wybe Dijkstra.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Benoit Mandelbrot 1924 - 2010</title>
 			<description>&lt;p&gt;The life of Benoit Mandelbrot - The Father of Fractals. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- &lt;a href="https://mathshistory.st-andrews.ac.uk/Biographies/Mandelbrot/" target="_blank" rel="noopener noreferer"&gt;https://mathshistory.st-andrews.ac.uk/Biographies/Mandelbrot/&lt;/a&gt;&lt;/p&gt;
