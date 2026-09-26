@@ -1,13 +1,16 @@
 import subprocess
 import sys
 import datetime
+from pathlib import Path
 
-def run_command(command, description):
+REPO_DIR = Path(__file__).resolve().parent
+
+def run_command(command, description, cwd=REPO_DIR):
     print(f"\n--- {description} ---")
     try:
         # shell=True is often needed on Windows for git commands or complex arguments
         # check=True will raise CalledProcessError if the command fails
-        subprocess.run(command, check=True, shell=True)
+        subprocess.run(command, check=True, shell=True, cwd=cwd)
         print(f"[OK] {description} completed successfully.")
     except subprocess.CalledProcessError as e:
         print(f"[ERROR] Error during: {description}")
@@ -17,11 +20,13 @@ def run_command(command, description):
 def main():
     print("Starting website update process...")
 
+    python_exe = f'"{sys.executable}"'
+
     # 1. Update the local RSS feed with latest images and episodes
-    run_command("python generate_updated_rss.py", "Generating updated RSS feed")
+    run_command(f"{python_exe} generate_updated_rss.py", "Generating updated RSS feed")
 
     # 2. Generate individual mathematician pages and search index
-    run_command("python generate_mathematician_pages.py", "Generating mathematician pages and search index")
+    run_command(f"{python_exe} generate_mathematician_pages.py", "Generating mathematician pages and search index")
 
     # 3. Git operations
     # Get current date for the commit message
@@ -33,7 +38,7 @@ def main():
     # Commit might fail if there are no changes, so we handle that gracefully
     print(f"\n--- Committing changes ---")
     try:
-        subprocess.run(f'git commit -m "{commit_msg}"', check=True, shell=True)
+        subprocess.run(f'git commit -m "{commit_msg}"', check=True, shell=True, cwd=REPO_DIR)
         print("[OK] Changes committed.")
     except subprocess.CalledProcessError:
         print("Note: No changes to commit (or commit failed). Continuing...")
