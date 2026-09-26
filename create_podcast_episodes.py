@@ -90,47 +90,72 @@ def slugify(text: str) -> str:
 
 
 def get_website_info(url):
-    """Extracts mathematician name and summary info from MacTutor HTML."""
+    """Extracts the exact full mathematician name and birth-death years from MacTutor HTML."""
     try:
         response = requests.get(url, timeout=10)
         response.encoding = 'utf-8'
         response.raise_for_status()
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        name = "Unknown Mathematician"
+        full_name = "Unknown Mathematician"
+        years = ""
 
-        # 1. Content <h1>
+        # 1. Exact Full Name from content <h1> (skipping site header 'MacTutor')
         for h1 in soup.find_all('h1'):
             text = h1.text.strip()
             if text and text.lower() != 'mactutor':
-                name = text
+                full_name = text
                 break
 
-        # 2. Fallback to <title>
-        if name == "Unknown Mathematician" and soup.title and soup.title.text:
-            clean_title = re.sub(r"\s*\(.*?\).*", "", soup.title.text).strip()
-            name = clean_title.split("-")[0].strip()
+        # 2. Extract Birth & Death Years from <title> tag (e.g. '(1912 - 1954)')
+        if soup.title and soup.title.text:
+            title_text = soup.title.text
+            match = re.search(r"\((\d{3,4}\s*[-–—]\s*\d{3,4}|\d{3,4}\s*[-–—]\s*present|\d{3,4})\)", title_text)
+            if match:
+                years = match.group(1).replace("–", "-").replace("—", "-")
+                years = re.sub(r"\s*-\s*", " - ", years).strip()
 
-        print(f"  [SCRAPE] Name: {name}")
-        return {"name": name, "url": url}
+            # Fallback for full name if h1 was not found
+            if full_name == "Unknown Mathematician":
+                clean_title = re.sub(r"\s*\(.*?\).*", "", title_text).strip()
+                full_name = clean_title.split("-")[0].strip()
+
+        # Format Spotify Episode Title: <FULL NAME> <BIRTH YEAR - DEATH YEAR>
+        spotify_title = f"{full_name} {years}".strip() if years else full_name
+
+        print(f"  [SCRAPE] Full Name: {full_name}")
+        print(f"  [SCRAPE] Years:     {years}")
+        print(f"  [SCRAPE] Ep Title:  {spotify_title}")
+
+        return {
+            "name": full_name,
+            "years": years,
+            "spotify_title": spotify_title,
+            "url": url,
+        }
     except Exception as e:
         print(f"  [WARNING] Scrape failed: {e}")
-        return {"name": "Alan Turing", "url": url}
+        return {
+            "name": "Alan Mathison Turing",
+            "years": "1912 - 1954",
+            "spotify_title": "Alan Mathison Turing 1912 - 1954",
+            "url": url,
+        }
 
 
 def generate_spotify_metadata_file(info, output_dir):
     """Creates a ready-to-copy description file with chapters, timestamps, and website links."""
     name = info["name"]
+    spotify_title = info["spotify_title"]
     url = info["url"]
     slug = slugify(name)
-    safe_name = re.sub(r'[\\/:*?"<>|]', '', name).strip()
-    desc_path = os.path.join(output_dir, f"{safe_name}_spotify_description.txt")
+    desc_path = os.path.join(output_dir, f"{name}_spotify_description.txt")
 
     content = f"""=== SPOTIFY EPISODE TITLE ===
-The Life & Mathematics of {name}
+{spotify_title}
 
 === SPOTIFY EPISODE DESCRIPTION ===
-In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and enduring legacy of {name}.
+In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and profound legacy of {name}.
 
 From foundational early discoveries to major theorem breakthroughs, historical challenges, and deep contributions to science, we trace the ideas that shaped mathematical history.
 
@@ -220,8 +245,8 @@ def main():
         delete_all_sources()
 
         info = get_website_info(url)
-        web_name = info["name"]
-        print(f"\n[TARGET] Starting Spotlight for: {web_name}")
+        full_name = info["name"]
+        print(f"\n[TARGET] Starting Spotlight for: {full_name}")
 
         # 2. Add Source with --url and --wait
         print(f"  Adding source: {url}...")
@@ -231,7 +256,7 @@ def main():
         time.sleep(5)
 
         # 3. Trigger Audio and Infographic generation
-        print(f"  Triggering Audio Overview (Deep Dive) and Infographic for {web_name}...")
+        print(f"  Triggering Audio Overview (Deep Dive) and Infographic for {full_name}...")
         run_command(f"nlm audio create {NOTEBOOK_ID} --format deep_dive --confirm")
         run_command(f"nlm infographic create {NOTEBOOK_ID} --confirm")
 
@@ -242,10 +267,10 @@ def main():
         audio_done = False
         info_done = False
         
-        safe_name = re.sub(r'[\\/:*?"<>|]', '', web_name).strip()
-        audio_path = os.path.join(OUTPUT_DIR, f"{safe_name}_podcast.m4a")
-        png_path = os.path.join(OUTPUT_DIR, f"{safe_name}_infographic.png")
-        avif_path = os.path.join(OUTPUT_DIR, f"{safe_name}_infographic.avif")
+        # Files are named with the EXACT FULL NAME of the mathematician
+        audio_path = os.path.join(OUTPUT_DIR, f"{full_name}_podcast.m4a")
+        png_path = os.path.join(OUTPUT_DIR, f"{full_name}.png")
+        avif_path = os.path.join(OUTPUT_DIR, f"{full_name}.avif")
 
         while attempts < max_attempts:
             attempts += 1
@@ -276,9 +301,9 @@ def main():
                         print(f"  [CONVERT] Converting infographic to AVIF...")
                         convert_png_to_avif(png_path, avif_path, quality=80)
                         
-                        # Copy to website repository image bank
+                        # Copy to website repository image bank with exact full name
                         if SITE_ASSETS_DIR.exists():
-                            dest_avif = SITE_ASSETS_DIR / f"{safe_name}.avif"
+                            dest_avif = SITE_ASSETS_DIR / f"{full_name}.avif"
                             shutil.copy2(avif_path, dest_avif)
                             print(f"  [SITE ASSETS] Staged image in website repo: {dest_avif}")
                     info_done = True
