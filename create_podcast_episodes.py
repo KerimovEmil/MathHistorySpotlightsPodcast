@@ -5,6 +5,7 @@ import time
 import os
 import shutil
 import sys
+from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
@@ -16,11 +17,16 @@ except ImportError:
     convert_image_to_avif = None
 
 # --- CONFIGURATION ---
-NOTEBOOK_ID = "692242fc-0aa1-4d2c-a276-ff9e0123e4ef"
+NOTEBOOK_ID = os.environ.get("NOTEBOOKLM_NOTEBOOK_ID", "692242fc-0aa1-4d2c-a276-ff9e0123e4ef")
 OUTPUT_DIR = "./output_spotlights"
 URLS = [
     "https://mathshistory.st-andrews.ac.uk/Biographies/Turing/",
 ]
+
+# Website assets image directory
+SITE_ASSETS_DIR = Path(__file__).resolve().parent.parent / "MathHistorySpotlightsPodcast" / "assets" / "images" / "episodes"
+if not SITE_ASSETS_DIR.exists():
+    SITE_ASSETS_DIR = Path(__file__).resolve().parent / "assets" / "images" / "episodes"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -43,7 +49,6 @@ def run_command(cmd, timeout=180):
         cmd_parts = cmd
 
     try:
-        # On Windows, enforce utf-8 environment
         env = os.environ.copy()
         env["PYTHONIOENCODING"] = "utf-8"
         
@@ -78,36 +83,74 @@ def run_command(cmd, timeout=180):
         return None
 
 
-def get_website_title(url):
-    """Extracts mathematician name reliably from MacTutor HTML."""
+def slugify(text: str) -> str:
+    """Converts a title to a URL-friendly slug."""
+    text = re.sub(r"[^a-zA-Z0-9\s-]", "", text).lower().strip()
+    return re.sub(r"[\s-]+", "-", text)
+
+
+def get_website_info(url):
+    """Extracts mathematician name and summary info from MacTutor HTML."""
     try:
         response = requests.get(url, timeout=10)
         response.encoding = 'utf-8'
         response.raise_for_status()
 
         soup = BeautifulSoup(response.text, 'html.parser')
+        name = "Unknown Mathematician"
 
-        # 1. Look for content <h1> that is not the site branding 'MacTutor'
+        # 1. Content <h1>
         for h1 in soup.find_all('h1'):
             text = h1.text.strip()
             if text and text.lower() != 'mactutor':
-                print(f"  [SCRAPE] Extracted Name from <h1>: {text}")
-                return text
+                name = text
+                break
 
-        # 2. Fallback: Parse <title> tag
-        if soup.title and soup.title.text:
+        # 2. Fallback to <title>
+        if name == "Unknown Mathematician" and soup.title and soup.title.text:
             clean_title = re.sub(r"\s*\(.*?\).*", "", soup.title.text).strip()
-            clean_title = clean_title.split("-")[0].strip()
-            if clean_title:
-                print(f"  [SCRAPE] Extracted Name from <title>: {clean_title}")
-                return clean_title
+            name = clean_title.split("-")[0].strip()
 
-        # 3. Fallback to URL slug
-        fallback_name = url.rstrip('/').split('/')[-1].replace('-', ' ')
-        return fallback_name
+        print(f"  [SCRAPE] Name: {name}")
+        return {"name": name, "url": url}
     except Exception as e:
         print(f"  [WARNING] Scrape failed: {e}")
-        return "Alan Turing"
+        return {"name": "Alan Turing", "url": url}
+
+
+def generate_spotify_metadata_file(info, output_dir):
+    """Creates a ready-to-copy description file with chapters, timestamps, and website links."""
+    name = info["name"]
+    url = info["url"]
+    slug = slugify(name)
+    safe_name = re.sub(r'[\\/:*?"<>|]', '', name).strip()
+    desc_path = os.path.join(output_dir, f"{safe_name}_spotify_description.txt")
+
+    content = f"""=== SPOTIFY EPISODE TITLE ===
+The Life & Mathematics of {name}
+
+=== SPOTIFY EPISODE DESCRIPTION ===
+In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and enduring legacy of {name}.
+
+From foundational early discoveries to major theorem breakthroughs, historical challenges, and deep contributions to science, we trace the ideas that shaped mathematical history.
+
+⏱️ CHAPTERS & TIMESTAMPS:
+00:00 - Introduction & Historical Context
+02:30 - Early Life & Mathematical Foundations
+06:00 - Major Discoveries & Breakthrough Theorems
+10:15 - Key Formulas & Proof Insights
+14:00 - Legacy & Modern Mathematical Impact
+
+🌐 COMPANION SITE & INTERACTIVE TIMELINE:
+https://www.mathhistoryspotlights.com/mathematicians/{slug}.html
+
+📚 SOURCES & PRIMARY CITATIONS:
+- MacTutor History of Mathematics Archive (University of St Andrews): {url}
+"""
+    with open(desc_path, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"  [METADATA] Spotify description ready: {desc_path}")
+    return desc_path
 
 
 def delete_all_sources():
@@ -176,7 +219,8 @@ def main():
         # 1. Reset Notebook context
         delete_all_sources()
 
-        web_name = get_website_title(url)
+        info = get_website_info(url)
+        web_name = info["name"]
         print(f"\n[TARGET] Starting Spotlight for: {web_name}")
 
         # 2. Add Source with --url and --wait
@@ -231,9 +275,18 @@ def main():
                     if os.path.exists(png_path):
                         print(f"  [CONVERT] Converting infographic to AVIF...")
                         convert_png_to_avif(png_path, avif_path, quality=80)
+                        
+                        # Copy to website repository image bank
+                        if SITE_ASSETS_DIR.exists():
+                            dest_avif = SITE_ASSETS_DIR / f"{safe_name}.avif"
+                            shutil.copy2(avif_path, dest_avif)
+                            print(f"  [SITE ASSETS] Staged image in website repo: {dest_avif}")
                     info_done = True
 
                 if audio_done and info_done:
+                    # 5. Generate Spotify metadata description file
+                    generate_spotify_metadata_file(info, OUTPUT_DIR)
+
                     print(f"\n  [SUCCESS] All assets generated and saved to {OUTPUT_DIR}:")
                     print(f"            Audio: {audio_path}")
                     print(f"            PNG:   {png_path}")
