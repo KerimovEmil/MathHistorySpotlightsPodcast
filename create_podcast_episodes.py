@@ -83,12 +83,6 @@ def run_command(cmd, timeout=180):
         return None
 
 
-def slugify(text: str) -> str:
-    """Converts a title to a URL-friendly slug."""
-    text = re.sub(r"[^a-zA-Z0-9\s-]", "", text).lower().strip()
-    return re.sub(r"[\s-]+", "-", text)
-
-
 def get_website_info(url):
     """Extracts the exact full mathematician name and birth-death years from MacTutor HTML."""
     try:
@@ -144,37 +138,33 @@ def get_website_info(url):
 
 
 def generate_spotify_metadata_file(info, output_dir):
-    """Creates a ready-to-copy description file with chapters, timestamps, and website links."""
+    """Creates a clean, emoji-free description file with chapters, timestamps, and sources."""
     name = info["name"]
     spotify_title = info["spotify_title"]
     url = info["url"]
-    slug = slugify(name)
     desc_path = os.path.join(output_dir, f"{name}_spotify_description.txt")
 
     content = f"""=== SPOTIFY EPISODE TITLE ===
 {spotify_title}
 
 === SPOTIFY EPISODE DESCRIPTION ===
-In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and profound legacy of {name}.
+In this episode of Math History Spotlights, we explore the life, mathematical breakthroughs, and enduring legacy of {name}.
 
 From foundational early discoveries to major theorem breakthroughs, historical challenges, and deep contributions to science, we trace the ideas that shaped mathematical history.
 
-⏱️ CHAPTERS & TIMESTAMPS:
+CHAPTERS & TIMESTAMPS:
 00:00 - Introduction & Historical Context
 02:30 - Early Life & Mathematical Foundations
 06:00 - Major Discoveries & Breakthrough Theorems
 10:15 - Key Formulas & Proof Insights
 14:00 - Legacy & Modern Mathematical Impact
 
-🌐 COMPANION SITE & INTERACTIVE TIMELINE:
-https://www.mathhistoryspotlights.com/mathematicians/{slug}.html
-
-📚 SOURCES & PRIMARY CITATIONS:
+SOURCES:
 - MacTutor History of Mathematics Archive (University of St Andrews): {url}
 """
     with open(desc_path, "w", encoding="utf-8") as f:
         f.write(content)
-    print(f"  [METADATA] Spotify description ready: {desc_path}")
+    print(f"  [METADATA] Spotify description ready (no emojis): {desc_path}")
     return desc_path
 
 

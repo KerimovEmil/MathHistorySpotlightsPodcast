@@ -496,6 +496,9 @@ def main():
                 desc = desc_el.text if desc_el is not None else ''
                 # remove unlinked Sources section from description (keep content before Sources)
                 desc_clean = re.split(r"\bSources[:\s]", desc, flags=re.IGNORECASE)[0].strip()
+                # remove any redundant companion site / timeline links from the web page's bio display
+                desc_clean = re.sub(r"(?i)(?:🌐\s*)?COMPANION SITE.*?(?=\n\n|\n[A-Z]|\Z)", "", desc_clean, flags=re.DOTALL).strip()
+                desc_clean = re.sub(r"https?://(?:www\.)?mathhistoryspotlights\.com\S*", "", desc_clean).strip()
                 source_link = extract_source_link(desc)
                 image = find_image_for_title(name, image_files)
                 slug = normalize_text(name)

@@ -20,7 +20,7 @@ This repository is the source code for the [Math History Spotlights](https://www
 
 ## Full Production Workflow
 
-For the complete end-to-end guide on researching, generating with Google NotebookLM, packaging for Spotify, and publishing, see [WORKFLOW.md](file:///c:/Users/emilk/GIT/MathHistorySpotlightsPodcast/WORKFLOW.md).
+For the complete end-to-end guide on researching, generating with Google NotebookLM, packaging for Spotify, and publishing, see [EPISODE_WORKFLOW_GUIDE.md](file:///c:/Users/emilk/GIT/MathHistorySpotlightsPodcast/EPISODE_WORKFLOW_GUIDE.md).
 
 ## How to Update the Website
 
