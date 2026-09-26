@@ -16,8 +16,35 @@ try:
 except ImportError:
     convert_image_to_avif = None
 
+
+def load_env_var(var_name: str, default: str = None) -> str:
+    """
+    Loads an environment variable from system environment or a local .env file.
+    Never falls back to hardcoded secret IDs.
+    """
+    # 1. System environment
+    val = os.environ.get(var_name)
+    if val:
+        return val.strip()
+
+    # 2. Local .env file in script dir or current working dir
+    for env_path in [Path(".env"), Path(__file__).resolve().parent / ".env"]:
+        if env_path.exists():
+            try:
+                for line in env_path.read_text(encoding="utf-8").splitlines():
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        if k.strip() == var_name:
+                            return v.strip().strip("'\"")
+            except Exception:
+                pass
+
+    return default
+
+
 # --- CONFIGURATION ---
-NOTEBOOK_ID = os.environ.get("NOTEBOOKLM_NOTEBOOK_ID", "692242fc-0aa1-4d2c-a276-ff9e0123e4ef")
+NOTEBOOK_ID = load_env_var("NOTEBOOKLM_NOTEBOOK_ID")
 OUTPUT_DIR = "./output_spotlights"
 URLS = [
     "https://mathshistory.st-andrews.ac.uk/Biographies/Turing/",
@@ -83,58 +110,67 @@ def run_command(cmd, timeout=180):
         return None
 
 
+def slugify(text: str) -> str:
+    """Converts a title to a URL-friendly slug."""
+    text = re.sub(r"[^a-zA-Z0-9\s-]", "", text).lower().strip()
+    return re.sub(r"[\s-]+", "-", text)
+
+
 def get_website_info(url):
-    """Extracts the exact full mathematician name and birth-death years from MacTutor HTML."""
+    """
+    Extracts the exact full mathematician name and birth-death years from MacTutor HTML.
+    Raises RuntimeError on failure rather than returning dummy fallbacks.
+    """
     try:
         response = requests.get(url, timeout=10)
         response.encoding = 'utf-8'
         response.raise_for_status()
-
-        soup = BeautifulSoup(response.text, 'html.parser')
-        full_name = "Unknown Mathematician"
-        years = ""
-
-        # 1. Exact Full Name from content <h1> (skipping site header 'MacTutor')
-        for h1 in soup.find_all('h1'):
-            text = h1.text.strip()
-            if text and text.lower() != 'mactutor':
-                full_name = text
-                break
-
-        # 2. Extract Birth & Death Years from <title> tag (e.g. '(1912 - 1954)')
-        if soup.title and soup.title.text:
-            title_text = soup.title.text
-            match = re.search(r"\((\d{3,4}\s*[-–—]\s*\d{3,4}|\d{3,4}\s*[-–—]\s*present|\d{3,4})\)", title_text)
-            if match:
-                years = match.group(1).replace("–", "-").replace("—", "-")
-                years = re.sub(r"\s*-\s*", " - ", years).strip()
-
-            # Fallback for full name if h1 was not found
-            if full_name == "Unknown Mathematician":
-                clean_title = re.sub(r"\s*\(.*?\).*", "", title_text).strip()
-                full_name = clean_title.split("-")[0].strip()
-
-        # Format Spotify Episode Title: <FULL NAME> <BIRTH YEAR - DEATH YEAR>
-        spotify_title = f"{full_name} {years}".strip() if years else full_name
-
-        print(f"  [SCRAPE] Full Name: {full_name}")
-        print(f"  [SCRAPE] Years:     {years}")
-        print(f"  [SCRAPE] Ep Title:  {spotify_title}")
-
-        return {
-            "name": full_name,
-            "years": years,
-            "spotify_title": spotify_title,
-            "url": url,
-        }
     except Exception as e:
-        print(f"  [WARNING] Scrape failed: {e}")
-        return {
-            "name": "Alan Mathison Turing",
-            "years": "1912 - 1954",
-            "spotify_title": "Alan Mathison Turing 1912 - 1954",
-            "url": url,
-        }
+        raise RuntimeError(f"HTTP request failed for URL '{url}': {e}")
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    full_name = None
+    years = ""
+
+    # 1. Exact Full Name from content <h1> (skipping site branding 'MacTutor')
+    for h1 in soup.find_all('h1'):
+        text = h1.text.strip()
+        if text and text.lower() != 'mactutor':
+            full_name = text
+            break
+
+    # 2. Extract Birth & Death Years from <title> tag (e.g. '(1912 - 1954)')
+    if soup.title and soup.title.text:
+        title_text = soup.title.text
+        match = re.search(r"\((\d{3,4}\s*[-–—]\s*\d{3,4}|\d{3,4}\s*[-–—]\s*present|\d{3,4})\)", title_text)
+        if match:
+            years = match.group(1).replace("–", "-").replace("—", "-")
+            years = re.sub(r"\s*-\s*", " - ", years).strip()
+
+        # Fallback for full name if h1 was not found
+        if not full_name:
+            clean_title = re.sub(r"\s*\(.*?\).*", "", title_text).strip()
+            clean_title = clean_title.split("-")[0].strip()
+            if clean_title:
+                full_name = clean_title
+
+    # Fail explicitly if name could not be resolved
+    if not full_name:
+        raise RuntimeError(f"Could not extract mathematician name from page: {url}")
+
+    # Format Spotify Episode Title: <FULL NAME> <BIRTH YEAR - DEATH YEAR>
+    spotify_title = f"{full_name} {years}".strip() if years else full_name
+
+    print(f"  [SCRAPE] Full Name: {full_name}")
+    print(f"  [SCRAPE] Years:     {years}")
+    print(f"  [SCRAPE] Ep Title:  {spotify_title}")
+
+    return {
+        "name": full_name,
+        "years": years,
+        "spotify_title": spotify_title,
+        "url": url,
+    }
 
 
 def generate_spotify_metadata_file(info, output_dir):
@@ -168,10 +204,10 @@ SOURCES:
     return desc_path
 
 
-def delete_all_sources():
+def delete_all_sources(notebook_id):
     """Purges prior sources from the notebook context."""
     print("  [CLEANUP] Purging sources to reset Notebook context...")
-    sources_raw = run_command(f"nlm source list {NOTEBOOK_ID} --json")
+    sources_raw = run_command(f"nlm source list {notebook_id} --json")
     if sources_raw:
         try:
             sources = json.loads(sources_raw)
@@ -188,9 +224,9 @@ def delete_all_sources():
     time.sleep(5)
 
 
-def get_existing_artifact_ids():
+def get_existing_artifact_ids(notebook_id):
     """Fetches IDs of all artifacts currently in the studio to distinguish new ones."""
-    status_raw = run_command(f"nlm studio status {NOTEBOOK_ID} --full --json")
+    status_raw = run_command(f"nlm studio status {notebook_id} --full --json")
     if not status_raw:
         return set()
     try:
@@ -224,15 +260,21 @@ def convert_png_to_avif(png_path, avif_path, quality=80):
 
 
 def main():
-    print(f"=== STARTING SPOTLIGHT PRODUCTION: {NOTEBOOK_ID} ===")
+    if not NOTEBOOK_ID:
+        print("\n[ERROR] NOTEBOOKLM_NOTEBOOK_ID is not set.")
+        print("Please set NOTEBOOKLM_NOTEBOOK_ID in your environment variables or in a local .env file.")
+        sys.exit(1)
+
+    print(f"=== STARTING SPOTLIGHT PRODUCTION ===")
+    print(f"Target Notebook ID: {NOTEBOOK_ID[:8]}...{NOTEBOOK_ID[-4:] if len(NOTEBOOK_ID) > 12 else ''}")
 
     for url in URLS:
         # Snapshot existing artifacts before this run
-        existing_ids = get_existing_artifact_ids()
+        existing_ids = get_existing_artifact_ids(NOTEBOOK_ID)
         print(f"  [INIT] Found {len(existing_ids)} pre-existing studio artifacts.")
 
         # 1. Reset Notebook context
-        delete_all_sources()
+        delete_all_sources(NOTEBOOK_ID)
 
         info = get_website_info(url)
         full_name = info["name"]
@@ -311,7 +353,7 @@ def main():
                 print(f"  [POLL PARSE ERROR] {e}")
 
     # Final cleanup so the notebook is fresh
-    delete_all_sources()
+    delete_all_sources(NOTEBOOK_ID)
     print("\n=== SPOTLIGHT PRODUCTION FINISHED ===")
 
 
