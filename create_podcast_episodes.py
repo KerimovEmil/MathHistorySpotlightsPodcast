@@ -65,11 +65,13 @@ else:
     NLM_BASE = [NLM_EXECUTABLE]
 
 
+import shlex
+
 def run_command(cmd, timeout=180):
     """Executes a command safely with UTF-8 encoding."""
     if isinstance(cmd, str):
         if cmd.startswith("nlm "):
-            cmd_parts = NLM_BASE + cmd[4:].split()
+            cmd_parts = NLM_BASE + shlex.split(cmd[4:], posix=False)
         else:
             cmd_parts = cmd
     else:
