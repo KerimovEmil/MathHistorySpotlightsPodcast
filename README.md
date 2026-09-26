@@ -18,6 +18,10 @@ This repository is the source code for the [Math History Spotlights](https://www
 - `assets/`: Contains styles, scripts, and the image bank (`assets/images/episodes`).
 - `generate_*.py`: Python scripts used for building the site.
 
+## Full Production Workflow
+
+For the complete end-to-end guide on researching, generating with Google NotebookLM, packaging for Spotify, and publishing, see [WORKFLOW.md](file:///c:/Users/emilk/GIT/MathHistorySpotlightsPodcast/WORKFLOW.md).
+
 ## How to Update the Website
 
 When you publish a new episode on Anchor/Spotify, follow these steps to update the website:
@@ -25,6 +29,7 @@ When you publish a new episode on Anchor/Spotify, follow these steps to update t
 1. **Add the Image**:
    - Save the portrait of the mathematician in `assets/images/episodes/`.
    - Ensure the filename roughly matches the episode title (e.g., for "The life of John Wallis", name the file `John Wallis.avif` or `.jpg`).
+   - (Optional) Use `create_podcast_episodes.py --image <path>` to automatically convert high-res images to `.avif`.
 
 2. **Run the Update Script**:
    open a terminal in the project root and run:
@@ -51,7 +56,8 @@ To preview changes locally:
 
 ## Scripts Overview
 
-- `update_website.py`: The master script that orchestrates the update and deployment.
+- `create_podcast_episodes.py`: Handles NotebookLM ingestion, audio overview generation, and visual asset conversion to `.avif`.
+- `update_website.py`: The master script that orchestrates the site update and deployment.
 - `generate_updated_rss.py`: Fetches the external RSS feed and creates a local version (`assets/feed.xml`) with corrected image paths.
 - `generate_mathematician_pages.py`: Parses the local RSS feed to generate static HTML pages for each episode and the search index.
 
