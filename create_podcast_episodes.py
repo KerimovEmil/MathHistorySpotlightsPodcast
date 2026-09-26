@@ -265,10 +265,10 @@ def main():
         print("Please set NOTEBOOKLM_NOTEBOOK_ID in your environment variables or in a local .env file.")
         sys.exit(1)
 
-    print(f"=== STARTING SPOTLIGHT PRODUCTION ===")
-    print(f"Target Notebook ID: {NOTEBOOK_ID[:8]}...{NOTEBOOK_ID[-4:] if len(NOTEBOOK_ID) > 12 else ''}")
+    target_urls = [arg for arg in sys.argv[1:] if arg.startswith("http")] or URLS
+    print(f"Target URLs to process: {len(target_urls)}")
 
-    for url in URLS:
+    for url in target_urls:
         # Snapshot existing artifacts before this run
         existing_ids = get_existing_artifact_ids(NOTEBOOK_ID)
         print(f"  [INIT] Found {len(existing_ids)} pre-existing studio artifacts.")
@@ -338,6 +338,16 @@ def main():
                             dest_avif = SITE_ASSETS_DIR / f"{full_name}.avif"
                             shutil.copy2(avif_path, dest_avif)
                             print(f"  [SITE ASSETS] Staged image in website repo: {dest_avif}")
+
+                        # Sync to Google Drive visual archive if connected
+                        gdrive_dir = Path(r"G:\My Drive\MathHistory\Visuals")
+                        if gdrive_dir.exists():
+                            try:
+                                gdrive_dest = gdrive_dir / f"{full_name}.avif"
+                                shutil.copy2(avif_path, gdrive_dest)
+                                print(f"  [GDRIVE] Synced visual to Google Drive: {gdrive_dest}")
+                            except Exception as ge:
+                                print(f"  [GDRIVE NOTICE] Could not sync to Google Drive: {ge}")
                     info_done = True
 
                 if audio_done and info_done:
