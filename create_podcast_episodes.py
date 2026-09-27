@@ -6,6 +6,18 @@ import os
 import shutil
 import sys
 from pathlib import Path
+
+if sys.stdout and hasattr(sys.stdout, 'reconfigure') and sys.stdout.encoding != 'utf-8':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+if sys.stderr and hasattr(sys.stderr, 'reconfigure') and sys.stderr.encoding != 'utf-8':
+    try:
+        sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+    except Exception:
+        pass
+
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
@@ -71,7 +83,11 @@ def run_command(cmd, timeout=180):
     """Executes a command safely with UTF-8 encoding."""
     if isinstance(cmd, str):
         if cmd.startswith("nlm "):
-            cmd_parts = NLM_BASE + shlex.split(cmd[4:], posix=False)
+            raw_parts = shlex.split(cmd[4:], posix=False)
+            cmd_parts = NLM_BASE + [
+                p[1:-1] if (len(p) >= 2 and ((p.startswith('"') and p.endswith('"')) or (p.startswith("'") and p.endswith("'")))) else p
+                for p in raw_parts
+            ]
         else:
             cmd_parts = cmd
     else:
