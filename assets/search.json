@@ -1,5 +1,11 @@
 [
   {
+    "title": "Alan Mathison Turing",
+    "url": "/mathematicians/alan-mathison-turing.html",
+    "description": "In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and profound legacy of Alan Mathison Turing (1912 \u2013 1954).From his revolutionary 1936 paper introducing Universal Turing Machines and the limits of decidability, to his wartime codebreaking breakthroughs at Bletchley Park, and his pioneering work on morphogenesis and machine intelligence, we trace the ideas that laid the foundations of modern computer science and artificial intelligence.CHAPTERS &amp; TIMESTAMPS:00:00 - Introduction &amp; Historical Significance02:15 - Early Life, Education &amp; Cambridge Years05:30 - &quot;On Computable Numbers&quot; &amp; The Turing Machine (1936)09:10 - Bletchley Park, Cryptanalysis &amp; The Bombe12:25 - Morphogenesis, AI &amp; The Turing Test14:50 - Legacy and Impact on Modern Mathematics &amp; Computing",
+    "image": "/assets/images/episodes/Alan Mathison Turing.avif"
+  },
+  {
     "title": "Edsger Wybe Dijkstra",
     "url": "/mathematicians/edsger-wybe-dijkstra.html",
     "description": "The life of Edsger Wybe Dijkstra - The Shortest Path.",

@@ -10,7 +10,7 @@ See more on https://www.mathhistoryspotlights.com/
 </description>
 		<link>https://www.mathhistoryspotlights.com/</link>
 		<generator>Anchor Podcasts</generator>
-		<lastBuildDate>Mon, 28 Sep 2026 19:47:44 GMT</lastBuildDate>
+		<lastBuildDate>Wed, 30 Sep 2026 18:04:26 GMT</lastBuildDate>
 		<atom:link href="https://anchor.fm/s/10cdf4708/podcast/rss" rel="self" type="application/rss+xml" />
 		<author>MathHistoryMuseum</author>
 		<copyright>MathHistoryMuseum</copyright>
@@ -31,6 +31,22 @@ See more on https://www.mathhistoryspotlights.com/
 		<itunes:explicit>false</itunes:explicit>
 		<itunes:category text="History" />
 		<itunes:image href="https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45009266/45009266-1765859653888-727bc23ee67fa.jpg" />
+		<item>
+			<title>Alan Mathison Turing 1912 - 1954</title>
+			<description>&lt;p&gt;In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and profound legacy of Alan Mathison Turing (1912 – 1954).&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;From his revolutionary 1936 paper introducing Universal Turing Machines and the limits of decidability, to his wartime codebreaking breakthroughs at Bletchley Park, and his pioneering work on morphogenesis and machine intelligence, we trace the ideas that laid the foundations of modern computer science and artificial intelligence.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;CHAPTERS &amp;amp; TIMESTAMPS:&lt;/p&gt;&lt;p&gt;00:00 - Introduction &amp;amp; Historical Significance&lt;/p&gt;&lt;p&gt;02:15 - Early Life, Education &amp;amp; Cambridge Years&lt;/p&gt;&lt;p&gt;05:30 - &amp;quot;On Computable Numbers&amp;quot; &amp;amp; The Turing Machine (1936)&lt;/p&gt;&lt;p&gt;09:10 - Bletchley Park, Cryptanalysis &amp;amp; The Bombe&lt;/p&gt;&lt;p&gt;12:25 - Morphogenesis, AI &amp;amp; The Turing Test&lt;/p&gt;&lt;p&gt;14:50 - Legacy and Impact on Modern Mathematics &amp;amp; Computing&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;COMPANION SITE &amp;amp; INTERACTIVE TIMELINE:&lt;/p&gt;&lt;p&gt;https://www.mathhistoryspotlights.com/mathematicians/alan-mathison-turing.html&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;SOURCES &amp;amp; PRIMARY CITATIONS:&lt;/p&gt;&lt;p&gt;- MacTutor History of Mathematics Archive (University of St Andrews): https://mathshistory.st-andrews.ac.uk/Biographies/Turing/&lt;/p&gt;&lt;p&gt;- Turing, A. M. (1936). &amp;quot;On Computable Numbers, with an Application to the Entscheidungsproblem.&amp;quot;&lt;/p&gt;
+</description>
+			<link>https://podcasters.spotify.com/pod/show/mathhistorymuseum/episodes/Alan-Mathison-Turing-1912---1954-e3pedhb</link>
+			<guid isPermaLink="false">3acf03ec-81a0-40a4-96be-c1e8cd7bea48</guid>
+			<dc:creator>MathHistoryMuseum</dc:creator>
+			<pubDate>Wed, 30 Sep 2026 11:00:00 GMT</pubDate>
+			<enclosure url="https://anchor.fm/s/10cdf4708/podcast/play/126350315/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-26%2F8e6ac2b4-21a5-5ee5-8f30-1caa0fce332d.m4a" length="15648369" type="audio/x-m4a" />
+			<itunes:summary>&lt;p&gt;In this episode of Math History Spotlights, we explore the extraordinary life, groundbreaking mathematics, and profound legacy of Alan Mathison Turing (1912 – 1954).&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;From his revolutionary 1936 paper introducing Universal Turing Machines and the limits of decidability, to his wartime codebreaking breakthroughs at Bletchley Park, and his pioneering work on morphogenesis and machine intelligence, we trace the ideas that laid the foundations of modern computer science and artificial intelligence.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;CHAPTERS &amp;amp; TIMESTAMPS:&lt;/p&gt;&lt;p&gt;00:00 - Introduction &amp;amp; Historical Significance&lt;/p&gt;&lt;p&gt;02:15 - Early Life, Education &amp;amp; Cambridge Years&lt;/p&gt;&lt;p&gt;05:30 - &amp;quot;On Computable Numbers&amp;quot; &amp;amp; The Turing Machine (1936)&lt;/p&gt;&lt;p&gt;09:10 - Bletchley Park, Cryptanalysis &amp;amp; The Bombe&lt;/p&gt;&lt;p&gt;12:25 - Morphogenesis, AI &amp;amp; The Turing Test&lt;/p&gt;&lt;p&gt;14:50 - Legacy and Impact on Modern Mathematics &amp;amp; Computing&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;COMPANION SITE &amp;amp; INTERACTIVE TIMELINE:&lt;/p&gt;&lt;p&gt;https://www.mathhistoryspotlights.com/mathematicians/alan-mathison-turing.html&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;SOURCES &amp;amp; PRIMARY CITATIONS:&lt;/p&gt;&lt;p&gt;- MacTutor History of Mathematics Archive (University of St Andrews): https://mathshistory.st-andrews.ac.uk/Biographies/Turing/&lt;/p&gt;&lt;p&gt;- Turing, A. M. (1936). &amp;quot;On Computable Numbers, with an Application to the Entscheidungsproblem.&amp;quot;&lt;/p&gt;
+</itunes:summary>
+			<itunes:explicit>false</itunes:explicit>
+			<itunes:duration>00:21:24</itunes:duration>
+			<itunes:image href="/assets/images/episodes/Alan Mathison Turing.avif" />
+			<itunes:episodeType>full</itunes:episodeType>
+		</item>
 		<item>
 			<title>Edsger Wybe Dijkstra 1930 - 2002</title>
 			<description>&lt;p&gt;The life of Edsger Wybe Dijkstra - The Shortest Path.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Sources:&lt;/p&gt;&lt;p&gt;- &lt;a href="https://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra/" target="_blank" rel="noopener noreferer"&gt;https://mathshistory.st-andrews.ac.uk/Biographies/Dijkstra/&lt;/a&gt;&lt;/p&gt;
