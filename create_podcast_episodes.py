@@ -57,7 +57,9 @@ def load_env_var(var_name: str, default: str = None) -> str:
 
 # --- CONFIGURATION ---
 NOTEBOOK_ID = load_env_var("NOTEBOOKLM_NOTEBOOK_ID")
-OUTPUT_DIR = "./output_spotlights"
+# Dedicated staging output directory (always outputs here regardless of cwd)
+STAGING_BASE_DIR = Path(r"C:\Users\emilk\GIT\llm\math podcast")
+OUTPUT_DIR = str(STAGING_BASE_DIR / "output_spotlights") if STAGING_BASE_DIR.exists() else str(Path(__file__).resolve().parent / "output_spotlights")
 URLS = [
     "https://mathshistory.st-andrews.ac.uk/Biographies/Turing/",
 ]
