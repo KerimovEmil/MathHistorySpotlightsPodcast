@@ -2,7 +2,9 @@
 
 This document is the **single source of truth** for creating and publishing new episodes of the **Math History Spotlights** podcast and companion website.
 
-> **Instruction for AI Assistants**: When the user asks to *"make an episode about [Mathematician Name] [URL]"*, follow the automated execution steps below sequentially.
+> **Instruction for AI Assistants**:
+> - When the user says to *"generate a new episode"* (without specifying a mathematician or URL), open `future_episodes.txt`, take the top URL, remove that line from `future_episodes.txt`, and proceed with that URL.
+> - When the user asks to *"make an episode about [Mathematician Name] [URL]"*, follow the automated execution steps below sequentially.
 
 ---
 
