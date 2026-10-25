@@ -3,7 +3,7 @@
 This document is the **single source of truth** for creating and publishing new episodes of the **Math History Spotlights** podcast and companion website.
 
 > **Instruction for AI Assistants**:
-> - When the user says to *"generate a new episode"* (without specifying a mathematician or URL), open `future_episodes.txt`, take the top URL, remove that line from `future_episodes.txt`, and proceed with that URL.
+> - When the user says to *"generate a new episode"* (without specifying a mathematician or URL), `create_podcast_episodes.py` automatically picks the top URL from `future_episodes.txt` and removes it upon execution. If invoking manually with a specific URL, also remove that URL from `future_episodes.txt`.
 > - When the user asks to *"make an episode about [Mathematician Name] [URL]"*, follow the automated execution steps below sequentially.
 
 ---
@@ -57,7 +57,7 @@ When a new mathematician URL is provided (e.g., `https://mathshistory.st-andrews
    - **Auto-Staging**: 
      - Copies `<Full Name>.avif` directly into `C:\Users\emilk\GIT\MathHistorySpotlightsPodcast\assets\images\episodes\<Full Name>.avif`.
      - Automatically mirrors `<Full Name>.avif` to `G:\My Drive\MathHistory\Visuals\<Full Name>.avif` if Google Drive is available.
-   - **Clean Metadata Generation**: Writes an emoji-free Spotify description with clean chapter markers and citations.
+   - **Clean Metadata Generation**: Writes an emoji-free Spotify description highlighting personal life insights, core contributions, and primary citations.
 
 ---
 
@@ -69,8 +69,8 @@ Once Step 1 completes, present the user with:
    - Infographic artwork (`.png` / `.avif`)
    - Description text (`.txt`)
 2. The exact text to copy into the **Spotify for Creators** dashboard:
-   - **Episode Title Format**: `<FULL NAME> <BIRTH YEAR> - <DEATH YEAR>` (e.g. `Alan Mathison Turing 1912 - 1954`)
-   - **Description**: Clean, professional plaintext with chapters, timestamps, and sources (NO emojis, NO redundant companion site links).
+   - **Episode Title Format (Always Include Years)**: `<FULL NAME> <BIRTH YEAR> - <DEATH YEAR>` (e.g. `Archimedes of Syracuse 287 BC - 212 BC` or `Alan Mathison Turing 1912 - 1954`).
+   - **Description**: Clean, personal summary describing their life, personal struggles, and major contributions to science and mathematics, followed by source citations (no emojis, no redundant companion links).
 3. A reminder that the `.m4a` audio file is ready in `C:\Users\emilk\GIT\llm\math podcast\output_spotlights\` for manual transfer to the private server.
 
 ---

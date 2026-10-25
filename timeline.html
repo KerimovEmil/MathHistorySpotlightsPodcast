@@ -80,6 +80,7 @@
       transform: rotate(-90deg);
     }
     /* Era accent: left border only — no fill */
+    .ancient     .era-header { border-left-color: hsl(45,  95%, 55%); }
     .medieval    .era-header { border-left-color: hsl(221, 80%, 55%); }
     .scientific  .era-header { border-left-color: hsl(178, 100%, 42%); }
     .euler       .era-header { border-left-color: hsl(38,  95%, 55%); }
@@ -232,6 +233,7 @@
 
       <div class="legend">
         <div class="legend-items">
+          <span class="legend-item ancient">Ancient &amp; Classical (600 BC&ndash;1100)</span>
           <span class="legend-item medieval">Medieval &amp; Renaissance (1100&ndash;1600)</span>
           <span class="legend-item scientific">Scientific Revolution (1600&ndash;1700)</span>
           <span class="legend-item euler">The Euler Century (1700&ndash;1800)</span>
@@ -250,6 +252,7 @@
 
       <script>
         const ERAS = [
+          { key: 'ancient',    label: 'Ancient \u0026 Classical',     start: -600, end: 1100, tickStep: 100 },
           { key: 'medieval',   label: 'Medieval \u0026 Renaissance',  start: 1100, end: 1600, tickStep: 50 },
           { key: 'scientific', label: 'Scientific Revolution',        start: 1600, end: 1700, tickStep: 20 },
           { key: 'euler',      label: 'The Euler Century',            start: 1700, end: 1800, tickStep: 20 },
@@ -290,7 +293,13 @@
           return str.normalize('NFKD').replace(/\p{Diacritic}/gu, '').toLowerCase();
         }
 
+        function formatYear(y) {
+          if (y < 0) return Math.abs(y) + ' BC';
+          return '' + y;
+        }
+
         function getEra(birthYear) {
+          if (birthYear < 1100) return 'ancient';
           if (birthYear < 1600) return 'medieval';
           if (birthYear < 1700) return 'scientific';
           if (birthYear < 1800) return 'euler';
@@ -299,10 +308,21 @@
         }
 
         function parseTitle(title) {
-          const m = title.match(/^(.+?)\s+(\d{4})\s*[-\u2013\u2014]\s*(\d{4})/);
-          if (m) return { name: m[1].trim(), b: +m[2], d: +m[3] };
-          const m2 = title.match(/(\d{4})\s+(.+?)\s+(\d{4})\s*[-\u2013\u2014]\s*(\d{4})/);
-          if (m2) return { name: m2[2].trim(), b: +m2[3], d: +m2[4] };
+          // Supports both:
+          // 1) "Archimedes of Syracuse 287 BC - 212 BC" or "Alan Mathison Turing 1912 - 1954"
+          // 2) Old formats with optional prefix digits
+          const m = title.match(/^(?:\d{4}\s+)?(.*?)\s+(?:about\s+|c\.\s*)?(\d{1,4})\s*(BC|BCE)?\s*[-\u2013\u2014]\s*(?:about\s+|c\.\s*)?(\d{1,4})\s*(BC|BCE)?/i);
+          if (m) {
+            const name = m[1].trim();
+            const bVal = parseInt(m[2], 10);
+            const dVal = parseInt(m[4], 10);
+            let bBC = Boolean(m[3]);
+            let dBC = Boolean(m[5]);
+            if (dBC && !bBC) bBC = true;
+            const b = bBC ? -bVal : bVal;
+            const d = dBC ? -dVal : dVal;
+            return { name, b, d };
+          }
           return null;
         }
 
@@ -351,7 +371,7 @@
             header.className = 'era-header';
             const matchCount = matched ? matched.length : eraItems.length;
             header.innerHTML =
-              '<span>' + era.label + ' <span class="era-range">' + era.start + '\u2013' + era.end + '</span></span>' +
+              '<span>' + era.label + ' <span class="era-range">' + formatYear(era.start) + '\u2013' + formatYear(era.end) + '</span></span>' +
               '<span class="era-count">' + matchCount + ' mathematician' + (matchCount !== 1 ? 's' : '') + '</span>' +
               '<span class="era-toggle-icon">\u25be</span>';
             header.addEventListener('click', () => lane.classList.toggle('collapsed'));
@@ -399,7 +419,7 @@
               tick.className = 'era-tick';
               tick.style.left = toX(y) + 'px';
               tick.style.top  = tickY + 'px';
-              tick.textContent = y;
+              tick.textContent = formatYear(y);
               canvas.appendChild(tick);
             }
 
@@ -426,7 +446,7 @@
               bar.target = '_blank';
               bar.rel    = 'noopener noreferrer';
               bar.setAttribute('aria-label',
-                'Click to listen: ' + p.name + ', born ' + p.b + ', died ' + p.d + '. ' + p.note);
+                'Click to listen: ' + p.name + ', born ' + formatYear(p.b) + ', died ' + formatYear(p.d) + '. ' + p.note);
 
               const icon = document.createElement('span');
               icon.className = 'local-indicator unknown';
@@ -435,7 +455,7 @@
 
               const nameSpan = document.createElement('span');
               nameSpan.className = 'person-name';
-              nameSpan.textContent = p.name + ' (' + p.b + '\u2013' + p.d + ')';
+              nameSpan.textContent = p.name + ' (' + formatYear(p.b) + '\u2013' + formatYear(p.d) + ')';
               bar.appendChild(nameSpan);
 
               (async () => {

@@ -156,6 +156,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   color: var(--white);
 }
 
+.legend-item.ancient     { background: hsl(45,  95%, 45%); }
 .legend-item.medieval    { background: hsl(221, 80%, 45%); }
 .legend-item.scientific  { background: hsl(178, 100%, 32%); }
 .legend-item.euler       { background: hsl(340, 65%, 42%); }
@@ -328,6 +329,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 /* Era bar colours — one per era */
+.ancient {
+  background: hsl(45,  95%, 45%);
+}
 .medieval {
   background: hsl(221, 80%, 45%);
 }

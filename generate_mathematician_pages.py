@@ -215,23 +215,26 @@ def build_collections_page(collections):
 
 
 def extract_years(title):
-        """Extracts birth and death years from title string, e.g. "Name 1643 - 1727" -> (1643, 1727)"""
-        if not title:
-                return None, None
-        # Look for pattern like "1643 - 1727" or "1643-1727"
-        m = re.search(r"(\d{3,4})\s*[\-–—]\s*(\d{3,4})", title)
-        if m:
-                return int(m.group(1)), int(m.group(2))
+    """Extracts birth and death years from title string, handling BC/BCE."""
+    if not title:
         return None, None
-
-
+    m = re.search(r"(?:about\s+|c\.\s*)?(\d{1,4})\s*(BC|BCE)?\s*[\-–—]\s*(?:about\s+|c\.\s*)?(\d{1,4})\s*(BC|BCE)?", title, re.IGNORECASE)
+    if m:
+        b_val = int(m.group(1))
+        d_val = int(m.group(3))
+        b_bc = bool(m.group(2))
+        d_bc = bool(m.group(4))
+        if d_bc and not b_bc:
+            b_bc = True
+        b = -b_val if b_bc else b_val
+        d = -d_val if d_bc else d_val
+        return b, d
+    return None, None
 def strip_years(s):
-        if not s:
-                return s
-        # remove trailing year ranges and stray digits/hyphens, e.g. " 1877 - 1947"
-        return re.sub(r"[\s\d\-–—]+$", "", s).strip()
-
-
+    if not s:
+        return s
+    cleaned = re.sub(r"\s*(?:about\s+|c\.\s*)?\d{1,4}(?:\s*(?:BC|BCE))?\s*[\-–—]\s*(?:about\s+|c\.\s*)?\d{1,4}(?:\s*(?:BC|BCE))?$", "", s, flags=re.IGNORECASE).strip()
+    return re.sub(r"[\s\d\-–—]+$", "", cleaned).strip()
 def extract_audio_url(item):
         # prefer <enclosure url="..."/>
         enc = item.find("enclosure")

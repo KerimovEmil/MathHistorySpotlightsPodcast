@@ -27,8 +27,8 @@ def normalize_text(s):
 def strip_years(s):
     if not s:
         return s
-    return re.sub(r"[\s\d\-–—]+$", "", s).strip()
-
+    cleaned = re.sub(r"\s*(?:about\s+|c\.\s*)?\d{1,4}(?:\s*(?:BC|BCE))?\s*[\-–—]\s*(?:about\s+|c\.\s*)?\d{1,4}(?:\s*(?:BC|BCE))?$", "", s, flags=re.IGNORECASE).strip()
+    return re.sub(r"[\s\d\-–—]+$", "", cleaned).strip()
 def list_image_files():
     try:
         return os.listdir(IMAGES_DIR)

@@ -62,10 +62,10 @@ URLS = [
     "https://mathshistory.st-andrews.ac.uk/Biographies/Turing/",
 ]
 
-# Website assets image directory
-SITE_ASSETS_DIR = Path(__file__).resolve().parent.parent / "MathHistorySpotlightsPodcast" / "assets" / "images" / "episodes"
-if not SITE_ASSETS_DIR.exists():
-    SITE_ASSETS_DIR = Path(__file__).resolve().parent / "assets" / "images" / "episodes"
+# Website assets image directory and future episodes file
+REPO_DIR = Path(__file__).resolve().parent
+SITE_ASSETS_DIR = REPO_DIR / "assets" / "images" / "episodes"
+FUTURE_EPISODES_FILE = REPO_DIR / "future_episodes.txt"
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -157,10 +157,10 @@ def get_website_info(url):
             full_name = text
             break
 
-    # 2. Extract Birth & Death Years from <title> tag (e.g. '(1912 - 1954)')
+    # 2. Extract Birth & Death Years from <title> tag or Quick Info <dt>/<dd>
     if soup.title and soup.title.text:
         title_text = soup.title.text
-        match = re.search(r"\((\d{3,4}\s*[-–—]\s*\d{3,4}|\d{3,4}\s*[-–—]\s*present|\d{3,4})\)", title_text)
+        match = re.search(r"\(([^)]*(?:BC|BCE|\d{3,4})[^)]*)\)", title_text, re.IGNORECASE)
         if match:
             years = match.group(1).replace("–", "-").replace("—", "-")
             years = re.sub(r"\s*-\s*", " - ", years).strip()
@@ -172,6 +172,40 @@ def get_website_info(url):
             if clean_title:
                 full_name = clean_title
 
+    # Fallback for years from dt/dd if title didn't contain them
+    if not years:
+        born_year = None
+        died_year = None
+        for dt in soup.find_all("dt"):
+            dt_text = dt.text.lower()
+            dd = dt.find_next_sibling("dd")
+            if not dd:
+                continue
+            dd_text = " ".join(dd.text.split())
+            if "born" in dt_text:
+                m = re.search(r"(?:about\s+|c\.\s*)?(\d{1,4}(?:\s*(?:BC|BCE))?)", dd_text, re.IGNORECASE)
+                if m:
+                    born_year = m.group(1)
+            elif "died" in dt_text:
+                m = re.search(r"(?:about\s+|c\.\s*)?(\d{1,4}(?:\s*(?:BC|BCE))?)", dd_text, re.IGNORECASE)
+                if m:
+                    died_year = m.group(1)
+        if born_year and died_year:
+            years = f"{born_year} - {died_year}"
+        elif born_year:
+            years = f"born {born_year}"
+        elif died_year:
+            years = f"died {died_year}"
+
+    # Extract personal summary / contributions from Quick Info <dt>Summary</dt>
+    summary = ""
+    for dt in soup.find_all("dt"):
+        if "summary" in dt.text.lower():
+            dd = dt.find_next_sibling("dd")
+            if dd:
+                summary = " ".join(dd.text.split())
+                break
+
     # Fail explicitly if name could not be resolved
     if not full_name:
         raise RuntimeError(f"Could not extract mathematician name from page: {url}")
@@ -182,36 +216,38 @@ def get_website_info(url):
     print(f"  [SCRAPE] Full Name: {full_name}")
     print(f"  [SCRAPE] Years:     {years}")
     print(f"  [SCRAPE] Ep Title:  {spotify_title}")
+    if summary:
+        print(f"  [SCRAPE] Summary:   {summary[:100]}...")
 
     return {
         "name": full_name,
         "years": years,
         "spotify_title": spotify_title,
+        "summary": summary,
         "url": url,
     }
 
 
 def generate_spotify_metadata_file(info, output_dir):
-    """Creates a clean, emoji-free description file with chapters, timestamps, and sources."""
+    """Creates a clean, emoji-free description file with personal bio summary and sources."""
     name = info["name"]
     spotify_title = info["spotify_title"]
     url = info["url"]
+    summary = info.get("summary", "").strip()
     desc_path = os.path.join(output_dir, f"{name}_spotify_description.txt")
+
+    if summary:
+        personal_section = f"{summary}\n\n"
+    else:
+        personal_section = ""
 
     content = f"""=== SPOTIFY EPISODE TITLE ===
 {spotify_title}
 
 === SPOTIFY EPISODE DESCRIPTION ===
-In this episode of Math History Spotlights, we explore the life, mathematical breakthroughs, and enduring legacy of {name}.
+{personal_section}In this episode of Math History Spotlights, we explore the life, mathematical breakthroughs, and enduring legacy of {name}.
 
-From foundational early discoveries to major theorem breakthroughs, historical challenges, and deep contributions to science, we trace the ideas that shaped mathematical history.
-
-CHAPTERS & TIMESTAMPS:
-00:00 - Introduction & Historical Context
-02:30 - Early Life & Mathematical Foundations
-06:00 - Major Discoveries & Breakthrough Theorems
-10:15 - Key Formulas & Proof Insights
-14:00 - Legacy & Modern Mathematical Impact
+From foundational early discoveries to major theorem breakthroughs, personal struggles, and monumental contributions to science, we trace the ideas that shaped mathematical history.
 
 SOURCES:
 - MacTutor History of Mathematics Archive (University of St Andrews): {url}
@@ -277,16 +313,41 @@ def convert_png_to_avif(png_path, avif_path, quality=80):
         return False
 
 
+def remove_url_from_future_episodes(target_url: str):
+    """Removes the processed URL from future_episodes.txt if present."""
+    if not FUTURE_EPISODES_FILE.exists():
+        return
+    try:
+        lines = FUTURE_EPISODES_FILE.read_text(encoding="utf-8").splitlines()
+        norm_target = target_url.strip().rstrip("/").lower()
+        new_lines = [line for line in lines if line.strip().rstrip("/").lower() != norm_target]
+        if len(new_lines) != len(lines):
+            FUTURE_EPISODES_FILE.write_text("\n".join(new_lines) + ("\n" if new_lines else ""), encoding="utf-8")
+            print(f"  [QUEUE] Removed {target_url} from {FUTURE_EPISODES_FILE.name}")
+    except Exception as e:
+        print(f"  [QUEUE NOTICE] Could not update {FUTURE_EPISODES_FILE.name}: {e}")
+
+
 def main():
     if not NOTEBOOK_ID:
         print("\n[ERROR] NOTEBOOKLM_NOTEBOOK_ID is not set.")
         print("Please set NOTEBOOKLM_NOTEBOOK_ID in your environment variables or in a local .env file.")
         sys.exit(1)
 
-    target_urls = [arg for arg in sys.argv[1:] if arg.startswith("http")] or URLS
+    target_urls = [arg for arg in sys.argv[1:] if arg.startswith("http")]
+    if not target_urls:
+        if FUTURE_EPISODES_FILE.exists():
+            lines = [l.strip() for l in FUTURE_EPISODES_FILE.read_text(encoding="utf-8").splitlines() if l.strip() and not l.strip().startswith("#")]
+            if lines:
+                target_urls = [lines[0]]
+        if not target_urls:
+            target_urls = URLS
+
     print(f"Target URLs to process: {len(target_urls)}")
 
     for url in target_urls:
+        # Automatically ensure the URL is removed from future_episodes.txt
+        remove_url_from_future_episodes(url)
         # Snapshot existing artifacts before this run
         existing_ids = get_existing_artifact_ids(NOTEBOOK_ID)
         print(f"  [INIT] Found {len(existing_ids)} pre-existing studio artifacts.")
