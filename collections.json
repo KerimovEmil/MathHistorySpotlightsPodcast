@@ -118,6 +118,18 @@
         "name": "John Wilder Tukey",
         "role": "Fast Fourier Transform & EDA",
         "image": "/assets/images/episodes/John Wilder Tukey.avif"
+      },
+      {
+        "slug": "alan-mathison-turing",
+        "name": "Alan Turing",
+        "role": "Universal Computing & AI",
+        "image": "/assets/images/episodes/Alan Mathison Turing.avif"
+      },
+      {
+        "slug": "edsger-wybe-dijkstra",
+        "name": "Edsger Dijkstra",
+        "role": "Algorithms & Structured Code",
+        "image": "/assets/images/episodes/Edsger Wybe Dijkstra.avif"
       }
     ]
   },
@@ -144,6 +156,12 @@
         "name": "Abraham de Moivre",
         "role": "Normal Distribution",
         "image": "/assets/images/episodes/Abraham de Moivre.avif"
+      },
+      {
+        "slug": "georges-louis-leclerc-comte-de-buffon",
+        "name": "Comte de Buffon",
+        "role": "Geometric Probability & Needles",
+        "image": "/assets/images/episodes/Georges Louis Leclerc Comte de Buffon.avif"
       }
     ]
   },
@@ -292,6 +310,12 @@
         "name": "Emil Artin",
         "role": "Algebraic Number Theory",
         "image": "/assets/images/episodes/Emil Artin.avif"
+      },
+      {
+        "slug": "hermann-minkowski",
+        "name": "Hermann Minkowski",
+        "role": "Geometry of Numbers & Spacetime",
+        "image": "/assets/images/episodes/Hermann Minkowski.avif"
       }
     ]
   },
@@ -301,6 +325,12 @@
     "tag": "Physics-Math Bridge",
     "description": "Maxwell unified electricity and magnetism with mathematics — and then these three took that\n                        torch and ran with it. Kelvin, Heaviside, and Hertz each extended and experimentally confirmed\n                        electromagnetic theory, reshaping how we understand waves, fields, and energy.",
     "mathematicians": [
+      {
+        "slug": "james-clerk-maxwell",
+        "name": "James Clerk Maxwell",
+        "role": "Electromagnetic Field Unifier",
+        "image": "/assets/images/episodes/James Clerk Maxwell.avif"
+      },
       {
         "slug": "william-thomson-lord-kelvin",
         "name": "Lord Kelvin",
@@ -442,6 +472,12 @@
         "name": "Andrey Kolmogorov",
         "role": "Axioms of Chance",
         "image": "/assets/images/episodes/Andrey Nikolaevich Kolmogorov.avif"
+      },
+      {
+        "slug": "aleksandr-yakovlevich-khinchin",
+        "name": "Aleksandr Khinchin",
+        "role": "Stochastic Processes & Number Theory",
+        "image": "/assets/images/episodes/Aleksandr Yakovlevich Khinchin.avif"
       }
     ]
   },
@@ -520,6 +556,198 @@
         "name": "Felix Klein",
         "role": "Erlangen Program",
         "image": "/assets/images/episodes/Felix Christian Klein.avif"
+      }
+    ]
+  },
+  {
+    "id": "algebraic-number-theory",
+    "title": "The Algebraic Number Theory School",
+    "tag": "Ideals & Fields",
+    "description": "From Kummer's ideal numbers to Dedekind's cuts and the unit theorems of Dirichlet, this German school revolutionized arithmetic by translating the laws of numbers into the rich language of abstract algebra.",
+    "mathematicians": [
+      {
+        "slug": "johann-peter-gustav-lejeune-dirichlet",
+        "name": "Peter Gustav Lejeune Dirichlet",
+        "role": "Analytic Number Theory & Units",
+        "image": "/assets/images/episodes/Johann Peter Gustav Lejeune Dirichlet.avif"
+      },
+      {
+        "slug": "ernst-eduard-kummer",
+        "name": "Ernst Kummer",
+        "role": "Ideal Complex Numbers",
+        "image": "/assets/images/episodes/Ernst Eduard Kummer.avif"
+      },
+      {
+        "slug": "julius-wilhelm-richard-dedekind",
+        "name": "Richard Dedekind",
+        "role": "Dedekind Cuts & Rings",
+        "image": "/assets/images/episodes/Julius Wilhelm Richard Dedekind.avif"
+      },
+      {
+        "slug": "leopold-kronecker",
+        "name": "Leopold Kronecker",
+        "role": "Arithmetical Algebraic Geometry",
+        "image": "/assets/images/episodes/Leopold Kronecker.avif"
+      },
+      {
+        "slug": "helmut-hasse",
+        "name": "Helmut Hasse",
+        "role": "Class Field Theory & Local-Global",
+        "image": "/assets/images/episodes/Helmut Hasse.avif"
+      }
+    ]
+  },
+  {
+    "id": "geometric-purists",
+    "title": "The Geometric Purists: Compass & Form",
+    "tag": "Geometric Constructions",
+    "description": "Pushing the boundaries of classical Euclidean geometry, these geometers proved astonishing minimalism—showing every straightedge-and-compass construction can be solved by compass alone—and pioneered non-orientable topology.",
+    "mathematicians": [
+      {
+        "slug": "georg-mohr",
+        "name": "Georg Mohr",
+        "role": "Euclidean Minimalism",
+        "image": "/assets/images/episodes/Georg Mohr.avif"
+      },
+      {
+        "slug": "lorenzo-mascheroni",
+        "name": "Lorenzo Mascheroni",
+        "role": "Compass Geometry",
+        "image": "/assets/images/episodes/Lorenzo Mascheroni.avif"
+      },
+      {
+        "slug": "august-ferdinand-mobius",
+        "name": "August Möbius",
+        "role": "Topology & Projective Geometry",
+        "image": "/assets/images/episodes/August Ferdinand Möbius.avif"
+      }
+    ]
+  },
+  {
+    "id": "scientific-dawn",
+    "title": "Mersenne’s Salon & The Scientific Dawn",
+    "tag": "The Republic of Letters",
+    "description": "Before academic journals, mathematical progress flowed through Father Marin Mersenne’s weekly salon in Paris and correspondence network. This circle forged modern analytic geometry, wave optics, atmospheric mechanics, and early calculus.",
+    "mathematicians": [
+      {
+        "slug": "rene-descartes",
+        "name": "René Descartes",
+        "role": "Cartesian Geometry & Method",
+        "image": "/assets/images/episodes/René Descartes.avif"
+      },
+      {
+        "slug": "marin-mersenne",
+        "name": "Marin Mersenne",
+        "role": "Mersenne Primes & Scientific Hub",
+        "image": "/assets/images/episodes/Marin Mersenne.avif"
+      },
+      {
+        "slug": "christiaan-huygens",
+        "name": "Christiaan Huygens",
+        "role": "Wave Theory & Pendulums",
+        "image": "/assets/images/episodes/Christiaan Huygens.avif"
+      },
+      {
+        "slug": "evangelista-torricelli",
+        "name": "Evangelista Torricelli",
+        "role": "Barometers & Gabriel's Horn",
+        "image": "/assets/images/episodes/Evangelista Torricelli.avif"
+      },
+      {
+        "slug": "john-wallis",
+        "name": "John Wallis",
+        "role": "The Symbol ∞ & Pre-Calculus",
+        "image": "/assets/images/episodes/John Wallis.avif"
+      }
+    ]
+  },
+  {
+    "id": "modern-analysis",
+    "title": "Measure Theory & Modern Analysis",
+    "tag": "Integration & Rigor",
+    "description": "The rigorous transformation of 19th-century real analysis into modern measure theory. These mathematicians dismantled classical notions of integration and dimension to handle the most irregular and discontinuous functions in nature.",
+    "mathematicians": [
+      {
+        "slug": "henri-leon-lebesgue",
+        "name": "Henri Lebesgue",
+        "role": "Lebesgue Measure & Integration",
+        "image": "/assets/images/episodes/Henri Léon Lebesgue.avif"
+      },
+      {
+        "slug": "felix-edouard-justin-emile-borel",
+        "name": "Émile Borel",
+        "role": "Borel Sets & Probability",
+        "image": "/assets/images/episodes/Félix Edouard Justin Émile Borel.avif"
+      },
+      {
+        "slug": "carl-gustav-jacob-jacobi",
+        "name": "Carl Gustav Jacobi",
+        "role": "Elliptic Functions & Dynamics",
+        "image": "/assets/images/episodes/Carl Gustav Jacob Jacobi.avif"
+      },
+      {
+        "slug": "hermann-amandus-schwarz",
+        "name": "Hermann Schwarz",
+        "role": "Cauchy-Schwarz & Minimal Surfaces",
+        "image": "/assets/images/episodes/Hermann Amandus Schwarz.avif"
+      }
+    ]
+  },
+  {
+    "id": "victorian-algebraists",
+    "title": "The Victorian Algebraists",
+    "tag": "Abstract Structures",
+    "description": "Breaking free from traditional arithmetic, these 19th-century pioneers invented non-commutative quaternions, matrix algebra, symbolic logic, and the systematic theory of finite groups.",
+    "mathematicians": [
+      {
+        "slug": "william-rowan-hamilton",
+        "name": "William Rowan Hamilton",
+        "role": "Quaternions & Classical Dynamics",
+        "image": "/assets/images/episodes/William Rowan Hamilton.avif"
+      },
+      {
+        "slug": "arthur-cayley",
+        "name": "Arthur Cayley",
+        "role": "Matrix Theory & Invariants",
+        "image": "/assets/images/episodes/Arthur Cayley.avif"
+      },
+      {
+        "slug": "augustus-de-morgan",
+        "name": "Augustus De Morgan",
+        "role": "Formal Logic & Induction",
+        "image": "/assets/images/episodes/Augustus De Morgan.avif"
+      },
+      {
+        "slug": "william-burnside",
+        "name": "William Burnside",
+        "role": "Group Representations",
+        "image": "/assets/images/episodes/William Burnside.avif"
+      }
+    ]
+  },
+  {
+    "id": "mavericks-combinatorics",
+    "title": "Mavericks of Play, Chaos & Combinatorics",
+    "tag": "Play & Discrete Worlds",
+    "description": "Rejecting rigid formalism in favor of boundless curiosity, these brilliant mavericks uncovered the deep mathematical structures hidden in games, chaotic dynamical systems, fractals, and discrete graphs.",
+    "mathematicians": [
+      {
+        "slug": "paul-erdos",
+        "name": "Paul Erdős",
+        "role": "Probabilistic Method & Graph Theory",
+        "image": "/assets/images/episodes/Paul Erdős.avif"
+      },
+      {
+        "slug": "john-horton-conway",
+        "name": "John Conway",
+        "role": "Game of Life & Surreal Numbers",
+        "image": "/assets/images/episodes/John Horton Conway.avif"
+      },
+      {
+        "slug": "benoit-mandelbrot",
+        "name": "Benoit Mandelbrot",
+        "role": "Fractal Geometry of Nature",
+        "image": "/assets/images/episodes/Benoit Mandelbrot.avif"
       }
     ]
   }
