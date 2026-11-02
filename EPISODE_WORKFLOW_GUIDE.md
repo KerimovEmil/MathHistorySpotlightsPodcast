@@ -5,6 +5,7 @@ This document is the **single source of truth** for creating and publishing new 
 > **Instruction for AI Assistants**:
 > - When the user says to *"generate a new episode"* (without specifying a mathematician or URL), `create_podcast_episodes.py` automatically picks the top URL from `future_episodes.txt` and removes it upon execution. If invoking manually with a specific URL, also remove that URL from `future_episodes.txt`.
 > - When the user asks to *"make an episode about [Mathematician Name] [URL]"*, follow the automated execution steps below sequentially.
+> - **Always ensure the generated artwork (`<Full Name>.avif`) in `assets/images/episodes/` and the updated `future_episodes.txt` are committed and pushed to Git immediately after Step 1**, before presenting Spotify details and asking the user to publish.
 
 ---
 
@@ -14,9 +15,10 @@ This document is the **single source of truth** for creating and publishing new 
  [0. Git Pull Repo] ──▶ [1. Run create_podcast_episodes.py] ──▶ [2. Present Spotify Details] ──▶ [3. User Publishes] ──▶ [4. update_website.py]
   • Ensures latest        • Cleans Notebook context               • Copy title & desc             • User uploads audio     • Pulls Anchor RSS
     code & website          • Ingests source with --wait            • Link audio & artwork          • User moves .m4a        • Builds HTML bio page
-    are in sync             • Generates audio (deep dive)                                             to private server      • Syncs search & graph
-                            • Generates infographic                                                                          • Deploys to GitHub
+    are in sync             • Generates audio (deep dive)           • Verifies artwork is pushed      to private server      • Syncs search & graph
+                            • Generates infographic                   to Git repository                                      • Deploys to GitHub
                             • Converts to .avif & stages to repo
+                            • Commits & pushes .avif + queue to Git
                             • Syncs .avif to Google Drive
 ```
 
@@ -54,8 +56,9 @@ When a new mathematician URL is provided (e.g., `https://mathshistory.st-andrews
      - `output_spotlights/<Full Name>.png`
      - `output_spotlights/<Full Name>.avif`
      - `output_spotlights/<Full Name>_spotify_description.txt`
-   - **Auto-Staging**: 
+   - **Auto-Staging & Git Push**: 
      - Copies `<Full Name>.avif` directly into `C:\Users\emilk\GIT\MathHistorySpotlightsPodcast\assets\images\episodes\<Full Name>.avif`.
+     - Commits `<Full Name>.avif` and the updated `future_episodes.txt` to Git and pushes to `origin/master`.
      - Automatically mirrors `<Full Name>.avif` to `G:\My Drive\MathHistory\Visuals\<Full Name>.avif` if Google Drive is available.
    - **Clean Metadata Generation**: Writes an emoji-free Spotify description highlighting personal life insights, core contributions, and primary citations.
 

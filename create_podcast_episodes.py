@@ -315,6 +315,27 @@ def convert_png_to_avif(png_path, avif_path, quality=80):
         return False
 
 
+def commit_and_push_artwork(full_name: str, dest_avif: Path):
+    """Commits and pushes newly created AVIF artwork and updated future_episodes.txt to GitHub."""
+    try:
+        if not REPO_DIR.exists():
+            return
+        subprocess.run(["git", "-C", str(REPO_DIR), "add", str(dest_avif), str(FUTURE_EPISODES_FILE)], check=True, capture_output=True)
+        commit_msg = f"Add {full_name} artwork and update episode queue"
+        commit_res = subprocess.run(["git", "-C", str(REPO_DIR), "commit", "-m", commit_msg], capture_output=True, text=True)
+        if commit_res.returncode == 0:
+            print(f"  [GIT] Committed artwork and queue: {commit_msg}")
+            push_res = subprocess.run(["git", "-C", str(REPO_DIR), "push"], capture_output=True, text=True)
+            if push_res.returncode == 0:
+                print(f"  [GIT] Pushed artwork and queue to remote repository.")
+            else:
+                print(f"  [GIT WARNING] Push output: {push_res.stderr.strip() or push_res.stdout.strip()}")
+        else:
+            print(f"  [GIT NOTICE] {commit_res.stdout.strip()}")
+    except Exception as e:
+        print(f"  [GIT ERROR] Failed to commit/push artwork: {e}")
+
+
 def remove_url_from_future_episodes(target_url: str):
     """Removes the processed URL from future_episodes.txt if present."""
     if not FUTURE_EPISODES_FILE.exists():
@@ -419,6 +440,7 @@ def main():
                             dest_avif = SITE_ASSETS_DIR / f"{full_name}.avif"
                             shutil.copy2(avif_path, dest_avif)
                             print(f"  [SITE ASSETS] Staged image in website repo: {dest_avif}")
+                            commit_and_push_artwork(full_name, dest_avif)
 
                         # Sync to Google Drive visual archive if connected
                         gdrive_dir = Path(r"G:\My Drive\MathHistory\Visuals")
