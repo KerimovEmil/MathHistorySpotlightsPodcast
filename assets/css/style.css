@@ -495,6 +495,11 @@ header .container {
   transition: var(--transition);
 }
 
+.podcast-card .card-title a {
+  display: inline;
+  color: inherit;
+}
+
 .podcast-card:is(:hover, :focus) .card-title {
   background-size: 100% 2px;
 }

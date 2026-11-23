@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Math History Spotlights</title>
+  <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <script>
+    // Smart redirect: if URL is /mathematicians/<slug-with-years>.html, redirect to clean slug
+    (function () {
+      const path = window.location.pathname;
+      const match = path.match(/^\/mathematicians\/(.+?)\.html$/);
+      if (match) {
+        let slug = match[1];
+        // Strip trailing year numbers like -429-501 or -1912-1954 or -287-bc-212-bc
+        const cleanedSlug = slug.replace(/-(?:about-)?\d{1,4}(?:-(?:bc|bce))?-+(?:about-)?\d{1,4}(?:-(?:bc|bce))?$/i, '')
+                                .replace(/-+[\d\-]+$/, '');
+        if (cleanedSlug && cleanedSlug !== slug) {
+          window.location.replace('/mathematicians/' + cleanedSlug + '.html');
+        }
+      }
+    })();
+  </script>
+</head>
+
+<body id="top" class="no-intro">
+  <site-header></site-header>
+
+  <main class="container">
+    <section class="about" style="text-align: center; padding: 80px 0;">
+      <h1 style="font-size: 3rem; margin-bottom: 20px;">404 — Page Not Found</h1>
+      <p style="font-size: 1.2rem; margin-bottom: 30px;">The page you are looking for might have moved, or does not exist.</p>
+      <p><a href="/" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+        <ion-icon name="home-outline"></ion-icon>
+        <span>Back to Home</span>
+      </a></p>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="/assets/js/site-header.js"></script>
+  <script type="module" src="/assets/js/site-footer.js"></script>
+</body>
+
+</html>

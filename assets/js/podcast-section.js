@@ -71,7 +71,7 @@ class PodcastSection extends HTMLElement {
               <time datetime="${dateISO}">${displayDate}</time>
               <p class="pod-epi">${epiLabel}${duration ? ' • ' + duration : ''}</p>
             </div>
-            <h3 class="h3 card-title">${this.escapeHtml(title)}</h3>
+            <h3 class="h3 card-title"><a href="${mathematicianUrl}">${this.escapeHtml(title)}</a></h3>
             ${enclosure ? `<audio controls preload="none" src="${enclosure}"></audio>` : ''}
           </div>
         `;
@@ -98,17 +98,20 @@ class PodcastSection extends HTMLElement {
   }
 
   getMathematicianLink(title) {
-    // Remove year patterns like " 1898 - 1962"
-    let slug = title.replace(/\s\d{4}\s-\s\d{4}/g, '');
+    // Strip trailing birth/death years matching site generation logic (e.g. " 429 - 501", " 287 BC - 212 BC")
+    let name = title || '';
+    name = name.replace(/\s*(?:about\s+|c\.\s*)?\d{1,4}(?:\s*(?:BC|BCE))?\s*[\-–—]\s*(?:about\s+|c\.\s*)?\d{1,4}(?:\s*(?:BC|BCE))?$/i, '').trim();
+    name = name.replace(/[\s\d\-–—]+$/, '').trim();
+
     // Normalize unicode characters (remove accents)
-    slug = slug.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    let slug = name.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     // Convert to lowercase
     slug = slug.toLowerCase();
     // Replace non-alphanumeric characters with hyphens
     slug = slug.replace(/[^a-z0-9]+/g, '-');
     // Remove leading/trailing hyphens
     slug = slug.replace(/^-+|-+$/g, '');
-    
+
     return `./mathematicians/${slug}.html`;
   }
 
